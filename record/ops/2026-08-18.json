@@ -1,11 +1,11 @@
 {
   "date": "2026-08-18",
   "source": "observe/cron-health.md",
-  "generated_at": "2026-08-18T20:20:19.669Z",
+  "generated_at": "2026-08-18T20:27:38.043Z",
   "summary": {
-    "ok": 10,
+    "ok": 12,
     "late": 0,
-    "silent": 2
+    "silent": 0
   },
   "jobs": [
     {
@@ -41,7 +41,7 @@
     {
       "job": "collect-portwatch",
       "status": "OK",
-      "detail": "log 6.1h old (allowed 192h)"
+      "detail": "no new output since last healthy check"
     },
     {
       "job": "heartbeat-gold",
@@ -51,7 +51,7 @@
     {
       "job": "heartbeat-crypto",
       "status": "OK",
-      "detail": "log 3.7h old (allowed 8h)"
+      "detail": "no new output since last healthy check"
     },
     {
       "job": "pattern-eval",
@@ -60,13 +60,13 @@
     },
     {
       "job": "anchor-push",
-      "status": "SILENT",
-      "detail": "log missing"
+      "status": "OK",
+      "detail": "log 0.0h old (allowed 26h)"
     },
     {
       "job": "forward-record",
-      "status": "SILENT",
-      "detail": "log missing"
+      "status": "OK",
+      "detail": "log 0.0h old (allowed 192h)"
     }
   ]
 }
