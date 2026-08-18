@@ -1,8 +1,8 @@
 {
   "date": "2026-08-18",
   "mirror_repo": "https://github.com/JimmyNewtron711/finance-brain",
-  "local_head": "5359eb02488056ba6a76bd127fae34d2647a10bd",
-  "mirror_main": "5359eb02488056ba6a76bd127fae34d2647a10bd",
+  "local_head": "ef9ba952561bba10c8f2653018457c62aaea8b97",
+  "mirror_main": "ef9ba952561bba10c8f2653018457c62aaea8b97",
   "manifest_sha256": "2644d65cff64bdb4a6abd22202a2f45af78ec09242891f84c89d9135dd74fad1",
   "snapshot_hashes": {
     "dashboard-20260707.db": "4c7e69636ed7c73ddd391763413374b921b824f5bebb8d9203aa7320c9d4d89a",
