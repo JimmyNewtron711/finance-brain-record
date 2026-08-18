@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "updated": "2026-08-18",
+  "note": "Curated research-claims register for the public Forward Record. Denominator-complete by intent: every governed hypothesis program ever run appears here, kills included. Entries are added with pre-registration commit hashes BEFORE runs execute; the daily private-mirror push externally anchors each edit. Program-level granularity in v0; per-claim rows accrue forward. Commit hashes refer to the private mirror (read access grantable to a verifying party on request).",
+  "ledger_summary": "6 families / 0 of 12 effective discoveries at the S106 terminal-charter close (2026-07-20). Post-S106: maritime confirmatory FAIL (2026-08-15), Treasury Phase 3 all three hypotheses dead (2026-08-18). Validated strategies: 0.",
+  "programs": [
+    {
+      "id": "crypto-strategy-families",
+      "name": "Crypto strategy families (templates, pairs, derivatives-meta, macro-meta, cost-amortization)",
+      "status": "WRITTEN_OFF",
+      "verdict": "5 families, 894 registered trials in the modern meta-CPCV/DSR pipeline, 0 deployable — positive in-sample metrics never survived OOS/DSR gates.",
+      "evidence": [
+        "orient/algo-classic/ (pipeline + registries)",
+        "docs/superpowers/specs/2026-06-10-sprint3-meta-labeling-design.md",
+        "docs/superpowers/specs/2026-07-02-sprint4-macro-meta-labeling-design.md",
+        "docs/superpowers/specs/2026-07-02-family5-daily-cost-amortization-design.md"
+      ]
+    },
+    {
+      "id": "superbrain-macro-registry",
+      "name": "SuperBrain macro hypothesis registry (h1-h6, h4b, COT h5, DFM h6-fc)",
+      "status": "TERMINATED",
+      "verdict": "0 scored alpha claims. h1/h3/h4 parked wrong-sign or unstable OOS; h4b killed by first-print vintage falsification (significance collapsed ~58x on first-print data — revision look-ahead, not signal); GARCH vol carve-out closed against the free VIX9D benchmark; COT h5 registered and killed same session; DFM h6-fc died statistically significant WRONG-SIGN (pre-named adverse outcome).",
+      "evidence": [
+        "docs/superpowers/specs/2026-07-03-superbrain-engine-mvp-design.md",
+        "docs/superpowers/specs/2026-07-04-cot-h5-registration-design.md",
+        "docs/superpowers/specs/2026-07-04-dfm-h6-registration-design.md"
+      ]
+    },
+    {
+      "id": "regime-conditional",
+      "name": "Regime-conditional program (family #6)",
+      "status": "WRITTEN_OFF",
+      "verdict": "Sole genuine survivor TLT->XLV died_holdout at S105 (2026-07-19): sign contradiction on the virgin one-shot holdout under the ratified sign-mode. S106 terminal review (2026-07-20): 0 candidates (3 KILL / 4 PARK), external Codex end-consensus CONFIRM. Program ledger closed: 6 families / 0 of 12 effective discoveries. Write-off is operational; holdout untouched at close.",
+      "verdict_date": "2026-07-20",
+      "evidence": [
+        "docs/superpowers/specs/2026-07-10-regime-conditional-methodology-design.md",
+        "docs/superpowers/specs/2026-07-20-lane-a-terminal-charter.md"
+      ]
+    },
+    {
+      "id": "visual-chain-pattern",
+      "name": "Visual-chain pattern program",
+      "status": "TERMINATED",
+      "verdict": "Program terminated with no validated discovery (platform validated-alpha count 0 at every close; see ledger_summary). History preserved in the memory-compiler KB.",
+      "evidence": [
+        "docs/superpowers/specs/2026-07-09-visual-chain-pattern-program.md"
+      ]
+    },
+    {
+      "id": "monitoring-to-prediction",
+      "name": "Monitoring-to-prediction program",
+      "status": "TERMINATED",
+      "verdict": "Program terminated with no validated discovery (platform validated-alpha count 0 at every close; see ledger_summary). History preserved in the memory-compiler KB.",
+      "evidence": [
+        "docs/superpowers/specs/2026-07-08-monitoring-to-prediction-program.md"
+      ]
+    },
+    {
+      "id": "maritime-chokepoint",
+      "name": "Maritime chokepoint falsification (PortWatch Panama transit -> tanker equities)",
+      "status": "CONCLUDED",
+      "verdict": "Exploratory CANDIDATE; pre-registered one-shot confirmatory holdout pass FAILED on OOS sign flip (2026-08-15). Holdout consumed; Phase 3 never built. Weekly PortWatch collection continues as monitoring substrate.",
+      "verdict_date": "2026-08-15",
+      "prereg_refs": [
+        "1d4247c",
+        "92db892",
+        "27f0eba"
+      ],
+      "evidence": [
+        "commit e7579b9 (confirmatory verdict: FAIL)"
+      ]
+    },
+    {
+      "id": "treasury-phase3",
+      "name": "Treasury Phase 3 (H-T1 stablecoin->bill, H-T2 auction events, H-T3 net-liquidity->SPY)",
+      "status": "CONCLUDED",
+      "verdict": "All three hypotheses dead (2026-08-18). H-T2: exploratory NO CANDIDATE — statistically significant WRONG-SIGN at d1. H-T1: exploratory CANDIDATE (2 of 3 horizons) -> confirmatory FAIL (sign held, -1.08/-1.50 bp/sigma, HAC p 0.127/0.092 miss p<0.05). H-T3: exploratory CANDIDATE (h=5 sole BH-FDR survivor) -> confirmatory FAIL (OOS sign flip at h=5). Holdout consumed for both families. Phase 4 never builds. Every registration committed before the affected run.",
+      "verdict_date": "2026-08-18",
+      "prereg_refs": [
+        "65a81ef",
+        "dcb956c",
+        "a10a02e",
+        "d626534",
+        "3414aab"
+      ],
+      "evidence": [
+        "docs/superpowers/plans/2026-08-18-treasury-phase3.md",
+        "docs/superpowers/plans/2026-08-18-treasury-ht1-confirmatory.md",
+        "docs/superpowers/plans/2026-08-18-treasury-ht3-confirmatory.md",
+        "orient/research-py/reports/treasury-benchmarks-2026-08-18.md",
+        "orient/research-py/reports/treasury-ht1-confirmatory-2026-08-18.md",
+        "orient/research-py/reports/treasury-ht3-confirmatory-2026-08-18.md"
+      ]
+    },
+    {
+      "id": "t110-ha",
+      "name": "T110-HA stablecoin treasury-demand hypothesis (Dune on-chain program)",
+      "status": "ACTIVE",
+      "note": "Charter ratified 2026-08-08. Section 3.9 pilot FAIL latched; operator-ratified fail-branch executing (Dune-primary panel, DeFiLlama cross-check). Armed kills: K1 at T13, settle-path 2026-09-15, K5 evaluation 2026-11-01. Outcome will be recorded here whichever way it lands."
+    },
+    {
+      "id": "paper-track-lane",
+      "name": "Paper-track lane (crypto strategy paper projections)",
+      "status": "WRITTEN_OFF",
+      "verdict": "Underlying strategy family is written off (see crypto-strategy-families); the paper lane runs mechanically to its pre-scheduled kill on 2026-09-15 and is excluded from any performance claim.",
+      "evidence": [
+        "act/live-trading/paper/report.md"
+      ]
+    }
+  ]
+}
