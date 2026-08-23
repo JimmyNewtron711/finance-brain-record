@@ -2,7 +2,7 @@
   "version": 1,
   "updated": "2026-08-18",
   "note": "Curated research-claims register for the public Forward Record. Denominator-complete by intent: every governed hypothesis program ever run appears here, kills included. Entries are added with pre-registration commit hashes BEFORE runs execute; the daily private-mirror push externally anchors each edit. Program-level granularity in v0; per-claim rows accrue forward. Commit hashes refer to the private mirror (read access grantable to a verifying party on request).",
-  "ledger_summary": "6 families / 0 of 12 effective discoveries at the S106 terminal-charter close (2026-07-20). Post-S106: maritime confirmatory FAIL (2026-08-15), Treasury Phase 3 all three hypotheses dead (2026-08-18). Validated strategies: 0.",
+  "ledger_summary": "6 families / 0 of 12 effective discoveries at the S106 terminal-charter close (2026-07-20). Post-S106: maritime confirmatory FAIL (2026-08-15), Treasury Phase 3 all three hypotheses dead (2026-08-18), trace-micro both hypotheses dead at exploration/gate-1 (2026-08-18). Validated strategies: 0.",
   "programs": [
     {
       "id": "crypto-strategy-families",
@@ -103,9 +103,26 @@
       "id": "paper-track-lane",
       "name": "Paper-track lane (crypto strategy paper projections)",
       "status": "WRITTEN_OFF",
-      "verdict": "Underlying strategy family is written off (see crypto-strategy-families); the paper lane runs mechanically to its pre-scheduled kill on 2026-09-15 and is excluded from any performance claim.",
+      "verdict": "Underlying strategy family is written off (see crypto-strategy-families); the paper lane runs mechanically to its pre-scheduled kill on 2026-09-15 and is excluded from any performance claim. Data basis: the fmp_1h hourly archive freezes at the FMP cancel (~2026-08-31, operator-ruled 2026-08-18); the final runs (2026-09-07, 2026-09-14) execute on the frozen tail.",
       "evidence": [
         "act/live-trading/paper/report.md"
+      ]
+    },
+    {
+      "id": "trace-micro",
+      "name": "trace-micro (H-M1 dealer-share -> VXTLT vol, H-M2 off-run-share -> TLT returns)",
+      "status": "CONCLUDED",
+      "verdict": "Both hypotheses dead (2026-08-18, same sitting as registration). H-M1: exploratory CANDIDATE (h=5 beta +0.0164 per z-unit on 5d VXTLT log change, HAC p 0.025, sole BH-FDR survivor of the 4 registered cells) -> KILLED at the kill-only gate-1 (2025-07 -> 2026-08 point-estimate sign flip: beta -0.0002, p 0.976, n 280 — a noise-level flip, but the frozen rule gates on sign; H-T3 death shape). H-M2: exploratory NO CANDIDATE (h=5 p 0.133). Gate-2 never runs. Pre-reg + this register entry were committed and mirror-pushed before the run.",
+      "verdict_date": "2026-08-18",
+      "prereg_refs": [
+        "0bfebab",
+        "7dc95dd",
+        "563ceb7"
+      ],
+      "evidence": [
+        "docs/superpowers/specs/2026-08-18-trace-micro-design.md",
+        "docs/superpowers/plans/2026-08-18-trace-micro-prereg.md",
+        "orient/research-py/reports/trace-micro-exploratory-2026-08-18.md"
       ]
     }
   ]

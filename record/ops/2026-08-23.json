@@ -1,0 +1,82 @@
+{
+  "date": "2026-08-23",
+  "source": "observe/cron-health.md",
+  "generated_at": "2026-08-23T10:50:01.879Z",
+  "summary": {
+    "ok": 14,
+    "late": 0,
+    "silent": 0
+  },
+  "jobs": [
+    {
+      "job": "provenance-snapshot",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "sweep-derivatives",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "paper-track",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "heartbeat-substrate",
+      "status": "OK",
+      "detail": "log 0.5h old (allowed 26h)"
+    },
+    {
+      "job": "stream-health",
+      "status": "OK",
+      "detail": "log 0.2h old (allowed 26h)"
+    },
+    {
+      "job": "map-run",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "collect-portwatch",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "heartbeat-gold",
+      "status": "OK",
+      "detail": "log 11.1h old (allowed 26h)"
+    },
+    {
+      "job": "heartbeat-crypto",
+      "status": "OK",
+      "detail": "log 0.2h old (allowed 8h)"
+    },
+    {
+      "job": "pattern-eval",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "anchor-push",
+      "status": "OK",
+      "detail": "log 11.7h old (allowed 26h)"
+    },
+    {
+      "job": "forward-record",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "nowcast-run",
+      "status": "OK",
+      "detail": "log 10.7h old (allowed 26h)"
+    },
+    {
+      "job": "drift-flags",
+      "status": "OK",
+      "detail": "log 9.8h old (allowed 26h)"
+    }
+  ]
+}
