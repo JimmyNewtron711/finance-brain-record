@@ -1,0 +1,842 @@
+{
+  "schema": "envelope_v1",
+  "program": "tsmom-bridge",
+  "generated_at": "2026-09-04T14:03:02.560Z",
+  "engine": {
+    "git_sha": "cfaf5c4386c519b6c4dab8d139996ce5e95c27da",
+    "dirty": false,
+    "tree_scope": [
+      "orient/algo-classic/server",
+      "orient/algo-classic/scripts/external-signal-run.js",
+      "orient/research-py/src/superbrain/portfolio",
+      "decide/programs",
+      "decide/weights/tsmom-bridge-*.json",
+      "decide/programs/tsmom-bridge.kills.json",
+      "decide/weights/tsmom-bridge-lb6.json",
+      "decide/weights/tsmom-bridge-lb9.json",
+      "decide/weights/tsmom-bridge-lb12.json"
+    ],
+    "cost_model": "bp_per_side_on_turnover"
+  },
+  "inputs": {
+    "manifest": {
+      "path": "decide/programs/tsmom-bridge.json",
+      "sha256": "cdf5a1bdb7462ee2a169994bea865a1cad2e786bf5415a980995bcb68bad4359"
+    },
+    "kills": {
+      "path": "decide/programs/tsmom-bridge.kills.json",
+      "sha256": "a86135e1122f01717bed50a9d74da75d28e3bc77e932dbd8e7e2c7bfa410be6e"
+    },
+    "prereg": {
+      "path": "docs/superpowers/plans/2026-09-04-tsmom-bridge-prereg.md",
+      "git_sha": "d2406d99",
+      "sha256": "7a161fd0b0ffcf6d6bdccf4a0e0f55864e2a44b3c72bd12d55e4e168016ed75d"
+    },
+    "rule_sha256": "93ba566648c0aeff7858e0160c9c07cfc4cbe78639d0cb8b03cce3f8fdc5f3f0",
+    "weights": [
+      {
+        "path": "decide/weights/tsmom-bridge-lb6.json",
+        "variant": "lb6",
+        "sha256": "b3ff2e65b23a909809d01eca2b431ba7d597ca917b4ac4b5cce9b2f58e93e438",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/tsmom-bridge-lb9.json",
+        "variant": "lb9",
+        "sha256": "b1755a85127d3ceffb033eb2f56fed41b9a8c3415998460e50622c12a601da09",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/tsmom-bridge-lb12.json",
+        "variant": "lb12",
+        "sha256": "14874a6d6fa5b2cc8ac27bddcdce749406d068a5d7f6e61491c3f03d31ab5fef",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      }
+    ],
+    "bars": {
+      "tables": [
+        "equity_daily_tr",
+        "futures_daily"
+      ],
+      "symbols": [
+        "SPY",
+        "TLT",
+        "GLD",
+        "IEF",
+        "USO",
+        "DBA"
+      ],
+      "price_basis": {
+        "DBA": "tr",
+        "GLD": "tr",
+        "IEF": "tr",
+        "SPY": "tr",
+        "TLT": "tr",
+        "USO": "tr"
+      },
+      "start": "2016-01-04",
+      "end_exclusive": "2026-07-03",
+      "tape_asof": "2026-09-04T04:22:52Z",
+      "data_fingerprint": "9993e73e46194702446804e6c0e304fc70bf9c826408cbcd5586a81f12ac288a",
+      "db": {
+        "basename": "dashboard.db",
+        "size_bytes": 458514432
+      },
+      "weekend_rows_dropped": {
+        "DBA": 0,
+        "GLD": 0,
+        "IEF": 0,
+        "SPY": 0,
+        "TLT": 0,
+        "USO": 0
+      },
+      "dropped_dates": {
+        "DBA": 0,
+        "GLD": 0,
+        "IEF": 0,
+        "SPY": 0,
+        "TLT": 0,
+        "USO": 0
+      },
+      "roll_days": {
+        "DBA": 0,
+        "GLD": 0,
+        "IEF": 0,
+        "SPY": 0,
+        "TLT": 0,
+        "USO": 0
+      },
+      "roll_bridged": {
+        "DBA": 0,
+        "GLD": 0,
+        "IEF": 0,
+        "SPY": 0,
+        "TLT": 0,
+        "USO": 0
+      },
+      "open_fallbacks": {
+        "DBA": 0,
+        "GLD": 0,
+        "IEF": 0,
+        "SPY": 0,
+        "TLT": 0,
+        "USO": 0
+      }
+    }
+  },
+  "results": {
+    "lb12": {
+      "metrics": {
+        "totalReturn": 0.2656770725599281,
+        "annualizedReturn": 0.022695419636256098,
+        "sharpe": 0.4799649977593392,
+        "sortino": 0.6675354697839562,
+        "calmar": 0.24504292189991472,
+        "sterling": 0.11782597236791281,
+        "maxDrawdown": -0.09261813995805114,
+        "winRate": 0.5275590551181102,
+        "profitFactor": 1.4556824623565856,
+        "averageTrade": 20.919454532277804,
+        "tradeCount": 127,
+        "totalTrades": 127,
+        "finalEquity": 12656.770725599281,
+        "observedSharpe": 0.4799649977593392
+      },
+      "dsr": {
+        "observedSharpe": 0.4799649977593392,
+        "dsrPvalue": 0.7923081009169889,
+        "dsrStatistic": 0.6937420248548589,
+        "nTrials": 3,
+        "dsrPass": false,
+        "dsrPvalueGrid": 0.7923081009169889,
+        "dsrStatisticGrid": 0.6937420248548589,
+        "nTrialsGrid": 3,
+        "dsrPassGrid": false,
+        "dsrPvalueFamily": 0.6250446276233022,
+        "dsrStatisticFamily": 0.24640573276971217,
+        "nTrialsFamily": 6,
+        "dsrPassFamily": false,
+        "skewness": -0.3417030733137968,
+        "kurtosis": 6.282345275586596
+      },
+      "sleeve_share": {
+        "DBA": 0.28233245624491343,
+        "GLD": 0.2750511503322945,
+        "IEF": 0.04792086504323144,
+        "SPY": 0.40385764443456906,
+        "TLT": -0.021996626275741206,
+        "USO": 0.012834510220732774
+      },
+      "blocks": {
+        "crisis": {
+          "mean_net_daily": 0.00035936102326644925,
+          "sharpe": 1.4177485944928612,
+          "n_obs": 345
+        },
+        "non_crisis": {
+          "mean_net_daily": 0.00003037873468751681,
+          "sharpe": 0.18996188036810194,
+          "n_obs": 1006
+        }
+      }
+    },
+    "lb6": {
+      "metrics": {
+        "totalReturn": 0.09018713237258526,
+        "annualizedReturn": 0.008258738623342143,
+        "sharpe": 0.18643547741450509,
+        "sortino": 0.2560306772172791,
+        "calmar": 0.06435085606776589,
+        "sterling": 0.03616872586257246,
+        "maxDrawdown": -0.12833921921170904,
+        "winRate": 0.5039370078740157,
+        "profitFactor": 1.1414779512544297,
+        "averageTrade": 7.101349005715375,
+        "tradeCount": 127,
+        "totalTrades": 127,
+        "finalEquity": 10901.871323725853,
+        "observedSharpe": 0.18643547741450509
+      },
+      "dsr": {
+        "observedSharpe": 0.18643547741450509,
+        "dsrPvalue": 0.37348230474309096,
+        "dsrStatistic": -0.2496483453616713,
+        "nTrials": 3,
+        "dsrPass": false,
+        "dsrPvalueGrid": 0.37348230474309096,
+        "dsrStatisticGrid": -0.2496483453616713,
+        "nTrialsGrid": 3,
+        "dsrPassGrid": false,
+        "dsrPvalueFamily": 0.20672255275406998,
+        "dsrStatisticFamily": -0.6969846374468178,
+        "nTrialsFamily": 6,
+        "dsrPassFamily": false,
+        "skewness": -0.2812521559839451,
+        "kurtosis": 5.0482895973884565
+      },
+      "sleeve_share": {
+        "DBA": 0.0589342830415621,
+        "GLD": 0.11598154575250506,
+        "IEF": -0.002832350380163474,
+        "SPY": 0.4700410576089527,
+        "TLT": -0.16498650444529767,
+        "USO": 0.5228619684224414
+      },
+      "blocks": {
+        "crisis": {
+          "mean_net_daily": 0.0001771823623899712,
+          "sharpe": 0.6637238394458801,
+          "n_obs": 345
+        },
+        "non_crisis": {
+          "mean_net_daily": -0.000027054950435925416,
+          "sharpe": -0.14669950423578842,
+          "n_obs": 1006
+        }
+      }
+    },
+    "lb9": {
+      "metrics": {
+        "totalReturn": 0.3640842310481281,
+        "annualizedReturn": 0.030015342097715614,
+        "sharpe": 0.6198056241673204,
+        "sortino": 0.8725083473478765,
+        "calmar": 0.28238645712507904,
+        "sterling": 0.14549950025710742,
+        "maxDrawdown": -0.10629171952258584,
+        "winRate": 0.5748031496062992,
+        "profitFactor": 1.657625735024378,
+        "averageTrade": 28.668049688828983,
+        "tradeCount": 127,
+        "totalTrades": 127,
+        "finalEquity": 13640.842310481281,
+        "observedSharpe": 0.6198056241673204
+      },
+      "dsr": {
+        "observedSharpe": 0.6198056241673204,
+        "dsrPvalue": 0.8980430904494037,
+        "dsrStatistic": 1.142394137500034,
+        "nTrials": 3,
+        "dsrPass": false,
+        "dsrPvalueGrid": 0.8980430904494037,
+        "dsrStatisticGrid": 1.142394137500034,
+        "nTrialsGrid": 3,
+        "dsrPassGrid": false,
+        "dsrPvalueFamily": 0.7927018418966385,
+        "dsrStatisticFamily": 0.6950578454148871,
+        "nTrialsFamily": 6,
+        "dsrPassFamily": false,
+        "skewness": -0.29911018248690957,
+        "kurtosis": 5.796047723217824
+      },
+      "sleeve_share": {
+        "DBA": 0.17316824693523225,
+        "GLD": 0.20036782589596863,
+        "IEF": 0.17871863186310583,
+        "SPY": 0.2986688940225056,
+        "TLT": -0.031159022571095558,
+        "USO": 0.1802354238542833
+      },
+      "blocks": {
+        "crisis": {
+          "mean_net_daily": 0.0002988350733809947,
+          "sharpe": 1.2063380717625085,
+          "n_obs": 345
+        },
+        "non_crisis": {
+          "mean_net_daily": -0.00005218820161770172,
+          "sharpe": -0.29697687315411336,
+          "n_obs": 1006
+        }
+      }
+    }
+  },
+  "cpcv": {
+    "pbo": 0,
+    "pboMeasured": true,
+    "pboInterpretation": "acceptable",
+    "oos_sharpe_median": 0.7729979957232669,
+    "oos_sharpe_min": -0.22935048882637402,
+    "embargo": {
+      "requested": 21,
+      "applied": 21
+    },
+    "flat_leadin_bars": [
+      40,
+      24,
+      23,
+      25,
+      27,
+      29
+    ],
+    "combinationResults": [
+      {
+        "testBlocks": [
+          0,
+          1
+        ],
+        "trainBlocks": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 1.1544535141972045,
+        "oosSharpe": -0.22784992601042023,
+        "oosReturn": -0.011924956508769447,
+        "oosTradeCountDiagnostic": 37,
+        "paramOosSharpes": [
+          -0.5150393056004497,
+          -0.22784992601042023,
+          -0.11132515282549636
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          0,
+          2
+        ],
+        "trainBlocks": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.8554291484913236,
+        "oosSharpe": 0.3701988054013419,
+        "oosReturn": 0.05496125176275965,
+        "oosTradeCountDiagnostic": 37,
+        "paramOosSharpes": [
+          0.35069992409874295,
+          0.3701988054013419,
+          0.12951004334027222
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          0,
+          3
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 1.1552037956051815,
+        "oosSharpe": -0.22935048882637402,
+        "oosReturn": -0.008999420826218012,
+        "oosTradeCountDiagnostic": 37,
+        "paramOosSharpes": [
+          -0.4407477385085991,
+          -0.22935048882637402,
+          0.141133405875089
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          0,
+          4
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.9718890911947584,
+        "oosSharpe": 0.13727891999447223,
+        "oosReturn": 0.02063292297061207,
+        "oosTradeCountDiagnostic": 37,
+        "paramOosSharpes": [
+          -0.4335109906046263,
+          0.13727891999447223,
+          0.22893718174586658
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          0,
+          5
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.8887076570187249,
+        "oosSharpe": 0.30364178834653927,
+        "oosReturn": 0.03345095072142949,
+        "oosTradeCountDiagnostic": 38,
+        "paramOosSharpes": [
+          -0.7715579740322238,
+          0.30364178834653927,
+          0.21514009083837587
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          1,
+          2
+        ],
+        "trainBlocks": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.5375696106269262,
+        "oosSharpe": 1.0059178811301366,
+        "oosReturn": 0.09901111258765587,
+        "oosTradeCountDiagnostic": 38,
+        "paramOosSharpes": [
+          0.8555289002987462,
+          1.0059178811301366,
+          0.2668710555827187
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          1,
+          3
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.8373442577407841,
+        "oosSharpe": 0.40636858690242067,
+        "oosReturn": 0.03505043999867821,
+        "oosTradeCountDiagnostic": 38,
+        "paramOosSharpes": [
+          0.06408123769140414,
+          0.40636858690242067,
+          0.27849441811753545
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          1,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.6540295533303611,
+        "oosSharpe": 0.7729979957232669,
+        "oosReturn": 0.06468278379550829,
+        "oosTradeCountDiagnostic": 38,
+        "paramOosSharpes": [
+          0.07131798559537694,
+          0.7729979957232669,
+          0.36629819398831304
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          1,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.5708481191543275,
+        "oosSharpe": 0.9393608640753339,
+        "oosReturn": 0.07750081154632571,
+        "oosTradeCountDiagnostic": 39,
+        "paramOosSharpes": [
+          -0.26672899783222065,
+          0.9393608640753339,
+          0.35250110308082233
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          2,
+          3
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.538319892034903,
+        "oosSharpe": 1.004417318314183,
+        "oosReturn": 0.1019366482702073,
+        "oosTradeCountDiagnostic": 38,
+        "paramOosSharpes": [
+          0.9298204673905969,
+          1.004417318314183,
+          0.519329614283304
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          2,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.35500518762447997,
+        "oosSharpe": 1.371046727135029,
+        "oosReturn": 0.13156899206703737,
+        "oosTradeCountDiagnostic": 38,
+        "paramOosSharpes": [
+          0.9370572152945696,
+          1.371046727135029,
+          0.6071333901540816
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          2,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.27182375344844645,
+        "oosSharpe": 1.537409595487096,
+        "oosReturn": 0.1443870198178548,
+        "oosTradeCountDiagnostic": 39,
+        "paramOosSharpes": [
+          0.5990102318669721,
+          1.537409595487096,
+          0.5933362992465909
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          3,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.654779834738338,
+        "oosSharpe": 0.7714974329073131,
+        "oosReturn": 0.06760831947805973,
+        "oosTradeCountDiagnostic": 38,
+        "paramOosSharpes": [
+          0.14560955268722758,
+          0.7714974329073131,
+          0.6187567526888984
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          3,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.5715984005623045,
+        "oosSharpe": 0.9378603012593801,
+        "oosReturn": 0.08042634722887715,
+        "oosTradeCountDiagnostic": 39,
+        "paramOosSharpes": [
+          -0.19243743074037,
+          0.9378603012593801,
+          0.6049596617814077
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      },
+      {
+        "testBlocks": [
+          4,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bestParams": "lb9",
+        "isSharpe": 0.3882836961518813,
+        "oosSharpe": 1.3044897100802264,
+        "oosReturn": 0.11005869102570723,
+        "oosTradeCountDiagnostic": 39,
+        "paramOosSharpes": [
+          -0.18520068283639718,
+          1.3044897100802264,
+          0.6927634376521853
+        ],
+        "oosTradeCountSumDiagnostic": 570,
+        "oosTradeCountUnique": 114
+      }
+    ],
+    "topParamIdx": 1
+  },
+  "walkforward": {
+    "expanding": true,
+    "aggregateOosSharpe": 0.8739386154051735,
+    "wfe": null,
+    "windows": [
+      {
+        "trainStart": 1451865600,
+        "trainEnd": 1545609600,
+        "testStart": 1545782400,
+        "testEnd": 1576800000,
+        "inSampleSharpe": -0.38085791106093386,
+        "outOfSampleSharpe": 1.6256454572026826,
+        "bestParams": "lb12"
+      },
+      {
+        "trainStart": 1451865600,
+        "trainEnd": 1576800000,
+        "testStart": 1577059200,
+        "testEnd": 1608163200,
+        "inSampleSharpe": 0.18224762130362565,
+        "outOfSampleSharpe": 1.14506348341356,
+        "bestParams": "lb12"
+      },
+      {
+        "trainStart": 1451865600,
+        "trainEnd": 1608163200,
+        "testStart": 1608249600,
+        "testEnd": 1639526400,
+        "inSampleSharpe": 0.48554978005010335,
+        "outOfSampleSharpe": 0.0025495424437261866,
+        "bestParams": "lb12"
+      },
+      {
+        "trainStart": 1451865600,
+        "trainEnd": 1639526400,
+        "testStart": 1639612800,
+        "testEnd": 1670889600,
+        "inSampleSharpe": 0.3866053589779981,
+        "outOfSampleSharpe": 0.4840067200885973,
+        "bestParams": "lb6"
+      },
+      {
+        "trainStart": 1451865600,
+        "trainEnd": 1670889600,
+        "testStart": 1670976000,
+        "testEnd": 1702339200,
+        "inSampleSharpe": 0.4228720888152578,
+        "outOfSampleSharpe": -0.2623887452267031,
+        "bestParams": "lb12"
+      },
+      {
+        "trainStart": 1451865600,
+        "trainEnd": 1702339200,
+        "testStart": 1702425600,
+        "testEnd": 1733788800,
+        "inSampleSharpe": 0.37288694138665585,
+        "outOfSampleSharpe": 1.3357368207820117,
+        "bestParams": "lb12"
+      },
+      {
+        "trainStart": 1451865600,
+        "trainEnd": 1733788800,
+        "testStart": 1733875200,
+        "testEnd": 1765324800,
+        "inSampleSharpe": 0.48439789889664747,
+        "outOfSampleSharpe": 1.7869570291323396,
+        "bestParams": "lb9"
+      }
+    ]
+  },
+  "deployability": {
+    "deployable": false,
+    "reasons": [
+      "family DSR p-value 0.793 ≤ 0.95 across 6 family trials — leader is not significant against the family-wide noise floor"
+    ]
+  },
+  "kills": [
+    {
+      "id": "dsr_family",
+      "rule": "results[selected].dsr.dsrPvalueFamily",
+      "value": 0.7927018418966385,
+      "threshold": 0.95,
+      "result": "DIE",
+      "why": "gt 0.95 failed"
+    },
+    {
+      "id": "oos_sharpe",
+      "rule": "cpcv.oos_sharpe_median",
+      "value": 0.7729979957232669,
+      "threshold": 0.5,
+      "result": "PASS"
+    },
+    {
+      "id": "max_drawdown",
+      "rule": "results[selected].metrics.maxDrawdown",
+      "value": -0.10629171952258584,
+      "threshold": 0.25,
+      "result": "PASS"
+    },
+    {
+      "id": "sleeve",
+      "rule": "results[selected].sleeve_share",
+      "value": {
+        "SPY": 0.2986688940225056,
+        "TLT": -0.031159022571095558,
+        "GLD": 0.20036782589596863,
+        "IEF": 0.17871863186310583,
+        "USO": 0.1802354238542833,
+        "DBA": 0.17316824693523225
+      },
+      "threshold": 0.5,
+      "result": "PASS"
+    },
+    {
+      "id": "block_sign",
+      "rule": "results[selected].blocks",
+      "value": {
+        "crisis": 0.0002988350733809947,
+        "non_crisis": -0.00005218820161770172
+      },
+      "threshold": 0,
+      "result": "PASS"
+    },
+    {
+      "id": "deployable",
+      "rule": "deployability.deployable",
+      "value": [
+        "family DSR p-value 0.793 ≤ 0.95 across 6 family trials — leader is not significant against the family-wide noise floor"
+      ],
+      "threshold": true,
+      "result": "DIE",
+      "why": "not deployable"
+    },
+    {
+      "id": "leverage",
+      "rule": "structural",
+      "value": "none (structural)",
+      "threshold": 1,
+      "result": "PASS"
+    }
+  ],
+  "verdict": "DIE",
+  "selected_variant": "lb9",
+  "frozen_through": "2026-07-01",
+  "weights_frozen_prefix_sha256": "ec468c5571451b2a953fe30aafd0bd56d2af80f06fe9731645e5fdd0101dba70"
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "composite_v1",
+  "program": "registry-composite",
+  "rule": "registry_composite",
+  "rule_files": [
+    "src/superbrain/relationships/composite.py"
+  ],
+  "targets": [
+    "SPY",
+    "EQ_XLP",
+    "EQ_XLU",
+    "EQ_XLV",
+    "DCOILWTICO",
+    "EQ_TLT",
+    "EQ_GLD"
+  ],
+  "horizon_sessions": 21,
+  "cadence": "monthly",
+  "params": {
+    "rank_window_years": 5,
+    "rank_min_obs": 20,
+    "min_members": 20,
+    "cap": 20.0
+  },
+  "variants": [
+    {
+      "id": "ew",
+      "params": {}
+    },
+    {
+      "id": "3prf",
+      "params": {}
+    }
+  ],
+  "window": {
+    "start": "2010-01-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "eras": [
+    [
+      "2010-01-04",
+      "2015-07-02"
+    ],
+    [
+      "2015-07-03",
+      "2021-01-03"
+    ],
+    [
+      "2021-01-04",
+      "2026-07-02"
+    ]
+  ],
+  "family_n_trials": 2,
+  "family_note": "2 counted trials: ew (RSZ equal-weight, Campbell–Thompson sign-restricted by each member's cross-target consensus sign — primary) + 3prf (Kelly–Pruitt auto-proxy, one factor — registered alternative), both over the ADF-pass vetted grid at the freeze, pooled across the 7 map targets, coefficients fitted once on 2010-01-04 → 2026-07-03 and frozen. Parameters rank_window_years 5 / rank_min_obs 20 / min_members 20 are chosen, one set, never swept. Clustered count recorded in the coefficients file (hclust_avg_0.7 over the two variants' in-window forecasts). Pre-reg docs/superpowers/plans/2026-09-05-registry-composite-prereg.md.",
+  "coefficients": {
+    "path": "decide/programs/registry-composite.coefficients.json",
+    "sha256": "003e82c5d678821441f2ed0a47137b36ac361167f90ad76c59340596fe70e471"
+  },
+  "gate": {
+    "first_date": "2026-10-01",
+    "read_dates_anniversary_of": "2026-09-05",
+    "min_observations": 60,
+    "min_rows_per_target": 12,
+    "sign_threshold": 0.0,
+    "pass_p_one_sided": 0.025,
+    "reps": 999,
+    "seed": 0
+  },
+  "prereg": {
+    "path": "docs/superpowers/plans/2026-09-05-registry-composite-prereg.md",
+    "git_sha": "e9b885eb"
+  },
+  "status": "preregistered"
+}

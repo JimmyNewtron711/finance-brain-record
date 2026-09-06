@@ -1,0 +1,101 @@
+{
+  "schema": "program_v1",
+  "program": "tsmom-bridge-fut",
+  "rule": "tsmom",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/tsmom.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "lookback_months": 12,
+    "vol_window": 63,
+    "vol_target": 0.1,
+    "vol_cap": 2.0,
+    "max_gross": 1.0
+  },
+  "universe": [
+    "FUT_BZ",
+    "FUT_CL",
+    "FUT_GC",
+    "FUT_HG",
+    "FUT_HO",
+    "FUT_NG",
+    "FUT_PL",
+    "FUT_RB",
+    "FUT_SI",
+    "FUT_ZC",
+    "FUT_ZS",
+    "FUT_ZW"
+  ],
+  "variants": [
+    {
+      "id": "lb6",
+      "params": {
+        "lookback_months": 6
+      }
+    },
+    {
+      "id": "lb9",
+      "params": {
+        "lookback_months": 9
+      }
+    },
+    {
+      "id": "lb12",
+      "params": {
+        "lookback_months": 12
+      }
+    }
+  ],
+  "cadence": "monthly",
+  "window": {
+    "start": "2010-06-07",
+    "end_exclusive": "2026-07-03"
+  },
+  "costs": {
+    "default_bp_per_side": 10,
+    "overrides": {}
+  },
+  "family_n_trials": 6,
+  "family_note": "6 counted trials: lb6/lb9/lb12 here + lb6/lb9/lb12 in tsmom-bridge (same rule, ETF arm); pre-reg docs/superpowers/plans/2026-09-04-tsmom-bridge-prereg.md",
+  "validation": {
+    "cpcv": true,
+    "cpcv_embargo_bars": 21,
+    "walkforward": {
+      "expanding": true,
+      "trainWindow": 750,
+      "testWindow": 250,
+      "stepSize": 250
+    }
+  },
+  "kills": {
+    "path": "decide/programs/tsmom-bridge-fut.kills.json",
+    "sha256": "a86135e1122f01717bed50a9d74da75d28e3bc77e932dbd8e7e2c7bfa410be6e"
+  },
+  "blocks": {
+    "crisis": [
+      [
+        "2020-02-15",
+        "2020-06-30"
+      ],
+      [
+        "2022-01-03",
+        "2022-12-30"
+      ]
+    ],
+    "non_crisis": [
+      [
+        "2010-06-07",
+        "2019-12-31"
+      ]
+    ]
+  },
+  "prereg": {
+    "path": "docs/superpowers/plans/2026-09-04-tsmom-bridge-prereg.md",
+    "git_sha": "d2406d99"
+  },
+  "status": "preregistered"
+}

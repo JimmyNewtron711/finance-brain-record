@@ -1,0 +1,212 @@
+{
+  "schema": "cto_oto_result_v1",
+  "program": "cto-oto-sign",
+  "evaluated_at": "2026-09-05",
+  "prereg_path": "docs/superpowers/plans/2026-09-05-cto-oto-sign-prereg.md",
+  "prereg_rule_sha256": "94bfbb279c674c7dcc387edace312fbd4737db4b98e3dc252962d66c64b9e28f",
+  "window": {
+    "start": "2016-01-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "universe": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "EFA",
+    "EEM",
+    "VNQ",
+    "TLT",
+    "IEF",
+    "TIP",
+    "LQD",
+    "HYG",
+    "EMB",
+    "GLD",
+    "SLV",
+    "USO",
+    "DBA",
+    "DBC",
+    "UUP",
+    "FXE",
+    "FXY"
+  ],
+  "stats": {
+    "SPY": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "QQQ": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "IWM": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "EFA": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "EEM": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "VNQ": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "TLT": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "IEF": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "TIP": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "LQD": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "HYG": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "EMB": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "GLD": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "SLV": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "USO": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "DBA": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "DBC": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "UUP": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "FXE": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    },
+    "FXY": {
+      "rows": 2639,
+      "null_dropped": 0,
+      "weekend_dropped": 0,
+      "first": "2016-01-04",
+      "last": "2026-07-02"
+    }
+  },
+  "e_on": 0.002882425386116543,
+  "e_id": -0.0021232347530204566,
+  "p_one_sided": 0.232,
+  "ci_low": -0.005326045130068067,
+  "ci_high": 0.010616182630710132,
+  "n_obs": 47720,
+  "n_dates": 2386,
+  "n_symbols": 20,
+  "null_on": 0.5192885720992145,
+  "null_id": 0.5030033688686951,
+  "eras": [
+    {
+      "start": "2016-01-04",
+      "end": "2019-07-03",
+      "n_dates": 628,
+      "e": -0.004185913530119039,
+      "note": "ok"
+    },
+    {
+      "start": "2019-07-04",
+      "end": "2023-01-01",
+      "n_dates": 881,
+      "e": 0.0021316456109168654,
+      "note": "ok"
+    },
+    {
+      "start": "2023-01-02",
+      "end": "2026-07-02",
+      "n_dates": 877,
+      "e": 0.0086981081926694,
+      "note": "ok"
+    }
+  ],
+  "kills_failed": [
+    "era_sign"
+  ],
+  "verdict": "DIE"
+}

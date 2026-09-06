@@ -1,0 +1,46 @@
+{
+  "schema": "program_v1",
+  "program": "multi-signal-family",
+  "rule": "family_cs",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/carry.py",
+    "src/superbrain/portfolio/rules/family.py",
+    "src/superbrain/portfolio/curve.py",
+    "src/superbrain/portfolio/forecast.py",
+    "src/superbrain/portfolio/allocator.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "seasonality": "same_month",
+    "w_carry": 0.4,
+    "w_seasonality": 0.4,
+    "w_xs_momentum": 0.2,
+    "vol_window": 63,
+    "vol_target": 0.1,
+    "vol_cap": 2.0,
+    "max_gross": 1.0,
+    "idm": 1.0
+  },
+  "universe": ["FUT_BZ", "FUT_CL", "FUT_GC", "FUT_HG", "FUT_HO", "FUT_NG", "FUT_PL", "FUT_RB", "FUT_SI", "FUT_ZC", "FUT_ZS", "FUT_ZW"],
+  "variants": [
+    { "id": "sm", "params": { "seasonality": "same_month" }, "neighbours": [ { "id": "xsw0", "params": { "w_carry": 0.5, "w_seasonality": 0.5, "w_xs_momentum": 0.0 } }, { "id": "xsw33", "params": { "w_carry": 0.34, "w_seasonality": 0.33, "w_xs_momentum": 0.33 } } ] },
+    { "id": "tom", "params": { "seasonality": "turn_of_month" }, "neighbours": [ { "id": "xsw0", "params": { "w_carry": 0.5, "w_seasonality": 0.5, "w_xs_momentum": 0.0 } }, { "id": "xsw33", "params": { "w_carry": 0.34, "w_seasonality": 0.33, "w_xs_momentum": 0.33 } } ] }
+  ],
+  "cadence": "monthly",
+  "window": { "start": "2010-06-07", "end_exclusive": "2026-07-03" },
+  "costs": { "default_bp_per_side": 10, "overrides": {}, "borrow_bp_yr": 0 },
+  "family_n_trials": 16,
+  "family_note": "16 counted trials (spec 2026-09-05 D8, strict reading). 4 new: sm + tom here (research arm, 12 CME roots n.0/n.1 settlement tape) and sm + tom in multi-signal-family-etf (paper book, 11 roster ETFs). 4 declared from carry-basis-cs: carry + bm (research arm) + s1 + s21 (tilt) — the carry member IS that rule's signal on these same tapes. 8 declared from the TSMOM lineage: tsmom-bridge-etf2.family_n_trials 8, which already absorbs tsmom-bridge's 6 — the xs_momentum member's X is the trailing 12-month return those eight trials searched. The clustered count (hclust_avg_0.7) is recorded by the run over this manifest's own variants; declared outside trials stay counted raw. Neighbours xsw0 (w 0.5/0.5/0.0, the carry + seasonality core alone) and xsw33 (w 0.34/0.33/0.33) are plateau kills, never trials (Sprint 1 D4); xsw0 also delivers ruling (c) efaa109b's required PnL correlation with the core. Literature-copied and therefore not trials: MOM_MONTHS 12 (Asness-Moskowitz-Pedersen 2013), the KLN 2016 same-month window, the Lakonishok-Smidt 1988 turn-of-month window, the KMPV rank construction, the tenor table, the allocator values (tsmom-bridge construction). Chosen construction, not swept, not trials: MIN_SEASONS 5, the 0.40/0.40/0.20 forecast weights, fdm 1.0. borrow_bp_yr 0: a futures short is a sold contract and carries no stock borrow; margin financing is not modelled (declared). Pre-reg docs/superpowers/plans/2026-09-05-multi-signal-family-prereg.md (spec docs/superpowers/specs/2026-09-05-multi-signal-family.md).",
+  "validation": { "cpcv": true, "cpcv_embargo_bars": 21, "walkforward": { "expanding": true, "trainWindow": 750, "testWindow": 250, "stepSize": 250 } },
+  "kills": { "path": "decide/programs/multi-signal-family.kills.json", "sha256": "b98fa5307ce35ecbf8b0d2c9ed98b3a93cb606428ed012242dabd29a8a66a01c" },
+  "blocks": {
+    "crisis": [ ["2020-02-15", "2020-06-30"], ["2022-01-03", "2022-12-30"] ],
+    "non_crisis": [ ["2010-06-07", "2019-12-31"] ],
+    "era": [ ["2010-06-07", "2015-10-14"], ["2015-10-15", "2021-02-21"], ["2021-02-22", "2026-07-02"] ]
+  },
+  "prereg": { "path": "docs/superpowers/plans/2026-09-05-multi-signal-family-prereg.md", "git_sha": "b54d91d3" },
+  "status": "preregistered"
+}

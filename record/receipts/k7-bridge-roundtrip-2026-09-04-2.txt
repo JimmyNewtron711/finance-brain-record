@@ -1,0 +1,76 @@
+# K7 bridge round-trip — 2026-09-05T00:02:18.109Z
+repo HEAD aa75f3e2dbb38d4f25ea6d401175ad3fbb33fac8; dirty bridge scope: "(clean)"
+temp /tmp/bridge-roundtrip-j26zBV; alpaca keys removed (sim-only, keyless leg)
+[DB] Skipping destructive migration: not enabled (deliberate server boot only)
+
+## 0. committed bytes (mirrored to /tmp/bridge-roundtrip-j26zBV/repo)
+  tests/fixtures/bridge/envelope-bridge-fixture.json  sha256 50954e20606b37f9ae215e8a3df1fa8d8d082d560e28d9bc785e0b0e3cf96e40
+  tests/fixtures/bridge/bridge-fixture-lb1.json  sha256 6babad65f92cb9375265f68680e95a1f6ec0ae9a97e4f0868ec1ee5c71c03929
+  decide/programs/bridge-fixture.json  sha256 0ffc8f53e7170ccbd6666ab3a28d15463b2d9f2c75828011ef6c63c9c10fdde4
+  decide/programs/bridge-fixture.kills.json  sha256 0a5bf8b06ce3894d6179c4e25f88bca8d4398d1eae88136a0459a1b335f6286d
+  tests/fixtures/bridge/bridge-fixture-lb2.json  sha256 083527af6e62abe58849925b957023e15f56fc9e0400fedc35ca3e7e10334866
+  tests/fixtures/bridge/bridge-fixture-lb1~n2.json  sha256 76faf88a6afd35aee9a0070573ce54c771f3fba1ff644aea338d5f592d766953
+  config {"id":"bridge-fixture","type":"signal_weights","universe":["FIXA","FIXB"],"rebalance":"rows","book_usd":10000,"status":"active","preregistered":"b398a77b","weights_file":"tests/fixtures/bridge/bridge-fixture-lb1.json","envelope":"tests/fixtures/bridge/envelope-bridge-fixture.json","envelope_sha256":"50954e20606b37f9ae215e8a3df1fa8d8d082d560e28d9bc785e0b0e3cf96e40","kills_sha256":"0a5bf8b06ce3894d6179c4e25f88bca8d4398d1eae88136a0459a1b335f6286d","manifest_sha256":"0ffc8f53e7170ccbd6666ab3a28d15463b2d9f2c75828011ef6c63c9c10fdde4","max_row_age_bd":25}
+  PASS loader accepts the committed config: 90 frozen rows through 2025-06-02
+  PASS envelope verdict PASS, selected lb1 = config variant lb1
+
+## 1. promotion session 2025-07-15 — emit-weights --initial, INITIAL application
+  emitter: emit-weights: db /tmp/bridge-roundtrip-j26zBV/bridge-fixture.db
+  PASS emit-weights --initial exit 0
+  PASS exactly one initial row appended, dated 2025-07-15
+  run 07-15: {"fails":[],"flags":[],"submitted":2,"emitter":{"bridge-fixture":"exit 2"}}
+  PASS two buy intents at the 07-15 close; the --append pre-step found nothing new (exit 2)
+  PASS wallet_decisions: INITIAL
+  PASS same-evening rerun: nothing submitted, no second decision row
+
+## 2. next open 2025-07-16 — sim fills, equity marks
+  PASS filled at the 07-16 open: sim positions {"FIXA":41,"FIXB":58}
+  PASS a wallet_equity_daily row per session
+
+## 3. decision session 2025-08-01 — real --append (carries the initial row), APPLIED rebalance
+  run 08-01: {"fails":[],"flags":["bridge-fixture: leg equity divergence 290.2bps"],"submitted":2,"emitter":{"bridge-fixture":"exit 0"}}
+  PASS emitter appended the 08-01 decision row and carried the 07-15 initial row
+  PASS one intent per non-zero delta, 0.6/0.4 → 0.4/0.6: sell FIXA, buy FIXB
+  PASS wallet_decisions: APPLIED
+  PASS rebalance filled at the 08-04 open: {"FIXA":27,"FIXB":85}
+
+## 4. missed decision 2025-09-01 — first run on 09-03 → SKIPPED_MISSED_T1, no late fill
+  PASS the 09-01 row was appended; its session passed → terminal skip, zero orders
+
+## 5. stale applied row — 2025-09-10 (28 sessions after 08-01 > max_row_age_bd 25)
+  PASS FAIL line names the stale row; the book abstains
+
+## 6. tampers on fresh mirrors — refused before any order
+  PASS tampered frozen row refused (frozen prefix hash)
+  PASS tampered envelope (verdict edited) refused at the sha check, before parse
+
+## 7. emitter non-zero exit — 2025-09-11: FAIL line, no orders, equity still marked
+  PASS pre-step exit 3 → one FAIL line, no orders, both legs marked
+  PASS the real emitter on the same session: nothing to append (exit 2)
+
+## wallet report (last run)
+# Wallet — Dual-Leg Paper Ledger
+
+> **Plumbing artifacts, not performance claims** (spec §3). Benchmark books
+> exist to exercise the decide→act path; strategies enter only via
+> pre-registered sittings. Alpaca-vs-sim deltas calibrate the fill model.
+
+_As of 2025-09-11_
+
+| book | leg | equity | cash | positions |
+|---|---|---|---|---|
+| bridge-fixture | alpaca | 10000.00 | 10000.00 | {} |
+| bridge-fixture | sim | 10341.03 | 186.24 | {"FIXA":27,"FIXB":85} |
+
+## Signal books (bridge spec §4C)
+
+| book | variant | latest row | last decision | status | decided_on | emitter |
+|---|---|---|---|---|---|---|
+| bridge-fixture | lb1 | 2025-09-01 | 2025-09-01 | SKIPPED_MISSED_T1 | 2025-09-03 | exit 3 |
+
+## Reconciliation
+
+- **FAIL**: bridge-fixture: emitter exit 3 — no orders (emit-weights: lb1: refused: drift (simulated))
+- flag: bridge-fixture: leg equity divergence 329.8bps
+
+## summary: 19 passed, 0 failed — PASS

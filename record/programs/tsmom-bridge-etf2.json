@@ -1,0 +1,103 @@
+{
+  "schema": "program_v1",
+  "program": "tsmom-bridge-etf2",
+  "rule": "tsmom",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/tsmom.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "lookback_months": 12,
+    "vol_window": 63,
+    "vol_target": 0.1,
+    "vol_cap": 2.0,
+    "max_gross": 1.0
+  },
+  "universe": [
+    "SPY",
+    "TLT",
+    "GLD",
+    "IEF",
+    "USO",
+    "DBA",
+    "QQQ",
+    "IWM",
+    "EFA",
+    "EEM",
+    "VNQ",
+    "TIP",
+    "LQD",
+    "HYG",
+    "EMB",
+    "SLV",
+    "DBC",
+    "UUP",
+    "FXE",
+    "FXY"
+  ],
+  "variants": [
+    {
+      "id": "lb9",
+      "params": {
+        "lookback_months": 9
+      }
+    },
+    {
+      "id": "lb12",
+      "params": {
+        "lookback_months": 12
+      }
+    }
+  ],
+  "cadence": "monthly",
+  "window": {
+    "start": "2016-01-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "costs": {
+    "default_bp_per_side": 10,
+    "overrides": {}
+  },
+  "family_n_trials": 8,
+  "family_note": "8 counted trials: lb6/lb9/lb12 in tsmom-bridge (ETF 6) + lb6/lb9/lb12 in tsmom-bridge-fut (CME research arm) + lb9/lb12 here on the 20-ETF universe (spec \u00a74B needs \u2265 2 variants for PBO; a universe choice is a counted trial, successor \u00a72.1; amendment 2026-09-04 f1 as corrected); pre-reg docs/superpowers/plans/2026-09-05-tsmom-bridge-etf2-prereg.md",
+  "validation": {
+    "cpcv": true,
+    "cpcv_embargo_bars": 21,
+    "walkforward": {
+      "expanding": true,
+      "trainWindow": 750,
+      "testWindow": 250,
+      "stepSize": 250
+    }
+  },
+  "kills": {
+    "path": "decide/programs/tsmom-bridge-etf2.kills.json",
+    "sha256": "a86135e1122f01717bed50a9d74da75d28e3bc77e932dbd8e7e2c7bfa410be6e"
+  },
+  "blocks": {
+    "crisis": [
+      [
+        "2020-02-15",
+        "2020-06-30"
+      ],
+      [
+        "2022-01-03",
+        "2022-12-30"
+      ]
+    ],
+    "non_crisis": [
+      [
+        "2016-01-04",
+        "2019-12-31"
+      ]
+    ]
+  },
+  "prereg": {
+    "path": "docs/superpowers/plans/2026-09-05-tsmom-bridge-etf2-prereg.md",
+    "git_sha": "b2a1f3f3"
+  },
+  "status": "preregistered"
+}

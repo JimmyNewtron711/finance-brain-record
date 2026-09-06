@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-08-18",
-  "note": "Curated research-claims register for the public Forward Record. Denominator-complete by intent: every governed hypothesis program ever run appears here, kills included. Entries are added with pre-registration commit hashes BEFORE runs execute; the daily private-mirror push externally anchors each edit. Program-level granularity in v0; per-claim rows accrue forward. Commit hashes refer to the private mirror (read access grantable to a verifying party on request).",
-  "ledger_summary": "6 families / 0 of 12 effective discoveries at the S106 terminal-charter close (2026-07-20). Post-S106: maritime confirmatory FAIL (2026-08-15), Treasury Phase 3 all three hypotheses dead (2026-08-18), trace-micro both hypotheses dead at exploration/gate-1 (2026-08-18). Validated strategies: 0.",
+  "updated": "2026-09-06",
+  "note": "Curated research-claims register for the public Forward Record. Denominator-complete by intent: every governed hypothesis program ever run appears here, kills included. Entries are added with pre-registration commit hashes BEFORE runs execute; the daily private-mirror push externally anchors each edit. Program-level granularity in v0; per-claim rows accrue forward. Commit hashes refer to the private mirror (read access grantable to a verifying party on request). Convention amendment 2026-09-03: a program may be entered at CHARTERED status with an empty prereg_refs; the pre-registration hash is appended before its first run (entries-before-runs preserved). Status vocabulary: WRITTEN_OFF, TERMINATED, CONCLUDED, ACTIVE, CHARTERED (pre-registration pending).",
+  "ledger_summary": "6 families / 0 of 12 effective discoveries at the S106 terminal-charter close (2026-07-20). Post-S106: maritime confirmatory FAIL (2026-08-15), Treasury Phase 3 all three hypotheses dead (2026-08-18), trace-micro both hypotheses dead at exploration/gate-1 (2026-08-18), gold physical-flow honest null at discovery power (2026-08-23). Relationship map (discovery engine, not a hypothesis program; every edge exploratory, none a claim): era-3 window rolled 2026-08-31 (window-advance application #2, roll commit aa3e504) to map_end 2026-07-03 / holdout_start 2027-07-03 -- the confirmatory holdout is EMPTY until 2027-07-03; grid 66 -> 233 vetted series across nine admission tranches, every newcomer tranche pooled-null; per-edge confirmatory power on a one-year slice 6-14% at IC 0.05-0.13 (2026-08-29; 7-edge pre-registration ruled NOT RUN, no one-shot spent). Successor research-direction document ratified 2026-09-03 (docs/superpowers/specs/2026-09-03-research-direction-successor.md): strategy factory, two CHARTERED programs (tsmom-bridge, announcement-day-spy), time-box 2027-01-01. Validated strategies: 0. tsmom-bridge (successor slot 1) pre-registered 2026-09-04 (prereg_refs d2406d99, cfaf5c43) and CONCLUDED the same day: both frozen DSR runs DIE (ETF arm family DSR 0.793 <= 0.95 with OOS Sharpe 0.77 passing; CME arm negative OOS). Validated strategies: 0. tsmom-bridge-etf2 (slot 1, second occupant: 20-ETF total-return universe declared by rule before any panel was read, lb9 + lb12, family of 8 counted trials) entered CHARTERED with its pre-registration frozen 2026-09-05 (commit A; frozen weights commit B; both mirror-pushed before the run) and CONCLUDED the same day: frozen run DIE (lb12 CPCV OOS Sharpe 0.41 < 0.5, family DSR 0.650 <= 0.95 over 8 trials; commit C df335f57, v2.82.0). Validated strategies: 0. carry-basis-cs (slot 1, third occupant: futures carry + basis-momentum cross-section on 12 CME roots as the research arm, long-only carry tilt on 11 roster ETFs as the paper book, one 4-trial family) entered CHARTERED with its pre-registration frozen 2026-09-05 (commit A 015eb325; frozen weights commit B 74e4ae86; both mirror-pushed before the runs) and CONCLUDED the same day: both frozen runs DIE (research bm: CPCV OOS Sharpe -0.51, family DSR 0.005; tilt s21: CPCV OOS 0.69 PASS but family DSR 0.910 and pool_corr 0.80 with 60/40). cto-oto-sign (Sprint 9, research-only sign claim, no book) entered CHARTERED with its pre-registration frozen 2026-09-05 (commit A db30538c) and CONCLUDED the same day: DIE, overnight hit-rate excess +0.29pp against a 1.02pp detection threshold at p1 0.2320, era_sign failed; the PIT vol-implied null of 0.51929 absorbed the drift a naive 0.5 null would have scored as +2.2pp of spurious excess. Validated strategies: 0. Engine correction 2026-09-05 (v2.86.1): the DSR gate's normal CDF was looser than declared before this date (0.95 reached at z ~1.52, one-sided 6.4% not 5%); every DSR p-value recorded earlier was computed on the old formula; no verdict flips (all DIE; the error could only have produced a false PASS). multi-signal-family (slot 1, fourth occupant: carry + seasonality + xs-momentum shrunk member on the 12 CME roots, one 16-trial family; the ETF paper book failed the OHLCV null-baseline gate and was never registered) entered CHARTERED with its pre-registration frozen 2026-09-05 (commit A b54d91d3; frozen weights commit B 00877bf7; both mirror-pushed before the run) and CONCLUDED the same day on the corrected DSR gate (v2.86.1): frozen run DIE (tom: CPCV OOS Sharpe -0.79, family DSR 1e-7, every era third negative). Validated strategies: 0. announcement-day-spy (successor slot 2, research-only: no manifest, no weights, no envelope, no book) entered CHARTERED with its pre-registration frozen 2026-09-06 (commit A 22e43df2 + prose-only correction 8d21c0b6, both mirror-pushed before any evaluation existed) and CONCLUDED the same day under the operator's dated ruling 'A: run' (5d9be767): DIE on all three members. A/FOMC e -1.92pp p1 0.806 (era_sign failed, and failed in the shape its own registered prior predicts - era 1 the only positive third, both post-2015 thirds negative); A/MACRO e +4.27pp p1 0.172 against a BH rank-1 bar of 0.025, positive in all three eras and the only member to clear era_sign; B/IEF post-FOMC 50-session drift e +11.7bp p1 0.407 with the TLT contrast agreeing in sign and era_sign failed. The moving-block bootstrap ran ~1.7x wider than the pre-registration's iid SE, so every P(PASS) in that power table was an upper bound - block-resampled SEs from here on. Validated strategies: 0.",
   "programs": [
     {
       "id": "crypto-strategy-families",
@@ -97,15 +97,16 @@
       "id": "t110-ha",
       "name": "T110-HA stablecoin treasury-demand hypothesis (Dune on-chain program)",
       "status": "ACTIVE",
-      "note": "Charter ratified 2026-08-08. Section 3.9 pilot FAIL latched; operator-ratified fail-branch executing (Dune-primary panel, DeFiLlama cross-check). Armed kills: K1 at T13, settle-path 2026-09-15, K5 evaluation 2026-11-01. Outcome will be recorded here whichever way it lands."
+      "note": "Charter ratified 2026-08-08. Section 3.9 pilot FAIL latched; operator-ratified fail-branch executing (Dune-primary panel, DeFiLlama cross-check). Armed kills (charter K1-K9): K1 at T13, K5 first evaluation 2026-11-01, K7 anti-revival; the 2026-09-15 settle-path kill its charter section 8 names belongs to the paper-track lane, not to T110. Critical path: Tron combined-readings scan >= 2026-09-01 -> sanity-v4 -> fill-pairs -> FB-5 -> FB-6 live. Monitoring-class per charter sections 6-7: no trade leg, no fixed adjudication date; it occupies no strategy slot under the 2026-09-03 successor research-direction document. Outcome will be recorded here whichever way it lands."
     },
     {
       "id": "paper-track-lane",
       "name": "Paper-track lane (crypto strategy paper projections)",
       "status": "WRITTEN_OFF",
-      "verdict": "Underlying strategy family is written off (see crypto-strategy-families); the paper lane runs mechanically to its pre-scheduled kill on 2026-09-15 and is excluded from any performance claim. Data basis: the fmp_1h hourly archive freezes at the FMP cancel (~2026-08-31, operator-ruled 2026-08-18); the final runs (2026-09-07, 2026-09-14) execute on the frozen tail.",
+      "verdict": "Underlying strategy family is written off (see crypto-strategy-families); the paper lane runs mechanically to its pre-scheduled terminal freeze + hash on 2026-09-15 and is excluded from any performance claim. One settled row exists (btc-meanreversion, entry 2026-07-15, exit 2026-08-03 on timeout) — recorded as mechanics evidence only, never as performance. Data basis: the fmp_1h hourly archive freezes at the FMP downgrade (~2026-09-22; retention ruled downgrade-not-terminate 2026-08-18); the lane's final runs (2026-09-07, 2026-09-14) precede the freeze. Correction 2026-09-03: an earlier version of this entry dated the freeze ~2026-08-31.",
       "evidence": [
-        "act/live-trading/paper/report.md"
+        "act/live-trading/paper/report.md",
+        "act/live-trading/paper/ledger.jsonl"
       ]
     },
     {
@@ -124,6 +125,148 @@
         "docs/superpowers/plans/2026-08-18-trace-micro-prereg.md",
         "orient/research-py/reports/trace-micro-exploratory-2026-08-18.md"
       ]
+    },
+    {
+      "id": "gold-physical-flow",
+      "name": "Gold physical-flow falsification (P5 of the 2026-08-17 review: ETF holdings, India premium, Swiss trade -> GLD)",
+      "status": "CONCLUDED",
+      "verdict": "Honest null at discovery power (2026-08-23). Three gold physical newcomers (ETF_GOLD_HOLDINGS, INDIA_GOLD_PREMIUM, SWISS_GOLD_TRADE) admitted to the exploratory grid by operator ruling crossing two recorded gold gates; first post-tranche run f0118bd1d4da4f36: as predictors, pooled null at every horizon (nearest p_fdr 0.113, INDIA_GOLD_PREMIUM -> EQ_XLU @3m); SWISS_GOLD_TRADE ADF-failed (trending export level). Exploratory only — no confirmatory read, no holdout touched. Registered 2026-09-03 as the P5 negative; nothing further is built; gold observe stays infrastructure per the 2026-07-21 ruling.",
+      "verdict_date": "2026-08-23",
+      "evidence": [
+        "docs/superpowers/specs/2026-08-23-gold-tranche.md (section 7 execution record)"
+      ]
+    },
+    {
+      "id": "tsmom-bridge",
+      "name": "Cross-asset time-series momentum via the signal->portfolio->wallet bridge (successor document slot 1)",
+      "status": "CONCLUDED",
+      "prereg_refs": [
+        "d2406d99",
+        "cfaf5c43"
+      ],
+      "evidence": [
+        "docs/superpowers/plans/2026-09-04-tsmom-bridge-prereg.md",
+        "decide/envelopes/tsmom-bridge.json",
+        "decide/envelopes/tsmom-bridge-fut.json",
+        "docs/superpowers/specs/2026-09-03-research-direction-successor.md",
+        "docs/superpowers/specs/2026-09-03-signal-bridge-design.md"
+      ],
+      "verdict": "Pre-registered 2026-09-04 (pre-reg commit d2406d99; manifests + frozen weights cfaf5c43; mirror-pushed before the runs). Frozen in-sample DSR runs 2026-09-04 (engine cfaf5c43, one 6-trial family over two manifests): ETF arm tsmom-bridge (SPY/TLT/GLD/IEF/USO/DBA total-return tape, 2016-01-04->2026-07-03, lb9 selected) DIE -- CPCV median OOS Sharpe 0.77 and max drawdown 10.6% pass, but family DSR 0.793 <= 0.95 (in-sample Sharpe 0.62, PBO 0.00, walk-forward OOS Sharpe 0.87): positive but not significant against the family noise floor. CME research arm tsmom-bridge-fut (12 roots on Databento settlements with the n.1 roll bridge, 2010-06-07->2026-07-03, lb9 selected) DIE -- in-sample Sharpe -0.25, CPCV median OOS Sharpe -0.52, PBO 0.87, max drawdown 34%, family DSR 0.008: net-of-cost TSMOM on open-interest-front settlements is negative over the window. Kill rows: decide/envelopes/tsmom-bridge.json, decide/envelopes/tsmom-bridge-fut.json. No re-run of the frozen window; a changed rule or universe is a new program id. Slot 1 has no live program (K3 2026-11-30).",
+      "verdict_date": "2026-09-04"
+    },
+    {
+      "id": "tsmom-bridge-etf2",
+      "name": "Cross-asset time-series momentum on a 20-ETF total-return universe via the signal->portfolio->wallet bridge (successor document slot 1, second occupant)",
+      "status": "CONCLUDED",
+      "note": "Chartered 2026-09-04 by the successor document's second K1 amendment (f1-f6: slot-1 second occupant after tsmom-bridge CONCLUDED; 20-ETF universe declared by rule BEFORE any panel was read; roster 6 -> 20). Pre-registration docs/superpowers/plans/2026-09-05-tsmom-bridge-etf2-prereg.md FROZEN 2026-09-05 in the same commit as this entry (commit A): two variants lb9 + lb12 on the receipted Alpaca total-return tape (provenance/equity-tr-backfill-20260905.json), window 2016-01-04 -> 2026-07-03, one DSR family of 8 counted trials (the six CONCLUDED tsmom-bridge arms ride along), kills byte-identical to tsmom-bridge's, stated prior roughly one PASS in four. Register convention: commit A's own hash cannot appear inside commit A, so prereg_refs stays empty here and [commit A, commit B (frozen weights)] is appended at the verdict commit, both mirror-pushed BEFORE the run executes. Outcome will be recorded here whichever way it lands; no re-run of the frozen window.",
+      "prereg_refs": [
+        "b2a1f3f3",
+        "60981372"
+      ],
+      "evidence": [
+        "decide/envelopes/tsmom-bridge-etf2.json",
+        "decide/programs/tsmom-bridge-etf2.json",
+        "docs/superpowers/plans/2026-09-05-tsmom-bridge-etf2-prereg.md",
+        "docs/superpowers/specs/2026-09-03-research-direction-successor.md",
+        "docs/superpowers/specs/2026-09-03-signal-bridge-design.md"
+      ],
+      "verdict": "Pre-registered 2026-09-05 (pre-reg commit b2a1f3f3; frozen weights lb9 + lb12 commit 60981372; mirror-pushed before the run). Frozen in-sample DSR run 2026-09-05 07:34 ET (engine 60981372, operator sitting, 20-ETF Alpaca total-return tape 2016-01-04->2026-07-03, one 8-trial family: these two variants plus the six CONCLUDED tsmom-bridge arms): DIE. Selected variant lb12 -- in-sample Sharpe 0.55, CPCV median OOS Sharpe 0.41 < 0.5 (kill oos_sharpe), PBO 0.40, walk-forward aggregate OOS Sharpe 0.61, family DSR p-value 0.650 <= 0.95 (kill dsr_family; variant-grid DSR 0.915 over 2 trials also short of 0.95), not deployable; max drawdown 9.2% PASS, sleeve share <= 15.5% PASS, block sign PASS (crisis + non-crisis), leverage none. lb9: Sharpe 0.30, family DSR 0.266. The breadth widening (6 -> 20 ETFs) lowered drawdown and sleeve concentration but did not raise the signal above the family noise floor. Kill rows: decide/envelopes/tsmom-bridge-etf2.json. No re-run of the frozen window; a changed rule or universe is a new program id. Slot 1 has no live program (K3 2026-11-30); next candidate per the gap-transplant master plan Sprint 3 = carry-basis-cs.",
+      "verdict_date": "2026-09-05"
+    },
+    {
+      "id": "announcement-day-spy",
+      "name": "Scheduled-announcement-day overlay on SPY (FOMC / NFP / CPI; successor document slot 2)",
+      "status": "CONCLUDED",
+      "note": "Chartered 2026-09-03 by the successor research-direction document (section 2.2), reshaped by K1 amendment 2026-09-04 (g1)(2) and by the operator ruling 'a3, b2' of 2026-09-06. TWO LEGS, one program, RESEARCH-ONLY - no manifest, no weights, no envelope, no book (the runner's kills are book kills). Leg A: SPY announcement-day sign excess over the PIT vol-implied null Phi(mu/sigma) (never 0.5; measured 0.52325), raw equity_daily tape 2010-01-04 -> 2026-07-03 (4,149 sessions), TWO members under Benjamini-Hochberg at FDR 0.05 - FOMC alone (123 scored events) and a merged NFP+CPI macro-data member (364) per ruling (b2). Leg B: post-FOMC 50-session drift on IEF (primary) with TLT as a sign contrast, PIT total-return tape equity_daily_tr 2016-01-04 -> 2026-07-03 (2,639 sessions each), CONDITIONED per ruling (a3) on the sign of the announcement-day IEF return - Brooks-Katz-Lustig's drift follows the policy surprise and the unconditional mean surprise is ~0 by construction, so the unconditional form averages the effect away; 71 scored events. Events come from a frozen, provenance-pinned, git-tracked file observe/calendars/macro-events-v1.json (sha256 a1f03a5725f7c1d688ce90235985c2df94c246ab68a16048107cb0afe34869d7): 526 scheduled announcements, 518 SCOREABLE (FOMC 131, NFP 192, CPI 195), 14 pinned sources, no registry series and no cron. Family 4 raw / 2 clustered, declared not computed (the two Leg-A members are measured on disjoint date sets and the legs differ in instrument, horizon and statistic). Registered falsifier: era_sign over three calendar thirds per leg (min_era_events 30 Leg A / 15 Leg B, both set from measured era counts), plus the TLT contrast sharing IEF's sign. Measured power: P(PASS) 0.025 (A/FOMC, whose registered prior says the effect died after 2015), 0.067 (A/MACRO after a 1/2 post-publication haircut), 0.225 (B/IEF). Pre-registration FROZEN at commit A 22e43df2 (docs/superpowers/plans/2026-09-06-announcement-day-spy-prereg.md), with one prose-only forward correction 8d21c0b6 that named commit A's sha and its eight ancestors precisely (no rule, constant, era boundary, threshold or sha moved; the fenced JSON block is byte-identical); both mirror-pushed BEFORE any evaluation existed. The evaluation was an operator fence and ran only under the dated ruling 'A: run' (govern/operator-inbox.md, commit 5d9be767), which authorised this ONE frozen evaluation headless and let the three disclosed deviations stand. Any member PASS -> ACTIVE, none -> CONCLUDED; none passed. Promotion is declared before the fact and is cost-constrained: at the platform default 10 bp/side a Leg-A book pays ~600 bp/yr against a ~330 bp/yr premium, so a promotion needs a justified costs.overrides entry for SPY or there is no book.",
+      "prereg_refs": [
+        "22e43df2",
+        "8d21c0b6"
+      ],
+      "evidence": [
+        "govern/receipts/announcement-day-spy-result.json",
+        "docs/superpowers/plans/2026-09-06-announcement-day-spy-prereg.md",
+        "observe/calendars/macro-events-v1.json",
+        "docs/superpowers/specs/2026-09-05-announcement-day-spy.md",
+        "docs/superpowers/specs/2026-09-03-research-direction-successor.md"
+      ],
+      "verdict_date": "2026-09-06",
+      "verdict": "Pre-registered 2026-09-06 (commit A 22e43df2 + prose-only correction 8d21c0b6, mirror-pushed and remote-verified before any result existed) and CONCLUDED the same day: DIE on all three members, no promotion, no book. Evaluated under the operator's dated ruling 'A: run' (5d9be767); result artifact govern/receipts/announcement-day-spy-result.json; the evaluator re-verified rule_sha256 47dffb35... and calendar_sha256 a1f03a57... against the bytes before computing. Leg A (SPY announcement-day sign excess over the PIT vol-implied null 0.52325, raw equity_daily tape 2010-01-04->2026-07-03, two members under Benjamini-Hochberg at FDR 0.05, rank-1 bar p1 < 0.025): FOMC e -0.01919, p1 0.8060, n 123, era thirds +0.0195 / -0.0487 / -0.0216 -> era_sign FAILED; MACRO (NFP+CPI merged per ruling b2) e +0.04268, p1 0.1720, n 364, era thirds +0.0146 / +0.0770 / +0.0315 -> era_sign ok but BH not rejected. Leg B (post-FOMC 50-session IEF drift on the PIT total-return tape 2016-01-04->2026-07-03, conditioned per ruling a3 on the sign of the announcement-day IEF return, one test at one-sided 0.025): e +0.00117, p1 0.4070, n 71 (60 dropped by the burn-in and the forward requirement; 45 long, 26 short), TLT contrast +0.00224 AGREED in sign so the contrast kill did not fire, era thirds +0.00022 / +0.00496 / -0.00210 -> era_sign FAILED. Read: A/FOMC reproduced its own registered prior in shape - Kurov-Wolfe-Gilbert 2021 say the equity pre-FOMC drift died after 2015, and era 1 is the only positive third with both post-2015 thirds negative, so era_sign failing is the falsifier agreeing with the literature. A/MACRO is the informative near-miss: the Savor-Wilson direction, positive in all three eras, the only member to clear era_sign, but p1 0.172 against a 0.025 bar. The pre-registered power table was optimistic and the bootstrap is why: section 4's iid SE sqrt(0.25/n) = 2.62pp at n=364 would have put +4.27pp at p ~ 0.052, while the registered moving-block bootstrap (block 24 = one year of macro events) returned p1 0.172, an effective SE near 4.5pp, ~1.7x the iid figure - announcement outcomes are positively correlated within a year, so every P(PASS) in section 4 is an upper bound. Later pre-registrations using a block bootstrap must size power off a block-resampled SE, not sqrt(p(1-p)/n). Type II, as pre-registered: this window separates only ~9pp (A/FOMC) or ~7pp (A/MACRO) of hit-rate excess from the null at the BH bar against a literature effect of ~2.4pp before the post-publication haircut, so a DIE here is weak evidence of absence - the claim is dead as registered, the announcement premium is not measured to be zero. No re-run of this frozen window; a changed rule, tape, calendar, conditioner or universe is a new program id. Slot 2 has no live program (K3 2026-11-30 met early by the pre-registration itself)."
+    },
+    {
+      "id": "carry-basis-cs",
+      "name": "Futures carry + basis-momentum cross-section on the 12 CME commodity roots (n.0/n.1 settlements), with a long-only carry tilt on 11 roster ETFs as the paper book (successor document slot 1, third occupant)",
+      "status": "CONCLUDED",
+      "note": "Chartered 2026-09-05 by the successor document's K1 sub-entry 'Amendment 2026-09-05 (K1) — sprint 3: carry-basis-cs' (gap-transplant master plan Sprint 3; report item 2; next slot-1 candidate after tsmom-bridge-etf2 CONCLUDED 2026-09-05). Pre-registration docs/superpowers/plans/2026-09-05-carry-basis-cs-prereg.md FROZEN 2026-09-05 in the same commit as this entry (commit A): two manifests, one 4-trial family (research arm carry + bm on the 12-root settlement tape 2010-06-07 -> 2026-07-03; tilt s1 + s21 on the 11-ETF total-return tape 2016-01-04 -> 2026-07-03), kills = K8 seven + plateau_sign / era_sign / pool_corr, stated prior P(research PASS) ~ 0.18 at E[SR] 0.45. Verdict rule: the research arm's verdict is the register verdict; the tilt promotes only under a research PASS. Register convention: commit A's own hash cannot appear inside commit A, so prereg_refs stays empty here and [commit A, commit B (frozen weights)] is appended at the verdict commit, both mirror-pushed BEFORE the run executes. Outcome will be recorded whichever way it lands; no re-run of either frozen window.",
+      "prereg_refs": [
+        "015eb325",
+        "74e4ae86"
+      ],
+      "evidence": [
+        "decide/envelopes/carry-basis-cs.json",
+        "decide/envelopes/carry-basis-cs-tilt.json",
+        "decide/programs/carry-basis-cs.json",
+        "decide/programs/carry-basis-cs-tilt.json",
+        "docs/superpowers/plans/2026-09-05-carry-basis-cs-prereg.md",
+        "docs/superpowers/specs/2026-09-05-carry-basis-cs.md",
+        "docs/superpowers/specs/2026-09-03-research-direction-successor.md"
+      ],
+      "verdict": "Pre-registered 2026-09-05 (pre-reg commit 015eb325; frozen weights + forecasts commit 74e4ae86; mirror-pushed before the runs). Two frozen in-sample DSR runs 2026-09-05 10:04 / 10:05 ET (engine 74e4ae86, operator sitting, one 4-trial family across both manifests). Research arm carry-basis-cs (12 CME roots n.0/n.1, long/short, 2010-06-07->2026-07-03): DIE. Selected variant bm -- in-sample Sharpe -0.35, CPCV median OOS Sharpe -0.51 (kill oos_sharpe; min -1.61), PBO 0.33, walk-forward aggregate OOS Sharpe -0.65, family DSR p-value 0.005 <= 0.95 over 4 trials (kill dsr_family; variant-grid DSR 0.021 over 2), max drawdown 17.9% PASS, sleeve DIE (no root's gross contribution positive), block sign DIE (negative in crisis and non-crisis), plateau_sign DIE (lb9 -0.42, lb15 -0.05), era_sign DIE (2010-15 -0.48, 2015-21 -1.04, 2021-26 +0.41), pool_corr PASS (|corr| < 0.04 with 60/40 and SPY), leverage none, not deployable. carry: Sharpe -1.11, family DSR ~1e-8, max drawdown 31.9%. Paper book carry-basis-cs-tilt (11 roster ETFs, long-only, 2016-01-04->2026-07-03): DIE, recorded beside the research verdict and promoting nothing. Selected s21 -- in-sample Sharpe 0.66, CPCV median OOS Sharpe 0.69 PASS (min 0.00), PBO 0.20, walk-forward aggregate OOS 1.00, family DSR p-value 0.910 <= 0.95 over 3 clustered trials of 4 raw (kill dsr_family; grid DSR 0.952 over 2), max drawdown 10.7% PASS, sleeve <= 16.7% PASS, block sign PASS (non-crisis positive), plateau PASS (s63 0.58), era sign PASS (all three thirds positive), pool_corr DIE (corr 0.80 with bench-6040, candidate Sharpe 0.66 vs 0.84 not beaten by 10%), leverage none, MinTRL 1,678 sessions, not deployable. s1: Sharpe 0.57, family DSR 0.858. Read: the commodity carry cross-section carried no sign on this tape in any era third but the last; the ETF tilt is a 60/40 proxy with a lower Sharpe. Kill rows: decide/envelopes/carry-basis-cs.json, decide/envelopes/carry-basis-cs-tilt.json. No re-run of either frozen window; a changed rule, universe, proxy table or tenor constant is a new program id. Slot 1 has no live program (K3 2026-11-30); next per the gap-transplant master plan = Sprint 6 multi-signal family (carry + seasonality + xs-momentum as a shrunk member) after Sprint 7's spec.",
+      "verdict_date": "2026-09-05"
+    },
+    {
+      "id": "registry-composite",
+      "name": "Registry combination forecast (RSZ equal-weight sign-restricted + Kelly–Pruitt 3PRF over the vetted map registry, pooled across 7 targets; forward gate; gap-transplant master plan Sprint 7)",
+      "status": "ACTIVE",
+      "note": "Chartered 2026-09-05 by the successor document's K1 sub-entry 'Amendment 2026-09-05 (K1) — sprint 7: registry-composite' (report item 7). Pre-registration docs/superpowers/plans/2026-09-05-registry-composite-prereg.md FROZEN in this commit: two trials (ew primary, 3prf alternative) over the ADF-pass vetted grid, coefficients fitted once on 2010-01-04 -> 2026-07-03 and frozen; NO engine run and NO holdout read — the claim is a forward gate on decision dates after this commit (kill-only sign gate at each anniversary, PASS at one-sided bootstrap p < 0.025, min 60 pooled pairs), applied only at a sitting by dated commit. Register moves to ACTIVE at commit B (coefficients pinned, first forward row possible). Power table in the pre-reg: at the RSZ ceiling the gate cannot reach conventional power inside the time-box — the expected verdict is CONTINUE for years; P(PASS within 5 y) ~0.12 at IC 0.06. Paper book = long-only SPY tilt, promoted only under a PASS. Outcome will be recorded here whichever way it lands. ACTIVE from commit B (2026-09-05): coefficients sha pinned, forecasts docs frozen through 2026-07-01 (199 rows per variant), tilt frozen weights emitted (127 monthly rows each, in-sample mechanics receipt), map chain enabled; commit B's sha is appended to prereg_refs by the release commit. No verdict until a registered read.",
+      "prereg_refs": [
+        "e9b885eb",
+        "831a559c"
+      ],
+      "evidence": [
+        "docs/superpowers/plans/2026-09-05-registry-composite-prereg.md",
+        "docs/superpowers/specs/2026-09-05-registry-composite.md",
+        "decide/programs/registry-composite.json",
+        "decide/programs/registry-composite.coefficients.json",
+        "decide/programs/registry-composite-tilt.json",
+        "decide/forecasts/registry-composite-ew.json",
+        "decide/forecasts/registry-composite-3prf.json"
+      ]
+    },
+    {
+      "id": "cto-oto-sign",
+      "name": "Close-to-open vs open-to-close return sign on the 20-ETF daily panel (research-only sign claim vs the PIT vol-implied null; gap-transplant master plan Sprint 9)",
+      "status": "CONCLUDED",
+      "note": "Chartered 2026-09-05 by the successor document's K1 sub-entry 'Amendment 2026-09-05 (K1) — sprint 9: OHLCV null baseline + cto-oto-sign' (report item 9). Pre-registration docs/superpowers/plans/2026-09-05-cto-oto-sign-prereg.md FROZEN in this commit: ONE trial (overnight hit-rate excess over the PIT Christoffersen-Diebold null Phi(mu/sigma); the intraday leg is a declared contrast, not a trial), 20 ETFs x 2016-01-04 -> 2026-07-03, era_sign kill carrying the NY Fed 2026 post-2021 collapse as the registered falsifier. NO engine run, NO envelope, NO holdout read: the evaluation is a statistic over a window that ends at map_end. Research-only and cost-dead by construction (an overnight book turns over fully every session: 20 bp/session against a few bp of drift), so the register moves to CONCLUDED whichever way it lands and no paper book is promoted. Power measured at the preflight: rho_bar 0.2204, k_eff 3.86 over 2386 scored dates x 20 symbols, SE 0.00521, detection threshold 1.02pp, MDE(80%) 1.46pp, P(PASS) 0.16 at a true excess of 0.5pp and 0.48 at 1.0pp - the claim is underpowered against the literature's return-shaped effect once drift sits in the null, and the expected verdict is DIE. Outcome recorded here either way. OUTCOME: DIE at commit C the same sitting — e_on +0.00288 (null 0.51929), e_id -0.00212, p1 0.2320 over 47,720 observations on 2,386 dates x 20 symbols; era_sign failed (era 1 -0.00419, era 2 +0.00213, era 3 +0.00870). Nothing promoted. Note the era pattern runs OPPOSITE to the registered NY Fed 2026 prior: era 3 carries the largest positive excess rather than the predicted post-2021 collapse, though no era clears its own detection threshold, so the window supports neither the claim nor the prior's timing.",
+      "prereg_refs": [
+        "db30538c"
+      ],
+      "evidence": [
+        "docs/superpowers/plans/2026-09-05-cto-oto-sign-prereg.md",
+        "docs/superpowers/specs/2026-09-05-ohlcv-null-baseline.md",
+        "govern/baselines/ohlcv_v1.json",
+        "govern/receipts/cto-oto-sign-result.json"
+      ],
+      "verdict": "DIE - overnight hit-rate excess +0.00288 (0.29pp) against a 1.02pp detection threshold at p1 0.2320, and era_sign failed (sign flips between era 1 and eras 2-3). Research-only, cost-dead by construction: nothing promoted, no paper book.",
+      "verdict_date": "2026-09-05"
+    },
+    {
+      "id": "multi-signal-family",
+      "name": "Multi-signal family: carry + seasonality + a shrunk cross-sectional momentum member, combined into one forecast on the 12 CME commodity roots (gap-transplant master plan Sprint 6)",
+      "status": "CONCLUDED",
+      "note": "Chartered 2026-09-05 by the successor document's K1 sub-entry 'Amendment 2026-09-05 (K1) - sprint 6: multi-signal-family' (gap-transplant master plan Sprint 6; report item 3). Pre-registration docs/superpowers/plans/2026-09-05-multi-signal-family-prereg.md FROZEN 2026-09-05 in the same commit as this entry (commit A). ONE manifest: the research arm family_cs on the 12 CME roots (n.0/n.1 settlement tape, long/short, 2010-06-07 -> 2026-07-03, 194 decision months), two variants sm (same-month seasonality) and tom (turn-of-month), each with the xsw0 / xsw33 weight neighbours as kills. family_n_trials 16 raw (4 new incl. the two measured-and-dropped ETF variants + 4 declared from carry-basis-cs + 8 declared from the TSMOM lineage); ~13 clustered expected. The claim is the COMBINATION's Sharpe: whether three weakly-correlated ranking signals beat what any of them reaches alone - the transplant's breadth arithmetic (t ~ IC*sqrt(N), effective breadth k/(1+(k-1)rho)) turned into one registrable object. The sibling ETF paper book planned by the spec was MEASURED AND DROPPED before pre-registration: its pooled rank IC at h=21 was +0.0024 (sm) / +0.0143 (tom) against the frozen ohlcv_v1 bar 0.0638 - DOES NOT EXCEED - so per prereg-template.md it was never pre-registered and no manifest for it is committed. The wallet cannot hold futures, so THIS SPRINT HAS NO PROMOTABLE OBJECT and a PASS advances K3 by nothing. Registered prior P(PASS) ~ 0.13 at E[SR] 0.58 against a 16-trial bar of annualised Sharpe 0.868; MinTRL 2055 sessions (8.2 yr); Type II : Type I 17:1. The research arm's measured pooled rank IC is NEGATIVE (-0.0921 sm / -0.1137 tom, |IC| EXCEEDS the bar), inherited from the carry member (carry-basis-cs/carry measures -0.0949 on the identical tape and statistic) - the sign is registered, not flipped, and it makes DIE the stated expectation. Register convention: commit A's own hash cannot appear inside commit A, so prereg_refs stays empty here and [commit A, commit B (frozen weights)] is appended at the verdict commit, both mirror-pushed BEFORE the run executes. Outcome will be recorded whichever way it lands; no re-run of the frozen window.",
+      "prereg_refs": [
+        "b54d91d3",
+        "00877bf7"
+      ],
+      "evidence": [
+        "decide/envelopes/multi-signal-family.json",
+        "decide/programs/multi-signal-family.json",
+        "docs/superpowers/plans/2026-09-05-multi-signal-family-prereg.md",
+        "docs/superpowers/specs/2026-09-05-multi-signal-family.md",
+        "docs/superpowers/specs/2026-09-03-research-direction-successor.md"
+      ],
+      "verdict": "Pre-registered 2026-09-05 (pre-reg commit b54d91d3; frozen weights + forecasts commit 00877bf7; mirror-pushed before the run). Frozen in-sample DSR run 2026-09-05 22:24 ET (engine 4fc09364 = the branch after merging main at v2.86.1, i.e. on the corrected DSR gate; operator sitting; 12 CME roots n.0/n.1 2010-06-07->2026-07-03; one 16-trial family, clustered 16): DIE. Selected variant tom -- in-sample Sharpe -0.84, CPCV median OOS Sharpe -0.79 (kill oos_sharpe; min -1.00), PBO 0.20, walk-forward aggregate OOS Sharpe -1.02, family DSR p-value 1e-7 <= 0.95 over 16 trials (kill dsr_family; grid 4e-5 over 2), max drawdown 16.6% PASS, sleeve DIE (no root's gross contribution positive), block sign DIE (negative in crisis and non-crisis), plateau_sign DIE (xsw0 -0.88, xsw33 -0.77), era_sign DIE (every third negative: -0.85 / -0.81 / -0.86 -- the registered negative sign held throughout), pool_corr PASS (|corr| < 0.07 with 60/40 and SPY), leverage none, not deployable. sm: Sharpe -0.81, family DSR 2e-7, max drawdown 15.8%. Ruling (c) efaa109b number: corr(PnL(tom), PnL(tom~xsw0)) = +0.9328 and corr(PnL(sm), PnL(sm~xsw0)) = +0.9296 over 4,050 sessions (receipt .review-scratch/multi-signal-family-xsw0-corr.txt, priced through the engine's runWeightsBlock path; xsw0 mean net daily reproduces the envelope's neighbour row exactly) -- the shrunk xs-momentum member at weight 0.20 moved the family's PnL by little. The ETF paper book was never pre-registered (null-baseline gate: pooled rank IC +0.0024 / +0.0143 at h=21 vs the frozen ohlcv_v1 bar 0.0638 -- DOES NOT EXCEED), so nothing was promotable whichever way this landed. Read: the carry + seasonality core inherits the carry channel's negative sign on this tape (carry-basis-cs CONCLUDED DIE); the family confirms, not rescues, it. Kill rows: decide/envelopes/multi-signal-family.json. No re-run of the frozen window; a changed member set, weight vector, universe, seasonality definition or sign convention is a new program id. Slot 1 has no live program (K3 2026-11-30).",
+      "verdict_date": "2026-09-05"
     }
   ]
 }

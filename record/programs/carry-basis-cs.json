@@ -1,0 +1,44 @@
+{
+  "schema": "program_v1",
+  "program": "carry-basis-cs",
+  "rule": "carry_cs",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/carry.py",
+    "src/superbrain/portfolio/curve.py",
+    "src/superbrain/portfolio/forecast.py",
+    "src/superbrain/portfolio/allocator.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "signal": "carry",
+    "lookback_months": 12,
+    "smooth_sessions": 1,
+    "vol_window": 63,
+    "vol_target": 0.1,
+    "vol_cap": 2.0,
+    "max_gross": 1.0,
+    "idm": 1.0
+  },
+  "universe": ["FUT_BZ", "FUT_CL", "FUT_GC", "FUT_HG", "FUT_HO", "FUT_NG", "FUT_PL", "FUT_RB", "FUT_SI", "FUT_ZC", "FUT_ZS", "FUT_ZW"],
+  "variants": [
+    { "id": "carry", "params": { "signal": "carry", "smooth_sessions": 1 }, "neighbours": [ { "id": "s5", "params": { "smooth_sessions": 5 } } ] },
+    { "id": "bm", "params": { "signal": "basis_momentum", "lookback_months": 12 }, "neighbours": [ { "id": "lb9", "params": { "lookback_months": 9 } }, { "id": "lb15", "params": { "lookback_months": 15 } } ] }
+  ],
+  "cadence": "monthly",
+  "window": { "start": "2010-06-07", "end_exclusive": "2026-07-03" },
+  "costs": { "default_bp_per_side": 10, "overrides": {}, "borrow_bp_yr": 0 },
+  "family_n_trials": 4,
+  "family_note": "4 counted trials: carry + bm here (research arm, 12 CME roots n.0/n.1 settlement tape) + s1 + s21 in carry-basis-cs-tilt (paper book, 11 roster ETFs; a universe choice is a counted trial, successor §2.1). Neighbours s5 / lb9 / lb15 are plateau kills, never trials (Sprint 1 D4). Literature-copied and not trials: lookback 12 (Boons–Prado 2019), month-end carry smooth 1 (KMPV 2018), KMPV rank construction, allocator values (tsmom-bridge construction). borrow_bp_yr 0: futures shorts carry no stock borrow (sold contract; margin financing not modelled — declared). Pre-reg docs/superpowers/plans/2026-09-05-carry-basis-cs-prereg.md (spec docs/superpowers/specs/2026-09-05-carry-basis-cs.md).",
+  "validation": { "cpcv": true, "cpcv_embargo_bars": 21, "walkforward": { "expanding": true, "trainWindow": 750, "testWindow": 250, "stepSize": 250 } },
+  "kills": { "path": "decide/programs/carry-basis-cs.kills.json", "sha256": "b98fa5307ce35ecbf8b0d2c9ed98b3a93cb606428ed012242dabd29a8a66a01c" },
+  "blocks": {
+    "crisis": [ ["2020-02-15", "2020-06-30"], ["2022-01-03", "2022-12-30"] ],
+    "non_crisis": [ ["2010-06-07", "2019-12-31"] ],
+    "era": [ ["2010-06-07", "2015-10-14"], ["2015-10-15", "2021-02-21"], ["2021-02-22", "2026-07-02"] ]
+  },
+  "prereg": { "path": "docs/superpowers/plans/2026-09-05-carry-basis-cs-prereg.md", "git_sha": "015eb325" },
+  "status": "preregistered"
+}

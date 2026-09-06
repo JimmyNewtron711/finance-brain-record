@@ -1,0 +1,102 @@
+{
+  "schema": "program_v1",
+  "program": "registry-composite-tilt",
+  "rule": "registry_tilt",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/registry.py",
+    "src/superbrain/portfolio/forecast.py",
+    "src/superbrain/portfolio/allocator.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "composite_program": "registry-composite",
+    "composite_variant": "ew",
+    "vol_window": 63,
+    "vol_target": 0.1,
+    "vol_cap": 2.0,
+    "max_gross": 1.0,
+    "idm": 1.0
+  },
+  "universe": [
+    "SPY"
+  ],
+  "variants": [
+    {
+      "id": "ew",
+      "params": {
+        "composite_variant": "ew"
+      }
+    },
+    {
+      "id": "3prf",
+      "params": {
+        "composite_variant": "3prf"
+      }
+    }
+  ],
+  "cadence": "monthly",
+  "window": {
+    "start": "2016-01-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "costs": {
+    "default_bp_per_side": 10,
+    "overrides": {}
+  },
+  "family_n_trials": 2,
+  "family_note": "2 counted trials: ew + 3prf — the research arm registry-composite's two variants; this paper book (long-only SPY tilt = max(0, composite SPY forecast), Campbell–Thompson non-negativity) adds no trial. Frozen weights are an in-sample mechanics receipt (the composite's coefficients were fitted over 2010→2026), never evidence; promotion requires the research arm's forward-gate PASS (spec D1/D11) and this manifest's engine run at that sitting. Pre-reg docs/superpowers/plans/2026-09-05-registry-composite-prereg.md.",
+  "validation": {
+    "cpcv": true,
+    "cpcv_embargo_bars": 21,
+    "walkforward": {
+      "expanding": true,
+      "trainWindow": 750,
+      "testWindow": 250,
+      "stepSize": 250
+    }
+  },
+  "kills": {
+    "path": "decide/programs/registry-composite-tilt.kills.json",
+    "sha256": "b98fa5307ce35ecbf8b0d2c9ed98b3a93cb606428ed012242dabd29a8a66a01c"
+  },
+  "blocks": {
+    "crisis": [
+      [
+        "2020-02-15",
+        "2020-06-30"
+      ],
+      [
+        "2022-01-03",
+        "2022-12-30"
+      ]
+    ],
+    "non_crisis": [
+      [
+        "2016-01-04",
+        "2019-12-31"
+      ]
+    ],
+    "era": [
+      [
+        "2016-01-04",
+        "2019-07-03"
+      ],
+      [
+        "2019-07-04",
+        "2023-01-01"
+      ],
+      [
+        "2023-01-02",
+        "2026-07-02"
+      ]
+    ]
+  },
+  "prereg": {
+    "path": "docs/superpowers/plans/2026-09-05-registry-composite-prereg.md",
+    "git_sha": "e9b885eb"
+  },
+  "status": "preregistered"
+}

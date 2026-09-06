@@ -1,0 +1,42 @@
+{
+  "schema": "program_v1",
+  "program": "carry-basis-cs-tilt",
+  "rule": "carry_tilt",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/carry.py",
+    "src/superbrain/portfolio/curve.py",
+    "src/superbrain/portfolio/forecast.py",
+    "src/superbrain/portfolio/allocator.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "smooth_sessions": 1,
+    "vol_window": 63,
+    "vol_target": 0.1,
+    "vol_cap": 2.0,
+    "max_gross": 1.0,
+    "idm": 1.0
+  },
+  "universe": ["SPY", "QQQ", "IWM", "VNQ", "TLT", "IEF", "LQD", "HYG", "GLD", "SLV", "USO"],
+  "variants": [
+    { "id": "s1", "params": { "smooth_sessions": 1 }, "neighbours": [ { "id": "s5", "params": { "smooth_sessions": 5 } } ] },
+    { "id": "s21", "params": { "smooth_sessions": 21 }, "neighbours": [ { "id": "s63", "params": { "smooth_sessions": 63 } } ] }
+  ],
+  "cadence": "monthly",
+  "window": { "start": "2016-01-04", "end_exclusive": "2026-07-03" },
+  "costs": { "default_bp_per_side": 10, "overrides": {} },
+  "family_n_trials": 4,
+  "family_note": "4 counted trials: s1 + s21 here (paper book: long-only carry tilt on the 11 roster ETFs with a HELD-data proxy — rates DGS20/DGS7 − DGS3MO, equity/credit TR-over-FMP-price distribution yield − DGS3MO, commodity ETFs = the root's annualised n.0/n.1 slope; EXCLUDED, never fabricated: EFA EEM EMB TIP DBC DBA UUP FXE FXY) + carry + bm in carry-basis-cs (research arm). Neighbours s5 / s63 are plateau kills. s21 (one-month mean carry) is the chosen second variant and is counted. Promotion requires the research arm's PASS (spec D1). Pre-reg docs/superpowers/plans/2026-09-05-carry-basis-cs-prereg.md.",
+  "validation": { "cpcv": true, "cpcv_embargo_bars": 21, "walkforward": { "expanding": true, "trainWindow": 750, "testWindow": 250, "stepSize": 250 } },
+  "kills": { "path": "decide/programs/carry-basis-cs-tilt.kills.json", "sha256": "b98fa5307ce35ecbf8b0d2c9ed98b3a93cb606428ed012242dabd29a8a66a01c" },
+  "blocks": {
+    "crisis": [ ["2020-02-15", "2020-06-30"], ["2022-01-03", "2022-12-30"] ],
+    "non_crisis": [ ["2016-01-04", "2019-12-31"] ],
+    "era": [ ["2016-01-04", "2019-07-03"], ["2019-07-04", "2023-01-01"], ["2023-01-02", "2026-07-02"] ]
+  },
+  "prereg": { "path": "docs/superpowers/plans/2026-09-05-carry-basis-cs-prereg.md", "git_sha": "015eb325" },
+  "status": "preregistered"
+}

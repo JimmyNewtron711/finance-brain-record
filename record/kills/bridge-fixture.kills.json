@@ -1,0 +1,15 @@
+{
+  "schema": "kills_v1",
+  "kills": [
+    { "id": "dsr_family",   "metric": "results[selected].dsr.dsrPvalueFamily", "op": "gt",  "threshold": 0.0,  "min_observations": 1 },
+    { "id": "oos_sharpe",   "metric": "cpcv.oos_sharpe_median",                "op": "gte", "threshold": -99.0, "min_observations": 1 },
+    { "id": "max_drawdown", "metric": "results[selected].metrics.maxDrawdown", "op": "lte", "threshold": 0.99, "min_observations": 1 },
+    { "id": "sleeve",       "metric": "results[selected].sleeve_share",        "op": "lte", "threshold": 1.0,  "min_observations": 1 },
+    { "id": "block_sign",   "metric": "results[selected].blocks",              "op": "sign", "threshold": 0.0, "min_observations": 5 },
+    { "id": "deployable",   "metric": "deployability.deployable",              "op": "eq",  "threshold": true, "min_observations": 1 },
+    { "id": "leverage",     "metric": "structural",                            "op": "none", "threshold": 1.0, "min_observations": 0 },
+    { "id": "plateau_sign", "metric": "results[selected].plateau",             "op": "sign", "threshold": 0.0, "min_observations": 1 },
+    { "id": "era_sign",     "metric": "results[selected].eras",                "op": "sign", "threshold": 0.0, "min_observations": 60 },
+    { "id": "pool_corr",    "metric": "results[selected].pool",                "op": "lt",   "threshold": 0.7, "min_observations": 252 }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "program_v1",
+  "program": "bridge-fixture",
+  "rule": "fixture_flip",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/fixture.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "lookback_months": 1
+  },
+  "universe": [
+    "FIXA",
+    "FIXB"
+  ],
+  "variants": [
+    {
+      "id": "lb1",
+      "params": {
+        "lookback_months": 1
+      },
+      "neighbours": [
+        {
+          "id": "n2",
+          "params": {
+            "lookback_months": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "lb2",
+      "params": {
+        "lookback_months": 2
+      }
+    }
+  ],
+  "cadence": "monthly",
+  "window": {
+    "start": "2018-01-01",
+    "end_exclusive": "2025-07-01"
+  },
+  "costs": {
+    "default_bp_per_side": 10,
+    "overrides": {}
+  },
+  "family_n_trials": 2,
+  "family_note": "toy fixture \u2014 proves the plumbing, not an edge (spec \u00a74E); sprint 1: neighbour n2 = lb2's params under lb1's name (plateau), three era thirds, pool = tests/fixtures/bridge/strategies",
+  "validation": {
+    "cpcv": true,
+    "cpcv_embargo_bars": 21,
+    "walkforward": {
+      "expanding": true,
+      "trainWindow": 750,
+      "testWindow": 250,
+      "stepSize": 250
+    }
+  },
+  "kills": {
+    "path": "decide/programs/bridge-fixture.kills.json",
+    "sha256": "0a5bf8b06ce3894d6179c4e25f88bca8d4398d1eae88136a0459a1b335f6286d"
+  },
+  "blocks": {
+    "crisis": [
+      [
+        "2020-02-15",
+        "2020-06-30"
+      ]
+    ],
+    "non_crisis": [
+      [
+        "2018-01-01",
+        "2019-12-31"
+      ]
+    ],
+    "era": [
+      [
+        "2018-01-01",
+        "2020-06-30"
+      ],
+      [
+        "2020-07-01",
+        "2022-12-30"
+      ],
+      [
+        "2023-01-02",
+        "2025-06-30"
+      ]
+    ]
+  },
+  "prereg": {
+    "path": "docs/superpowers/specs/2026-09-03-signal-bridge-design.md",
+    "git_sha": "b398a77b"
+  },
+  "status": "fixture"
+}

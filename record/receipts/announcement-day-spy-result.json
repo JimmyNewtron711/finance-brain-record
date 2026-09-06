@@ -1,0 +1,200 @@
+{
+  "schema": "announcement_result_v1",
+  "program": "announcement-day-spy",
+  "evaluated_at": "2026-09-06",
+  "prereg_path": "docs/superpowers/plans/2026-09-06-announcement-day-spy-prereg.md",
+  "prereg_rule_sha256": "47dffb35864958b78e0f1f322661cd6d2b940650adf8b9e9c4b6019525c811f1",
+  "calendar_sha256": "a1f03a5725f7c1d688ce90235985c2df94c246ab68a16048107cb0afe34869d7",
+  "leg_a": {
+    "tape": "equity_daily",
+    "symbol": "SPY",
+    "window": {
+      "start": "2010-01-04",
+      "end_exclusive": "2026-07-03"
+    },
+    "members": [
+      {
+        "name": "FOMC",
+        "series": [
+          "FOMC"
+        ],
+        "block": 8
+      },
+      {
+        "name": "MACRO",
+        "series": [
+          "NFP",
+          "CPI"
+        ],
+        "block": 24
+      }
+    ],
+    "eras": [
+      [
+        "2010-01-04",
+        "2015-06-04"
+      ],
+      [
+        "2015-06-05",
+        "2020-11-03"
+      ],
+      [
+        "2020-11-04",
+        "2026-07-02"
+      ]
+    ],
+    "min_era_events": 30
+  },
+  "leg_b": {
+    "tape": "equity_daily_tr",
+    "window": {
+      "start": "2016-01-04",
+      "end_exclusive": "2026-07-03"
+    },
+    "primary": "IEF",
+    "contrast": "TLT",
+    "horizon": 50,
+    "block": 8,
+    "conditioner": "sign(announcement-day return of primary)",
+    "eras": [
+      [
+        "2016-01-04",
+        "2019-07-03"
+      ],
+      [
+        "2019-07-04",
+        "2023-01-01"
+      ],
+      [
+        "2023-01-02",
+        "2026-07-02"
+      ]
+    ],
+    "min_era_events": 15
+  },
+  "members": [
+    {
+      "leg": "A",
+      "member": "FOMC",
+      "series": [
+        "FOMC"
+      ],
+      "e": -0.019189849348257054,
+      "p_one_sided": 0.806,
+      "null_mean": 0.5232548899986635,
+      "n_events": 123,
+      "ci_low": -0.07736711789506105,
+      "ci_high": 0.05650199532375768,
+      "eras": [
+        {
+          "start": "2010-01-04",
+          "end": "2015-06-04",
+          "n": 35,
+          "e": 0.01948543032844725,
+          "note": "ok"
+        },
+        {
+          "start": "2015-06-05",
+          "end": "2020-11-03",
+          "n": 42,
+          "e": -0.048736552680105606,
+          "note": "ok"
+        },
+        {
+          "start": "2020-11-04",
+          "end": "2026-07-02",
+          "n": 46,
+          "e": -0.02163926779927905,
+          "note": "ok"
+        }
+      ],
+      "passed": false,
+      "bh_rejected": false,
+      "verdict": "DIE"
+    },
+    {
+      "leg": "A",
+      "member": "MACRO",
+      "series": [
+        "NFP",
+        "CPI"
+      ],
+      "e": 0.04267554850409093,
+      "p_one_sided": 0.172,
+      "null_mean": 0.523258517429975,
+      "n_events": 364,
+      "ci_low": -0.005720474593675409,
+      "ci_high": 0.11043347148554786,
+      "eras": [
+        {
+          "start": "2010-01-04",
+          "end": "2015-06-04",
+          "n": 104,
+          "e": 0.01461822350318415,
+          "note": "ok"
+        },
+        {
+          "start": "2015-06-05",
+          "end": "2020-11-03",
+          "n": 128,
+          "e": 0.0769883871256831,
+          "note": "ok"
+        },
+        {
+          "start": "2020-11-04",
+          "end": "2026-07-02",
+          "n": 132,
+          "e": 0.031508264083867504,
+          "note": "ok"
+        }
+      ],
+      "passed": true,
+      "bh_rejected": false,
+      "verdict": "DIE"
+    },
+    {
+      "leg": "B",
+      "member": "FOMC-drift",
+      "instrument": "IEF",
+      "contrast": "TLT",
+      "e": 0.0011744629399652487,
+      "p_one_sided": 0.407,
+      "e_contrast": 0.00224037977527966,
+      "contrast_sign_agrees": true,
+      "n_events": 71,
+      "n_dropped": 60,
+      "n_long": 45,
+      "null_mean": 0.00019896782580805,
+      "ci_low": -0.00632561095266759,
+      "ci_high": 0.008637189975942568,
+      "eras": [
+        {
+          "start": "2016-01-04",
+          "end": "2019-07-03",
+          "n": 18,
+          "e": 0.00022183627954943294,
+          "note": "ok"
+        },
+        {
+          "start": "2019-07-04",
+          "end": "2023-01-01",
+          "n": 27,
+          "e": 0.004959157155648723,
+          "note": "ok"
+        },
+        {
+          "start": "2023-01-02",
+          "end": "2026-07-02",
+          "n": 26,
+          "e": -0.0020962856729566386,
+          "note": "ok"
+        }
+      ],
+      "passed": false,
+      "verdict": "DIE"
+    }
+  ],
+  "members_passed": [],
+  "verdict": "DIE",
+  "register": "CONCLUDED"
+}

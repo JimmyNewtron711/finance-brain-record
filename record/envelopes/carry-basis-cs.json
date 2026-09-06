@@ -1,0 +1,1159 @@
+{
+  "schema": "envelope_v1",
+  "program": "carry-basis-cs",
+  "generated_at": "2026-09-05T14:04:38.853Z",
+  "engine": {
+    "git_sha": "74e4ae8617128ad31df6320e4db15318fd04bf33",
+    "dirty": false,
+    "tree_scope": [
+      "orient/algo-classic/server",
+      "orient/algo-classic/scripts/external-signal-run.js",
+      "orient/research-py/src/superbrain/portfolio",
+      "decide/programs",
+      "decide/weights/carry-basis-cs-*.json",
+      "decide/programs/carry-basis-cs.kills.json",
+      "decide/weights/carry-basis-cs-carry.json",
+      "decide/weights/carry-basis-cs-carry~s5.json",
+      "decide/weights/carry-basis-cs-bm.json",
+      "decide/weights/carry-basis-cs-bm~lb9.json",
+      "decide/weights/carry-basis-cs-bm~lb15.json"
+    ],
+    "cost_model": "bp_per_side_on_turnover+borrow_bp_yr_on_short_notional"
+  },
+  "inputs": {
+    "manifest": {
+      "path": "decide/programs/carry-basis-cs.json",
+      "sha256": "d588409c0669b60727b3f6fbd7da41278e75c97ed2ea09ba0cbf889ede2687c7"
+    },
+    "kills": {
+      "path": "decide/programs/carry-basis-cs.kills.json",
+      "sha256": "b98fa5307ce35ecbf8b0d2c9ed98b3a93cb606428ed012242dabd29a8a66a01c"
+    },
+    "prereg": {
+      "path": "docs/superpowers/plans/2026-09-05-carry-basis-cs-prereg.md",
+      "git_sha": "015eb325",
+      "sha256": "482d4cdad93e22641d65e81b2d730df9704637f0dac5bda97aea1caa2f55b497"
+    },
+    "rule_sha256": "2b80d94eb023c578b2b90172a4082732f2843ca1de6daae073debb503cb4287c",
+    "weights": [
+      {
+        "path": "decide/weights/carry-basis-cs-carry.json",
+        "variant": "carry",
+        "sha256": "a157db88f678a753b8d1b066150ca329df0c578da46b08e1bff1717bffadfcef",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/carry-basis-cs-carry~s5.json",
+        "variant": "carry~s5",
+        "sha256": "e2222616dfb18d84f92dfa83787264220cb1b48e2c188ae0b1b3e7b49f8c3902",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/carry-basis-cs-bm.json",
+        "variant": "bm",
+        "sha256": "3fcc8061859b90f701f43beedcb07582c7f7ff3f846dfcfcac8fd3bece7bdcf2",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/carry-basis-cs-bm~lb9.json",
+        "variant": "bm~lb9",
+        "sha256": "7fc0a3cc94f30e7f87062c644706edbc27118c50cbadf2aae115c0594b827923",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/carry-basis-cs-bm~lb15.json",
+        "variant": "bm~lb15",
+        "sha256": "5ff92033ec9fb0282c5412f0957744c70972cb21f8b834664bd99c4404a44ef4",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      }
+    ],
+    "bars": {
+      "tables": [
+        "equity_daily_tr",
+        "futures_daily"
+      ],
+      "symbols": [
+        "FUT_BZ",
+        "FUT_CL",
+        "FUT_GC",
+        "FUT_HG",
+        "FUT_HO",
+        "FUT_NG",
+        "FUT_PL",
+        "FUT_RB",
+        "FUT_SI",
+        "FUT_ZC",
+        "FUT_ZS",
+        "FUT_ZW"
+      ],
+      "price_basis": {
+        "FUT_BZ": "settlement",
+        "FUT_CL": "settlement",
+        "FUT_GC": "settlement",
+        "FUT_HG": "settlement",
+        "FUT_HO": "settlement",
+        "FUT_NG": "settlement",
+        "FUT_PL": "settlement",
+        "FUT_RB": "settlement",
+        "FUT_SI": "settlement",
+        "FUT_ZC": "settlement",
+        "FUT_ZS": "settlement",
+        "FUT_ZW": "settlement"
+      },
+      "start": "2010-06-07",
+      "end_exclusive": "2026-07-03",
+      "tape_asof": null,
+      "data_fingerprint": "902f983a74b2e91842ebc7ea1e538b185fc27e8029c22a4f3e5e19dff71a4250",
+      "db": {
+        "basename": "dashboard.db",
+        "size_bytes": 466399232
+      },
+      "weekend_rows_dropped": {
+        "FUT_BZ": 464,
+        "FUT_CL": 822,
+        "FUT_GC": 821,
+        "FUT_HG": 821,
+        "FUT_HO": 822,
+        "FUT_NG": 821,
+        "FUT_PL": 821,
+        "FUT_RB": 822,
+        "FUT_SI": 821,
+        "FUT_ZC": 103,
+        "FUT_ZS": 103,
+        "FUT_ZW": 103
+      },
+      "dropped_dates": {
+        "FUT_BZ": 0,
+        "FUT_CL": 1,
+        "FUT_GC": 1,
+        "FUT_HG": 2,
+        "FUT_HO": 1,
+        "FUT_NG": 1,
+        "FUT_PL": 2,
+        "FUT_RB": 1,
+        "FUT_SI": 1,
+        "FUT_ZC": 4,
+        "FUT_ZS": 4,
+        "FUT_ZW": 4
+      },
+      "roll_days": {
+        "FUT_BZ": 127,
+        "FUT_CL": 228,
+        "FUT_GC": 80,
+        "FUT_HG": 80,
+        "FUT_HO": 196,
+        "FUT_NG": 180,
+        "FUT_PL": 65,
+        "FUT_RB": 192,
+        "FUT_SI": 82,
+        "FUT_ZC": 74,
+        "FUT_ZS": 84,
+        "FUT_ZW": 84
+      },
+      "roll_bridged": {
+        "FUT_BZ": 118,
+        "FUT_CL": 198,
+        "FUT_GC": 80,
+        "FUT_HG": 80,
+        "FUT_HO": 195,
+        "FUT_NG": 171,
+        "FUT_PL": 65,
+        "FUT_RB": 192,
+        "FUT_SI": 81,
+        "FUT_ZC": 71,
+        "FUT_ZS": 81,
+        "FUT_ZW": 82
+      },
+      "open_fallbacks": {
+        "FUT_BZ": 323,
+        "FUT_CL": 9,
+        "FUT_GC": 10,
+        "FUT_HG": 10,
+        "FUT_HO": 9,
+        "FUT_NG": 9,
+        "FUT_PL": 9,
+        "FUT_RB": 9,
+        "FUT_SI": 10,
+        "FUT_ZC": 11,
+        "FUT_ZS": 11,
+        "FUT_ZW": 11
+      }
+    },
+    "pool_dir": "decide/strategies",
+    "costs": {
+      "borrow_bp_yr": 0
+    }
+  },
+  "results": {
+    "bm": {
+      "metrics": {
+        "totalReturn": -0.09439789982361835,
+        "annualizedReturn": -0.006147607212094508,
+        "sharpe": -0.3475409194752566,
+        "sortino": -0.47336182347543465,
+        "calmar": -0.034320682179089256,
+        "sterling": -0.022024762198868876,
+        "maxDrawdown": -0.17912252384773672,
+        "winRate": 0.42783505154639173,
+        "profitFactor": 0.7387314408921467,
+        "averageTrade": -4.865871124928781,
+        "tradeCount": 194,
+        "totalTrades": 194,
+        "finalEquity": 9056.021001763816,
+        "observedSharpe": -0.3475409194752566
+      },
+      "dsr": {
+        "observedSharpe": -0.3475409194752566,
+        "dsrPvalue": 0.020925855400599103,
+        "dsrStatistic": -1.9197644269891123,
+        "nTrials": 2,
+        "dsrPass": false,
+        "dsrPvalueGrid": 0.020925855400599103,
+        "dsrStatisticGrid": -1.9197644269891123,
+        "nTrialsGrid": 2,
+        "dsrPassGrid": false,
+        "dsrPvalueFamily": 0.0053042433189137705,
+        "dsrStatisticFamily": -2.452131906614374,
+        "nTrialsFamily": 4,
+        "dsrPassFamily": false,
+        "nTrialsFamilyRaw": 4,
+        "nTrialsFamilyClustered": 4,
+        "dsrPvalueFamilyRaw": 0.0053042433189137705,
+        "dsrStatisticFamilyRaw": -2.452131906614374,
+        "mbfGrid": 0.1583816380747573,
+        "mbfFamily": 0.04946571657936027,
+        "skewness": -0.4492715917318419,
+        "kurtosis": 9.048519404782782
+      },
+      "sleeve_share": {
+        "FUT_BZ": null,
+        "FUT_CL": null,
+        "FUT_GC": null,
+        "FUT_HG": null,
+        "FUT_HO": null,
+        "FUT_NG": null,
+        "FUT_PL": null,
+        "FUT_RB": null,
+        "FUT_SI": null,
+        "FUT_ZC": null,
+        "FUT_ZS": null,
+        "FUT_ZW": null
+      },
+      "blocks": {
+        "crisis": {
+          "mean_net_daily": -0.00004962330867116113,
+          "sharpe": -0.6835850025704375,
+          "n_obs": 343
+        },
+        "non_crisis": {
+          "mean_net_daily": -0.000047475172814772016,
+          "sharpe": -0.7212331676941895,
+          "n_obs": 2416
+        }
+      },
+      "eras": {
+        "2010-06-07..2015-10-14": {
+          "mean_net_daily": -0.000031103151438436264,
+          "sharpe": -0.48350623660518105,
+          "n_obs": 1355
+        },
+        "2015-10-15..2021-02-21": {
+          "mean_net_daily": -0.00007080491848392995,
+          "sharpe": -1.0431010799237044,
+          "n_obs": 1345
+        },
+        "2021-02-22..2026-07-02": {
+          "mean_net_daily": 0.000030098220516473607,
+          "sharpe": 0.40900693919598485,
+          "n_obs": 1350
+        }
+      },
+      "plateau": {
+        "sharpe": -0.3475409194752566,
+        "neighbours": {
+          "lb15": {
+            "sharpe": -0.04807432838235032,
+            "mean_net_daily": -0.0000032390194462932837,
+            "params": {
+              "lookback_months": 15
+            }
+          },
+          "lb9": {
+            "sharpe": -0.42116251290077317,
+            "mean_net_daily": -0.000029261001826831238,
+            "params": {
+              "lookback_months": 9
+            }
+          }
+        }
+      },
+      "pool": [
+        {
+          "id": "bench-6040",
+          "type": "fixed_weight",
+          "corr": -0.037361064707979244,
+          "sharpe_member": 0.8508665927748814,
+          "sharpe_candidate": -0.27801115696907786,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        },
+        {
+          "id": "bench-spy-hold",
+          "type": "buy_hold",
+          "corr": -0.03149483688582359,
+          "sharpe_member": 0.9052451891441144,
+          "sharpe_candidate": -0.27801115696907786,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        }
+      ],
+      "min_trl_sessions": null
+    },
+    "carry": {
+      "metrics": {
+        "totalReturn": -0.3148786533555366,
+        "annualizedReturn": -0.02324377443423742,
+        "sharpe": -1.1070940704314625,
+        "sortino": -1.4401383734111768,
+        "calmar": -0.07295847003266938,
+        "sterling": -0.055528855325752774,
+        "maxDrawdown": -0.3185891154766446,
+        "winRate": 0.34536082474226804,
+        "profitFactor": 0.42200253402490107,
+        "averageTrade": -16.230858420388486,
+        "tradeCount": 194,
+        "totalTrades": 194,
+        "finalEquity": 6851.213466444634,
+        "observedSharpe": -1.1070940704314625
+      },
+      "dsr": {
+        "observedSharpe": -1.1070940704314625,
+        "dsrPvalue": 2.1875091449352624e-7,
+        "dsrStatistic": -4.9899691748207475,
+        "nTrials": 2,
+        "dsrPass": false,
+        "dsrPvalueGrid": 2.1875091449352624e-7,
+        "dsrStatisticGrid": -4.9899691748207475,
+        "nTrialsGrid": 2,
+        "dsrPassGrid": false,
+        "dsrPvalueFamily": 1.2115796366174436e-8,
+        "dsrStatisticFamily": -5.522336654446009,
+        "nTrialsFamily": 4,
+        "dsrPassFamily": false,
+        "nTrialsFamilyRaw": 4,
+        "nTrialsFamilyClustered": 4,
+        "dsrPvalueFamilyRaw": 1.2115796366174436e-8,
+        "dsrStatisticFamilyRaw": -5.522336654446009,
+        "mbfGrid": 0.0000039181295140256405,
+        "mbfFamily": 2.3868979366463813e-7,
+        "skewness": -0.3301201012010459,
+        "kurtosis": 8.821366656809413
+      },
+      "sleeve_share": {
+        "FUT_BZ": null,
+        "FUT_CL": null,
+        "FUT_GC": null,
+        "FUT_HG": null,
+        "FUT_HO": null,
+        "FUT_NG": null,
+        "FUT_PL": null,
+        "FUT_RB": null,
+        "FUT_SI": null,
+        "FUT_ZC": null,
+        "FUT_ZS": null,
+        "FUT_ZW": null
+      },
+      "blocks": {
+        "crisis": {
+          "mean_net_daily": -0.00011756976207272861,
+          "sharpe": -1.4686018240870866,
+          "n_obs": 343
+        },
+        "non_crisis": {
+          "mean_net_daily": -0.00007127062135171868,
+          "sharpe": -0.8748402132066311,
+          "n_obs": 2416
+        }
+      },
+      "eras": {
+        "2010-06-07..2015-10-14": {
+          "mean_net_daily": -0.00006525227342114552,
+          "sharpe": -0.8484870452394553,
+          "n_obs": 1355
+        },
+        "2015-10-15..2021-02-21": {
+          "mean_net_daily": -0.0000995921563038714,
+          "sharpe": -1.181389310191995,
+          "n_obs": 1345
+        },
+        "2021-02-22..2026-07-02": {
+          "mean_net_daily": -0.00011275107383502656,
+          "sharpe": -1.2663756573833678,
+          "n_obs": 1350
+        }
+      },
+      "plateau": {
+        "sharpe": -1.1070940704314625,
+        "neighbours": {
+          "s5": {
+            "sharpe": -1.142326300830897,
+            "mean_net_daily": -0.0000951093810168611,
+            "params": {
+              "smooth_sessions": 5
+            }
+          }
+        }
+      },
+      "pool": [
+        {
+          "id": "bench-6040",
+          "type": "fixed_weight",
+          "corr": -0.011215439517189132,
+          "sharpe_member": 0.8508665927748814,
+          "sharpe_candidate": -1.286469385687576,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        },
+        {
+          "id": "bench-spy-hold",
+          "type": "buy_hold",
+          "corr": 0.036493691797460585,
+          "sharpe_member": 0.9052451891441144,
+          "sharpe_candidate": -1.286469385687576,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        }
+      ],
+      "min_trl_sessions": null
+    }
+  },
+  "family": {
+    "n_trials_raw": 4,
+    "n_trials_clustered": 4,
+    "clustering": {
+      "n_clusters": 2,
+      "clusters": [
+        [
+          "carry"
+        ],
+        [
+          "bm"
+        ]
+      ],
+      "method": "hclust_avg_0.7",
+      "cut": 0.7,
+      "corr": {
+        "carry": {
+          "carry": 1,
+          "bm": 0.07679331475939274
+        },
+        "bm": {
+          "carry": 0.07679331475939274,
+          "bm": 1
+        }
+      }
+    }
+  },
+  "cpcv": {
+    "pbo": 0.3333333333333333,
+    "pboMeasured": true,
+    "pboInterpretation": "elevated",
+    "oos_sharpe_median": -0.5095919553456195,
+    "oos_sharpe_min": -1.613212726030289,
+    "embargo": {
+      "requested": 21,
+      "applied": 21
+    },
+    "flat_leadin_bars": [
+      40,
+      39,
+      38,
+      34,
+      29,
+      28
+    ],
+    "combinationResults": [
+      {
+        "testBlocks": [
+          0,
+          1
+        ],
+        "trainBlocks": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.30075965357104223,
+        "oosSharpe": -0.5095919553456195,
+        "oosReturn": -0.024393922282595213,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.7635017607772931,
+          -0.5095919553456195
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          0,
+          2
+        ],
+        "trainBlocks": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.15535352990992918,
+        "oosSharpe": -0.8004042026678455,
+        "oosReturn": -0.03457648036655746,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.799836983835135,
+          -0.8004042026678455
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          0,
+          3
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.5044794043827039,
+        "oosSharpe": -0.102152453722296,
+        "oosReturn": -0.004827249551243676,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.5846825317299675,
+          -0.102152453722296
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          0,
+          4
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.42229113761392084,
+        "oosSharpe": -0.26652898725986196,
+        "oosReturn": -0.012466806968868606,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.056336926363839,
+          -0.26652898725986196
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          0,
+          5
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.8148148582110026,
+        "oosSharpe": 0.5185184539343016,
+        "oosReturn": 0.02610926504682011,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -1.1367352029997981,
+          0.5185184539343016
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          1,
+          2
+        ],
+        "trainBlocks": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": 0.08718047711947619,
+        "oosSharpe": -1.2854722167266561,
+        "oosReturn": -0.05787872255366583,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.45513373591295164,
+          -1.2854722167266561
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          1,
+          3
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.2619453973532985,
+        "oosSharpe": -0.5872204677811068,
+        "oosReturn": -0.028129491738352046,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.239979283807784,
+          -0.5872204677811068
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          1,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.1797571305845156,
+        "oosSharpe": -0.7515970013186728,
+        "oosReturn": -0.03576904915597697,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.7116336784416555,
+          -0.7515970013186728
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          1,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.5722808511815974,
+        "oosSharpe": 0.0334504398754909,
+        "oosReturn": 0.002807022859711742,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -0.7920319550776147,
+          0.0334504398754909
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          2,
+          3
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.11653927369218559,
+        "oosSharpe": -0.8780327151033328,
+        "oosReturn": -0.038312049822314294,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.276314506865626,
+          -0.8780327151033328
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          2,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.034351006923402594,
+        "oosSharpe": -1.0424092486408987,
+        "oosReturn": -0.04595160723993922,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.7479689014994972,
+          -1.0424092486408987
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          2,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.4268747275204844,
+        "oosSharpe": -0.2573618074467351,
+        "oosReturn": -0.007375535224250506,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -0.8283671781354566,
+          -0.2573618074467351
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          3,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.38347688139617725,
+        "oosSharpe": -0.34415749969534926,
+        "oosReturn": -0.016202376424625436,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.5328144493943299,
+          -0.34415749969534926
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          3,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "bestParams": "carry",
+        "isSharpe": -0.7557353311383952,
+        "oosSharpe": -1.613212726030289,
+        "oosReturn": -0.09082875474639268,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -1.613212726030289,
+          0.4408899414988144
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          4,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bestParams": "bm",
+        "isSharpe": -0.693812335224476,
+        "oosSharpe": 0.2765134079612484,
+        "oosReturn": 0.01473413817343835,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -1.0848671206641605,
+          0.2765134079612484
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      }
+    ],
+    "topParamIdx": 1
+  },
+  "walkforward": {
+    "expanding": true,
+    "aggregateOosSharpe": -0.6497578583352733,
+    "wfe": null,
+    "windows": [
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1369094400,
+        "testStart": 1369180800,
+        "testEnd": 1400198400,
+        "inSampleSharpe": -0.09969775715907327,
+        "outOfSampleSharpe": -2.063949040168723,
+        "bestParams": "bm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1400198400,
+        "testStart": 1400457600,
+        "testEnd": 1431907200,
+        "inSampleSharpe": -0.5643502553661375,
+        "outOfSampleSharpe": -2.5863627356485415,
+        "bestParams": "carry"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1431907200,
+        "testStart": 1431993600,
+        "testEnd": 1463011200,
+        "inSampleSharpe": -0.7498027961333135,
+        "outOfSampleSharpe": 0.14375813767058435,
+        "bestParams": "bm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1463011200,
+        "testStart": 1463097600,
+        "testEnd": 1494374400,
+        "inSampleSharpe": -0.5681091187640116,
+        "outOfSampleSharpe": -2.0041452831912228,
+        "bestParams": "bm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1494374400,
+        "testStart": 1494460800,
+        "testEnd": 1525737600,
+        "inSampleSharpe": -0.6300545284658814,
+        "outOfSampleSharpe": -1.260908487083555,
+        "bestParams": "carry"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1525737600,
+        "testStart": 1525824000,
+        "testEnd": 1557100800,
+        "inSampleSharpe": -0.7012518193968774,
+        "outOfSampleSharpe": -0.5232722787087104,
+        "bestParams": "carry"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1557100800,
+        "testStart": 1557187200,
+        "testEnd": 1588550400,
+        "inSampleSharpe": -0.6959361825562295,
+        "outOfSampleSharpe": -2.3022414748548496,
+        "bestParams": "carry"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1588550400,
+        "testStart": 1588636800,
+        "testEnd": 1619740800,
+        "inSampleSharpe": -0.7834804159680296,
+        "outOfSampleSharpe": 0.013386200341528983,
+        "bestParams": "bm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1619740800,
+        "testStart": 1620000000,
+        "testEnd": 1651017600,
+        "inSampleSharpe": -0.7563982850064721,
+        "outOfSampleSharpe": 0.7326496700100106,
+        "bestParams": "bm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1651017600,
+        "testStart": 1651104000,
+        "testEnd": 1682380800,
+        "inSampleSharpe": -0.6321016487960748,
+        "outOfSampleSharpe": -0.8122041264867769,
+        "bestParams": "bm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1682380800,
+        "testStart": 1682467200,
+        "testEnd": 1713830400,
+        "inSampleSharpe": -0.6486605947179984,
+        "outOfSampleSharpe": 0.5611932322476144,
+        "bestParams": "bm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1713830400,
+        "testStart": 1713916800,
+        "testEnd": 1745280000,
+        "inSampleSharpe": -0.5443727898332262,
+        "outOfSampleSharpe": 0.5705615026030076,
+        "bestParams": "bm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1745280000,
+        "testStart": 1745366400,
+        "testEnd": 1776729600,
+        "inSampleSharpe": -0.468975861342837,
+        "outOfSampleSharpe": 1.0846825249110787,
+        "bestParams": "bm"
+      }
+    ]
+  },
+  "deployability": {
+    "deployable": false,
+    "reasons": [
+      "family DSR p-value 0.005 ≤ 0.95 across 4 family trials — leader is not significant against the family-wide noise floor",
+      "OOS Sharpe -0.510 ≤ 0 — failed held-out evaluation"
+    ]
+  },
+  "kills": [
+    {
+      "id": "dsr_family",
+      "rule": "results[selected].dsr.dsrPvalueFamily",
+      "value": 0.0053042433189137705,
+      "threshold": 0.95,
+      "result": "DIE",
+      "why": "gt 0.95 failed"
+    },
+    {
+      "id": "oos_sharpe",
+      "rule": "cpcv.oos_sharpe_median",
+      "value": -0.5095919553456195,
+      "threshold": 0.5,
+      "result": "DIE",
+      "why": "gte 0.5 failed"
+    },
+    {
+      "id": "max_drawdown",
+      "rule": "results[selected].metrics.maxDrawdown",
+      "value": -0.17912252384773672,
+      "threshold": 0.25,
+      "result": "PASS"
+    },
+    {
+      "id": "sleeve",
+      "rule": "results[selected].sleeve_share",
+      "value": {
+        "FUT_BZ": null,
+        "FUT_CL": null,
+        "FUT_GC": null,
+        "FUT_HG": null,
+        "FUT_HO": null,
+        "FUT_NG": null,
+        "FUT_PL": null,
+        "FUT_RB": null,
+        "FUT_SI": null,
+        "FUT_ZC": null,
+        "FUT_ZS": null,
+        "FUT_ZW": null
+      },
+      "threshold": 0.5,
+      "result": "DIE",
+      "why": "gross contribution not positive"
+    },
+    {
+      "id": "block_sign",
+      "rule": "results[selected].blocks",
+      "value": {
+        "crisis": {
+          "mean_net_daily": -0.00004962330867116113,
+          "sharpe": -0.6835850025704375,
+          "n_obs": 343
+        },
+        "non_crisis": {
+          "mean_net_daily": -0.000047475172814772016,
+          "sharpe": -0.7212331676941895,
+          "n_obs": 2416
+        }
+      },
+      "threshold": 0,
+      "result": "DIE",
+      "why": "negative in both blocks"
+    },
+    {
+      "id": "deployable",
+      "rule": "deployability.deployable",
+      "value": [
+        "family DSR p-value 0.005 ≤ 0.95 across 4 family trials — leader is not significant against the family-wide noise floor",
+        "OOS Sharpe -0.510 ≤ 0 — failed held-out evaluation"
+      ],
+      "threshold": true,
+      "result": "DIE",
+      "why": "not deployable"
+    },
+    {
+      "id": "leverage",
+      "rule": "structural",
+      "value": "none (structural)",
+      "threshold": 1,
+      "result": "PASS"
+    },
+    {
+      "id": "plateau_sign",
+      "rule": "results[selected].plateau",
+      "value": {
+        "sharpe": -0.3475409194752566,
+        "neighbours": {
+          "lb15": {
+            "sharpe": -0.04807432838235032,
+            "mean_net_daily": -0.0000032390194462932837,
+            "params": {
+              "lookback_months": 15
+            }
+          },
+          "lb9": {
+            "sharpe": -0.42116251290077317,
+            "mean_net_daily": -0.000029261001826831238,
+            "params": {
+              "lookback_months": 9
+            }
+          }
+        }
+      },
+      "threshold": 0,
+      "result": "DIE",
+      "why": "selected sharpe not positive"
+    },
+    {
+      "id": "era_sign",
+      "rule": "results[selected].eras",
+      "value": {
+        "2010-06-07..2015-10-14": {
+          "mean_net_daily": -0.000031103151438436264,
+          "sharpe": -0.48350623660518105,
+          "n_obs": 1355
+        },
+        "2015-10-15..2021-02-21": {
+          "mean_net_daily": -0.00007080491848392995,
+          "sharpe": -1.0431010799237044,
+          "n_obs": 1345
+        },
+        "2021-02-22..2026-07-02": {
+          "mean_net_daily": 0.000030098220516473607,
+          "sharpe": 0.40900693919598485,
+          "n_obs": 1350
+        }
+      },
+      "threshold": 0,
+      "result": "DIE",
+      "why": "sign fails in an era"
+    },
+    {
+      "id": "pool_corr",
+      "rule": "results[selected].pool",
+      "value": [
+        {
+          "id": "bench-6040",
+          "type": "fixed_weight",
+          "corr": -0.037361064707979244,
+          "sharpe_member": 0.8508665927748814,
+          "sharpe_candidate": -0.27801115696907786,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        },
+        {
+          "id": "bench-spy-hold",
+          "type": "buy_hold",
+          "corr": -0.03149483688582359,
+          "sharpe_member": 0.9052451891441144,
+          "sharpe_candidate": -0.27801115696907786,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        }
+      ],
+      "threshold": 0.7,
+      "result": "PASS"
+    }
+  ],
+  "verdict": "DIE",
+  "selected_variant": "bm",
+  "frozen_through": "2026-07-01",
+  "weights_frozen_prefix_sha256": "43ca28ed287e6e20e193a1a8cd92d271167207b101dec59e9241c7d1f6c159ed"
+}

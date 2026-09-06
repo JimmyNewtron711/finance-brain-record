@@ -1,0 +1,1192 @@
+{
+  "schema": "envelope_v1",
+  "program": "multi-signal-family",
+  "generated_at": "2026-09-06T02:24:46.498Z",
+  "engine": {
+    "git_sha": "4fc093646edc22d6b5f5a9d588422d96485ab995",
+    "dirty": false,
+    "tree_scope": [
+      "orient/algo-classic/server",
+      "orient/algo-classic/scripts/external-signal-run.js",
+      "orient/research-py/src/superbrain/portfolio",
+      "decide/programs",
+      "decide/weights/multi-signal-family-*.json",
+      "decide/programs/multi-signal-family.kills.json",
+      "decide/weights/multi-signal-family-sm.json",
+      "decide/weights/multi-signal-family-sm~xsw0.json",
+      "decide/weights/multi-signal-family-sm~xsw33.json",
+      "decide/weights/multi-signal-family-tom.json",
+      "decide/weights/multi-signal-family-tom~xsw0.json",
+      "decide/weights/multi-signal-family-tom~xsw33.json"
+    ],
+    "cost_model": "bp_per_side_on_turnover+borrow_bp_yr_on_short_notional"
+  },
+  "inputs": {
+    "manifest": {
+      "path": "decide/programs/multi-signal-family.json",
+      "sha256": "adb03c5085e01a2ab3d739373933305c5a46213138dd48dbeaba44fc4e26845f"
+    },
+    "kills": {
+      "path": "decide/programs/multi-signal-family.kills.json",
+      "sha256": "b98fa5307ce35ecbf8b0d2c9ed98b3a93cb606428ed012242dabd29a8a66a01c"
+    },
+    "prereg": {
+      "path": "docs/superpowers/plans/2026-09-05-multi-signal-family-prereg.md",
+      "git_sha": "b54d91d3",
+      "sha256": "e0ad53e5605e9a8e0e36ad374e0cbb6d2c635a200eca59657c4e9816ca8f7a9f"
+    },
+    "rule_sha256": "0e1868bbfb6d591bf532752af8a726c2f36ced600e0f14dc2d24ee9ec351bef7",
+    "weights": [
+      {
+        "path": "decide/weights/multi-signal-family-sm.json",
+        "variant": "sm",
+        "sha256": "d20cd59e7665e78d150c537995200c867d0ffed87f58dbdad66e113f84a01e94",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/multi-signal-family-sm~xsw0.json",
+        "variant": "sm~xsw0",
+        "sha256": "bbf9c56d02b70abf2e5263f482a8b8f2d454c5fbacb895217b36ca762e9f7073",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/multi-signal-family-sm~xsw33.json",
+        "variant": "sm~xsw33",
+        "sha256": "2e668c63b4e2aca6f1a014f03a9dbedd497e6208b619d28e511f4b4df46f262e",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/multi-signal-family-tom.json",
+        "variant": "tom",
+        "sha256": "a08ee3539cda851b356d26a6ef4c33d03aa5cec6569814df38a57b99a8a2e09e",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/multi-signal-family-tom~xsw0.json",
+        "variant": "tom~xsw0",
+        "sha256": "c9c0aaf72efacecd382f2f2259a7a78e90482be30937763356d2a9310e3d063d",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      },
+      {
+        "path": "decide/weights/multi-signal-family-tom~xsw33.json",
+        "variant": "tom~xsw33",
+        "sha256": "ea2075430b07b9283d7657def7faadfde54c5103c304b12724708d5249ae247c",
+        "causality_check": {
+          "dates_tested": [
+            "2026-05-01",
+            "2026-06-01",
+            "2026-07-01"
+          ],
+          "max_abs_delta": 0
+        }
+      }
+    ],
+    "bars": {
+      "tables": [
+        "equity_daily_tr",
+        "futures_daily"
+      ],
+      "symbols": [
+        "FUT_BZ",
+        "FUT_CL",
+        "FUT_GC",
+        "FUT_HG",
+        "FUT_HO",
+        "FUT_NG",
+        "FUT_PL",
+        "FUT_RB",
+        "FUT_SI",
+        "FUT_ZC",
+        "FUT_ZS",
+        "FUT_ZW"
+      ],
+      "price_basis": {
+        "FUT_BZ": "settlement",
+        "FUT_CL": "settlement",
+        "FUT_GC": "settlement",
+        "FUT_HG": "settlement",
+        "FUT_HO": "settlement",
+        "FUT_NG": "settlement",
+        "FUT_PL": "settlement",
+        "FUT_RB": "settlement",
+        "FUT_SI": "settlement",
+        "FUT_ZC": "settlement",
+        "FUT_ZS": "settlement",
+        "FUT_ZW": "settlement"
+      },
+      "start": "2010-06-07",
+      "end_exclusive": "2026-07-03",
+      "tape_asof": null,
+      "data_fingerprint": "902f983a74b2e91842ebc7ea1e538b185fc27e8029c22a4f3e5e19dff71a4250",
+      "db": {
+        "basename": "dashboard.db",
+        "size_bytes": 467853312
+      },
+      "weekend_rows_dropped": {
+        "FUT_BZ": 464,
+        "FUT_CL": 822,
+        "FUT_GC": 821,
+        "FUT_HG": 821,
+        "FUT_HO": 822,
+        "FUT_NG": 821,
+        "FUT_PL": 821,
+        "FUT_RB": 822,
+        "FUT_SI": 821,
+        "FUT_ZC": 103,
+        "FUT_ZS": 103,
+        "FUT_ZW": 103
+      },
+      "dropped_dates": {
+        "FUT_BZ": 0,
+        "FUT_CL": 1,
+        "FUT_GC": 1,
+        "FUT_HG": 2,
+        "FUT_HO": 1,
+        "FUT_NG": 1,
+        "FUT_PL": 2,
+        "FUT_RB": 1,
+        "FUT_SI": 1,
+        "FUT_ZC": 4,
+        "FUT_ZS": 4,
+        "FUT_ZW": 4
+      },
+      "roll_days": {
+        "FUT_BZ": 127,
+        "FUT_CL": 228,
+        "FUT_GC": 80,
+        "FUT_HG": 80,
+        "FUT_HO": 196,
+        "FUT_NG": 180,
+        "FUT_PL": 65,
+        "FUT_RB": 192,
+        "FUT_SI": 82,
+        "FUT_ZC": 74,
+        "FUT_ZS": 84,
+        "FUT_ZW": 84
+      },
+      "roll_bridged": {
+        "FUT_BZ": 118,
+        "FUT_CL": 198,
+        "FUT_GC": 80,
+        "FUT_HG": 80,
+        "FUT_HO": 195,
+        "FUT_NG": 171,
+        "FUT_PL": 65,
+        "FUT_RB": 192,
+        "FUT_SI": 81,
+        "FUT_ZC": 71,
+        "FUT_ZS": 81,
+        "FUT_ZW": 82
+      },
+      "open_fallbacks": {
+        "FUT_BZ": 323,
+        "FUT_CL": 9,
+        "FUT_GC": 10,
+        "FUT_HG": 10,
+        "FUT_HO": 9,
+        "FUT_NG": 9,
+        "FUT_PL": 9,
+        "FUT_RB": 9,
+        "FUT_SI": 10,
+        "FUT_ZC": 11,
+        "FUT_ZS": 11,
+        "FUT_ZW": 11
+      }
+    },
+    "pool_dir": "decide/strategies",
+    "costs": {
+      "borrow_bp_yr": 0
+    }
+  },
+  "results": {
+    "sm": {
+      "metrics": {
+        "totalReturn": -0.1539124260583805,
+        "annualizedReturn": -0.010340328137930066,
+        "sharpe": -0.8107057562446447,
+        "sortino": -1.064263079232509,
+        "calmar": -0.06531986412734148,
+        "sterling": -0.040031782656347416,
+        "maxDrawdown": -0.15830296458932513,
+        "winRate": 0.3917525773195876,
+        "profitFactor": 0.5011113397267277,
+        "averageTrade": -7.933630209194872,
+        "tradeCount": 194,
+        "totalTrades": 194,
+        "finalEquity": 8460.875739416195,
+        "observedSharpe": -0.8107057562446447
+      },
+      "dsr": {
+        "observedSharpe": -0.8107057562446447,
+        "dsrPvalue": 0.00006822200087153174,
+        "dsrStatistic": -3.814612405262911,
+        "nTrials": 2,
+        "dsrPass": false,
+        "dsrPvalueGrid": 0.00006822200087153174,
+        "dsrStatisticGrid": -3.814612405262911,
+        "nTrialsGrid": 2,
+        "dsrPassGrid": false,
+        "dsrPvalueFamily": 1.7438599353436501e-7,
+        "dsrStatisticFamily": -5.095311301139076,
+        "nTrialsFamily": 16,
+        "dsrPassFamily": false,
+        "nTrialsFamilyRaw": 16,
+        "nTrialsFamilyClustered": 16,
+        "dsrPvalueFamilyRaw": 1.7438599353436501e-7,
+        "dsrStatisticFamilyRaw": -5.095311301139076,
+        "mbfGrid": 0.0006922011944407123,
+        "mbfFamily": 0.000002303459055219836,
+        "skewness": -0.6736238228481504,
+        "kurtosis": 13.458805378018845
+      },
+      "sleeve_share": {
+        "FUT_BZ": null,
+        "FUT_CL": null,
+        "FUT_GC": null,
+        "FUT_HG": null,
+        "FUT_HO": null,
+        "FUT_NG": null,
+        "FUT_PL": null,
+        "FUT_RB": null,
+        "FUT_SI": null,
+        "FUT_ZC": null,
+        "FUT_ZS": null,
+        "FUT_ZW": null
+      },
+      "blocks": {
+        "crisis": {
+          "mean_net_daily": -0.00006791724870585227,
+          "sharpe": -1.2894206706283604,
+          "n_obs": 343
+        },
+        "non_crisis": {
+          "mean_net_daily": -0.00003851254301690602,
+          "sharpe": -0.8496637240548051,
+          "n_obs": 2416
+        }
+      },
+      "eras": {
+        "2010-06-07..2015-10-14": {
+          "mean_net_daily": -0.000033858728093776595,
+          "sharpe": -0.8275614310250597,
+          "n_obs": 1355
+        },
+        "2015-10-15..2021-02-21": {
+          "mean_net_daily": -0.0000491716475606894,
+          "sharpe": -0.952123086493631,
+          "n_obs": 1345
+        },
+        "2021-02-22..2026-07-02": {
+          "mean_net_daily": -0.00003986192686833719,
+          "sharpe": -0.69198326933505,
+          "n_obs": 1350
+        }
+      },
+      "plateau": {
+        "sharpe": -0.8107057562446447,
+        "neighbours": {
+          "xsw0": {
+            "sharpe": -0.8351990990403572,
+            "mean_net_daily": -0.00004463785868449283,
+            "params": {
+              "w_carry": 0.5,
+              "w_seasonality": 0.5,
+              "w_xs_momentum": 0
+            }
+          },
+          "xsw33": {
+            "sharpe": -0.7497306256349129,
+            "mean_net_daily": -0.00003953505437232646,
+            "params": {
+              "w_carry": 0.34,
+              "w_seasonality": 0.33,
+              "w_xs_momentum": 0.33
+            }
+          }
+        }
+      },
+      "pool": [
+        {
+          "id": "bench-6040",
+          "type": "fixed_weight",
+          "corr": -0.010938954276245383,
+          "sharpe_member": 0.8508665927748814,
+          "sharpe_candidate": -0.8434423461993886,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        },
+        {
+          "id": "bench-spy-hold",
+          "type": "buy_hold",
+          "corr": 0.02342237129022936,
+          "sharpe_member": 0.9052451891441144,
+          "sharpe_candidate": -0.8434423461993886,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        }
+      ],
+      "min_trl_sessions": null
+    },
+    "tom": {
+      "metrics": {
+        "totalReturn": -0.15964351107181154,
+        "annualizedReturn": -0.010758562221457657,
+        "sharpe": -0.8352756828345728,
+        "sortino": -1.0917863532274448,
+        "calmar": -0.06473746082839243,
+        "sterling": -0.04041722026339147,
+        "maxDrawdown": -0.1661875841867926,
+        "winRate": 0.39690721649484534,
+        "profitFactor": 0.49415250992168497,
+        "averageTrade": -8.229046962464514,
+        "tradeCount": 194,
+        "totalTrades": 194,
+        "finalEquity": 8403.564889281884,
+        "observedSharpe": -0.8352756828345728
+      },
+      "dsr": {
+        "observedSharpe": -0.8352756828345728,
+        "dsrPvalue": 0.000044270207602004064,
+        "dsrStatistic": -3.9201225317393917,
+        "nTrials": 2,
+        "dsrPass": false,
+        "dsrPvalueGrid": 0.000044270207602004064,
+        "dsrStatisticGrid": -3.9201225317393917,
+        "nTrialsGrid": 2,
+        "dsrPassGrid": false,
+        "dsrPvalueFamily": 9.939427575433868e-8,
+        "dsrStatisticFamily": -5.200821427615556,
+        "nTrialsFamily": 16,
+        "dsrPassFamily": false,
+        "nTrialsFamilyRaw": 16,
+        "nTrialsFamilyClustered": 16,
+        "dsrPvalueFamilyRaw": 9.939427575433868e-8,
+        "dsrStatisticFamilyRaw": -5.200821427615556,
+        "mbfGrid": 0.0004602778026669984,
+        "mbfFamily": 0.0000013380840762536955,
+        "skewness": -0.7340414807753344,
+        "kurtosis": 14.163157783888973
+      },
+      "sleeve_share": {
+        "FUT_BZ": null,
+        "FUT_CL": null,
+        "FUT_GC": null,
+        "FUT_HG": null,
+        "FUT_HO": null,
+        "FUT_NG": null,
+        "FUT_PL": null,
+        "FUT_RB": null,
+        "FUT_SI": null,
+        "FUT_ZC": null,
+        "FUT_ZS": null,
+        "FUT_ZW": null
+      },
+      "blocks": {
+        "crisis": {
+          "mean_net_daily": -0.000007567910780701456,
+          "sharpe": -0.12253469329600201,
+          "n_obs": 343
+        },
+        "non_crisis": {
+          "mean_net_daily": -0.00004301557931627022,
+          "sharpe": -0.9103244274713828,
+          "n_obs": 2416
+        }
+      },
+      "eras": {
+        "2010-06-07..2015-10-14": {
+          "mean_net_daily": -0.000037518803668652923,
+          "sharpe": -0.8508624458520907,
+          "n_obs": 1355
+        },
+        "2015-10-15..2021-02-21": {
+          "mean_net_daily": -0.00004406283382389033,
+          "sharpe": -0.8072171000879578,
+          "n_obs": 1345
+        },
+        "2021-02-22..2026-07-02": {
+          "mean_net_daily": -0.000046292740572144885,
+          "sharpe": -0.8606761018858028,
+          "n_obs": 1350
+        }
+      },
+      "plateau": {
+        "sharpe": -0.8352756828345728,
+        "neighbours": {
+          "xsw0": {
+            "sharpe": -0.8794649111974534,
+            "mean_net_daily": -0.00004675024694509689,
+            "params": {
+              "w_carry": 0.5,
+              "w_seasonality": 0.5,
+              "w_xs_momentum": 0
+            }
+          },
+          "xsw33": {
+            "sharpe": -0.7668008539036876,
+            "mean_net_daily": -0.000041014970918314704,
+            "params": {
+              "w_carry": 0.34,
+              "w_seasonality": 0.33,
+              "w_xs_momentum": 0.33
+            }
+          }
+        }
+      },
+      "pool": [
+        {
+          "id": "bench-6040",
+          "type": "fixed_weight",
+          "corr": -0.05080419911600597,
+          "sharpe_member": 0.8508665927748814,
+          "sharpe_candidate": -0.9069269002072854,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        },
+        {
+          "id": "bench-spy-hold",
+          "type": "buy_hold",
+          "corr": -0.06906772098141585,
+          "sharpe_member": 0.9052451891441144,
+          "sharpe_candidate": -0.9069269002072854,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        }
+      ],
+      "min_trl_sessions": null
+    }
+  },
+  "family": {
+    "n_trials_raw": 16,
+    "n_trials_clustered": 16,
+    "clustering": {
+      "n_clusters": 2,
+      "clusters": [
+        [
+          "sm"
+        ],
+        [
+          "tom"
+        ]
+      ],
+      "method": "hclust_avg_0.7",
+      "cut": 0.7,
+      "corr": {
+        "sm": {
+          "sm": 1,
+          "tom": 0.6522690247720633
+        },
+        "tom": {
+          "sm": 0.6522690247720633,
+          "tom": 1
+        }
+      }
+    }
+  },
+  "cpcv": {
+    "pbo": 0.2,
+    "pboMeasured": true,
+    "pboInterpretation": "caution",
+    "oos_sharpe_median": -0.7897215034174756,
+    "oos_sharpe_min": -0.9994479721781298,
+    "embargo": {
+      "requested": 21,
+      "applied": 21
+    },
+    "flat_leadin_bars": [
+      40,
+      39,
+      38,
+      34,
+      29,
+      28
+    ],
+    "combinationResults": [
+      {
+        "testBlocks": [
+          0,
+          1
+        ],
+        "trainBlocks": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.8035266597066197,
+        "oosSharpe": -0.7225312218099832,
+        "oosReturn": -0.01923981062591329,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.8418232641412995,
+          -0.7225312218099832
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          0,
+          2
+        ],
+        "trainBlocks": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.713955851804797,
+        "oosSharpe": -0.9016728376136283,
+        "oosReturn": -0.027012763946266935,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.2011844939599643,
+          -0.9016728376136283
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          0,
+          3
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.6650682845225464,
+        "oosSharpe": -0.9994479721781298,
+        "oosReturn": -0.02986327765652732,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.2023670807252143,
+          -0.9994479721781298
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          0,
+          4
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.6856004674838398,
+        "oosSharpe": -0.958383606255543,
+        "oosReturn": -0.027340362453356283,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.0035678708565146,
+          -0.958383606255543
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          0,
+          5
+        ],
+        "trainBlocks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.7482931910552346,
+        "oosSharpe": -0.8329981591127533,
+        "oosReturn": -0.02451768707077963,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -1.0314206360477485,
+          -0.8329981591127533
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          1,
+          2
+        ],
+        "trainBlocks": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.8740525548365092,
+        "oosSharpe": -0.5814794315502039,
+        "oosReturn": -0.020482298648302186,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.7505680544598807,
+          -0.5814794315502039
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          1,
+          3
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.8251649875542586,
+        "oosSharpe": -0.6792545661147055,
+        "oosReturn": -0.02333281235856257,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.7517506412251307,
+          -0.6792545661147055
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          1,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.845697170515552,
+        "oosSharpe": -0.6381902001921187,
+        "oosReturn": -0.020809897155391534,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.552951431356431,
+          -0.6381902001921187
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          1,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.9083898940869468,
+        "oosSharpe": -0.512804753049329,
+        "oosReturn": -0.017987221772814883,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -0.5808041965476649,
+          -0.512804753049329
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          2,
+          3
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.7355941796524359,
+        "oosSharpe": -0.8583961819183505,
+        "oosReturn": -0.031105765678916215,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -1.1111118710437955,
+          -0.8583961819183505
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          2,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.7561263626137293,
+        "oosSharpe": -0.8173318159957637,
+        "oosReturn": -0.02858285047574518,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.9123126611750958,
+          -0.8173318159957637
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          2,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.8188190861851242,
+        "oosSharpe": -0.6919463688529741,
+        "oosReturn": -0.025760175093168528,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -0.9401654263663297,
+          -0.6919463688529741
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          3,
+          4
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.7072387953314787,
+        "oosSharpe": -0.9151069505602654,
+        "oosReturn": -0.031433364186005563,
+        "oosTradeCountDiagnostic": 60,
+        "paramOosSharpes": [
+          -0.9134952479403458,
+          -0.9151069505602654
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          3,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.7699315189028735,
+        "oosSharpe": -0.7897215034174756,
+        "oosReturn": -0.028610688803428912,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -0.9413480131315797,
+          -0.7897215034174756
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      },
+      {
+        "testBlocks": [
+          4,
+          5
+        ],
+        "trainBlocks": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bestParams": "tom",
+        "isSharpe": -0.7904637018641669,
+        "oosSharpe": -0.7486571374948888,
+        "oosReturn": -0.02608777360025788,
+        "oosTradeCountDiagnostic": 61,
+        "paramOosSharpes": [
+          -0.74254880326288,
+          -0.7486571374948888
+        ],
+        "oosTradeCountSumDiagnostic": 905,
+        "oosTradeCountUnique": 181
+      }
+    ],
+    "topParamIdx": 1
+  },
+  "walkforward": {
+    "expanding": true,
+    "aggregateOosSharpe": -1.0239989750030067,
+    "wfe": null,
+    "windows": [
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1369094400,
+        "testStart": 1369180800,
+        "testEnd": 1400198400,
+        "inSampleSharpe": -1.214203639491618,
+        "outOfSampleSharpe": -0.08653328925108567,
+        "bestParams": "tom"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1400198400,
+        "testStart": 1400457600,
+        "testEnd": 1431907200,
+        "inSampleSharpe": -0.6284796495616611,
+        "outOfSampleSharpe": -2.2169741939885967,
+        "bestParams": "sm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1431907200,
+        "testStart": 1431993600,
+        "testEnd": 1463011200,
+        "inSampleSharpe": -0.8799207230206197,
+        "outOfSampleSharpe": 0.101143746455639,
+        "bestParams": "sm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1463011200,
+        "testStart": 1463097600,
+        "testEnd": 1494374400,
+        "inSampleSharpe": -0.6503513277671698,
+        "outOfSampleSharpe": -1.8792938788049296,
+        "bestParams": "sm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1494374400,
+        "testStart": 1494460800,
+        "testEnd": 1525737600,
+        "inSampleSharpe": -0.7152163412697509,
+        "outOfSampleSharpe": -1.403386167798161,
+        "bestParams": "tom"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1525737600,
+        "testStart": 1525824000,
+        "testEnd": 1557100800,
+        "inSampleSharpe": -0.7671719400699885,
+        "outOfSampleSharpe": -1.6418390952480197,
+        "bestParams": "tom"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1557100800,
+        "testStart": 1557187200,
+        "testEnd": 1588550400,
+        "inSampleSharpe": -0.7717243731013309,
+        "outOfSampleSharpe": -0.7029734553907575,
+        "bestParams": "sm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1588550400,
+        "testStart": 1588636800,
+        "testEnd": 1619740800,
+        "inSampleSharpe": -0.8428733506679879,
+        "outOfSampleSharpe": -0.33327630257524066,
+        "bestParams": "tom"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1619740800,
+        "testStart": 1620000000,
+        "testEnd": 1651017600,
+        "inSampleSharpe": -0.7799221596789913,
+        "outOfSampleSharpe": -0.3913595484575304,
+        "bestParams": "tom"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1651017600,
+        "testStart": 1651104000,
+        "testEnd": 1682380800,
+        "inSampleSharpe": -0.7215644109089845,
+        "outOfSampleSharpe": -2.799081439462385,
+        "bestParams": "sm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1682380800,
+        "testStart": 1682467200,
+        "testEnd": 1713830400,
+        "inSampleSharpe": -0.8582211613110768,
+        "outOfSampleSharpe": 0.39479783437050814,
+        "bestParams": "sm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1713830400,
+        "testStart": 1713916800,
+        "testEnd": 1745280000,
+        "inSampleSharpe": -0.7705455893484311,
+        "outOfSampleSharpe": -1.457456331901176,
+        "bestParams": "sm"
+      },
+      {
+        "trainStart": 1275868800,
+        "trainEnd": 1745280000,
+        "testStart": 1745366400,
+        "testEnd": 1776729600,
+        "inSampleSharpe": -0.8165903833900984,
+        "outOfSampleSharpe": -0.8957545529873554,
+        "bestParams": "tom"
+      }
+    ]
+  },
+  "deployability": {
+    "deployable": false,
+    "reasons": [
+      "family DSR p-value 0.000 ≤ 0.95 across 16 family trials — leader is not significant against the family-wide noise floor",
+      "OOS Sharpe -0.790 ≤ 0 — failed held-out evaluation"
+    ]
+  },
+  "kills": [
+    {
+      "id": "dsr_family",
+      "rule": "results[selected].dsr.dsrPvalueFamily",
+      "value": 9.939427575433868e-8,
+      "threshold": 0.95,
+      "result": "DIE",
+      "why": "gt 0.95 failed"
+    },
+    {
+      "id": "oos_sharpe",
+      "rule": "cpcv.oos_sharpe_median",
+      "value": -0.7897215034174756,
+      "threshold": 0.5,
+      "result": "DIE",
+      "why": "gte 0.5 failed"
+    },
+    {
+      "id": "max_drawdown",
+      "rule": "results[selected].metrics.maxDrawdown",
+      "value": -0.1661875841867926,
+      "threshold": 0.25,
+      "result": "PASS"
+    },
+    {
+      "id": "sleeve",
+      "rule": "results[selected].sleeve_share",
+      "value": {
+        "FUT_BZ": null,
+        "FUT_CL": null,
+        "FUT_GC": null,
+        "FUT_HG": null,
+        "FUT_HO": null,
+        "FUT_NG": null,
+        "FUT_PL": null,
+        "FUT_RB": null,
+        "FUT_SI": null,
+        "FUT_ZC": null,
+        "FUT_ZS": null,
+        "FUT_ZW": null
+      },
+      "threshold": 0.5,
+      "result": "DIE",
+      "why": "gross contribution not positive"
+    },
+    {
+      "id": "block_sign",
+      "rule": "results[selected].blocks",
+      "value": {
+        "crisis": {
+          "mean_net_daily": -0.000007567910780701456,
+          "sharpe": -0.12253469329600201,
+          "n_obs": 343
+        },
+        "non_crisis": {
+          "mean_net_daily": -0.00004301557931627022,
+          "sharpe": -0.9103244274713828,
+          "n_obs": 2416
+        }
+      },
+      "threshold": 0,
+      "result": "DIE",
+      "why": "negative in both blocks"
+    },
+    {
+      "id": "deployable",
+      "rule": "deployability.deployable",
+      "value": [
+        "family DSR p-value 0.000 ≤ 0.95 across 16 family trials — leader is not significant against the family-wide noise floor",
+        "OOS Sharpe -0.790 ≤ 0 — failed held-out evaluation"
+      ],
+      "threshold": true,
+      "result": "DIE",
+      "why": "not deployable"
+    },
+    {
+      "id": "leverage",
+      "rule": "structural",
+      "value": "none (structural)",
+      "threshold": 1,
+      "result": "PASS"
+    },
+    {
+      "id": "plateau_sign",
+      "rule": "results[selected].plateau",
+      "value": {
+        "sharpe": -0.8352756828345728,
+        "neighbours": {
+          "xsw0": {
+            "sharpe": -0.8794649111974534,
+            "mean_net_daily": -0.00004675024694509689,
+            "params": {
+              "w_carry": 0.5,
+              "w_seasonality": 0.5,
+              "w_xs_momentum": 0
+            }
+          },
+          "xsw33": {
+            "sharpe": -0.7668008539036876,
+            "mean_net_daily": -0.000041014970918314704,
+            "params": {
+              "w_carry": 0.34,
+              "w_seasonality": 0.33,
+              "w_xs_momentum": 0.33
+            }
+          }
+        }
+      },
+      "threshold": 0,
+      "result": "DIE",
+      "why": "selected sharpe not positive"
+    },
+    {
+      "id": "era_sign",
+      "rule": "results[selected].eras",
+      "value": {
+        "2010-06-07..2015-10-14": {
+          "mean_net_daily": -0.000037518803668652923,
+          "sharpe": -0.8508624458520907,
+          "n_obs": 1355
+        },
+        "2015-10-15..2021-02-21": {
+          "mean_net_daily": -0.00004406283382389033,
+          "sharpe": -0.8072171000879578,
+          "n_obs": 1345
+        },
+        "2021-02-22..2026-07-02": {
+          "mean_net_daily": -0.000046292740572144885,
+          "sharpe": -0.8606761018858028,
+          "n_obs": 1350
+        }
+      },
+      "threshold": 0,
+      "result": "DIE",
+      "why": "sign fails in an era"
+    },
+    {
+      "id": "pool_corr",
+      "rule": "results[selected].pool",
+      "value": [
+        {
+          "id": "bench-6040",
+          "type": "fixed_weight",
+          "corr": -0.05080419911600597,
+          "sharpe_member": 0.8508665927748814,
+          "sharpe_candidate": -0.9069269002072854,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        },
+        {
+          "id": "bench-spy-hold",
+          "type": "buy_hold",
+          "corr": -0.06906772098141585,
+          "sharpe_member": 0.9052451891441144,
+          "sharpe_candidate": -0.9069269002072854,
+          "n_obs": 2637,
+          "beat": false,
+          "error": null
+        }
+      ],
+      "threshold": 0.7,
+      "result": "PASS"
+    }
+  ],
+  "verdict": "DIE",
+  "selected_variant": "tom",
+  "frozen_through": "2026-07-01",
+  "weights_frozen_prefix_sha256": "9ff0c667e47cf73fc61d2d33f907ae238f1d38b33ed26adc50e2b86e405ed4e0"
+}
