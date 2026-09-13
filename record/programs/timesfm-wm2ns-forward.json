@@ -1,0 +1,45 @@
+{
+  "schema": "nowcast_forward_v1",
+  "program": "timesfm-wm2ns-forward",
+  "target": "WM2NS",
+  "incumbent": "the ACTIVE nowcast_v1 champion for WM2NS at emission (BRIDGE_ARIMAX at commit B), copied into each row from nowcast_history",
+  "arms": [
+    {"id": "uni", "model": "TimesFM", "covariates": []},
+    {"id": "x", "model": "TimesFM", "covariates": ["DPSACBW027NBOG", "LTDACBW027NBOG", "TOTBKCRNSA", "WCURCIR"]}
+  ],
+  "protocol": "bridge.frontier_rows (monday_plus_2_wednesday): one row per unpublished Monday-week once its Wednesday X row is modelled-knowable; asof = max(x_knowable, last real origin); written once; depth-k rows recurse on the arm's own prior nowcast; both arms or nothing",
+  "checkpoint": {
+    "id": "google/timesfm-3.0-pytorch",
+    "revision": "43046b85ec22d584a13f8098c2ed39c889e129c2",
+    "model_safetensors_digest": "a7592b0a8432baee54483254e5647856911ce69e09d09a9bb65904b2d98f17da",
+    "timesfm_version": "3.0.1",
+    "torch_version": "2.9.0+cpu",
+    "seed": 13,
+    "device_default": "cpu"
+  },
+  "rule": {"path": "orient/research-py/src/superbrain/nowcast/forward_window.py", "sha256": "197403ac6d18db481919814e52be8437c2c9c03263258058ed1ed21a76623938"},
+  "sidecar": {"path": "orient/research-py/timesfm_sidecar/sidecar.py", "sha256": "aeee17e6d02c953eda1c3010a0dccf37a71feea05fc90ed125628762a605dee9"},
+  "versions": {"path": "orient/research-py/timesfm_sidecar/versions.json", "sha256": "3e6c7f96d82148b234a515a9557b868d9be54099bc90631041e18110d8eb4195"},
+  "protocol_file_recorded_not_pinned": {"path": "orient/research-py/src/superbrain/nowcast/bridge.py", "sha256_at_commit_b": "031878022a47e1f148635c924d3b83ec603df6d68dd3c20bd10b6a0dd3d55261"},
+  "ledger": "decide/forecasts/timesfm-wm2ns-forward.jsonl",
+  "realised": "first print: MIN captured vintage per obs from series_vintages (w/w ratio of two first-print levels); fred_series latest recorded beside it as an instrument; a missing first print is never filled from latest",
+  "gate": {
+    "loss": "abs",
+    "statistic": "moving_block_bootstrap_mean_diff_one_sided",
+    "block": 8,
+    "reps": 999,
+    "seed": 0,
+    "alpha_family": 0.10,
+    "alpha_arm": 0.05,
+    "pass_min_paired": 40,
+    "die_min_paired": 48,
+    "read_dates": ["2027-03-07", "2027-09-07"],
+    "read_cadence_months": 6,
+    "close": "2028-09-07",
+    "diagnostic": "core.dm_pvalue (h=1 HLN) printed beside p_block; never gates"
+  },
+  "family_n_trials": 2,
+  "family_note": "2 counted trials (uni = attribution arm, x = promotion arm), one parameter set each, never swept; per-arm alpha 0.05 = 0.10 / 2 regardless of the reported loss-differential correlation. Pre-reg docs/superpowers/plans/2026-09-07-timesfm-wm2ns-forward-prereg.md.",
+  "prereg": {"path": "docs/superpowers/plans/2026-09-07-timesfm-wm2ns-forward-prereg.md", "git_sha": "ad6739c9"},
+  "status": "preregistered"
+}

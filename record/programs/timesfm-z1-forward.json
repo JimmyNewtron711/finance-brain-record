@@ -1,0 +1,52 @@
+{
+  "schema": "nowcast_forward_v1",
+  "program": "timesfm-z1-forward",
+  "members": [
+    {"sid": "TLBSHNO", "incumbent": "champion", "champion_at_commit_b": "AutoARIMA", "survey": {"mae_champion": 0.005951570, "mae_timesfm": 0.005772608, "dm_p_vs_champion": 0.2942, "dm_p_vs_naive": 0.0267, "n_judge": 32}},
+    {"sid": "HNOREMQ027S", "incumbent": "champion", "champion_at_commit_b": "AutoETS", "survey": {"mae_champion": 0.020158291, "mae_timesfm": 0.019499863, "dm_p_vs_champion": 0.3108, "dm_p_vs_naive": 0.0456, "n_judge": 26}},
+    {"sid": "DABSHNO", "incumbent": "zero", "champion_at_commit_b": null, "survey": {"mae_zero": 0.022322230, "mae_timesfm": 0.018508879, "dm_p_vs_classical": 0.4663, "dm_p_vs_naive": 0.0857, "n_judge": 32}}
+  ],
+  "incumbent_rule": "champion: the ACTIVE nowcast_v1 champion's committed nowcast_history row for the period at emission (value, model, asof_date), absent => null and never paired; zero: the survey's better naive, incumbent 0.0 / incumbent_model 'zero'",
+  "arm": {"id": "uni", "model": "TimesFM", "covariates": []},
+  "protocol": "materialize._live_edge_task: the champion's univariate live-edge task (first_print q/q pct-change, final regular segment, min_train quarterly 32, h = 1, expanding_tasks(live=True)[-1]); one row per member per Z.1 print, depth 1, asof = task origin, written once; ONE sidecar batch per run (ids <sid>|<period>, freq QS, no covariates), all due members or nothing",
+  "checkpoint": {
+    "id": "google/timesfm-3.0-pytorch",
+    "revision": "43046b85ec22d584a13f8098c2ed39c889e129c2",
+    "model_safetensors_digest": "a7592b0a8432baee54483254e5647856911ce69e09d09a9bb65904b2d98f17da",
+    "timesfm_version": "3.0.1",
+    "torch_version": "2.9.0+cpu",
+    "seed": 13,
+    "device_default": "cpu"
+  },
+  "rule": {"path": "orient/research-py/src/superbrain/nowcast/forward_quarterly.py", "sha256": "716ddf8ea45754226baa58981bf3a7f308bcf83e183258f4d8c7be3bc541a88a"},
+  "sidecar": {"path": "orient/research-py/timesfm_sidecar/sidecar.py", "sha256": "aeee17e6d02c953eda1c3010a0dccf37a71feea05fc90ed125628762a605dee9"},
+  "versions": {"path": "orient/research-py/timesfm_sidecar/versions.json", "sha256": "3e6c7f96d82148b234a515a9557b868d9be54099bc90631041e18110d8eb4195"},
+  "protocol_files_recorded_not_pinned": {
+    "materialize.py": {"path": "orient/research-py/src/superbrain/nowcast/materialize.py", "sha256_at_commit_b": "385b82bc4a2279dc3b23618b36a8d3e604928d4fbefa36ce556bb6c90162f441"},
+    "core.py": {"path": "orient/research-py/src/superbrain/nowcast/core.py", "sha256_at_commit_b": "a23241a5490bcc0a1060f495df7f970976d56cbfcf68c9ee4cabba1e7734ab57"},
+    "access.py": {"path": "orient/research-py/src/superbrain/data/access.py", "sha256_at_commit_b": "d66fde51fcc387bfc7a3cbf0926c8e220a0317bd69fe6cf547dbdfebca691b85"},
+    "note": "the shared univariate protocol (_live_edge_task, expanding_tasks, target_from_frame, first_print_frame): a change moves champion and arm identically and is a git event the read sitting checks (spec D5)"
+  },
+  "imports_from_pinned": {"path": "orient/research-py/src/superbrain/nowcast/forward_window.py", "note": "read_ledger, first_print_levels, block_bootstrap_p, git_sha, _now_utc, MODEL_KEY, TIMESFM_SIDECAR — pinned by timesfm-wm2ns-forward, never edited here"},
+  "ledger": "decide/forecasts/timesfm-z1-forward.jsonl",
+  "realised": "first print: MIN captured vintage per obs from series_vintages (field value, tombstone 0), q/q ratio of the period's and the quarter-start predecessor's first-print levels; fred_series latest recorded beside it as an instrument; a missing first print is never filled from latest; a first print without a recorded stamp fails closed",
+  "gate": {
+    "loss": "abs",
+    "statistic": "moving_block_bootstrap_mean_diff_one_sided",
+    "block": 4,
+    "reps": 999,
+    "seed": 0,
+    "alpha_family": 0.10,
+    "family_n_trials": 3,
+    "alpha_member": 0.033333,
+    "pass_min_paired": 20,
+    "die_min_paired": 24,
+    "read_dates": ["2027-10-01"],
+    "read_cadence_months": 12,
+    "close": "2032-12-31",
+    "diagnostic": "core.dm_pvalue (h=1 HLN) printed beside p_block; never gates"
+  },
+  "family_note": "3 counted trials (one uni arm per member), one parameter set each, never swept; per-member alpha 0.033333 = 0.10 / 3 regardless of the reported pairwise loss-differential correlations. Chartered against the pre-registered power table (P(PASS) at n 20 ~0.05 / 0.04 / 0.19). Pre-reg docs/superpowers/plans/2026-09-11-timesfm-z1-forward-prereg.md.",
+  "prereg": {"path": "docs/superpowers/plans/2026-09-11-timesfm-z1-forward-prereg.md", "git_sha": "11598849"},
+  "status": "preregistered"
+}

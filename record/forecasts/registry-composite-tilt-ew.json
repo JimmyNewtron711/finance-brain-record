@@ -1,0 +1,798 @@
+{
+  "schema": "forecasts_v1",
+  "program": "registry-composite-tilt",
+  "variant": "ew",
+  "universe": [
+    "SPY"
+  ],
+  "cadence": "monthly",
+  "horizon_sessions": 21,
+  "scale": {
+    "cap": 20.0,
+    "normal_abs": 10.0
+  },
+  "emitter": {
+    "git_sha": "e9b885eb0860eb9ec25ad09c8917875f8ab85ef2",
+    "rule": "registry_tilt",
+    "rule_sha256": "7213e2a3eebe88417e0d113453a813dba5d1128a2e15c3304a844d78dcc1346d",
+    "manifest_sha256": "737ecedaabc99fee5c40e0537433989e659261d38e5d0c1e8b7ee57d40af532b",
+    "data_fingerprint": "fd0c9ece3817b27307da8876da37a3212da95c5c72584ba3d72ee4fb931eee76",
+    "db_path_basename": "dashboard.db",
+    "tape_asof": "2026-09-04T04:22:52Z",
+    "causality_check": {
+      "dates_tested": [
+        "2026-05-01",
+        "2026-06-01",
+        "2026-07-01"
+      ],
+      "max_abs_delta": 0.0
+    },
+    "emitted_at": "2026-09-05T15:59:35Z",
+    "rows_appended": 127
+  },
+  "frozen_through": "2026-07-01",
+  "rows": [
+    {
+      "date": "2016-01-04",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2016-02-01",
+      "forecast": {
+        "SPY": 0.886475
+      }
+    },
+    {
+      "date": "2016-03-01",
+      "forecast": {
+        "SPY": 2.57418
+      }
+    },
+    {
+      "date": "2016-04-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2016-05-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2016-06-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2016-07-01",
+      "forecast": {
+        "SPY": 8.102197
+      }
+    },
+    {
+      "date": "2016-08-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2016-09-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2016-10-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2016-11-01",
+      "forecast": {
+        "SPY": 3.818206
+      }
+    },
+    {
+      "date": "2016-12-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-01-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-02-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-03-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-04-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-05-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-06-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-07-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-08-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-09-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-10-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-11-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2017-12-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2018-01-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2018-02-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2018-03-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2018-04-02",
+      "forecast": {
+        "SPY": 5.98374
+      }
+    },
+    {
+      "date": "2018-05-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2018-06-01",
+      "forecast": {
+        "SPY": 0.225791
+      }
+    },
+    {
+      "date": "2018-07-02",
+      "forecast": {
+        "SPY": 1.525076
+      }
+    },
+    {
+      "date": "2018-08-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2018-09-04",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2018-10-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2018-11-01",
+      "forecast": {
+        "SPY": 4.718006
+      }
+    },
+    {
+      "date": "2018-12-03",
+      "forecast": {
+        "SPY": 2.550614
+      }
+    },
+    {
+      "date": "2019-01-02",
+      "forecast": {
+        "SPY": 16.057069
+      }
+    },
+    {
+      "date": "2019-02-01",
+      "forecast": {
+        "SPY": 2.402127
+      }
+    },
+    {
+      "date": "2019-03-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2019-04-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2019-05-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2019-06-03",
+      "forecast": {
+        "SPY": 11.898922
+      }
+    },
+    {
+      "date": "2019-07-01",
+      "forecast": {
+        "SPY": 6.529125
+      }
+    },
+    {
+      "date": "2019-08-01",
+      "forecast": {
+        "SPY": 14.391918
+      }
+    },
+    {
+      "date": "2019-09-03",
+      "forecast": {
+        "SPY": 17.561286
+      }
+    },
+    {
+      "date": "2019-10-01",
+      "forecast": {
+        "SPY": 20.0
+      }
+    },
+    {
+      "date": "2019-11-01",
+      "forecast": {
+        "SPY": 6.287942
+      }
+    },
+    {
+      "date": "2019-12-02",
+      "forecast": {
+        "SPY": 1.243044
+      }
+    },
+    {
+      "date": "2020-01-02",
+      "forecast": {
+        "SPY": 0.688754
+      }
+    },
+    {
+      "date": "2020-02-03",
+      "forecast": {
+        "SPY": 11.299551
+      }
+    },
+    {
+      "date": "2020-03-02",
+      "forecast": {
+        "SPY": 9.151918
+      }
+    },
+    {
+      "date": "2020-04-01",
+      "forecast": {
+        "SPY": 20.0
+      }
+    },
+    {
+      "date": "2020-05-01",
+      "forecast": {
+        "SPY": 20.0
+      }
+    },
+    {
+      "date": "2020-06-01",
+      "forecast": {
+        "SPY": 20.0
+      }
+    },
+    {
+      "date": "2020-07-01",
+      "forecast": {
+        "SPY": 20.0
+      }
+    },
+    {
+      "date": "2020-08-03",
+      "forecast": {
+        "SPY": 18.843243
+      }
+    },
+    {
+      "date": "2020-09-01",
+      "forecast": {
+        "SPY": 14.544078
+      }
+    },
+    {
+      "date": "2020-10-01",
+      "forecast": {
+        "SPY": 18.08335
+      }
+    },
+    {
+      "date": "2020-11-02",
+      "forecast": {
+        "SPY": 19.163533
+      }
+    },
+    {
+      "date": "2020-12-01",
+      "forecast": {
+        "SPY": 16.315031
+      }
+    },
+    {
+      "date": "2021-01-04",
+      "forecast": {
+        "SPY": 11.834734
+      }
+    },
+    {
+      "date": "2021-02-01",
+      "forecast": {
+        "SPY": 16.688571
+      }
+    },
+    {
+      "date": "2021-03-01",
+      "forecast": {
+        "SPY": 17.637653
+      }
+    },
+    {
+      "date": "2021-04-01",
+      "forecast": {
+        "SPY": 9.27554
+      }
+    },
+    {
+      "date": "2021-05-03",
+      "forecast": {
+        "SPY": 1.50348
+      }
+    },
+    {
+      "date": "2021-06-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2021-07-01",
+      "forecast": {
+        "SPY": 0.278279
+      }
+    },
+    {
+      "date": "2021-08-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2021-09-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2021-10-01",
+      "forecast": {
+        "SPY": 7.339658
+      }
+    },
+    {
+      "date": "2021-11-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2021-12-01",
+      "forecast": {
+        "SPY": 8.930062
+      }
+    },
+    {
+      "date": "2022-01-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2022-02-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2022-03-01",
+      "forecast": {
+        "SPY": 10.92951
+      }
+    },
+    {
+      "date": "2022-04-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2022-05-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2022-06-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2022-07-01",
+      "forecast": {
+        "SPY": 2.108639
+      }
+    },
+    {
+      "date": "2022-08-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2022-09-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2022-10-03",
+      "forecast": {
+        "SPY": 1.567868
+      }
+    },
+    {
+      "date": "2022-11-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2022-12-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-01-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-02-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-03-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-04-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-05-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-06-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-07-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-08-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-09-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-10-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-11-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2023-12-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-01-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-02-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-03-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-04-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-05-01",
+      "forecast": {
+        "SPY": 0.531105
+      }
+    },
+    {
+      "date": "2024-06-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-07-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-08-01",
+      "forecast": {
+        "SPY": 0.960871
+      }
+    },
+    {
+      "date": "2024-09-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-10-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2024-11-01",
+      "forecast": {
+        "SPY": 5.046666
+      }
+    },
+    {
+      "date": "2024-12-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2025-01-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2025-02-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2025-03-03",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2025-04-01",
+      "forecast": {
+        "SPY": 7.646563
+      }
+    },
+    {
+      "date": "2025-05-01",
+      "forecast": {
+        "SPY": 18.557538
+      }
+    },
+    {
+      "date": "2025-06-02",
+      "forecast": {
+        "SPY": 7.404048
+      }
+    },
+    {
+      "date": "2025-07-01",
+      "forecast": {
+        "SPY": 1.834331
+      }
+    },
+    {
+      "date": "2025-08-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2025-09-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2025-10-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2025-11-03",
+      "forecast": {
+        "SPY": 4.219581
+      }
+    },
+    {
+      "date": "2025-12-01",
+      "forecast": {
+        "SPY": 2.469197
+      }
+    },
+    {
+      "date": "2026-01-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2026-02-02",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2026-03-02",
+      "forecast": {
+        "SPY": 0.62618
+      }
+    },
+    {
+      "date": "2026-04-01",
+      "forecast": {
+        "SPY": 16.172012
+      }
+    },
+    {
+      "date": "2026-05-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2026-06-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "forecast": {
+        "SPY": 0.0
+      }
+    }
+  ]
+}

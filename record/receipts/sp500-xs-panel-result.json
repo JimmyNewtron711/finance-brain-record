@@ -1,0 +1,382 @@
+{
+  "schema": "xs_panel_result_v1",
+  "program": "sp500-xs-panel",
+  "evaluated_at": "2026-09-09",
+  "prereg_path": "docs/superpowers/plans/2026-09-08-sp500-xs-panel-prereg.md",
+  "window": {
+    "start": "2016-01-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "horizon": 21,
+  "alpha_family": 0.016667,
+  "family_n_trials": 3,
+  "n_trials_clustered": 1,
+  "pins": {
+    "rule_path": "orient/research-py/src/superbrain/relationships/xs_panel.py",
+    "rule_sha256": "16619410620639c51deffe9c9c2e358336d374bae8630d9c18c21e15475bd0ed",
+    "stat_path": "orient/research-py/src/superbrain/relationships/panel.py",
+    "stat_sha256": "2b7691ed3b971288d5173f5cbb9b758cd6813454c03066d8d89bed2be80472cd",
+    "universe_path": "observe/universe/sp500-pit-2026-09-08.json",
+    "universe_sha256": "5485328f2505953584562788256adc2fc5696659fbd4a64e158c4bf261a58a28",
+    "baseline_path": "govern/baselines/ohlcv_sp500xs_v1.json",
+    "baseline_sha256": "7acbde42f311516615116cc638a817601986bdb849411bbe78120a548830a039"
+  },
+  "receipt": {
+    "no_bars": [
+      "BCR",
+      "BXLT",
+      "CSRA",
+      "DPS",
+      "DWDP",
+      "GAS",
+      "GGP",
+      "HAR",
+      "PCL",
+      "RHT",
+      "SCG",
+      "SNI",
+      "TWC",
+      "TYC",
+      "YHOO"
+    ],
+    "stitched": [
+      {
+        "symbol": "ABMD",
+        "from": "2018-05-30",
+        "to": "2022-12-21",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "ALK",
+        "from": "2016-05-12",
+        "to": "2023-12-15",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "AMTM",
+        "from": "2024-10-30",
+        "to": "2024-12-23",
+        "first_bar": "2024-09-24"
+      },
+      {
+        "symbol": "ANSS",
+        "from": "2017-06-19",
+        "to": "2025-07-18",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "AYI",
+        "from": "2016-05-02",
+        "to": "2018-06-15",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "BHF",
+        "from": "2017-08-08",
+        "to": "2019-04-02",
+        "first_bar": "2017-07-17"
+      },
+      {
+        "symbol": "BIO",
+        "from": "2020-06-19",
+        "to": "2024-09-23",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "CE",
+        "from": "2018-12-21",
+        "to": "2025-03-24",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "COTY",
+        "from": "2016-09-30",
+        "to": "2020-09-18",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "CTLT",
+        "from": "2020-09-18",
+        "to": "2024-12-23",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "CXO",
+        "from": "2016-02-19",
+        "to": "2021-01-20",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "CZR",
+        "from": "2021-03-19",
+        "to": "2025-09-22",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "DAY",
+        "from": "2021-09-17",
+        "to": "2026-02-09",
+        "first_bar": "2018-04-26"
+      },
+      {
+        "symbol": "DISH",
+        "from": "2017-03-13",
+        "to": "2023-06-20",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "DRE",
+        "from": "2017-07-25",
+        "to": "2022-09-30",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "DXC",
+        "from": "2017-04-03",
+        "to": "2023-10-02",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "ENPH",
+        "from": "2021-01-06",
+        "to": "2025-09-22",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "EPAM",
+        "from": "2021-12-13",
+        "to": "2026-06-01",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "ETSY",
+        "from": "2020-09-18",
+        "to": "2024-09-23",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "EVHC",
+        "from": "2016-12-01",
+        "to": "2018-10-10",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "FBIN",
+        "from": "2016-06-23",
+        "to": "2022-12-20",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "FL",
+        "from": "2016-04-01",
+        "to": "2019-08-08",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "FRC",
+        "from": "2018-12-31",
+        "to": "2023-05-03",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "HFC",
+        "from": "2018-06-15",
+        "to": "2021-06-03",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "HOLX",
+        "from": "2016-03-29",
+        "to": "2026-04-09",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "IPGP",
+        "from": "2018-03-06",
+        "to": "2022-06-17",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "LKQ",
+        "from": "2016-05-20",
+        "to": "2025-12-22",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "LW",
+        "from": "2018-11-30",
+        "to": "2026-03-23",
+        "first_bar": "2016-11-01"
+      },
+      {
+        "symbol": "MBC",
+        "from": "2022-12-15",
+        "to": "2022-12-19",
+        "first_bar": "2022-12-09"
+      },
+      {
+        "symbol": "MKTX",
+        "from": "2019-06-28",
+        "to": "2025-09-22",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "MOH",
+        "from": "2022-03-01",
+        "to": "2026-03-23",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "MTCH",
+        "from": "2021-09-17",
+        "to": "2026-03-23",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "MXIM",
+        "from": "2018-11-30",
+        "to": "2021-08-27",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "NKTR",
+        "from": "2018-03-19",
+        "to": "2019-10-02",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "OGN",
+        "from": "2021-06-02",
+        "to": "2023-10-17",
+        "first_bar": "2021-05-14"
+      },
+      {
+        "symbol": "PAYC",
+        "from": "2020-01-27",
+        "to": "2026-03-23",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "PENN",
+        "from": "2021-03-19",
+        "to": "2022-09-16",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "POOL",
+        "from": "2020-10-06",
+        "to": "2026-06-22",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "SBNY",
+        "from": "2021-12-17",
+        "to": "2023-03-14",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "SEDG",
+        "from": "2021-12-17",
+        "to": "2023-12-15",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "SIVB",
+        "from": "2018-03-19",
+        "to": "2023-03-14",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "SOLS",
+        "from": "2025-10-31",
+        "to": "2025-12-22",
+        "first_bar": "2025-10-20"
+      },
+      {
+        "symbol": "TFX",
+        "from": "2019-01-17",
+        "to": "2025-03-24",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "TWTR",
+        "from": "2018-06-06",
+        "to": "2022-10-31",
+        "first_bar": "2016-01-04"
+      },
+      {
+        "symbol": "UA",
+        "from": "2016-04-14",
+        "to": "2022-06-17",
+        "first_bar": "2016-01-05"
+      },
+      {
+        "symbol": "VNT",
+        "from": "2020-10-08",
+        "to": "2021-03-19",
+        "first_bar": "2020-09-24"
+      },
+      {
+        "symbol": "WCG",
+        "from": "2018-09-14",
+        "to": "2020-01-27",
+        "first_bar": "2016-01-04"
+      }
+    ],
+    "splices": 95,
+    "delisted_cells": {
+      "mom_12_1": 1033
+    },
+    "symbols_with_bars": 698,
+    "intervals": 719
+  },
+  "members": [
+    {
+      "member": "mom_12_1",
+      "registered_sign": 1,
+      "effect_size": 0.016632584323046054,
+      "p_raw": 0.292,
+      "mbf": 0.573964043198268,
+      "ci_low": -0.013533280283509124,
+      "ci_high": 0.047784715664985176,
+      "n_obs": 1172380,
+      "n_dates": 2366,
+      "n_symbols": 649,
+      "dates_dropped": 0,
+      "delisted_cells": 1033,
+      "splices": 72,
+      "eras": [
+        {
+          "start": "2016-01-04",
+          "end": "2019-07-03",
+          "n_dates": 629,
+          "ic": 0.02809102109336001,
+          "note": "ok"
+        },
+        {
+          "start": "2019-07-04",
+          "end": "2023-01-01",
+          "n_dates": 881,
+          "ic": -0.018781171397322136,
+          "note": "ok"
+        },
+        {
+          "start": "2023-01-02",
+          "end": "2026-07-02",
+          "n_dates": 856,
+          "ic": 0.044778605032247454,
+          "note": "ok"
+        }
+      ],
+      "neighbour": {
+        "id": "mom_6_1",
+        "effect_size": 0.002019106586026149
+      },
+      "kills_failed": [
+        "p_family",
+        "era_sign"
+      ],
+      "verdict": "DIE"
+    }
+  ]
+}

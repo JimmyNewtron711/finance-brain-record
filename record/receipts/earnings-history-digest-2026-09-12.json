@@ -1,0 +1,12 @@
+{
+  "schema": "earnings_digest_v1",
+  "program": "sp500-earnings-events",
+  "generated_at": "2026-09-12",
+  "universe_path": "observe/universe/sp500-pit-2026-09-08.json",
+  "universe_sha256": "5485328f2505953584562788256adc2fc5696659fbd4a64e158c4bf261a58a28",
+  "sql": "SELECT symbol, date FROM earnings_history WHERE eps_actual IS NOT NULL AND date >= ? AND date < ? ORDER BY symbol, date",
+  "end_exclusive": "2026-07-03",
+  "universe_symbols": 713,
+  "rows": 80641,
+  "sha256": "70e600a63ac167f488750fd5d3838a4d96a1613c6875a0ec79ea629573c9e0d0"
+}
