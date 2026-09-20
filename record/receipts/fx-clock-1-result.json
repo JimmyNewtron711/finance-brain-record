@@ -1,0 +1,121 @@
+{
+  "schema": "fx_clock_result_v1",
+  "program": "fx-clock-1",
+  "evaluated_at": "2026-09-15",
+  "prereg_path": "docs/superpowers/plans/2026-09-15-fx-clock-1-prereg.md",
+  "window": {
+    "start": "2003-08-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "alpha_family": 0.05,
+  "family_n_trials": 2,
+  "n_trials_clustered": 1,
+  "forward": {
+    "first_date": "2026-09-16",
+    "reads": [
+      "2027-09-16",
+      "2028-09-16",
+      "2029-09-16",
+      "2030-09-16"
+    ],
+    "close": "2031-09-16",
+    "cap": 3,
+    "min_era_dates": 60
+  },
+  "pins": {
+    "rule_path": "orient/research-py/src/superbrain/relationships/fx_clock.py",
+    "rule_sha256": "997db457270a3a31b324c5c6496b1e8b23172fb906b295cf03cc52987ae284f9",
+    "baseline_path": "govern/baselines/ohlcv_fx_v1.json",
+    "baseline_sha256": "75cb9d5997b58d996dd529ef9b7761d1abceff3c93359e4777e350b6880434f1",
+    "tape_path": "govern/receipts/fx-tape-2026-09-15.json",
+    "tape_sha256": "c5ea804f91e98e701a7cce652e06847bab59e6324f8e9fdc796a5249c537b022"
+  },
+  "tape": {
+    "digest": "55d1b4034a7aa7f1a1cb45c6fe2af775a148f922f78cc659fff0caa03ba28c00",
+    "tables": {
+      "fx_minute": {
+        "rows": 17126160,
+        "first_ts": 1059955200,
+        "last_ts": 1783036740,
+        "pairs": [
+          "EURUSD"
+        ]
+      },
+      "fx_hourly": {
+        "rows": 2001306,
+        "first_ts": 1059955200,
+        "last_ts": 1783033200,
+        "pairs": [
+          "AUDUSD",
+          "EURUSD",
+          "GBPUSD",
+          "NZDUSD",
+          "USDCAD",
+          "USDCHF",
+          "USDJPY"
+        ]
+      }
+    }
+  },
+  "members": [
+    {
+      "member": "europe_am_short",
+      "registered_sign": 1,
+      "effect_size": 1.6960752953377995,
+      "units": "bp/day",
+      "p_raw": 0.001,
+      "mbf": 0.0044547555730083625,
+      "ci_low": 0.9086816141657613,
+      "ci_high": 2.5574352890187306,
+      "n": 5957,
+      "sigma": 33.193844403882785,
+      "receipt": {
+        "n_days": 5979,
+        "n_scored": 5957,
+        "n_without_quote": 22,
+        "n_outside_window": 0,
+        "shift_h": 0,
+        "half_spread_bp": [
+          0.19455480025013316,
+          0.17822056401478442
+        ]
+      },
+      "eras": [
+        {
+          "start": "2003-08-04",
+          "end": "2011-03-24",
+          "n_dates": 1993,
+          "ic": 1.6427745645582221,
+          "note": "ok"
+        },
+        {
+          "start": "2011-03-25",
+          "end": "2018-11-11",
+          "n_dates": 1982,
+          "ic": 2.7853581055311913,
+          "note": "ok"
+        },
+        {
+          "start": "2018-11-12",
+          "end": "2026-07-02",
+          "n_dates": 1982,
+          "ic": 0.6603890322905716,
+          "note": "ok"
+        }
+      ],
+      "neighbour": {
+        "id": "europe_am_short_ldn",
+        "effect_size": 2.060687850050123
+      },
+      "kills_failed": [],
+      "p_pass_registered": 0.79,
+      "mechanism_class": "institutional flow / calendar",
+      "expected_effect": 1.19,
+      "realized_effect": 1.6960752953377995,
+      "cost_bp_per_day": 0.3727753642649176,
+      "net_mean": 1.323299931072882,
+      "verdict": "PASS"
+    }
+  ],
+  "conclusion_note": "expected_effect (the frozen prereg prior 1.19 bp/day) and realized_effect (= effect_size) were added by the conclusion commit, not by the run: the writer in orient/research-py/src/superbrain/relationships/fx_clock.py emits effect_size only, and that file is a pinned rule (rule_sha256 997db457\u2026) frozen while the member is live, so it was not edited. No computed value was altered. Adding both names to the writer is owed on the next program that unfreezes it."
+}

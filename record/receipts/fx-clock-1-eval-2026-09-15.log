@@ -1,0 +1,11 @@
+$ source orient/research-py/.venv/bin/activate && PYTHONPATH=orient/research-py/src python -m superbrain.cli fxc evaluate --prereg docs/superpowers/plans/2026-09-15-fx-clock-1-prereg.md
+# started 2026-09-15T06:56:49.325Z
+europe_am_short: mean +1.6961 bp/day  p 0.0010  mbf 0.0045  n 5957  sigma 33.1938  neighbour europe_am_short_ldn +2.0607  registered P(PASS) 0.79
+  cost (receipt): spread paid 0.37 bp/day; net mean +1.3233 bp/day (not a kill)
+  era 2003-08-04..2011-03-24: n 1993 mean +1.6428 (ok)
+  era 2011-03-25..2018-11-11: n 1982 mean +2.7854 (ok)
+  era 2018-11-12..2026-07-02: n 1982 mean +0.6604 (ok)
+  kills failed: none
+  VERDICT PASS
+family: 2 raw / 1 clustered; forward first_date 2026-09-16, reads ['2027-09-16', '2028-09-16', '2029-09-16', '2030-09-16'], close 2031-09-16
+# exit 0

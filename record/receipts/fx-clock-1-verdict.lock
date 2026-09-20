@@ -1,0 +1,7 @@
+{
+  "program": "fx-clock-1",
+  "commit_a": "f542c9a0450b0ae9767e39726b867aa2e14d1935",
+  "run_command": "PYTHONPATH=orient/research-py/src python -m superbrain.cli fxc evaluate --prereg docs/superpowers/plans/2026-09-15-fx-clock-1-prereg.md",
+  "host": "AI-node",
+  "ts": "2026-09-15T06:56:48.090Z"
+}

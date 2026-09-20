@@ -1,0 +1,122 @@
+{
+  "date": "2026-09-20",
+  "source": "observe/cron-health.md",
+  "generated_at": "2026-09-20T13:41:12.319Z",
+  "summary": {
+    "ok": 19,
+    "late": 1,
+    "silent": 0
+  },
+  "jobs": [
+    {
+      "job": "provenance-snapshot",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "sweep-derivatives",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "paper-track",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "heartbeat-substrate",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "stream-health",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "map-run",
+      "status": "LATE",
+      "detail": "log 313.8h old (allowed 192h)"
+    },
+    {
+      "job": "collect-portwatch",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "heartbeat-gold",
+      "status": "FAILING",
+      "detail": "no \"[gold] done — all sources ok\" in log output since last healthy check"
+    },
+    {
+      "job": "heartbeat-crypto",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "pattern-eval",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "anchor-push",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "forward-record",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "factory-tick",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "backup",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "backup-drill",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "nowcast-run",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "drift-flags",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "db-reconcile",
+      "status": "FAILING",
+      "detail": "no \"[reconcile] ok\" in log output since last healthy check"
+    },
+    {
+      "job": "wallet-run",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "t110-refresh",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "databento-daily",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "blocks-run",
+      "status": "OK",
+      "detail": "log 2.2h old (allowed 26h)"
+    }
+  ]
+}

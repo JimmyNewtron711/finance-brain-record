@@ -1,0 +1,80 @@
+{
+  "schema": "fx_tape_receipt_v1",
+  "db": "/home/brain/finance-brain/data/fx-bars.db",
+  "written_at": "2026-09-15",
+  "window": {
+    "start": "2003-08-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "digest": "55d1b4034a7aa7f1a1cb45c6fe2af775a148f922f78cc659fff0caa03ba28c00",
+  "tables": {
+    "fx_minute": {
+      "rows": 17126160,
+      "first_ts": 1059955200,
+      "last_ts": 1783036740,
+      "pairs": [
+        "EURUSD"
+      ]
+    },
+    "fx_hourly": {
+      "rows": 2001306,
+      "first_ts": 1059955200,
+      "last_ts": 1783033200,
+      "pairs": [
+        "AUDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "NZDUSD",
+        "USDCAD",
+        "USDCHF",
+        "USDJPY"
+      ]
+    }
+  },
+  "sessions": {
+    "EUR": 5971,
+    "GBP": 5970,
+    "JPY": 5969,
+    "CHF": 5970,
+    "CAD": 5968,
+    "AUD": 5965,
+    "NZD": 5967
+  },
+  "clocks": {
+    "tokyo_fix_rev": {
+      "n_days": 5978,
+      "n_scored": 5961,
+      "n_without_quote": 17,
+      "n_outside_window": 1,
+      "shift_h": 0,
+      "half_spread_bp": [
+        0.6904498010631387,
+        0.16424069520626333,
+        0.20889823422665693
+      ],
+      "cost_bp_per_day": 1.2278294257023223
+    },
+    "europe_am_short": {
+      "n_days": 5979,
+      "n_scored": 5957,
+      "n_without_quote": 22,
+      "n_outside_window": 0,
+      "shift_h": 0,
+      "half_spread_bp": [
+        0.19455480025013316,
+        0.17822056401478442
+      ],
+      "cost_bp_per_day": 0.3727753642649176
+    }
+  },
+  "fred_check": {
+    "DEXUSEU": {
+      "dates": 5742,
+      "median_abs_logdiff": 0.0009971841222820596
+    },
+    "DEXJPUS": {
+      "dates": 5742,
+      "median_abs_logdiff": 0.0009661389314285666
+    }
+  }
+}
