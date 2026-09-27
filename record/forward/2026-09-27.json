@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-27",
+  "label": "running — not a verdict",
+  "generated_at": "2026-09-27T17:00:01+00:00",
+  "pool_size": 1,
+  "members": [
+    {
+      "program": "fx-clock-1",
+      "member": "europe_am_short",
+      "status": "stale",
+      "units": "bp/day",
+      "first_date": "2026-09-16",
+      "last_date": "2026-09-11",
+      "n_forward": 0,
+      "mean_net": null,
+      "mean_gross": null,
+      "sd": null,
+      "prior": 1.19,
+      "in_sample_mean": 1.6960752953377995,
+      "rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

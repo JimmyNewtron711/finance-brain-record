@@ -5,3 +5,5 @@ empty: no hypothesis has survived the platform's confirmatory holdout gates yet
 (see `record/claims.json` for the full denominator, kills included). A strategy
 appears here only after a pre-registered confirmatory PASS on virgin holdout data.
 Forecast-scoring slots (Brier/CRPS) activate with the first live forecast stream.
+Running forward statistics of the factory pool (in-sample PASS / FORWARD-WATCH members) publish weekly in
+`record/forward/` — labelled running, never a verdict; each file's `rows_sha256` anchors the private daily rows.
