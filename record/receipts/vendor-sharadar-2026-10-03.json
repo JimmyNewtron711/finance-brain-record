@@ -1,0 +1,154 @@
+{
+  "schema": "vendor_tape_receipt_v1",
+  "vendor": "sharadar",
+  "written_at": "2026-10-03",
+  "authority": "Amendment 2026-10-01 (K1) B1 (4); factory spec § 2.2 condition 2",
+  "arenas": [
+    "us-allus-xs-sharadar",
+    "us-events-sharadar"
+  ],
+  "source": {
+    "path": "observe/vendor-eod-2026-09-20.md",
+    "commit": "79a8d69bb6129fa1d98f76a73f1cda96b91825d2",
+    "sha256": "1230d20c4cbd9b6cb905406136cd287148937e14caff75bc476d421253ba7b30"
+  },
+  "note": "Counts, spans and shas transcribed from the source load receipt (S-A and S-B, 2026-09-20); no vendor row. sha256 = the source receipt per-table digest of the depot rows as received. Depot rows after sharadar#104 (the --daily runs, 2026-09-25 →) are not in this receipt.",
+  "tables": {
+    "stocks": {
+      "rows": 45343704,
+      "first_date": "1997-12-31",
+      "last_date": "2026-09-18",
+      "depot_rows": "sharadar#26–41",
+      "bytes_as_received": 990688912,
+      "sha256": "7f583620c5a2258067f8dc3d1ab280cc8767e5731cf57ca9b31c2c389fa9af25",
+      "schema_row": "sharadar#25"
+    },
+    "funds": {
+      "rows": 15635012,
+      "first_date": "1997-12-31",
+      "last_date": "2026-09-18",
+      "depot_rows": "sharadar#43–48",
+      "bytes_as_received": 304773971,
+      "sha256": "416bad5195daadad7781b2289cd75b2bd292f1a806447a59def77b8ffd602197",
+      "schema_row": "sharadar#42"
+    },
+    "tickers": {
+      "rows": 74238,
+      "first_date": null,
+      "last_date": null,
+      "depot_rows": "sharadar#50",
+      "bytes_as_received": 4894691,
+      "sha256": "efb59a210db52e925f644d419655e854ac3bb9f3520b94559dcdd5b9e2ae8d63",
+      "schema_row": "sharadar#49"
+    },
+    "actions": {
+      "rows": 699821,
+      "first_date": "1997-12-31",
+      "last_date": "2026-09-22",
+      "depot_rows": "sharadar#52",
+      "bytes_as_received": 10408479,
+      "sha256": "3601f848b88dc3664f2bd5cfb977866122e6f1a86704f56586e4de3a93fe0005",
+      "schema_row": "sharadar#51"
+    },
+    "sp500": {
+      "rows": 59674,
+      "first_date": "1957-03-04",
+      "last_date": "2026-09-20",
+      "depot_rows": "sharadar#54",
+      "bytes_as_received": 285413,
+      "sha256": "013f105553c6785e202e1e0d03789c5dfc517e2838cc0bd68d23b4070b3b02ac",
+      "schema_row": "sharadar#53"
+    },
+    "metrics": {
+      "rows": 30894,
+      "first_date": "1997-12-31",
+      "last_date": "2026-09-18",
+      "depot_rows": "sharadar#56",
+      "bytes_as_received": 1469769,
+      "sha256": "fe1989db98e4ae40891e1c1341f951fe2221e2b95a3025d0a14f62dc46567508",
+      "schema_row": "sharadar#55"
+    },
+    "descriptions": {
+      "rows": 384,
+      "first_date": null,
+      "last_date": null,
+      "depot_rows": "sharadar#58",
+      "bytes_as_received": 18732,
+      "sha256": "a39d6b52be58a67c464f9d70b901af625d353674f0a1b3a065489bba16333aa9",
+      "schema_row": "sharadar#57"
+    },
+    "fundamentals": {
+      "rows": 3217092,
+      "first_date": "1990-06-06",
+      "last_date": "2026-09-18",
+      "depot_rows": "sharadar#60–70",
+      "bytes_as_received": 660686874,
+      "sha256": "26cf2eb4c0a03b9d8bf4c9427a910293a605123b38c4e0ebbc057b39e164b1a2",
+      "schema_row": "sharadar#59"
+    },
+    "daily": {
+      "rows": 39808078,
+      "first_date": "1998-12-01",
+      "last_date": "2026-09-18",
+      "depot_rows": "sharadar#72–84",
+      "bytes_as_received": 764924282,
+      "sha256": "7ca53d972d0b659943eafc638567e0ba22dfc369cb24a0fbc0ca2ea6fcbf56f8",
+      "schema_row": "sharadar#71"
+    },
+    "events": {
+      "rows": 2531283,
+      "first_date": "1993-11-08",
+      "last_date": "2026-09-18",
+      "depot_rows": "sharadar#86",
+      "bytes_as_received": 11513810,
+      "sha256": "d9f422b87e0231bc55691718017be1f20e224a8d20ef9700f58352bed9093b54",
+      "schema_row": "sharadar#85"
+    },
+    "insiders": {
+      "rows": 11549293,
+      "first_date": "2008-01-02",
+      "last_date": "2026-09-18",
+      "depot_rows": "sharadar#88",
+      "bytes_as_received": 246692385,
+      "sha256": "d39969b201ac969cb8748bbdef918ad067c472184b385c6243de1fd12dc37393",
+      "schema_row": "sharadar#87"
+    },
+    "holdings": {
+      "rows": 81202367,
+      "first_date": "2013-06-30",
+      "last_date": "2026-06-30",
+      "depot_rows": "sharadar#90–100",
+      "bytes_as_received": 610529567,
+      "sha256": "6fcb2b5241896078610469a4a91f1505a5d874494e0f23b46c992050c4737ef5",
+      "schema_row": "sharadar#89"
+    },
+    "holdings_investor": {
+      "rows": 306476,
+      "first_date": "2013-06-30",
+      "last_date": "2026-06-30",
+      "depot_rows": "sharadar#102",
+      "bytes_as_received": 11521508,
+      "sha256": "ab7916c06bd5ae0c18e424ddb01869342d8b53ac18b37888c6405cffe558ab7b",
+      "schema_row": "sharadar#101"
+    },
+    "holdings_ticker": {
+      "rows": 670111,
+      "first_date": "2013-06-30",
+      "last_date": "2026-06-30",
+      "depot_rows": "sharadar#104",
+      "bytes_as_received": 19409726,
+      "sha256": "8fb06bd55f2364f4ff9b4d681d3892b68ef76e51dc36017f8b63a07002ade95b",
+      "schema_row": "sharadar#103"
+    }
+  },
+  "loads": [
+    {
+      "rows": 61843727,
+      "bytes_as_received": 1312539967
+    },
+    {
+      "rows": 139284700,
+      "bytes_as_received": 2325278152
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-04",
+  "source": "observe/cron-health.md",
+  "generated_at": "2026-10-04T10:50:01.138Z",
+  "summary": {
+    "ok": 21,
+    "late": 1,
+    "silent": 0,
+    "failing": 2
+  },
+  "jobs": [
+    {
+      "job": "provenance-snapshot",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "sweep-derivatives",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "paper-track",
+      "status": "FAILING",
+      "detail": "no \"[paper-track] outcome=ok\" in log output since last healthy check"
+    },
+    {
+      "job": "heartbeat-substrate",
+      "status": "OK",
+      "detail": "log 0.4h old (allowed 26h)"
+    },
+    {
+      "job": "stream-health",
+      "status": "OK",
+      "detail": "log 0.2h old (allowed 26h)"
+    },
+    {
+      "job": "map-run",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "collect-portwatch",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "heartbeat-gold",
+      "status": "FAILING",
+      "detail": "no \"[gold] done — all sources ok\" in log output since last healthy check"
+    },
+    {
+      "job": "heartbeat-crypto",
+      "status": "OK",
+      "detail": "log 0.2h old (allowed 8h)"
+    },
+    {
+      "job": "pattern-eval",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "anchor-push",
+      "status": "OK",
+      "detail": "log 11.7h old (allowed 26h)"
+    },
+    {
+      "job": "forward-record",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "factory-tick",
+      "status": "OK",
+      "detail": "log 5.8h old (allowed 26h)"
+    },
+    {
+      "job": "backup",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "backup-drill",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "nowcast-run",
+      "status": "OK",
+      "detail": "log 10.7h old (allowed 26h)"
+    },
+    {
+      "job": "drift-flags",
+      "status": "OK",
+      "detail": "log 9.8h old (allowed 26h)"
+    },
+    {
+      "job": "db-reconcile",
+      "status": "OK",
+      "detail": "log 23.6h old (allowed 26h)"
+    },
+    {
+      "job": "wallet-run",
+      "status": "LATE",
+      "detail": "log 35.7h old (allowed 26h)"
+    },
+    {
+      "job": "t110-refresh",
+      "status": "OK",
+      "detail": "log 0.6h old (allowed 26h)"
+    },
+    {
+      "job": "databento-daily",
+      "status": "OK",
+      "detail": "log 0.4h old (allowed 26h)"
+    },
+    {
+      "job": "blocks-run",
+      "status": "OK",
+      "detail": "log 23.1h old (allowed 26h)"
+    },
+    {
+      "job": "vendor-eod-daily-sharadar",
+      "status": "OK",
+      "detail": "log 1.0h old (allowed 26h)"
+    },
+    {
+      "job": "vendor-eod-daily-eodhd",
+      "status": "OK",
+      "detail": "log 1.0h old (allowed 26h)"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "schema": "vendor_tape_receipt_v1",
+  "vendor": "thetadata",
+  "written_at": "2026-10-04",
+  "authority": "Amendment 2026-10-03 (K1), megareview rulings (4)",
+  "note": "Counts, dates, byte totals and digests of data/raw/thetadata as received; no vendor row and no figure derived from one. sha256 = one digest over the body_sha256 values of the answered sessions, in date order. An empty answer is held and is never coverage. loads = the days and rows of the local chain store, a replay of these answers; a session that holds one or two of its three answers is refused, never loaded.",
+  "terminal": {
+    "bootstrap": {
+      "name": "ThetaTerminalv3.jar",
+      "bytes": 41061736,
+      "sha256": "08773e104a6df321f35fdd0d59d455065cac1ed36aa82b9962557dd740fd20b5"
+    },
+    "lib": [
+      {
+        "name": "202609301.jar",
+        "bytes": 62205903,
+        "sha256": "c4914d91fcd72705b200bdea4d9affe8114ebcdbb6001c75433b5e5b076249c4"
+      }
+    ]
+  },
+  "probe": {
+    "probed_at": "2026-10-04T01:37:55.901Z",
+    "last_session": "2026-10-02",
+    "requests": [
+      {
+        "kind": "contracts",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 13280,
+        "bytes": 445824,
+        "header_ok": true,
+        "depot_row": "thetadata#1"
+      },
+      {
+        "kind": "eod",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 13280,
+        "bytes": 1801648,
+        "header_ok": true,
+        "depot_row": "thetadata#2"
+      },
+      {
+        "kind": "greeks_eod",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 13280,
+        "bytes": 4201441,
+        "header_ok": true,
+        "depot_row": "thetadata#3"
+      },
+      {
+        "kind": "open_interest",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 12788,
+        "bytes": 778588,
+        "header_ok": true,
+        "depot_row": "thetadata#4"
+      },
+      {
+        "kind": "greeks_eod",
+        "symbol": "SPY",
+        "date": "2019-12-31",
+        "status": 200,
+        "rows": 7224,
+        "bytes": 2272867,
+        "header_ok": true,
+        "depot_row": "thetadata#5"
+      },
+      {
+        "kind": "eod",
+        "symbol": "SPY",
+        "date": "2016-01-04",
+        "status": 200,
+        "rows": 3870,
+        "bytes": 528783,
+        "header_ok": true,
+        "depot_row": "thetadata#6"
+      },
+      {
+        "kind": "eod",
+        "symbol": "SPY",
+        "date": "2015-12-31",
+        "status": 403,
+        "rows": 0,
+        "bytes": 263,
+        "header_ok": null,
+        "depot_row": "thetadata#7"
+      },
+      {
+        "kind": "eod",
+        "symbol": "SPY",
+        "date": "2024-12-25",
+        "status": 472,
+        "rows": 0,
+        "bytes": 223,
+        "header_ok": null,
+        "depot_row": "thetadata#8"
+      },
+      {
+        "kind": "quote",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 6600,
+        "bytes": 564726,
+        "header_ok": true,
+        "depot_row": "thetadata#9"
+      },
+      {
+        "kind": "trade_quote",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 71465,
+        "bytes": 10637055,
+        "header_ok": true,
+        "depot_row": "thetadata#10"
+      },
+      {
+        "kind": "quote",
+        "symbol": "SPY",
+        "date": "2017-06-01",
+        "status": 200,
+        "rows": 187,
+        "bytes": 16044,
+        "header_ok": true,
+        "depot_row": "thetadata#11"
+      },
+      {
+        "kind": "greeks_eod",
+        "symbol": "XSP",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 16576,
+        "bytes": 5182602,
+        "header_ok": true,
+        "depot_row": "thetadata#12"
+      }
+    ]
+  },
+  "tape": {
+    "SPY": {
+      "eod": {
+        "requests": 2703,
+        "first_id": 2,
+        "last_id": 8112,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-02",
+        "bytes_as_received": 2980898751,
+        "rows": 21871594,
+        "sessions": 2703,
+        "answered": 2703,
+        "empty": 0,
+        "missing": 0,
+        "sha256": "4356e421ddd0f9b6ffc2081ff3ea28035b9f109d7480e89ce8dbc928b2f5df6f"
+      },
+      "greeks_eod": {
+        "requests": 2703,
+        "first_id": 3,
+        "last_id": 8116,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-02",
+        "bytes_as_received": 6539546241,
+        "rows": 20768085,
+        "sessions": 2703,
+        "answered": 2703,
+        "empty": 252,
+        "missing": 0,
+        "sha256": "7c9f9adcde28822163470c84893cea90fae62cb5813a62ef88147ec9e74da9c3"
+      },
+      "open_interest": {
+        "requests": 2703,
+        "first_id": 4,
+        "last_id": 8114,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-02",
+        "bytes_as_received": 1290384288,
+        "rows": 21116921,
+        "sessions": 2703,
+        "answered": 2703,
+        "empty": 0,
+        "missing": 0,
+        "sha256": "d4f8e30a9946eacfd0266a38f6ff742fc7786e8739e1b3865e4ee6d99fc3e56d"
+      }
+    },
+    "XSP": {
+      "greeks_eod": {
+        "requests": 1,
+        "first_id": 12,
+        "last_id": 12,
+        "first_date": "2026-10-02",
+        "last_date": "2026-10-02",
+        "bytes_as_received": 5182602,
+        "rows": 16576,
+        "sessions": 2451,
+        "answered": 1,
+        "empty": 0,
+        "missing": 2450,
+        "sha256": "c318acd01edea5e4ca4423960d0687b7dcebbe53a46c38b7bc97eeea6849b007"
+      }
+    }
+  },
+  "loads": {
+    "SPY": {
+      "days_loaded": 2703,
+      "rows": 22235908,
+      "first_date": "2016-01-04",
+      "last_date": "2026-10-02",
+      "days_refused": 0
+    },
+    "XSP": {
+      "days_loaded": 0,
+      "rows": 0,
+      "first_date": null,
+      "last_date": null,
+      "days_refused": 1
+    }
+  }
+}

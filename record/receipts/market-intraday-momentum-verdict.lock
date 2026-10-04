@@ -1,0 +1,7 @@
+{
+  "program": "market-intraday-momentum",
+  "commit_a": "822806bf2429ec5763c71d7f81c924d62babe4ef",
+  "run_command": "PYTHONPATH=orient/research-py/src python -m superbrain.cli intraday evaluate --prereg docs/superpowers/plans/2026-10-04-market-intraday-momentum-prereg.md",
+  "host": "AI-node",
+  "ts": "2026-10-04T16:41:55.369Z"
+}

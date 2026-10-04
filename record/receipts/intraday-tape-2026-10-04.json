@@ -1,0 +1,44 @@
+{
+  "schema": "intraday_tape_receipt_v1",
+  "db": "data/minute-bars.db",
+  "written_at": "2026-10-04",
+  "window": {
+    "start": "2016-01-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "digest": "236dbd64ffbaee80a23bfca85da683fbd7a3b7f007a8459e733a9066c722e23e",
+  "symbols": {
+    "SPY": {
+      "n_sessions": 2639,
+      "n_half_day": 21,
+      "n_unscored": 3,
+      "n_scored": 2615,
+      "first": "2016-01-05",
+      "last": "2026-07-02"
+    },
+    "QQQ": {
+      "n_sessions": 2639,
+      "n_half_day": 21,
+      "n_unscored": 4,
+      "n_scored": 2614,
+      "first": "2016-01-05",
+      "last": "2026-07-02"
+    },
+    "IWM": {
+      "n_sessions": 2639,
+      "n_half_day": 21,
+      "n_unscored": 3,
+      "n_scored": 2615,
+      "first": "2016-01-05",
+      "last": "2026-07-02"
+    },
+    "TLT": {
+      "n_sessions": 2639,
+      "n_half_day": 21,
+      "n_unscored": 4,
+      "n_scored": 2614,
+      "first": "2016-01-05",
+      "last": "2026-07-02"
+    }
+  }
+}

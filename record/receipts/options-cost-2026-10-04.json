@@ -1,0 +1,33 @@
+{
+  "schema": "options_cost_receipt_v1",
+  "vendor": "thetadata",
+  "written_at": "2026-10-04",
+  "authority": "Amendment 2026-10-03 (K1), megareview rulings (4); publication ruling D147 (a), 2026-10-03",
+  "note": "Counts, dates and digests of the T-COST answers held in data/raw/thetadata; no vendor row and no figure derived from one. first_id and last_id bound the depot ids of the answers read, which need not be contiguous; answers_sha256 = one digest over their body_sha256 values, in request order. figures_sha256 = the sha256 of the figures file at figures_path, which no bundle prefix reads. A used quote or trade entered a figure; a dropped one had a zero bid, a crossed or locked quote, or no quote.",
+  "tranche": "T-COST",
+  "roots": [
+    "SPY",
+    "QQQ",
+    "XSP"
+  ],
+  "windows": [
+    "09:40:00 – 09:50:00",
+    "11:55:00 – 12:05:00",
+    "15:40:00 – 16:00:00"
+  ],
+  "filter": "expiration=* max_dte=45 strike_range=10 interval=1m",
+  "requests": 360,
+  "empty": 0,
+  "sessions": 20,
+  "first_date": "2026-09-04",
+  "last_date": "2026-10-02",
+  "first_id": 9,
+  "last_id": 8474,
+  "answers_sha256": "4262473e4f86ccae06f43f0cc4069b5be9b311e864c312ab7631805bf8355563",
+  "quotes_used": 1988993,
+  "quotes_dropped": 16527,
+  "trades_used": 5119767,
+  "trades_dropped": 57735,
+  "figures_path": "orient/options/cost-2026-10-04.json",
+  "figures_sha256": "cb2c6e47a4c2cb2bc0b659326dc58029e8120e0507f0bd6f82f893bdab9ec8d5"
+}

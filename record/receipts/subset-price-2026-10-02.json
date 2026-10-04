@@ -1,0 +1,184 @@
+{
+  "schema": "subset_price_v1",
+  "measured_at": "2026-10-02T15:18:58.833Z",
+  "universe": "allus-pit-2026-09-30.json",
+  "asof": "2026-08-31",
+  "capital": 14000,
+  "gross": 1,
+  "leg_frac": 0.1,
+  "borrow": {
+    "bp_yr": 0,
+    "source": "Alpaca: $0 locate and borrow on ETB shares; HTB live-only (alpaca.markets/support/short-selling-fees, read 2026-10-02)"
+  },
+  "cost_receipts": {
+    "b": {
+      "median": 4.193037467470037,
+      "p75": 6.540694297200929,
+      "receipt": "govern/receipts/spread-sample-2026-09-12.json"
+    },
+    "s": {
+      "median": 13.524173423401106,
+      "p75": 21.503420832875438,
+      "receipt": "govern/receipts/spread-size-s-2026-10-02.json"
+    },
+    "m": {
+      "median": 41.263099152205314,
+      "p75": 94.39537075295466,
+      "receipt": "govern/receipts/spread-size-m-2026-10-02.json"
+    }
+  },
+  "universe_names": 4331,
+  "priced_names": 4331,
+  "missing_price_or_cap": 0,
+  "etb_symbols": 5310,
+  "universe_etb_share": 0.7280073885938583,
+  "grid": [
+    {
+      "n": 50,
+      "pool": 50,
+      "leg": 5,
+      "per_name_usd": 1400,
+      "mix": {
+        "b": 50,
+        "s": 0,
+        "m": 0
+      },
+      "etb_share": 1,
+      "short_ok_share": 1,
+      "short_round_err_median": 0.0559571428571428,
+      "cost_side_bp": {
+        "median": 4.193037467470041,
+        "p75": 6.540694297200934
+      },
+      "borrow_bp_yr": 0,
+      "borrow_bp_yr_on_capital": 0,
+      "smallest_cap_musd": 229394.6
+    },
+    {
+      "n": 100,
+      "pool": 100,
+      "leg": 10,
+      "per_name_usd": 700,
+      "mix": {
+        "b": 100,
+        "s": 0,
+        "m": 0
+      },
+      "etb_share": 1,
+      "short_ok_share": 0.99,
+      "short_round_err_median": 0.07550000000000004,
+      "cost_side_bp": {
+        "median": 4.193037467470045,
+        "p75": 6.540694297200946
+      },
+      "borrow_bp_yr": 0,
+      "borrow_bp_yr_on_capital": 0,
+      "smallest_cap_musd": 125413.7
+    },
+    {
+      "n": 200,
+      "pool": 200,
+      "leg": 20,
+      "per_name_usd": 350,
+      "mix": {
+        "b": 200,
+        "s": 0,
+        "m": 0
+      },
+      "etb_share": 1,
+      "short_ok_share": 0.92,
+      "short_round_err_median": 0.11050000000000004,
+      "cost_side_bp": {
+        "median": 4.193037467470046,
+        "p75": 6.540694297200926
+      },
+      "borrow_bp_yr": 0,
+      "borrow_bp_yr_on_capital": 0,
+      "smallest_cap_musd": 62967.7
+    },
+    {
+      "n": 500,
+      "pool": 500,
+      "leg": 50,
+      "per_name_usd": 140,
+      "mix": {
+        "b": 500,
+        "s": 0,
+        "m": 0
+      },
+      "etb_share": 0.998,
+      "short_ok_share": 0.728,
+      "short_round_err_median": 0.1691071428571429,
+      "cost_side_bp": {
+        "median": 4.193037467470043,
+        "p75": 6.5406942972008775
+      },
+      "borrow_bp_yr": 0,
+      "borrow_bp_yr_on_capital": 0,
+      "smallest_cap_musd": 18184.3
+    },
+    {
+      "n": 1000,
+      "pool": 1000,
+      "leg": 100,
+      "per_name_usd": 70,
+      "mix": {
+        "b": 1000,
+        "s": 0,
+        "m": 0
+      },
+      "etb_share": 0.994,
+      "short_ok_share": 0.578,
+      "short_round_err_median": 0.16364285714285723,
+      "cost_side_bp": {
+        "median": 4.193037467469942,
+        "p75": 6.54069429720103
+      },
+      "borrow_bp_yr": 0,
+      "borrow_bp_yr_on_capital": 0,
+      "smallest_cap_musd": 6027.4
+    },
+    {
+      "n": 2000,
+      "pool": 2000,
+      "leg": 200,
+      "per_name_usd": 35,
+      "mix": {
+        "b": 1220,
+        "s": 780,
+        "m": 0
+      },
+      "etb_share": 0.9755,
+      "short_ok_share": 0.5205,
+      "short_round_err_median": 0.17285714285714276,
+      "cost_side_bp": {
+        "median": 7.832180490282999,
+        "p75": 12.37615764611435
+      },
+      "borrow_bp_yr": 0,
+      "borrow_bp_yr_on_capital": 0,
+      "smallest_cap_musd": 1195.2
+    },
+    {
+      "n": 5000,
+      "pool": 4331,
+      "leg": 433,
+      "per_name_usd": 16.166281755196305,
+      "mix": {
+        "b": 1220,
+        "s": 1039,
+        "m": 2072
+      },
+      "etb_share": 0.7280073885938583,
+      "short_ok_share": 0.3590394827984299,
+      "short_round_err_median": 0.13771142857142862,
+      "cost_side_bp": {
+        "median": 24.16630416545608,
+        "p75": 52.160911911353665
+      },
+      "borrow_bp_yr": 0,
+      "borrow_bp_yr_on_capital": 0,
+      "smallest_cap_musd": 0.1
+    }
+  ]
+}

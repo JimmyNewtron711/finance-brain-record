@@ -1,0 +1,277 @@
+{
+  "schema": "intraday_momentum_result_v1",
+  "program": "market-intraday-momentum",
+  "evaluated_at": "2026-10-04",
+  "prereg_path": "docs/superpowers/plans/2026-10-04-market-intraday-momentum-prereg.md",
+  "window": {
+    "start": "2016-01-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "alpha_family": 0.010937254144266762,
+  "alpha_member": 0.0027343135360666905,
+  "family_n_trials": 4,
+  "n_trials_clustered": 3,
+  "forward": {
+    "first_date": "2026-10-05",
+    "read_years": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "close_years": 5,
+    "cap": null,
+    "min_era_dates": 60,
+    "reads": [
+      "2027-10-04",
+      "2028-10-04",
+      "2029-10-04",
+      "2030-10-04"
+    ],
+    "close": "2031-10-04"
+  },
+  "pins": {
+    "rule_path": "orient/research-py/src/superbrain/relationships/intraday_momentum.py",
+    "rule_sha256": "ab4c0320c17c00b4e0fb9e74044f3082bd56de519c48e9f6158b1d417a08e2db",
+    "baseline_path": "govern/baselines/ohlcv_intraday_v1.json",
+    "baseline_sha256": "f969a9c256bc2c50f93b5e84b8d1cfa6b2d6d47e0d8e1de14091aac31ccc5c37",
+    "tape_path": "govern/receipts/intraday-tape-2026-10-04.json",
+    "tape_sha256": "868d725b60f71f2cbf3ea0fc14dc80af88fc89ceb01d3388f5a8af08407e6f26"
+  },
+  "tape": {
+    "digest": "236dbd64ffbaee80a23bfca85da683fbd7a3b7f007a8459e733a9066c722e23e"
+  },
+  "members": [
+    {
+      "member": "SPY",
+      "registered_sign": 1,
+      "effect_size": 0.01022080680443841,
+      "units": "Spearman rho",
+      "p_raw": 0.6675,
+      "mbf": 0.9118587413629161,
+      "ci_low": -0.03607835310443622,
+      "ci_high": 0.0565571056923564,
+      "n": 2615,
+      "sigma": 1.1080074509584579,
+      "bar": 0.053643805624126406,
+      "receipt": {
+        "n_sessions": 2639,
+        "n_half_day": 21,
+        "n_unscored": 3,
+        "n_scored": 2615,
+        "first": "2016-01-05",
+        "last": "2026-07-02"
+      },
+      "eras": [
+        {
+          "start": "2016-01-04",
+          "end": "2019-07-04",
+          "n_dates": 873,
+          "ic": -0.028125491001133124,
+          "note": "ok"
+        },
+        {
+          "start": "2019-07-05",
+          "end": "2023-01-01",
+          "n_dates": 873,
+          "ic": 0.07382328547814751,
+          "note": "ok"
+        },
+        {
+          "start": "2023-01-02",
+          "end": "2026-07-02",
+          "n_dates": 869,
+          "ic": -0.049185829305006666,
+          "note": "ok"
+        }
+      ],
+      "neighbour": {
+        "id": "first_half_hour",
+        "effect_size": -0.025097599922159812
+      },
+      "kills_failed": [
+        "p_family",
+        "era_sign",
+        "plateau_sign",
+        "bar"
+      ],
+      "p_pass_registered": 0.86,
+      "mechanism_class": "microstructure / inventory",
+      "expected_effect": 0.08,
+      "realized_effect": 0.01022080680443841,
+      "verdict": "DIE"
+    },
+    {
+      "member": "QQQ",
+      "registered_sign": 1,
+      "effect_size": 0.018917283442684972,
+      "units": "Spearman rho",
+      "p_raw": 0.4548,
+      "mbf": 0.7562896742541974,
+      "ci_low": -0.03205134193501753,
+      "ci_high": 0.06692710129732253,
+      "n": 2614,
+      "sigma": 1.1035026558417989,
+      "bar": 0.07489749400848195,
+      "receipt": {
+        "n_sessions": 2639,
+        "n_half_day": 21,
+        "n_unscored": 4,
+        "n_scored": 2614,
+        "first": "2016-01-05",
+        "last": "2026-07-02"
+      },
+      "eras": [
+        {
+          "start": "2016-01-04",
+          "end": "2019-07-04",
+          "n_dates": 870,
+          "ic": 0.0073819680374024475,
+          "note": "ok"
+        },
+        {
+          "start": "2019-07-05",
+          "end": "2023-01-01",
+          "n_dates": 875,
+          "ic": 0.09031770813986369,
+          "note": "ok"
+        },
+        {
+          "start": "2023-01-02",
+          "end": "2026-07-02",
+          "n_dates": 869,
+          "ic": -0.06498782050379466,
+          "note": "ok"
+        }
+      ],
+      "neighbour": {
+        "id": "first_half_hour",
+        "effect_size": -0.014009075384829978
+      },
+      "kills_failed": [
+        "p_family",
+        "era_sign",
+        "plateau_sign",
+        "bar"
+      ],
+      "p_pass_registered": 0.6,
+      "mechanism_class": "microstructure / inventory",
+      "expected_effect": 0.08,
+      "realized_effect": 0.018917283442684972,
+      "verdict": "DIE"
+    },
+    {
+      "member": "IWM",
+      "registered_sign": 1,
+      "effect_size": 0.009909000074564828,
+      "units": "Spearman rho",
+      "p_raw": 0.6674,
+      "mbf": 0.9118048926761974,
+      "ci_low": -0.03601897984075378,
+      "ci_high": 0.05503987922514546,
+      "n": 2615,
+      "sigma": 1.0809453241363776,
+      "bar": 0.042355622276765974,
+      "receipt": {
+        "n_sessions": 2639,
+        "n_half_day": 21,
+        "n_unscored": 3,
+        "n_scored": 2615,
+        "first": "2016-01-05",
+        "last": "2026-07-02"
+      },
+      "eras": [
+        {
+          "start": "2016-01-04",
+          "end": "2019-07-04",
+          "n_dates": 873,
+          "ic": 0.07149790619119042,
+          "note": "ok"
+        },
+        {
+          "start": "2019-07-05",
+          "end": "2023-01-01",
+          "n_dates": 873,
+          "ic": 0.01337948544669705,
+          "note": "ok"
+        },
+        {
+          "start": "2023-01-02",
+          "end": "2026-07-02",
+          "n_dates": 869,
+          "ic": -0.04524491073282602,
+          "note": "ok"
+        }
+      ],
+      "neighbour": {
+        "id": "first_half_hour",
+        "effect_size": -0.022382004187936108
+      },
+      "kills_failed": [
+        "p_family",
+        "era_sign",
+        "plateau_sign",
+        "bar"
+      ],
+      "p_pass_registered": 0.86,
+      "mechanism_class": "microstructure / inventory",
+      "expected_effect": 0.08,
+      "realized_effect": 0.009909000074564828,
+      "verdict": "DIE"
+    },
+    {
+      "member": "TLT",
+      "registered_sign": 1,
+      "effect_size": 0.0934636488370329,
+      "units": "Spearman rho",
+      "p_raw": 0.0001,
+      "mbf": 0.0005165426936363419,
+      "ci_low": 0.043957609747242485,
+      "ci_high": 0.13815803827064865,
+      "n": 2614,
+      "sigma": 1.0726815225583677,
+      "bar": 0.06633268243037418,
+      "receipt": {
+        "n_sessions": 2639,
+        "n_half_day": 21,
+        "n_unscored": 4,
+        "n_scored": 2614,
+        "first": "2016-01-05",
+        "last": "2026-07-02"
+      },
+      "eras": [
+        {
+          "start": "2016-01-04",
+          "end": "2019-07-04",
+          "n_dates": 870,
+          "ic": 0.00664873296387086,
+          "note": "ok"
+        },
+        {
+          "start": "2019-07-05",
+          "end": "2023-01-01",
+          "n_dates": 875,
+          "ic": 0.1304023135212422,
+          "note": "ok"
+        },
+        {
+          "start": "2023-01-02",
+          "end": "2026-07-02",
+          "n_dates": 869,
+          "ic": 0.12258895263080816,
+          "note": "ok"
+        }
+      ],
+      "neighbour": {
+        "id": "first_half_hour",
+        "effect_size": 0.07026080772190264
+      },
+      "kills_failed": [],
+      "p_pass_registered": 0.01,
+      "mechanism_class": "microstructure / inventory",
+      "expected_effect": 0.022,
+      "realized_effect": 0.0934636488370329,
+      "verdict": "PASS"
+    }
+  ]
+}

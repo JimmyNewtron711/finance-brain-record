@@ -1,0 +1,3879 @@
+{
+  "schema": "gate_calibration_v1",
+  "generated_at": "2026-10-04T02:02:38-04:00",
+  "amendment": "successor Amendment 2026-10-03 (K1), megareview rulings (2)",
+  "plan": "docs/superpowers/plans/2026-10-03-control-receipt.md",
+  "synthetic_only": true,
+  "seed": 20261003,
+  "draws": 2000,
+  "code": {
+    "git_sha": "836d5c000620473825cfe5185f0e86ffdf81b6cb",
+    "dirty": false,
+    "files": {
+      "scripts/gate-calibration.mjs": "72d7e698eb3789785e68b803ad1321f77d40f1b9c70bfea65a7d7af2b5c72f5b",
+      "orient/research-py/src/superbrain/factory/gate_controls.py": "eddf55690834999d5fd0e65f599efc708382f0b009054a6d384f0c6bfe72cb26",
+      "orient/algo-classic/server/services/backtester/externalRun.js": "3ae30b9d1e3a1e693f46d49552076c7f7912e478b528804e81c55c3bb05ae36f",
+      "orient/algo-classic/server/services/backtester/external.js": "0aba283d4e1eaf35fd9b10fe47d24d3de4e4d16434f30c35d5e933352f01b020",
+      "orient/algo-classic/server/services/backtester/dsr.js": "8393567e4c1d919f6edf7bd0f3f299bcd896eaf4881c9041ec6a530b615badea",
+      "orient/algo-classic/server/services/backtester/cpcv.js": "06c6cec69b0335f90e61e1010ee3072e9ea861b013e5691e8f2013960d3305fa",
+      "orient/algo-classic/server/services/backtester/walkForward.js": "3118956d9a0cf962d0f92bfd3cc8497bc58a1726d38b35f875ac9364e2b0ce77",
+      "orient/algo-classic/server/services/backtester/engine.js": "d7e92a5d7b113c9f5c60835b30829a8bf724791f1d76979a81af326642c3564a",
+      "decide/programs/carry-basis-cs-tilt.json": "9e89bae09271265e78cb3fb0ce4203d8c603e580fe8c5f9bd69976976b3f7346",
+      "decide/programs/carry-basis-cs-tilt.kills.json": "b98fa5307ce35ecbf8b0d2c9ed98b3a93cb606428ed012242dabd29a8a66a01c",
+      "orient/research-py/src/superbrain/relationships/fx_clock.py": "19e00e9a27adfb478039034ac4fb571fb03224714f4d245b878fe8db3c03c98b",
+      "orient/research-py/src/superbrain/relationships/xs_panel.py": "654d800549af4cc656546075386f85c20a962074d52d78b892037b33ddaa8080",
+      "orient/research-py/src/superbrain/relationships/power.py": "b061dfea838767ac233cf8c234d037b1c1c68643aec43d8dba1a02b6a66b15c4"
+    }
+  },
+  "cells": [
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": null,
+        "verdict": "n/a (null control)"
+      },
+      "in_sample": {
+        "PASS": 44,
+        "FORWARD-WATCH": 38,
+        "DIE": 1918
+      },
+      "gate_fail": {
+        "era_sign": 1741,
+        "p_family": 1896,
+        "plateau_sign": 1023,
+        "sign": 1009
+      },
+      "sole_fail": {
+        "era_sign": 8,
+        "p_family": 209
+      },
+      "forward": {
+        "DIE (forward_sign)": 59,
+        "NOT PROVEN (close)": 19,
+        "PASS": 4
+      },
+      "read": {
+        "1": 1,
+        "2": 3
+      },
+      "chain": 4,
+      "any": 4,
+      "p": 0.002,
+      "lo": 0.000778,
+      "hi": 0.005131
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": 0.30016155382239235,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 532,
+        "FORWARD-WATCH": 178,
+        "DIE": 1290
+      },
+      "gate_fail": {
+        "era_sign": 967,
+        "p_family": 1388,
+        "plateau_sign": 126,
+        "sign": 137
+      },
+      "sole_fail": {
+        "era_sign": 79,
+        "p_family": 496
+      },
+      "forward": {
+        "DIE (forward_sign)": 364,
+        "NOT PROVEN (close)": 207,
+        "PASS": 139
+      },
+      "read": {
+        "1": 41,
+        "2": 30,
+        "3": 34,
+        "4": 17,
+        "5": 17
+      },
+      "chain": 109,
+      "any": 139,
+      "p": 0.0545,
+      "lo": 0.045378,
+      "hi": 0.06533
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": 0.667643753005096,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1166,
+        "FORWARD-WATCH": 181,
+        "DIE": 653
+      },
+      "gate_fail": {
+        "era_sign": 469,
+        "p_family": 729,
+        "plateau_sign": 14,
+        "sign": 16
+      },
+      "sole_fail": {
+        "era_sign": 105,
+        "p_family": 365
+      },
+      "forward": {
+        "DIE (forward_sign)": 583,
+        "NOT PROVEN (close)": 411,
+        "PASS": 353
+      },
+      "read": {
+        "1": 98,
+        "2": 75,
+        "3": 72,
+        "4": 55,
+        "5": 53
+      },
+      "chain": 310,
+      "any": 353,
+      "p": 0.155,
+      "lo": 0.139802,
+      "hi": 0.171521
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": 0.9484604697648675,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1822,
+        "FORWARD-WATCH": 34,
+        "DIE": 144
+      },
+      "gate_fail": {
+        "era_sign": 123,
+        "p_family": 102
+      },
+      "sole_fail": {
+        "era_sign": 76,
+        "p_family": 55
+      },
+      "forward": {
+        "DIE (forward_sign)": 544,
+        "NOT PROVEN (close)": 524,
+        "PASS": 788
+      },
+      "read": {
+        "1": 176,
+        "2": 187,
+        "3": 186,
+        "4": 121,
+        "5": 118
+      },
+      "chain": 773,
+      "any": 788,
+      "p": 0.3865,
+      "lo": 0.365396,
+      "hi": 0.408039
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": 0.9976491881431724,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1979,
+        "FORWARD-WATCH": 2,
+        "DIE": 19
+      },
+      "gate_fail": {
+        "era_sign": 18,
+        "p_family": 4
+      },
+      "sole_fail": {
+        "era_sign": 17,
+        "p_family": 3
+      },
+      "forward": {
+        "DIE (forward_sign)": 402,
+        "NOT PROVEN (close)": 370,
+        "PASS": 1209
+      },
+      "read": {
+        "1": 285,
+        "2": 315,
+        "3": 267,
+        "4": 190,
+        "5": 152
+      },
+      "chain": 1208,
+      "any": 1209,
+      "p": 0.604,
+      "lo": 0.582386,
+      "hi": 0.625215
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": null,
+        "verdict": "n/a (null control)"
+      },
+      "in_sample": {
+        "PASS": 27,
+        "FORWARD-WATCH": 37,
+        "DIE": 1936
+      },
+      "gate_fail": {
+        "era_sign": 1776,
+        "p_family": 1925,
+        "plateau_sign": 1021,
+        "sign": 1036
+      },
+      "sole_fail": {
+        "era_sign": 7,
+        "p_family": 193
+      },
+      "forward": {
+        "DIE (forward_sign)": 48,
+        "NOT PROVEN (close)": 14,
+        "PASS": 2
+      },
+      "read": {
+        "4": 2
+      },
+      "chain": 1,
+      "any": 2,
+      "p": 0.0005,
+      "lo": 0.000088,
+      "hi": 0.002827
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": 0.30016155382239235,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 540,
+        "FORWARD-WATCH": 171,
+        "DIE": 1289
+      },
+      "gate_fail": {
+        "era_sign": 986,
+        "p_family": 1398,
+        "plateau_sign": 132,
+        "sign": 141
+      },
+      "sole_fail": {
+        "era_sign": 61,
+        "p_family": 469
+      },
+      "forward": {
+        "DIE (forward_sign)": 405,
+        "NOT PROVEN (close)": 190,
+        "PASS": 116
+      },
+      "read": {
+        "1": 37,
+        "2": 28,
+        "3": 20,
+        "4": 16,
+        "5": 15
+      },
+      "chain": 92,
+      "any": 116,
+      "p": 0.046,
+      "lo": 0.037657,
+      "hi": 0.056084
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": 0.667643753005096,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1236,
+        "FORWARD-WATCH": 162,
+        "DIE": 602
+      },
+      "gate_fail": {
+        "era_sign": 448,
+        "p_family": 643,
+        "plateau_sign": 16,
+        "sign": 16
+      },
+      "sole_fail": {
+        "era_sign": 121,
+        "p_family": 316
+      },
+      "forward": {
+        "DIE (forward_sign)": 580,
+        "NOT PROVEN (close)": 440,
+        "PASS": 378
+      },
+      "read": {
+        "1": 85,
+        "2": 86,
+        "3": 76,
+        "4": 82,
+        "5": 49
+      },
+      "chain": 341,
+      "any": 378,
+      "p": 0.1705,
+      "lo": 0.154654,
+      "hi": 0.18761
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": 0.9484604697648675,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1829,
+        "FORWARD-WATCH": 37,
+        "DIE": 134
+      },
+      "gate_fail": {
+        "era_sign": 105,
+        "p_family": 119,
+        "sign": 2
+      },
+      "sole_fail": {
+        "era_sign": 52,
+        "p_family": 66
+      },
+      "forward": {
+        "DIE (forward_sign)": 533,
+        "NOT PROVEN (close)": 415,
+        "PASS": 918
+      },
+      "read": {
+        "1": 220,
+        "2": 237,
+        "3": 202,
+        "4": 142,
+        "5": 117
+      },
+      "chain": 900,
+      "any": 918,
+      "p": 0.45,
+      "lo": 0.428313,
+      "hi": 0.471878
+    },
+    {
+      "route": "research",
+      "cell": "daily_a05",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "alpha": 0.05,
+      "stage1": {
+        "p_pass": 0.9976491881431724,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1966,
+        "FORWARD-WATCH": 8,
+        "DIE": 26
+      },
+      "gate_fail": {
+        "era_sign": 22,
+        "p_family": 17
+      },
+      "sole_fail": {
+        "era_sign": 17,
+        "p_family": 12
+      },
+      "forward": {
+        "DIE (forward_sign)": 364,
+        "NOT PROVEN (close)": 289,
+        "PASS": 1321
+      },
+      "read": {
+        "1": 364,
+        "2": 355,
+        "3": 296,
+        "4": 198,
+        "5": 108
+      },
+      "chain": 1315,
+      "any": 1321,
+      "p": 0.6575,
+      "lo": 0.636418,
+      "hi": 0.677978
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": null,
+        "verdict": "n/a (null control)"
+      },
+      "in_sample": {
+        "PASS": 8,
+        "FORWARD-WATCH": 64,
+        "DIE": 1928
+      },
+      "gate_fail": {
+        "era_sign": 1772,
+        "p_family": 1984,
+        "plateau_sign": 1021,
+        "sign": 1028
+      },
+      "sole_fail": {
+        "p_family": 212
+      },
+      "forward": {
+        "DIE (forward_sign)": 62,
+        "NOT PROVEN (close)": 10
+      },
+      "read": {},
+      "chain": 0,
+      "any": 0,
+      "p": 0,
+      "lo": 0,
+      "hi": 0.001917
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.1337864740621328,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 258,
+        "FORWARD-WATCH": 442,
+        "DIE": 1300
+      },
+      "gate_fail": {
+        "era_sign": 981,
+        "p_family": 1726,
+        "plateau_sign": 149,
+        "sign": 140
+      },
+      "sole_fail": {
+        "era_sign": 16,
+        "p_family": 757
+      },
+      "forward": {
+        "DIE (forward_sign)": 405,
+        "NOT PROVEN (close)": 252,
+        "PASS": 43
+      },
+      "read": {
+        "1": 9,
+        "2": 15,
+        "3": 10,
+        "5": 9
+      },
+      "chain": 18,
+      "any": 43,
+      "p": 0.009,
+      "lo": 0.0057,
+      "hi": 0.014182
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.43986279853867133,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 804,
+        "FORWARD-WATCH": 575,
+        "DIE": 621
+      },
+      "gate_fail": {
+        "era_sign": 440,
+        "p_family": 1167,
+        "plateau_sign": 14,
+        "sign": 15
+      },
+      "sole_fail": {
+        "era_sign": 29,
+        "p_family": 755
+      },
+      "forward": {
+        "DIE (forward_sign)": 651,
+        "NOT PROVEN (close)": 565,
+        "PASS": 163
+      },
+      "read": {
+        "1": 28,
+        "2": 40,
+        "3": 44,
+        "4": 18,
+        "5": 33
+      },
+      "chain": 95,
+      "any": 163,
+      "p": 0.0475,
+      "lo": 0.039014,
+      "hi": 0.057721
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.8520746881352951,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1650,
+        "FORWARD-WATCH": 208,
+        "DIE": 142
+      },
+      "gate_fail": {
+        "era_sign": 119,
+        "p_family": 314,
+        "plateau_sign": 1
+      },
+      "sole_fail": {
+        "era_sign": 36,
+        "p_family": 231
+      },
+      "forward": {
+        "DIE (forward_sign)": 563,
+        "NOT PROVEN (close)": 820,
+        "PASS": 475
+      },
+      "read": {
+        "1": 80,
+        "2": 81,
+        "3": 95,
+        "4": 106,
+        "5": 113
+      },
+      "chain": 422,
+      "any": 475,
+      "p": 0.211,
+      "lo": 0.193681,
+      "hi": 0.229427
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.9875213502663296,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1959,
+        "FORWARD-WATCH": 23,
+        "DIE": 18
+      },
+      "gate_fail": {
+        "era_sign": 18,
+        "p_family": 26
+      },
+      "sole_fail": {
+        "era_sign": 15,
+        "p_family": 23
+      },
+      "forward": {
+        "DIE (forward_sign)": 380,
+        "NOT PROVEN (close)": 777,
+        "PASS": 825
+      },
+      "read": {
+        "1": 132,
+        "2": 173,
+        "3": 179,
+        "4": 175,
+        "5": 166
+      },
+      "chain": 818,
+      "any": 825,
+      "p": 0.409,
+      "lo": 0.387647,
+      "hi": 0.430702
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": null,
+        "verdict": "n/a (null control)"
+      },
+      "in_sample": {
+        "PASS": 16,
+        "FORWARD-WATCH": 52,
+        "DIE": 1932
+      },
+      "gate_fail": {
+        "era_sign": 1759,
+        "p_family": 1971,
+        "plateau_sign": 998,
+        "sign": 981
+      },
+      "sole_fail": {
+        "era_sign": 1,
+        "p_family": 215
+      },
+      "forward": {
+        "DIE (forward_sign)": 47,
+        "NOT PROVEN (close)": 20,
+        "PASS": 1
+      },
+      "read": {
+        "3": 1
+      },
+      "chain": 0,
+      "any": 1,
+      "p": 0,
+      "lo": 0,
+      "hi": 0.001917
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.1337864740621328,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 255,
+        "FORWARD-WATCH": 467,
+        "DIE": 1278
+      },
+      "gate_fail": {
+        "era_sign": 934,
+        "p_family": 1734,
+        "plateau_sign": 140,
+        "sign": 128
+      },
+      "sole_fail": {
+        "era_sign": 11,
+        "p_family": 807
+      },
+      "forward": {
+        "DIE (forward_sign)": 396,
+        "NOT PROVEN (close)": 277,
+        "PASS": 49
+      },
+      "read": {
+        "1": 7,
+        "2": 12,
+        "3": 20,
+        "4": 3,
+        "5": 7
+      },
+      "chain": 10,
+      "any": 49,
+      "p": 0.005,
+      "lo": 0.002718,
+      "hi": 0.00918
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.43986279853867133,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 892,
+        "FORWARD-WATCH": 506,
+        "DIE": 602
+      },
+      "gate_fail": {
+        "era_sign": 452,
+        "p_family": 1078,
+        "plateau_sign": 20,
+        "sign": 22
+      },
+      "sole_fail": {
+        "era_sign": 30,
+        "p_family": 655
+      },
+      "forward": {
+        "DIE (forward_sign)": 580,
+        "NOT PROVEN (close)": 642,
+        "PASS": 176
+      },
+      "read": {
+        "1": 31,
+        "2": 26,
+        "3": 35,
+        "4": 47,
+        "5": 37
+      },
+      "chain": 107,
+      "any": 176,
+      "p": 0.0535,
+      "lo": 0.044466,
+      "hi": 0.064246
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.8520746881352951,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1664,
+        "FORWARD-WATCH": 205,
+        "DIE": 131
+      },
+      "gate_fail": {
+        "era_sign": 112,
+        "p_family": 305
+      },
+      "sole_fail": {
+        "era_sign": 31,
+        "p_family": 224
+      },
+      "forward": {
+        "DIE (forward_sign)": 513,
+        "NOT PROVEN (close)": 831,
+        "PASS": 525
+      },
+      "read": {
+        "1": 86,
+        "2": 116,
+        "3": 130,
+        "4": 100,
+        "5": 93
+      },
+      "chain": 467,
+      "any": 525,
+      "p": 0.2335,
+      "lo": 0.215481,
+      "hi": 0.252541
+    },
+    {
+      "route": "research",
+      "cell": "daily_a1",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.9875213502663296,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1951,
+        "FORWARD-WATCH": 26,
+        "DIE": 23
+      },
+      "gate_fail": {
+        "era_sign": 21,
+        "p_family": 37
+      },
+      "sole_fail": {
+        "era_sign": 12,
+        "p_family": 28
+      },
+      "forward": {
+        "DIE (forward_sign)": 317,
+        "NOT PROVEN (close)": 723,
+        "PASS": 937
+      },
+      "read": {
+        "1": 156,
+        "2": 221,
+        "3": 225,
+        "4": 173,
+        "5": 162
+      },
+      "chain": 926,
+      "any": 937,
+      "p": 0.463,
+      "lo": 0.441239,
+      "hi": 0.484903
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": null,
+        "verdict": "n/a (null control)"
+      },
+      "in_sample": {
+        "PASS": 9,
+        "FORWARD-WATCH": 75,
+        "DIE": 1916
+      },
+      "gate_fail": {
+        "era_sign": 1745,
+        "p_family": 1982,
+        "plateau_sign": 1001,
+        "sign": 992
+      },
+      "sole_fail": {
+        "p_family": 237
+      },
+      "forward": {
+        "DIE (forward_sign)": 54,
+        "NOT PROVEN (close)": 29,
+        "PASS": 1
+      },
+      "read": {
+        "3": 1
+      },
+      "chain": 0,
+      "any": 1,
+      "p": 0,
+      "lo": 0,
+      "hi": 0.001917
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.0934002804094149,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 197,
+        "FORWARD-WATCH": 370,
+        "DIE": 1433
+      },
+      "gate_fail": {
+        "era_sign": 1091,
+        "p_family": 1796,
+        "plateau_sign": 214,
+        "sign": 211
+      },
+      "sole_fail": {
+        "era_sign": 7,
+        "p_family": 708
+      },
+      "forward": {
+        "DIE (forward_sign)": 218,
+        "NOT PROVEN (close)": 312,
+        "PASS": 37
+      },
+      "read": {
+        "3": 21,
+        "4": 13,
+        "5": 3
+      },
+      "chain": 10,
+      "any": 37,
+      "p": 0.005,
+      "lo": 0.002718,
+      "hi": 0.00918
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.3072335629731567,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 642,
+        "FORWARD-WATCH": 532,
+        "DIE": 826
+      },
+      "gate_fail": {
+        "era_sign": 593,
+        "p_family": 1329,
+        "plateau_sign": 29,
+        "sign": 32
+      },
+      "sole_fail": {
+        "era_sign": 29,
+        "p_family": 764
+      },
+      "forward": {
+        "DIE (forward_sign)": 281,
+        "NOT PROVEN (close)": 765,
+        "PASS": 128
+      },
+      "read": {
+        "3": 62,
+        "4": 34,
+        "5": 32
+      },
+      "chain": 60,
+      "any": 128,
+      "p": 0.03,
+      "lo": 0.023378,
+      "hi": 0.038424
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.6973478314483497,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1335,
+        "FORWARD-WATCH": 363,
+        "DIE": 302
+      },
+      "gate_fail": {
+        "era_sign": 226,
+        "p_family": 626,
+        "plateau_sign": 1,
+        "sign": 2
+      },
+      "sole_fail": {
+        "era_sign": 39,
+        "p_family": 439
+      },
+      "forward": {
+        "DIE (forward_sign)": 205,
+        "NOT PROVEN (close)": 1082,
+        "PASS": 411
+      },
+      "read": {
+        "3": 190,
+        "4": 122,
+        "5": 99
+      },
+      "chain": 323,
+      "any": 411,
+      "p": 0.1615,
+      "lo": 0.146024,
+      "hi": 0.178274
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.9378879541375559,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1835,
+        "FORWARD-WATCH": 99,
+        "DIE": 66
+      },
+      "gate_fail": {
+        "era_sign": 57,
+        "p_family": 138
+      },
+      "sole_fail": {
+        "era_sign": 27,
+        "p_family": 108
+      },
+      "forward": {
+        "DIE (forward_sign)": 107,
+        "NOT PROVEN (close)": 994,
+        "PASS": 833
+      },
+      "read": {
+        "3": 420,
+        "4": 223,
+        "5": 190
+      },
+      "chain": 796,
+      "any": 833,
+      "p": 0.398,
+      "lo": 0.376763,
+      "hi": 0.419628
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": null,
+        "verdict": "n/a (null control)"
+      },
+      "in_sample": {
+        "PASS": 8,
+        "FORWARD-WATCH": 61,
+        "DIE": 1931
+      },
+      "gate_fail": {
+        "era_sign": 1730,
+        "p_family": 1980,
+        "plateau_sign": 1015,
+        "sign": 983
+      },
+      "sole_fail": {
+        "era_sign": 1,
+        "p_family": 248
+      },
+      "forward": {
+        "DIE (forward_sign)": 44,
+        "NOT PROVEN (close)": 23,
+        "PASS": 2
+      },
+      "read": {
+        "3": 1,
+        "4": 1
+      },
+      "chain": 1,
+      "any": 2,
+      "p": 0.0005,
+      "lo": 0.000088,
+      "hi": 0.002827
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.0934002804094149,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 251,
+        "FORWARD-WATCH": 446,
+        "DIE": 1303
+      },
+      "gate_fail": {
+        "era_sign": 977,
+        "p_family": 1736,
+        "plateau_sign": 198,
+        "sign": 206
+      },
+      "sole_fail": {
+        "era_sign": 13,
+        "p_family": 766
+      },
+      "forward": {
+        "DIE (forward_sign)": 234,
+        "NOT PROVEN (close)": 407,
+        "PASS": 56
+      },
+      "read": {
+        "3": 27,
+        "4": 17,
+        "5": 12
+      },
+      "chain": 19,
+      "any": 56,
+      "p": 0.0095,
+      "lo": 0.00609,
+      "hi": 0.01479
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.3072335629731567,
+        "verdict": "DEAD-POWER"
+      },
+      "in_sample": {
+        "PASS": 824,
+        "FORWARD-WATCH": 513,
+        "DIE": 663
+      },
+      "gate_fail": {
+        "era_sign": 470,
+        "p_family": 1149,
+        "plateau_sign": 31,
+        "sign": 33
+      },
+      "sole_fail": {
+        "era_sign": 27,
+        "p_family": 706
+      },
+      "forward": {
+        "DIE (forward_sign)": 257,
+        "NOT PROVEN (close)": 795,
+        "PASS": 285
+      },
+      "read": {
+        "3": 157,
+        "4": 60,
+        "5": 68
+      },
+      "chain": 185,
+      "any": 285,
+      "p": 0.0925,
+      "lo": 0.080572,
+      "hi": 0.105991
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.6973478314483497,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1498,
+        "FORWARD-WATCH": 237,
+        "DIE": 265
+      },
+      "gate_fail": {
+        "era_sign": 203,
+        "p_family": 471,
+        "plateau_sign": 8,
+        "sign": 11
+      },
+      "sole_fail": {
+        "era_sign": 31,
+        "p_family": 299
+      },
+      "forward": {
+        "DIE (forward_sign)": 176,
+        "NOT PROVEN (close)": 861,
+        "PASS": 698
+      },
+      "read": {
+        "3": 395,
+        "4": 164,
+        "5": 139
+      },
+      "chain": 612,
+      "any": 698,
+      "p": 0.306,
+      "lo": 0.286191,
+      "hi": 0.326552
+    },
+    {
+      "route": "research",
+      "cell": "monthly_a1",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "alpha": 0.010937254144266762,
+      "stage1": {
+        "p_pass": 0.9378879541375559,
+        "verdict": "CLEARS"
+      },
+      "in_sample": {
+        "PASS": 1805,
+        "FORWARD-WATCH": 94,
+        "DIE": 101
+      },
+      "gate_fail": {
+        "era_sign": 89,
+        "p_family": 167,
+        "sign": 6
+      },
+      "sole_fail": {
+        "era_sign": 28,
+        "p_family": 106
+      },
+      "forward": {
+        "DIE (forward_sign)": 62,
+        "NOT PROVEN (close)": 680,
+        "PASS": 1157
+      },
+      "read": {
+        "3": 766,
+        "4": 219,
+        "5": 172
+      },
+      "chain": 1105,
+      "any": 1157,
+      "p": 0.5525,
+      "lo": 0.530628,
+      "hi": 0.574171
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 363,
+        "dsr_family": 1956,
+        "era_sign": 1635,
+        "max_drawdown": 1403,
+        "oos_positive": 1073,
+        "oos_sharpe": 1871,
+        "pbo": 1012,
+        "plateau_sign": 759,
+        "sleeve": 1657
+      },
+      "sole_fail": {
+        "dsr_family": 34,
+        "era_sign": 4,
+        "pbo": 4,
+        "sleeve": 3
+      },
+      "selected_v1": 991,
+      "sharpe_mean": -0.00791156149564781,
+      "sharpe_sd": 0.3088655306607626,
+      "sharpe2_mean": -0.009837491414968296,
+      "chain": 29,
+      "p": 0.0145,
+      "lo": 0.010115,
+      "hi": 0.020747
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 115,
+        "dsr_family": 1648,
+        "era_sign": 1037,
+        "max_drawdown": 738,
+        "oos_positive": 374,
+        "oos_sharpe": 1477,
+        "pbo": 991,
+        "plateau_sign": 164,
+        "sleeve": 1054
+      },
+      "sole_fail": {
+        "dsr_family": 90,
+        "era_sign": 20,
+        "max_drawdown": 9,
+        "oos_sharpe": 8,
+        "pbo": 55,
+        "sleeve": 16
+      },
+      "selected_v1": 1001,
+      "sharpe_mean": 0.30192464752572945,
+      "sharpe_sd": 0.30646636431979163,
+      "sharpe2_mean": 0.2956248414399672,
+      "chain": 188,
+      "p": 0.094,
+      "lo": 0.081977,
+      "hi": 0.107579
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 42,
+        "dsr_family": 1127,
+        "era_sign": 659,
+        "max_drawdown": 461,
+        "oos_positive": 114,
+        "oos_sharpe": 1024,
+        "pbo": 955,
+        "plateau_sign": 26,
+        "sleeve": 585
+      },
+      "sole_fail": {
+        "dsr_family": 75,
+        "era_sign": 24,
+        "max_drawdown": 25,
+        "oos_sharpe": 16,
+        "pbo": 204,
+        "sleeve": 28
+      },
+      "selected_v1": 1019,
+      "sharpe_mean": 0.507980645207752,
+      "sharpe_sd": 0.3107044124865135,
+      "sharpe2_mean": 0.5008362410256757,
+      "chain": 430,
+      "p": 0.215,
+      "lo": 0.197551,
+      "hi": 0.233542
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 11,
+        "dsr_family": 513,
+        "era_sign": 289,
+        "max_drawdown": 203,
+        "oos_positive": 25,
+        "oos_sharpe": 506,
+        "pbo": 1027,
+        "plateau_sign": 4,
+        "sleeve": 244
+      },
+      "sole_fail": {
+        "dsr_family": 39,
+        "era_sign": 18,
+        "max_drawdown": 17,
+        "oos_sharpe": 7,
+        "pbo": 529,
+        "sleeve": 25
+      },
+      "selected_v1": 992,
+      "sharpe_mean": 0.7427412648951658,
+      "sharpe_sd": 0.3072541705918088,
+      "sharpe2_mean": 0.7556901833384861,
+      "chain": 700,
+      "p": 0.35,
+      "lo": 0.329402,
+      "hi": 0.371173
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 3,
+        "dsr_family": 127,
+        "era_sign": 104,
+        "max_drawdown": 72,
+        "oos_positive": 4,
+        "oos_sharpe": 152,
+        "pbo": 990,
+        "sleeve": 89
+      },
+      "sole_fail": {
+        "dsr_family": 9,
+        "era_sign": 19,
+        "max_drawdown": 14,
+        "oos_sharpe": 5,
+        "pbo": 781,
+        "sleeve": 21
+      },
+      "selected_v1": 1006,
+      "sharpe_mean": 0.9985646606448618,
+      "sharpe_sd": 0.31543170362287964,
+      "sharpe2_mean": 0.9887585876617847,
+      "chain": 909,
+      "p": 0.4545,
+      "lo": 0.432786,
+      "hi": 0.476389
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 344,
+        "dsr_family": 1937,
+        "era_sign": 1630,
+        "max_drawdown": 1340,
+        "oos_positive": 1036,
+        "oos_sharpe": 1863,
+        "pbo": 1027,
+        "plateau_sign": 783,
+        "sleeve": 1656
+      },
+      "sole_fail": {
+        "dsr_family": 31,
+        "era_sign": 6,
+        "max_drawdown": 3,
+        "oos_sharpe": 2,
+        "pbo": 2,
+        "sleeve": 3
+      },
+      "selected_v1": 1032,
+      "sharpe_mean": 0.003070508152615314,
+      "sharpe_sd": 0.297898852696114,
+      "sharpe2_mean": -0.004174283331316024,
+      "chain": 34,
+      "p": 0.017,
+      "lo": 0.012191,
+      "hi": 0.023661
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 117,
+        "dsr_family": 1634,
+        "era_sign": 1064,
+        "max_drawdown": 756,
+        "oos_positive": 365,
+        "oos_sharpe": 1499,
+        "pbo": 990,
+        "plateau_sign": 197,
+        "sleeve": 1087
+      },
+      "sole_fail": {
+        "dsr_family": 75,
+        "era_sign": 10,
+        "max_drawdown": 11,
+        "oos_sharpe": 11,
+        "pbo": 54,
+        "sleeve": 11
+      },
+      "selected_v1": 995,
+      "sharpe_mean": 0.28778986327321987,
+      "sharpe_sd": 0.30528115669226624,
+      "sharpe2_mean": 0.2877534420536232,
+      "chain": 181,
+      "p": 0.0905,
+      "lo": 0.078699,
+      "hi": 0.103871
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 39,
+        "dsr_family": 1137,
+        "era_sign": 646,
+        "max_drawdown": 472,
+        "oos_positive": 116,
+        "oos_sharpe": 989,
+        "pbo": 997,
+        "plateau_sign": 49,
+        "sleeve": 618
+      },
+      "sole_fail": {
+        "dsr_family": 80,
+        "era_sign": 29,
+        "max_drawdown": 27,
+        "oos_sharpe": 8,
+        "pbo": 197,
+        "sleeve": 28
+      },
+      "selected_v1": 1002,
+      "sharpe_mean": 0.5050053512301739,
+      "sharpe_sd": 0.3167773795593249,
+      "sharpe2_mean": 0.5030570748802103,
+      "chain": 424,
+      "p": 0.212,
+      "lo": 0.194648,
+      "hi": 0.230456
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 13,
+        "dsr_family": 464,
+        "era_sign": 273,
+        "max_drawdown": 302,
+        "oos_positive": 26,
+        "oos_sharpe": 443,
+        "pbo": 1043,
+        "plateau_sign": 6,
+        "sleeve": 242
+      },
+      "sole_fail": {
+        "dsr_family": 36,
+        "era_sign": 22,
+        "max_drawdown": 50,
+        "oos_sharpe": 3,
+        "pbo": 539,
+        "sleeve": 22
+      },
+      "selected_v1": 1005,
+      "sharpe_mean": 0.7564589233063788,
+      "sharpe_sd": 0.32239468690977663,
+      "sharpe2_mean": 0.7552447901943999,
+      "chain": 698,
+      "p": 0.349,
+      "lo": 0.328418,
+      "hi": 0.370161
+    },
+    {
+      "route": "book",
+      "cell": "n2_plateau",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 2,
+        "dsr_family": 125,
+        "era_sign": 91,
+        "max_drawdown": 203,
+        "oos_positive": 2,
+        "oos_sharpe": 120,
+        "pbo": 1039,
+        "sleeve": 77
+      },
+      "sole_fail": {
+        "dsr_family": 11,
+        "era_sign": 6,
+        "max_drawdown": 54,
+        "oos_sharpe": 1,
+        "pbo": 803,
+        "sleeve": 7
+      },
+      "selected_v1": 1017,
+      "sharpe_mean": 1.009553930137634,
+      "sharpe_sd": 0.32110221186597715,
+      "sharpe2_mean": 1.0042246194013618,
+      "chain": 841,
+      "p": 0.4205,
+      "lo": 0.399038,
+      "hi": 0.442266
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 328,
+        "dsr_family": 1938,
+        "era_sign": 1604,
+        "max_drawdown": 1347,
+        "oos_positive": 1003,
+        "oos_sharpe": 1863,
+        "pbo": 1042,
+        "plateau_sign": 725,
+        "sleeve": 1597
+      },
+      "sole_fail": {
+        "dsr_family": 38,
+        "oos_sharpe": 2,
+        "pbo": 4,
+        "sleeve": 2
+      },
+      "selected_v1": 1022,
+      "sharpe_mean": 0.011208623076182568,
+      "sharpe_sd": 0.3131120478560229,
+      "sharpe2_mean": 0.013601787207730774,
+      "chain": 43,
+      "p": 0.0215,
+      "lo": 0.016001,
+      "hi": 0.028834
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 180,
+        "dsr_family": 1762,
+        "era_sign": 1238,
+        "max_drawdown": 950,
+        "oos_positive": 531,
+        "oos_sharpe": 1561,
+        "pbo": 694,
+        "plateau_sign": 343,
+        "sleeve": 1245
+      },
+      "sole_fail": {
+        "block_sign": 1,
+        "dsr_family": 93,
+        "era_sign": 13,
+        "max_drawdown": 9,
+        "oos_sharpe": 5,
+        "pbo": 11,
+        "sleeve": 11
+      },
+      "selected_v1": 1644,
+      "sharpe_mean": 0.2924352071801746,
+      "sharpe_sd": 0.3112287144343078,
+      "sharpe2_mean": -0.0012885275407844563,
+      "chain": 165,
+      "p": 0.0825,
+      "lo": 0.071228,
+      "hi": 0.095373
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 75,
+        "dsr_family": 1406,
+        "era_sign": 883,
+        "max_drawdown": 646,
+        "oos_positive": 233,
+        "oos_sharpe": 1145,
+        "pbo": 367,
+        "plateau_sign": 144,
+        "sleeve": 853
+      },
+      "sole_fail": {
+        "dsr_family": 128,
+        "era_sign": 33,
+        "max_drawdown": 22,
+        "oos_sharpe": 12,
+        "pbo": 20,
+        "sleeve": 32
+      },
+      "selected_v1": 1863,
+      "sharpe_mean": 0.4886952860090803,
+      "sharpe_sd": 0.31091718826465237,
+      "sharpe2_mean": -0.00456794421917961,
+      "chain": 429,
+      "p": 0.2145,
+      "lo": 0.197067,
+      "hi": 0.233028
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 31,
+        "dsr_family": 791,
+        "era_sign": 455,
+        "max_drawdown": 294,
+        "oos_positive": 53,
+        "oos_sharpe": 524,
+        "pbo": 112,
+        "plateau_sign": 20,
+        "sleeve": 426
+      },
+      "sole_fail": {
+        "dsr_family": 128,
+        "era_sign": 52,
+        "max_drawdown": 33,
+        "oos_sharpe": 10,
+        "pbo": 12,
+        "sleeve": 40
+      },
+      "selected_v1": 1979,
+      "sharpe_mean": 0.7565799602709115,
+      "sharpe_sd": 0.31201743550499766,
+      "sharpe2_mean": 0.010181077873098377,
+      "chain": 1021,
+      "p": 0.5105,
+      "lo": 0.488593,
+      "hi": 0.532367
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 5,
+        "dsr_family": 263,
+        "era_sign": 175,
+        "max_drawdown": 140,
+        "oos_positive": 8,
+        "oos_sharpe": 144,
+        "pbo": 17,
+        "sleeve": 130
+      },
+      "sole_fail": {
+        "dsr_family": 60,
+        "era_sign": 45,
+        "max_drawdown": 38,
+        "oos_sharpe": 6,
+        "pbo": 3,
+        "sleeve": 26
+      },
+      "selected_v1": 1998,
+      "sharpe_mean": 1.0005966320158726,
+      "sharpe_sd": 0.30423069021492055,
+      "sharpe2_mean": -0.0006850996651885097,
+      "chain": 1584,
+      "p": 0.792,
+      "lo": 0.77366,
+      "hi": 0.80922
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 340,
+        "dsr_family": 1955,
+        "era_sign": 1639,
+        "max_drawdown": 1361,
+        "oos_positive": 1031,
+        "oos_sharpe": 1873,
+        "pbo": 1009,
+        "plateau_sign": 777,
+        "sleeve": 1663
+      },
+      "sole_fail": {
+        "dsr_family": 38,
+        "era_sign": 5,
+        "oos_sharpe": 3,
+        "pbo": 3,
+        "sleeve": 3
+      },
+      "selected_v1": 1015,
+      "sharpe_mean": -0.002312150429790734,
+      "sharpe_sd": 0.3106246773565749,
+      "sharpe2_mean": 0.0006351919435240464,
+      "chain": 18,
+      "p": 0.009,
+      "lo": 0.0057,
+      "hi": 0.014182
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 165,
+        "dsr_family": 1750,
+        "era_sign": 1231,
+        "max_drawdown": 956,
+        "oos_positive": 507,
+        "oos_sharpe": 1501,
+        "pbo": 650,
+        "plateau_sign": 346,
+        "sleeve": 1260
+      },
+      "sole_fail": {
+        "dsr_family": 92,
+        "era_sign": 15,
+        "max_drawdown": 7,
+        "oos_sharpe": 4,
+        "pbo": 18,
+        "sleeve": 20
+      },
+      "selected_v1": 1683,
+      "sharpe_mean": 0.30219777520093954,
+      "sharpe_sd": 0.31325074974343897,
+      "sharpe2_mean": -0.005763384402349838,
+      "chain": 166,
+      "p": 0.083,
+      "lo": 0.071694,
+      "hi": 0.095905
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 75,
+        "dsr_family": 1406,
+        "era_sign": 847,
+        "max_drawdown": 639,
+        "oos_positive": 198,
+        "oos_sharpe": 1088,
+        "pbo": 373,
+        "plateau_sign": 114,
+        "sleeve": 839
+      },
+      "sole_fail": {
+        "dsr_family": 150,
+        "era_sign": 34,
+        "max_drawdown": 24,
+        "oos_sharpe": 2,
+        "pbo": 16,
+        "sleeve": 37
+      },
+      "selected_v1": 1881,
+      "sharpe_mean": 0.5008043918518743,
+      "sharpe_sd": 0.30695651056951656,
+      "sharpe2_mean": -0.005892005619745205,
+      "chain": 445,
+      "p": 0.2225,
+      "lo": 0.204813,
+      "hi": 0.241251
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 23,
+        "dsr_family": 785,
+        "era_sign": 464,
+        "max_drawdown": 386,
+        "oos_positive": 39,
+        "oos_sharpe": 496,
+        "pbo": 99,
+        "plateau_sign": 21,
+        "sleeve": 418
+      },
+      "sole_fail": {
+        "dsr_family": 147,
+        "era_sign": 48,
+        "max_drawdown": 63,
+        "oos_sharpe": 9,
+        "pbo": 12,
+        "sleeve": 51
+      },
+      "selected_v1": 1976,
+      "sharpe_mean": 0.7561935421484999,
+      "sharpe_sd": 0.3240125727924127,
+      "sharpe2_mean": 0.0007103975942765835,
+      "chain": 972,
+      "p": 0.486,
+      "lo": 0.464143,
+      "hi": 0.50791
+    },
+    {
+      "route": "book",
+      "cell": "n2_single",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 7,
+        "dsr_family": 295,
+        "era_sign": 164,
+        "max_drawdown": 226,
+        "oos_positive": 5,
+        "oos_sharpe": 139,
+        "pbo": 21,
+        "plateau_sign": 2,
+        "sleeve": 142
+      },
+      "sole_fail": {
+        "block_sign": 1,
+        "dsr_family": 63,
+        "era_sign": 32,
+        "max_drawdown": 90,
+        "oos_sharpe": 6,
+        "pbo": 5,
+        "sleeve": 33
+      },
+      "selected_v1": 1999,
+      "sharpe_mean": 1.0151817553618976,
+      "sharpe_sd": 0.3216013844214636,
+      "sharpe2_mean": 0.008434855907381477,
+      "chain": 1506,
+      "p": 0.753,
+      "lo": 0.733626,
+      "hi": 0.771404
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 363,
+        "dsr_family": 1998,
+        "era_sign": 1635,
+        "max_drawdown": 1403,
+        "oos_positive": 1073,
+        "oos_sharpe": 1871,
+        "pbo": 1012,
+        "plateau_sign": 759,
+        "sleeve": 1657
+      },
+      "sole_fail": {
+        "dsr_family": 62,
+        "pbo": 1
+      },
+      "selected_v1": 991,
+      "sharpe_mean": -0.00791156149564781,
+      "sharpe_sd": 0.3088655306607626,
+      "sharpe2_mean": -0.009837491414968296,
+      "chain": 1,
+      "p": 0.0005,
+      "lo": 0.000088,
+      "hi": 0.002827
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 115,
+        "dsr_family": 1921,
+        "era_sign": 1037,
+        "max_drawdown": 738,
+        "oos_positive": 374,
+        "oos_sharpe": 1477,
+        "pbo": 991,
+        "plateau_sign": 164,
+        "sleeve": 1054
+      },
+      "sole_fail": {
+        "dsr_family": 223,
+        "max_drawdown": 1,
+        "pbo": 17,
+        "sleeve": 2
+      },
+      "selected_v1": 1001,
+      "sharpe_mean": 0.30192464752572945,
+      "sharpe_sd": 0.30646636431979163,
+      "sharpe2_mean": 0.2956248414399672,
+      "chain": 55,
+      "p": 0.0275,
+      "lo": 0.021188,
+      "hi": 0.035623
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 42,
+        "dsr_family": 1692,
+        "era_sign": 659,
+        "max_drawdown": 461,
+        "oos_positive": 114,
+        "oos_sharpe": 1024,
+        "pbo": 955,
+        "plateau_sign": 26,
+        "sleeve": 585
+      },
+      "sole_fail": {
+        "dsr_family": 304,
+        "era_sign": 5,
+        "max_drawdown": 3,
+        "oos_sharpe": 2,
+        "pbo": 89,
+        "sleeve": 2
+      },
+      "selected_v1": 1019,
+      "sharpe_mean": 0.507980645207752,
+      "sharpe_sd": 0.3107044124865135,
+      "sharpe2_mean": 0.5008362410256757,
+      "chain": 201,
+      "p": 0.1005,
+      "lo": 0.088079,
+      "hi": 0.114452
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 11,
+        "dsr_family": 1117,
+        "era_sign": 289,
+        "max_drawdown": 203,
+        "oos_positive": 25,
+        "oos_sharpe": 506,
+        "pbo": 1027,
+        "plateau_sign": 4,
+        "sleeve": 244
+      },
+      "sole_fail": {
+        "dsr_family": 239,
+        "era_sign": 6,
+        "max_drawdown": 10,
+        "pbo": 329,
+        "sleeve": 9
+      },
+      "selected_v1": 992,
+      "sharpe_mean": 0.7427412648951658,
+      "sharpe_sd": 0.3072541705918088,
+      "sharpe2_mean": 0.7556901833384861,
+      "chain": 500,
+      "p": 0.25,
+      "lo": 0.231514,
+      "hi": 0.269444
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 3,
+        "dsr_family": 475,
+        "era_sign": 104,
+        "max_drawdown": 72,
+        "oos_positive": 4,
+        "oos_sharpe": 152,
+        "pbo": 990,
+        "sleeve": 89
+      },
+      "sole_fail": {
+        "dsr_family": 118,
+        "era_sign": 8,
+        "max_drawdown": 9,
+        "pbo": 651,
+        "sleeve": 12
+      },
+      "selected_v1": 1006,
+      "sharpe_mean": 0.9985646606448618,
+      "sharpe_sd": 0.31543170362287964,
+      "sharpe2_mean": 0.9887585876617847,
+      "chain": 800,
+      "p": 0.4,
+      "lo": 0.378741,
+      "hi": 0.421642
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 344,
+        "dsr_family": 1991,
+        "era_sign": 1630,
+        "max_drawdown": 1340,
+        "oos_positive": 1036,
+        "oos_sharpe": 1863,
+        "pbo": 1027,
+        "plateau_sign": 783,
+        "sleeve": 1656
+      },
+      "sole_fail": {
+        "dsr_family": 57,
+        "era_sign": 1
+      },
+      "selected_v1": 1032,
+      "sharpe_mean": 0.003070508152615314,
+      "sharpe_sd": 0.297898852696114,
+      "sharpe2_mean": -0.004174283331316024,
+      "chain": 8,
+      "p": 0.004,
+      "lo": 0.002028,
+      "hi": 0.007873
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 117,
+        "dsr_family": 1931,
+        "era_sign": 1064,
+        "max_drawdown": 756,
+        "oos_positive": 365,
+        "oos_sharpe": 1499,
+        "pbo": 990,
+        "plateau_sign": 197,
+        "sleeve": 1087
+      },
+      "sole_fail": {
+        "dsr_family": 199,
+        "era_sign": 1,
+        "max_drawdown": 1,
+        "pbo": 10
+      },
+      "selected_v1": 995,
+      "sharpe_mean": 0.28778986327321987,
+      "sharpe_sd": 0.30528115669226624,
+      "sharpe2_mean": 0.2877534420536232,
+      "chain": 57,
+      "p": 0.0285,
+      "lo": 0.022063,
+      "hi": 0.036745
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 39,
+        "dsr_family": 1652,
+        "era_sign": 646,
+        "max_drawdown": 472,
+        "oos_positive": 116,
+        "oos_sharpe": 989,
+        "pbo": 997,
+        "plateau_sign": 49,
+        "sleeve": 618
+      },
+      "sole_fail": {
+        "dsr_family": 283,
+        "era_sign": 6,
+        "max_drawdown": 9,
+        "oos_sharpe": 1,
+        "pbo": 89,
+        "sleeve": 7
+      },
+      "selected_v1": 1002,
+      "sharpe_mean": 0.5050053512301739,
+      "sharpe_sd": 0.3167773795593249,
+      "sharpe2_mean": 0.5030570748802103,
+      "chain": 221,
+      "p": 0.1105,
+      "lo": 0.0975,
+      "hi": 0.124994
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 13,
+        "dsr_family": 1097,
+        "era_sign": 273,
+        "max_drawdown": 302,
+        "oos_positive": 26,
+        "oos_sharpe": 443,
+        "pbo": 1043,
+        "plateau_sign": 6,
+        "sleeve": 242
+      },
+      "sole_fail": {
+        "dsr_family": 235,
+        "era_sign": 8,
+        "max_drawdown": 16,
+        "pbo": 334,
+        "sleeve": 5
+      },
+      "selected_v1": 1005,
+      "sharpe_mean": 0.7564589233063788,
+      "sharpe_sd": 0.32239468690977663,
+      "sharpe2_mean": 0.7552447901943999,
+      "chain": 499,
+      "p": 0.2495,
+      "lo": 0.231028,
+      "hi": 0.268933
+    },
+    {
+      "route": "book",
+      "cell": "n6_plateau",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 2,
+        "dsr_family": 465,
+        "era_sign": 91,
+        "max_drawdown": 203,
+        "oos_positive": 2,
+        "oos_sharpe": 120,
+        "pbo": 1039,
+        "sleeve": 77
+      },
+      "sole_fail": {
+        "dsr_family": 92,
+        "era_sign": 3,
+        "max_drawdown": 30,
+        "pbo": 691,
+        "sleeve": 3
+      },
+      "selected_v1": 1017,
+      "sharpe_mean": 1.009553930137634,
+      "sharpe_sd": 0.32110221186597715,
+      "sharpe2_mean": 1.0042246194013618,
+      "chain": 760,
+      "p": 0.38,
+      "lo": 0.358977,
+      "hi": 0.401483
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 328,
+        "dsr_family": 1995,
+        "era_sign": 1604,
+        "max_drawdown": 1347,
+        "oos_positive": 1003,
+        "oos_sharpe": 1863,
+        "pbo": 1042,
+        "plateau_sign": 725,
+        "sleeve": 1597
+      },
+      "sole_fail": {
+        "dsr_family": 77,
+        "pbo": 1
+      },
+      "selected_v1": 1022,
+      "sharpe_mean": 0.011208623076182568,
+      "sharpe_sd": 0.3131120478560229,
+      "sharpe2_mean": 0.013601787207730774,
+      "chain": 4,
+      "p": 0.002,
+      "lo": 0.000778,
+      "hi": 0.005131
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 180,
+        "dsr_family": 1954,
+        "era_sign": 1238,
+        "max_drawdown": 950,
+        "oos_positive": 531,
+        "oos_sharpe": 1561,
+        "pbo": 694,
+        "plateau_sign": 343,
+        "sleeve": 1245
+      },
+      "sole_fail": {
+        "dsr_family": 217,
+        "era_sign": 1,
+        "pbo": 3,
+        "sleeve": 1
+      },
+      "selected_v1": 1644,
+      "sharpe_mean": 0.2924352071801746,
+      "sharpe_sd": 0.3112287144343078,
+      "sharpe2_mean": -0.0012885275407844563,
+      "chain": 41,
+      "p": 0.0205,
+      "lo": 0.015147,
+      "hi": 0.027691
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 75,
+        "dsr_family": 1840,
+        "era_sign": 883,
+        "max_drawdown": 646,
+        "oos_positive": 233,
+        "oos_sharpe": 1145,
+        "pbo": 367,
+        "plateau_sign": 144,
+        "sleeve": 853
+      },
+      "sole_fail": {
+        "dsr_family": 416,
+        "era_sign": 7,
+        "max_drawdown": 3,
+        "pbo": 5,
+        "sleeve": 3
+      },
+      "selected_v1": 1863,
+      "sharpe_mean": 0.4886952860090803,
+      "sharpe_sd": 0.31091718826465237,
+      "sharpe2_mean": -0.00456794421917961,
+      "chain": 141,
+      "p": 0.0705,
+      "lo": 0.060085,
+      "hi": 0.082562
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 31,
+        "dsr_family": 1373,
+        "era_sign": 455,
+        "max_drawdown": 294,
+        "oos_positive": 53,
+        "oos_sharpe": 524,
+        "pbo": 112,
+        "plateau_sign": 20,
+        "sleeve": 426
+      },
+      "sole_fail": {
+        "dsr_family": 556,
+        "era_sign": 11,
+        "max_drawdown": 9,
+        "pbo": 6,
+        "sleeve": 6
+      },
+      "selected_v1": 1979,
+      "sharpe_mean": 0.7565799602709115,
+      "sharpe_sd": 0.31201743550499766,
+      "sharpe2_mean": 0.010181077873098377,
+      "chain": 593,
+      "p": 0.2965,
+      "lo": 0.276889,
+      "hi": 0.316891
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 5,
+        "dsr_family": 754,
+        "era_sign": 175,
+        "max_drawdown": 140,
+        "oos_positive": 8,
+        "oos_sharpe": 144,
+        "pbo": 17,
+        "sleeve": 130
+      },
+      "sole_fail": {
+        "dsr_family": 453,
+        "era_sign": 15,
+        "max_drawdown": 17,
+        "pbo": 1,
+        "sleeve": 7
+      },
+      "selected_v1": 1998,
+      "sharpe_mean": 1.0005966320158726,
+      "sharpe_sd": 0.30423069021492055,
+      "sharpe2_mean": -0.0006850996651885097,
+      "chain": 1191,
+      "p": 0.5955,
+      "lo": 0.573827,
+      "hi": 0.616807
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 340,
+        "dsr_family": 1997,
+        "era_sign": 1639,
+        "max_drawdown": 1361,
+        "oos_positive": 1031,
+        "oos_sharpe": 1873,
+        "pbo": 1009,
+        "plateau_sign": 777,
+        "sleeve": 1663
+      },
+      "sole_fail": {
+        "dsr_family": 54,
+        "era_sign": 1
+      },
+      "selected_v1": 1015,
+      "sharpe_mean": -0.002312150429790734,
+      "sharpe_sd": 0.3106246773565749,
+      "sharpe2_mean": 0.0006351919435240464,
+      "chain": 2,
+      "p": 0.001,
+      "lo": 0.000274,
+      "hi": 0.003639
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 165,
+        "dsr_family": 1944,
+        "era_sign": 1231,
+        "max_drawdown": 956,
+        "oos_positive": 507,
+        "oos_sharpe": 1501,
+        "pbo": 650,
+        "plateau_sign": 346,
+        "sleeve": 1260
+      },
+      "sole_fail": {
+        "dsr_family": 215,
+        "era_sign": 1,
+        "pbo": 7,
+        "sleeve": 2
+      },
+      "selected_v1": 1683,
+      "sharpe_mean": 0.30219777520093954,
+      "sharpe_sd": 0.31325074974343897,
+      "sharpe2_mean": -0.005763384402349838,
+      "chain": 43,
+      "p": 0.0215,
+      "lo": 0.016001,
+      "hi": 0.028834
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 75,
+        "dsr_family": 1808,
+        "era_sign": 847,
+        "max_drawdown": 639,
+        "oos_positive": 198,
+        "oos_sharpe": 1088,
+        "pbo": 373,
+        "plateau_sign": 114,
+        "sleeve": 839
+      },
+      "sole_fail": {
+        "dsr_family": 432,
+        "era_sign": 7,
+        "max_drawdown": 9,
+        "pbo": 4,
+        "sleeve": 6
+      },
+      "selected_v1": 1881,
+      "sharpe_mean": 0.5008043918518743,
+      "sharpe_sd": 0.30695651056951656,
+      "sharpe2_mean": -0.005892005619745205,
+      "chain": 163,
+      "p": 0.0815,
+      "lo": 0.070296,
+      "hi": 0.094309
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 23,
+        "dsr_family": 1372,
+        "era_sign": 464,
+        "max_drawdown": 386,
+        "oos_positive": 39,
+        "oos_sharpe": 496,
+        "pbo": 99,
+        "plateau_sign": 21,
+        "sleeve": 418
+      },
+      "sole_fail": {
+        "dsr_family": 535,
+        "era_sign": 13,
+        "max_drawdown": 14,
+        "pbo": 6,
+        "sleeve": 7
+      },
+      "selected_v1": 1976,
+      "sharpe_mean": 0.7561935421484999,
+      "sharpe_sd": 0.3240125727924127,
+      "sharpe2_mean": 0.0007103975942765835,
+      "chain": 584,
+      "p": 0.292,
+      "lo": 0.272487,
+      "hi": 0.312311
+    },
+    {
+      "route": "book",
+      "cell": "n6_single",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 7,
+        "dsr_family": 729,
+        "era_sign": 164,
+        "max_drawdown": 226,
+        "oos_positive": 5,
+        "oos_sharpe": 139,
+        "pbo": 21,
+        "plateau_sign": 2,
+        "sleeve": 142
+      },
+      "sole_fail": {
+        "dsr_family": 372,
+        "era_sign": 13,
+        "max_drawdown": 49,
+        "pbo": 4,
+        "sleeve": 5
+      },
+      "selected_v1": 1999,
+      "sharpe_mean": 1.0151817553618976,
+      "sharpe_sd": 0.3216013844214636,
+      "sharpe2_mean": 0.008434855907381477,
+      "chain": 1197,
+      "p": 0.5985,
+      "lo": 0.576847,
+      "hi": 0.619775
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 363,
+        "dsr_family": 2000,
+        "era_sign": 1635,
+        "max_drawdown": 1403,
+        "oos_positive": 1073,
+        "oos_sharpe": 1871,
+        "pbo": 1012,
+        "plateau_sign": 759,
+        "sleeve": 1657
+      },
+      "sole_fail": {
+        "dsr_family": 63
+      },
+      "selected_v1": 991,
+      "sharpe_mean": -0.00791156149564781,
+      "sharpe_sd": 0.3088655306607626,
+      "sharpe2_mean": -0.009837491414968296,
+      "chain": 0,
+      "p": 0,
+      "lo": 0,
+      "hi": 0.001917
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 115,
+        "dsr_family": 1977,
+        "era_sign": 1037,
+        "max_drawdown": 738,
+        "oos_positive": 374,
+        "oos_sharpe": 1477,
+        "pbo": 991,
+        "plateau_sign": 164,
+        "sleeve": 1054
+      },
+      "sole_fail": {
+        "dsr_family": 261,
+        "pbo": 5
+      },
+      "selected_v1": 1001,
+      "sharpe_mean": 0.30192464752572945,
+      "sharpe_sd": 0.30646636431979163,
+      "sharpe2_mean": 0.2956248414399672,
+      "chain": 17,
+      "p": 0.0085,
+      "lo": 0.005314,
+      "hi": 0.013571
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 42,
+        "dsr_family": 1876,
+        "era_sign": 659,
+        "max_drawdown": 461,
+        "oos_positive": 114,
+        "oos_sharpe": 1024,
+        "pbo": 955,
+        "plateau_sign": 26,
+        "sleeve": 585
+      },
+      "sole_fail": {
+        "dsr_family": 418,
+        "era_sign": 1,
+        "pbo": 34
+      },
+      "selected_v1": 1019,
+      "sharpe_mean": 0.507980645207752,
+      "sharpe_sd": 0.3107044124865135,
+      "sharpe2_mean": 0.5008362410256757,
+      "chain": 87,
+      "p": 0.0435,
+      "lo": 0.035401,
+      "hi": 0.053349
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 11,
+        "dsr_family": 1509,
+        "era_sign": 289,
+        "max_drawdown": 203,
+        "oos_positive": 25,
+        "oos_sharpe": 506,
+        "pbo": 1027,
+        "plateau_sign": 4,
+        "sleeve": 244
+      },
+      "sole_fail": {
+        "dsr_family": 417,
+        "era_sign": 4,
+        "max_drawdown": 5,
+        "pbo": 148,
+        "sleeve": 3
+      },
+      "selected_v1": 992,
+      "sharpe_mean": 0.7427412648951658,
+      "sharpe_sd": 0.3072541705918088,
+      "sharpe2_mean": 0.7556901833384861,
+      "chain": 322,
+      "p": 0.161,
+      "lo": 0.145545,
+      "hi": 0.177755
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 3,
+        "dsr_family": 909,
+        "era_sign": 104,
+        "max_drawdown": 72,
+        "oos_positive": 4,
+        "oos_sharpe": 152,
+        "pbo": 990,
+        "sleeve": 89
+      },
+      "sole_fail": {
+        "dsr_family": 297,
+        "era_sign": 2,
+        "max_drawdown": 2,
+        "pbo": 451,
+        "sleeve": 4
+      },
+      "selected_v1": 1006,
+      "sharpe_mean": 0.9985646606448618,
+      "sharpe_sd": 0.31543170362287964,
+      "sharpe2_mean": 0.9887585876617847,
+      "chain": 621,
+      "p": 0.3105,
+      "lo": 0.290601,
+      "hi": 0.331125
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 344,
+        "dsr_family": 1998,
+        "era_sign": 1630,
+        "max_drawdown": 1340,
+        "oos_positive": 1036,
+        "oos_sharpe": 1863,
+        "pbo": 1027,
+        "plateau_sign": 783,
+        "sleeve": 1656
+      },
+      "sole_fail": {
+        "dsr_family": 63
+      },
+      "selected_v1": 1032,
+      "sharpe_mean": 0.003070508152615314,
+      "sharpe_sd": 0.297898852696114,
+      "sharpe2_mean": -0.004174283331316024,
+      "chain": 2,
+      "p": 0.001,
+      "lo": 0.000274,
+      "hi": 0.003639
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 117,
+        "dsr_family": 1982,
+        "era_sign": 1064,
+        "max_drawdown": 756,
+        "oos_positive": 365,
+        "oos_sharpe": 1499,
+        "pbo": 990,
+        "plateau_sign": 197,
+        "sleeve": 1087
+      },
+      "sole_fail": {
+        "dsr_family": 239,
+        "pbo": 1
+      },
+      "selected_v1": 995,
+      "sharpe_mean": 0.28778986327321987,
+      "sharpe_sd": 0.30528115669226624,
+      "sharpe2_mean": 0.2877534420536232,
+      "chain": 17,
+      "p": 0.0085,
+      "lo": 0.005314,
+      "hi": 0.013571
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 39,
+        "dsr_family": 1862,
+        "era_sign": 646,
+        "max_drawdown": 472,
+        "oos_positive": 116,
+        "oos_sharpe": 989,
+        "pbo": 997,
+        "plateau_sign": 49,
+        "sleeve": 618
+      },
+      "sole_fail": {
+        "dsr_family": 410,
+        "era_sign": 2,
+        "max_drawdown": 5,
+        "pbo": 34,
+        "sleeve": 1
+      },
+      "selected_v1": 1002,
+      "sharpe_mean": 0.5050053512301739,
+      "sharpe_sd": 0.3167773795593249,
+      "sharpe2_mean": 0.5030570748802103,
+      "chain": 94,
+      "p": 0.047,
+      "lo": 0.038561,
+      "hi": 0.057175
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 13,
+        "dsr_family": 1478,
+        "era_sign": 273,
+        "max_drawdown": 302,
+        "oos_positive": 26,
+        "oos_sharpe": 443,
+        "pbo": 1043,
+        "plateau_sign": 6,
+        "sleeve": 242
+      },
+      "sole_fail": {
+        "dsr_family": 408,
+        "era_sign": 4,
+        "max_drawdown": 4,
+        "pbo": 180
+      },
+      "selected_v1": 1005,
+      "sharpe_mean": 0.7564589233063788,
+      "sharpe_sd": 0.32239468690977663,
+      "sharpe2_mean": 0.7552447901943999,
+      "chain": 326,
+      "p": 0.163,
+      "lo": 0.147461,
+      "hi": 0.179831
+    },
+    {
+      "route": "book",
+      "cell": "n16_plateau",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 2,
+        "dsr_family": 857,
+        "era_sign": 91,
+        "max_drawdown": 203,
+        "oos_positive": 2,
+        "oos_sharpe": 120,
+        "pbo": 1039,
+        "sleeve": 77
+      },
+      "sole_fail": {
+        "dsr_family": 228,
+        "era_sign": 1,
+        "max_drawdown": 9,
+        "pbo": 493,
+        "sleeve": 1
+      },
+      "selected_v1": 1017,
+      "sharpe_mean": 1.009553930137634,
+      "sharpe_sd": 0.32110221186597715,
+      "sharpe2_mean": 1.0042246194013618,
+      "chain": 624,
+      "p": 0.312,
+      "lo": 0.292072,
+      "hi": 0.332649
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "gaussian",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 328,
+        "dsr_family": 2000,
+        "era_sign": 1604,
+        "max_drawdown": 1347,
+        "oos_positive": 1003,
+        "oos_sharpe": 1863,
+        "pbo": 1042,
+        "plateau_sign": 725,
+        "sleeve": 1597
+      },
+      "sole_fail": {
+        "dsr_family": 81
+      },
+      "selected_v1": 1022,
+      "sharpe_mean": 0.011208623076182568,
+      "sharpe_sd": 0.3131120478560229,
+      "sharpe2_mean": 0.013601787207730774,
+      "chain": 0,
+      "p": 0,
+      "lo": 0,
+      "hi": 0.001917
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "gaussian",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 180,
+        "dsr_family": 1989,
+        "era_sign": 1238,
+        "max_drawdown": 950,
+        "oos_positive": 531,
+        "oos_sharpe": 1561,
+        "pbo": 694,
+        "plateau_sign": 343,
+        "sleeve": 1245
+      },
+      "sole_fail": {
+        "dsr_family": 247
+      },
+      "selected_v1": 1644,
+      "sharpe_mean": 0.2924352071801746,
+      "sharpe_sd": 0.3112287144343078,
+      "sharpe2_mean": -0.0012885275407844563,
+      "chain": 11,
+      "p": 0.0055,
+      "lo": 0.003074,
+      "hi": 0.009822
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "gaussian",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 75,
+        "dsr_family": 1947,
+        "era_sign": 883,
+        "max_drawdown": 646,
+        "oos_positive": 233,
+        "oos_sharpe": 1145,
+        "pbo": 367,
+        "plateau_sign": 144,
+        "sleeve": 853
+      },
+      "sole_fail": {
+        "dsr_family": 506,
+        "max_drawdown": 1,
+        "pbo": 1
+      },
+      "selected_v1": 1863,
+      "sharpe_mean": 0.4886952860090803,
+      "sharpe_sd": 0.31091718826465237,
+      "sharpe2_mean": -0.00456794421917961,
+      "chain": 51,
+      "p": 0.0255,
+      "lo": 0.019448,
+      "hi": 0.033371
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "gaussian",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 31,
+        "dsr_family": 1684,
+        "era_sign": 455,
+        "max_drawdown": 294,
+        "oos_positive": 53,
+        "oos_sharpe": 524,
+        "pbo": 112,
+        "plateau_sign": 20,
+        "sleeve": 426
+      },
+      "sole_fail": {
+        "dsr_family": 840,
+        "era_sign": 2,
+        "max_drawdown": 3,
+        "pbo": 2
+      },
+      "selected_v1": 1979,
+      "sharpe_mean": 0.7565799602709115,
+      "sharpe_sd": 0.31201743550499766,
+      "sharpe2_mean": 0.010181077873098377,
+      "chain": 309,
+      "p": 0.1545,
+      "lo": 0.139324,
+      "hi": 0.171001
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "gaussian",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 5,
+        "dsr_family": 1173,
+        "era_sign": 175,
+        "max_drawdown": 140,
+        "oos_positive": 8,
+        "oos_sharpe": 144,
+        "pbo": 17,
+        "sleeve": 130
+      },
+      "sole_fail": {
+        "dsr_family": 834,
+        "era_sign": 6,
+        "max_drawdown": 6,
+        "pbo": 1,
+        "sleeve": 2
+      },
+      "selected_v1": 1998,
+      "sharpe_mean": 1.0005966320158726,
+      "sharpe_sd": 0.30423069021492055,
+      "sharpe2_mean": -0.0006850996651885097,
+      "chain": 810,
+      "p": 0.405,
+      "lo": 0.383688,
+      "hi": 0.426676
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "garch_t",
+      "sharpe": 0,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 340,
+        "dsr_family": 2000,
+        "era_sign": 1639,
+        "max_drawdown": 1361,
+        "oos_positive": 1031,
+        "oos_sharpe": 1873,
+        "pbo": 1009,
+        "plateau_sign": 777,
+        "sleeve": 1663
+      },
+      "sole_fail": {
+        "dsr_family": 56
+      },
+      "selected_v1": 1015,
+      "sharpe_mean": -0.002312150429790734,
+      "sharpe_sd": 0.3106246773565749,
+      "sharpe2_mean": 0.0006351919435240464,
+      "chain": 0,
+      "p": 0,
+      "lo": 0,
+      "hi": 0.001917
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "garch_t",
+      "sharpe": 0.3,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 165,
+        "dsr_family": 1984,
+        "era_sign": 1231,
+        "max_drawdown": 956,
+        "oos_positive": 507,
+        "oos_sharpe": 1501,
+        "pbo": 650,
+        "plateau_sign": 346,
+        "sleeve": 1260
+      },
+      "sole_fail": {
+        "dsr_family": 244,
+        "pbo": 2
+      },
+      "selected_v1": 1683,
+      "sharpe_mean": 0.30219777520093954,
+      "sharpe_sd": 0.31325074974343897,
+      "sharpe2_mean": -0.005763384402349838,
+      "chain": 14,
+      "p": 0.007,
+      "lo": 0.004174,
+      "hi": 0.011716
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "garch_t",
+      "sharpe": 0.5,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 75,
+        "dsr_family": 1936,
+        "era_sign": 847,
+        "max_drawdown": 639,
+        "oos_positive": 198,
+        "oos_sharpe": 1088,
+        "pbo": 373,
+        "plateau_sign": 114,
+        "sleeve": 839
+      },
+      "sole_fail": {
+        "dsr_family": 538,
+        "era_sign": 3,
+        "max_drawdown": 2,
+        "sleeve": 2
+      },
+      "selected_v1": 1881,
+      "sharpe_mean": 0.5008043918518743,
+      "sharpe_sd": 0.30695651056951656,
+      "sharpe2_mean": -0.005892005619745205,
+      "chain": 57,
+      "p": 0.0285,
+      "lo": 0.022063,
+      "hi": 0.036745
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "garch_t",
+      "sharpe": 0.75,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 23,
+        "dsr_family": 1660,
+        "era_sign": 464,
+        "max_drawdown": 386,
+        "oos_positive": 39,
+        "oos_sharpe": 496,
+        "pbo": 99,
+        "plateau_sign": 21,
+        "sleeve": 418
+      },
+      "sole_fail": {
+        "dsr_family": 795,
+        "era_sign": 4,
+        "max_drawdown": 6,
+        "pbo": 2,
+        "sleeve": 2
+      },
+      "selected_v1": 1976,
+      "sharpe_mean": 0.7561935421484999,
+      "sharpe_sd": 0.3240125727924127,
+      "sharpe2_mean": 0.0007103975942765835,
+      "chain": 324,
+      "p": 0.162,
+      "lo": 0.146503,
+      "hi": 0.178793
+    },
+    {
+      "route": "book",
+      "cell": "n16_single",
+      "kind": "garch_t",
+      "sharpe": 1,
+      "n": 2000,
+      "gate_fail": {
+        "block_sign": 7,
+        "dsr_family": 1124,
+        "era_sign": 164,
+        "max_drawdown": 226,
+        "oos_positive": 5,
+        "oos_sharpe": 139,
+        "pbo": 21,
+        "plateau_sign": 2,
+        "sleeve": 142
+      },
+      "sole_fail": {
+        "dsr_family": 723,
+        "era_sign": 4,
+        "max_drawdown": 20,
+        "pbo": 2,
+        "sleeve": 4
+      },
+      "selected_v1": 1999,
+      "sharpe_mean": 1.0151817553618976,
+      "sharpe_sd": 0.3216013844214636,
+      "sharpe2_mean": 0.008434855907381477,
+      "chain": 846,
+      "p": 0.423,
+      "lo": 0.401516,
+      "hi": 0.444779
+    }
+  ],
+  "model": {
+    "daily_a05": {
+      "0": 0.0011,
+      "1": 0.53,
+      "0.3": 0.04,
+      "0.5": 0.14,
+      "0.75": 0.34
+    },
+    "daily_a1": {
+      "0": 0.00008,
+      "1": 0.33,
+      "0.3": 0.006,
+      "0.5": 0.04,
+      "0.75": 0.16
+    },
+    "monthly_a1": {
+      "0": 0.00004,
+      "1": 0.29,
+      "0.3": 0.003,
+      "0.5": 0.02,
+      "0.75": 0.11
+    },
+    "n6": {
+      "0": 0.0016,
+      "1": 0.6,
+      "0.3": 0.02,
+      "0.5": 0.09,
+      "0.75": 0.29
+    },
+    "n16": {
+      "0": 0.0003,
+      "1": 0.42,
+      "0.3": 0.006,
+      "0.5": 0.03,
+      "0.75": 0.15
+    }
+  },
+  "envelope": {
+    "null": [
+      {
+        "route": "research",
+        "cell": "daily_a05",
+        "kind": "gaussian",
+        "k": 44,
+        "n": 2000,
+        "rate": 0.022,
+        "lo": 0.016429,
+        "hi": 0.029404,
+        "nominal": 0.025,
+        "reading": "OK"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a05",
+        "kind": "garch_t",
+        "k": 27,
+        "n": 2000,
+        "rate": 0.0135,
+        "lo": 0.009294,
+        "hi": 0.019571,
+        "nominal": 0.025,
+        "reading": "OK"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a1",
+        "kind": "gaussian",
+        "k": 8,
+        "n": 2000,
+        "rate": 0.004,
+        "lo": 0.002028,
+        "hi": 0.007873,
+        "nominal": 0.005468627072133381,
+        "reading": "OK"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a1",
+        "kind": "garch_t",
+        "k": 16,
+        "n": 2000,
+        "rate": 0.008,
+        "lo": 0.00493,
+        "hi": 0.012956,
+        "nominal": 0.005468627072133381,
+        "reading": "OK"
+      },
+      {
+        "route": "research",
+        "cell": "monthly_a1",
+        "kind": "gaussian",
+        "k": 9,
+        "n": 2000,
+        "rate": 0.0045,
+        "lo": 0.002369,
+        "hi": 0.008531,
+        "nominal": 0.005468627072133381,
+        "reading": "OK"
+      },
+      {
+        "route": "research",
+        "cell": "monthly_a1",
+        "kind": "garch_t",
+        "k": 8,
+        "n": 2000,
+        "rate": 0.004,
+        "lo": 0.002028,
+        "hi": 0.007873,
+        "nominal": 0.005468627072133381,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n2_plateau",
+        "kind": "gaussian",
+        "k": 29,
+        "n": 2000,
+        "rate": 0.0145,
+        "lo": 0.010115,
+        "hi": 0.020747,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n2_plateau",
+        "kind": "garch_t",
+        "k": 34,
+        "n": 2000,
+        "rate": 0.017,
+        "lo": 0.012191,
+        "hi": 0.023661,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n2_single",
+        "kind": "gaussian",
+        "k": 43,
+        "n": 2000,
+        "rate": 0.0215,
+        "lo": 0.016001,
+        "hi": 0.028834,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n2_single",
+        "kind": "garch_t",
+        "k": 18,
+        "n": 2000,
+        "rate": 0.009,
+        "lo": 0.0057,
+        "hi": 0.014182,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n6_plateau",
+        "kind": "gaussian",
+        "k": 1,
+        "n": 2000,
+        "rate": 0.0005,
+        "lo": 0.000088,
+        "hi": 0.002827,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n6_plateau",
+        "kind": "garch_t",
+        "k": 8,
+        "n": 2000,
+        "rate": 0.004,
+        "lo": 0.002028,
+        "hi": 0.007873,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n6_single",
+        "kind": "gaussian",
+        "k": 4,
+        "n": 2000,
+        "rate": 0.002,
+        "lo": 0.000778,
+        "hi": 0.005131,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n6_single",
+        "kind": "garch_t",
+        "k": 2,
+        "n": 2000,
+        "rate": 0.001,
+        "lo": 0.000274,
+        "hi": 0.003639,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n16_plateau",
+        "kind": "gaussian",
+        "k": 0,
+        "n": 2000,
+        "rate": 0,
+        "lo": 0,
+        "hi": 0.001917,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n16_plateau",
+        "kind": "garch_t",
+        "k": 2,
+        "n": 2000,
+        "rate": 0.001,
+        "lo": 0.000274,
+        "hi": 0.003639,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n16_single",
+        "kind": "gaussian",
+        "k": 0,
+        "n": 2000,
+        "rate": 0,
+        "lo": 0,
+        "hi": 0.001917,
+        "nominal": 0.05,
+        "reading": "OK"
+      },
+      {
+        "route": "book",
+        "cell": "n16_single",
+        "kind": "garch_t",
+        "k": 0,
+        "n": 2000,
+        "rate": 0,
+        "lo": 0,
+        "hi": 0.001917,
+        "nominal": 0.05,
+        "reading": "OK"
+      }
+    ],
+    "model": [
+      {
+        "route": "research",
+        "cell": "daily_a05",
+        "sharpe": 0,
+        "p": 0.002,
+        "lo": 0.000778,
+        "hi": 0.005131,
+        "model": 0.0011,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a05",
+        "sharpe": 0.3,
+        "p": 0.0545,
+        "lo": 0.045378,
+        "hi": 0.06533,
+        "model": 0.04,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a05",
+        "sharpe": 0.5,
+        "p": 0.155,
+        "lo": 0.139802,
+        "hi": 0.171521,
+        "model": 0.14,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a05",
+        "sharpe": 0.75,
+        "p": 0.3865,
+        "lo": 0.365396,
+        "hi": 0.408039,
+        "model": 0.34,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a05",
+        "sharpe": 1,
+        "p": 0.604,
+        "lo": 0.582386,
+        "hi": 0.625215,
+        "model": 0.53,
+        "reading": "ABOVE-MODEL"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a1",
+        "sharpe": 0,
+        "p": 0,
+        "lo": 0,
+        "hi": 0.001917,
+        "model": 0.00008,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a1",
+        "sharpe": 0.3,
+        "p": 0.009,
+        "lo": 0.0057,
+        "hi": 0.014182,
+        "model": 0.006,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a1",
+        "sharpe": 0.5,
+        "p": 0.0475,
+        "lo": 0.039014,
+        "hi": 0.057721,
+        "model": 0.04,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a1",
+        "sharpe": 0.75,
+        "p": 0.211,
+        "lo": 0.193681,
+        "hi": 0.229427,
+        "model": 0.16,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "daily_a1",
+        "sharpe": 1,
+        "p": 0.409,
+        "lo": 0.387647,
+        "hi": 0.430702,
+        "model": 0.33,
+        "reading": "ABOVE-MODEL"
+      },
+      {
+        "route": "research",
+        "cell": "monthly_a1",
+        "sharpe": 0,
+        "p": 0,
+        "lo": 0,
+        "hi": 0.001917,
+        "model": 0.00004,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "monthly_a1",
+        "sharpe": 0.3,
+        "p": 0.005,
+        "lo": 0.002718,
+        "hi": 0.00918,
+        "model": 0.003,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "monthly_a1",
+        "sharpe": 0.5,
+        "p": 0.03,
+        "lo": 0.023378,
+        "hi": 0.038424,
+        "model": 0.02,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "monthly_a1",
+        "sharpe": 0.75,
+        "p": 0.1615,
+        "lo": 0.146024,
+        "hi": 0.178274,
+        "model": 0.11,
+        "reading": "MATCH"
+      },
+      {
+        "route": "research",
+        "cell": "monthly_a1",
+        "sharpe": 1,
+        "p": 0.398,
+        "lo": 0.376763,
+        "hi": 0.419628,
+        "model": 0.29,
+        "reading": "ABOVE-MODEL"
+      },
+      {
+        "route": "book",
+        "cell": "n6_plateau",
+        "sharpe": 0,
+        "p": 0.0005,
+        "lo": 0.000088,
+        "hi": 0.002827,
+        "model": 0.0016,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n6_plateau",
+        "sharpe": 0.3,
+        "p": 0.0275,
+        "lo": 0.021188,
+        "hi": 0.035623,
+        "model": 0.02,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n6_plateau",
+        "sharpe": 0.5,
+        "p": 0.1005,
+        "lo": 0.088079,
+        "hi": 0.114452,
+        "model": 0.09,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n6_plateau",
+        "sharpe": 0.75,
+        "p": 0.25,
+        "lo": 0.231514,
+        "hi": 0.269444,
+        "model": 0.29,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n6_plateau",
+        "sharpe": 1,
+        "p": 0.4,
+        "lo": 0.378741,
+        "hi": 0.421642,
+        "model": 0.6,
+        "reading": "BELOW-MODEL"
+      },
+      {
+        "route": "book",
+        "cell": "n6_single",
+        "sharpe": 0,
+        "p": 0.002,
+        "lo": 0.000778,
+        "hi": 0.005131,
+        "model": 0.0016,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n6_single",
+        "sharpe": 0.3,
+        "p": 0.0205,
+        "lo": 0.015147,
+        "hi": 0.027691,
+        "model": 0.02,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n6_single",
+        "sharpe": 0.5,
+        "p": 0.0705,
+        "lo": 0.060085,
+        "hi": 0.082562,
+        "model": 0.09,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n6_single",
+        "sharpe": 0.75,
+        "p": 0.2965,
+        "lo": 0.276889,
+        "hi": 0.316891,
+        "model": 0.29,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n6_single",
+        "sharpe": 1,
+        "p": 0.5955,
+        "lo": 0.573827,
+        "hi": 0.616807,
+        "model": 0.6,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_plateau",
+        "sharpe": 0,
+        "p": 0,
+        "lo": 0,
+        "hi": 0.001917,
+        "model": 0.0003,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_plateau",
+        "sharpe": 0.3,
+        "p": 0.0085,
+        "lo": 0.005314,
+        "hi": 0.013571,
+        "model": 0.006,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_plateau",
+        "sharpe": 0.5,
+        "p": 0.0435,
+        "lo": 0.035401,
+        "hi": 0.053349,
+        "model": 0.03,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_plateau",
+        "sharpe": 0.75,
+        "p": 0.161,
+        "lo": 0.145545,
+        "hi": 0.177755,
+        "model": 0.15,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_plateau",
+        "sharpe": 1,
+        "p": 0.3105,
+        "lo": 0.290601,
+        "hi": 0.331125,
+        "model": 0.42,
+        "reading": "BELOW-MODEL"
+      },
+      {
+        "route": "book",
+        "cell": "n16_single",
+        "sharpe": 0,
+        "p": 0,
+        "lo": 0,
+        "hi": 0.001917,
+        "model": 0.0003,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_single",
+        "sharpe": 0.3,
+        "p": 0.0055,
+        "lo": 0.003074,
+        "hi": 0.009822,
+        "model": 0.006,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_single",
+        "sharpe": 0.5,
+        "p": 0.0255,
+        "lo": 0.019448,
+        "hi": 0.033371,
+        "model": 0.03,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_single",
+        "sharpe": 0.75,
+        "p": 0.1545,
+        "lo": 0.139324,
+        "hi": 0.171001,
+        "model": 0.15,
+        "reading": "MATCH"
+      },
+      {
+        "route": "book",
+        "cell": "n16_single",
+        "sharpe": 1,
+        "p": 0.405,
+        "lo": 0.383688,
+        "hi": 0.426676,
+        "model": 0.42,
+        "reading": "MATCH"
+      }
+    ],
+    "synthesis_s5": [
+      {
+        "cell": "daily_a05",
+        "p_05": 0.155,
+        "overstated": false,
+        "p_10": 0.604,
+        "understated": false
+      },
+      {
+        "cell": "daily_a1",
+        "p_05": 0.0475,
+        "overstated": false,
+        "p_10": 0.409,
+        "understated": false
+      },
+      {
+        "cell": "monthly_a1",
+        "p_05": 0.03,
+        "overstated": false,
+        "p_10": 0.398,
+        "understated": false
+      }
+    ]
+  },
+  "pin": {
+    "draws": 24,
+    "sharpe": 1,
+    "kind": "gaussian",
+    "cells": {
+      "research:daily_a05": "011011101100000010011111",
+      "book:n6_single": "001010101111101110111111",
+      "book:n6_plateau": "101010110101000110010000"
+    }
+  },
+  "not_measured": [
+    "the null-baseline bar (prereg-template \"Null baseline\"): it needs a real universe, so every rate here is an upper bound in that respect",
+    "pool_corr: the pool is empty, so a control is never compared with bench-spy-hold or bench-6040",
+    "the book pre-registration a forward PASS only earns the ticket for; promotion to the wallet; K5; MinTRL",
+    "IC-form and forecast-form routes (xs_panel, both TimesFM windows, T110-HA): \"true Sharpe\" is not defined for them — UNCALIBRATED",
+    "the e-process forward gate (factory/eprocess.py): no pre-registration declares the block",
+    "a research runner at the ledger alpha: none exists — daily_a1 and monthly_a1 put the fx_clock gate lines at slot 1 as a what-if",
+    "costs: the research statistic is gross (fx_clock reports cost, never kills on it); the book pays 10 bp a side on a near-static basket",
+    "block-bootstrap standard errors, vendor data, Stage 0, charter caps and every operator latch"
+  ]
+}

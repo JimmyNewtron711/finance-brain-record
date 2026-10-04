@@ -1,0 +1,28 @@
+$ source orient/research-py/.venv/bin/activate && PYTHONPATH=orient/research-py/src python -m superbrain.cli intraday evaluate --prereg docs/superpowers/plans/2026-10-04-market-intraday-momentum-prereg.md
+# started 2026-10-04T16:41:56.478Z
+SPY: rho +0.0102  p 0.6675  mbf 0.9119  n 2615  sigma 1.1080  bar 0.0536  neighbour first_half_hour -0.0251  registered P(PASS) 0.86
+  era 2016-01-04..2019-07-04: n 873 rho -0.0281 (ok)
+  era 2019-07-05..2023-01-01: n 873 rho +0.0738 (ok)
+  era 2023-01-02..2026-07-02: n 869 rho -0.0492 (ok)
+  kills failed: ['p_family', 'era_sign', 'plateau_sign', 'bar']
+  VERDICT DIE
+QQQ: rho +0.0189  p 0.4548  mbf 0.7563  n 2614  sigma 1.1035  bar 0.0749  neighbour first_half_hour -0.0140  registered P(PASS) 0.60
+  era 2016-01-04..2019-07-04: n 870 rho +0.0074 (ok)
+  era 2019-07-05..2023-01-01: n 875 rho +0.0903 (ok)
+  era 2023-01-02..2026-07-02: n 869 rho -0.0650 (ok)
+  kills failed: ['p_family', 'era_sign', 'plateau_sign', 'bar']
+  VERDICT DIE
+IWM: rho +0.0099  p 0.6674  mbf 0.9118  n 2615  sigma 1.0809  bar 0.0424  neighbour first_half_hour -0.0224  registered P(PASS) 0.86
+  era 2016-01-04..2019-07-04: n 873 rho +0.0715 (ok)
+  era 2019-07-05..2023-01-01: n 873 rho +0.0134 (ok)
+  era 2023-01-02..2026-07-02: n 869 rho -0.0452 (ok)
+  kills failed: ['p_family', 'era_sign', 'plateau_sign', 'bar']
+  VERDICT DIE
+TLT: rho +0.0935  p 0.0001  mbf 0.0005  n 2614  sigma 1.0727  bar 0.0663  neighbour first_half_hour +0.0703  registered P(PASS) 0.01
+  era 2016-01-04..2019-07-04: n 870 rho +0.0066 (ok)
+  era 2019-07-05..2023-01-01: n 875 rho +0.1304 (ok)
+  era 2023-01-02..2026-07-02: n 869 rho +0.1226 (ok)
+  kills failed: none
+  VERDICT PASS
+family: 4 raw / 3 clustered; alpha_member 0.002734; forward first_date 2026-10-05, reads ['2027-10-04', '2028-10-04', '2029-10-04', '2030-10-04'], close 2031-10-04
+# exit 0
