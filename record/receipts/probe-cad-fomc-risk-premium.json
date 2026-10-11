@@ -1,0 +1,62 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "cad-fomc-risk-premium",
+  "vendor": "dukascopy",
+  "computed_at": "2026-10-04T23:19:59-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii), this row ruled (a) on 2026-10-04",
+  "note": "One read of the pinned tape window, no p-value, a counted trial, never re-run. No discovery / confirmation split is ruled for the FX arena. The tape is the held hourly USD/CAD tape (tape_receipt); the FOMC days are the frozen calendar from 2010 and seven Board pages for 2003 – 2009, pulled through rawFetch on 2026-10-04 (calendar). script_sha256 = the sha256 of the script at script_path, committed before the read.",
+  "statistic": "mean return per scheduled FOMC event of long CAD against USD, 16:00 ET to 16:00 ET, at the far touch, in bp per event",
+  "value": 10.831382649469061,
+  "sigma": 68.5031145105734,
+  "units": "bp per FOMC event",
+  "n": 183,
+  "skipped": [],
+  "spread_cost_bp_mean": 1.6190565810403161,
+  "bar": "zero on the registered sign (+): the row declares no baseline bar",
+  "clears": true,
+  "window": {
+    "start": "2003-08-04",
+    "end_exclusive": "2026-07-03"
+  },
+  "first_event": "2003-08-12",
+  "last_event": "2026-06-17",
+  "pulled_via": "rawFetch",
+  "tape_receipt": "govern/receipts/fx-tape-2026-09-15.json",
+  "calendar": {
+    "frozen": "observe/calendars/macro-events-v1.json",
+    "frozen_sha256": "a1f03a5725f7c1d688ce90235985c2df94c246ab68a16048107cb0afe34869d7",
+    "depot": "data/raw/fedboard",
+    "pages": {
+      "2003": {
+        "depot_id": 24,
+        "body_sha256": "9d73637fd9f35236fe7fdf494566958fcfdb993b54d5366b6d67b02687b608e9"
+      },
+      "2004": {
+        "depot_id": 25,
+        "body_sha256": "7792942703a3ca5b810637b9d48d0ea7ad95442410b1e64b78a463565e15972b"
+      },
+      "2005": {
+        "depot_id": 26,
+        "body_sha256": "8bbbf548eee1af3f677e9480af462d856bdee60176ee951043ddf7517c254f88"
+      },
+      "2006": {
+        "depot_id": 27,
+        "body_sha256": "bdf3cb08078f70d0b2f428dcb2f25aa4f2faecd1c17fdda354669792713de8ef"
+      },
+      "2007": {
+        "depot_id": 28,
+        "body_sha256": "41ad386b95c393c5bd37812c0493aa28255b6b3caacee714a3ba721a8c4b0415"
+      },
+      "2008": {
+        "depot_id": 29,
+        "body_sha256": "e0e7802940274be4f6c3c292d5a2c022b8072118b499ebbe13309b4e05ffb921"
+      },
+      "2009": {
+        "depot_id": 30,
+        "body_sha256": "ed661b016203b919edcbf1071667b8fecc19a5824cd21f20071bcc5d9b6c9dc5"
+      }
+    }
+  },
+  "script_path": "orient/investigations/probe-cad-fomc-risk-premium.py",
+  "script_sha256": "e2b9b945a9371b3344a05a4bab3682606376016b9834affe62219d2ae440b644"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "spy-bounded-put-premium",
+  "vendor": "thetadata",
+  "computed_at": "2026-10-04T23:01:05-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii) and (4); publication ruling D147 (a), 2026-10-03",
+  "note": "One read of the discovery window, no p-value, a counted trial, never re-run. No request: the held chain store data/options.db (answers in data/raw/thetadata through rawFetch) and the held SPY daily closes. This file carries dates, digests and the clears flag; the statistic's value and its sigma are in the figures file at figures_path, which no bundle prefix reads. figures_sha256 = the sha256 of that file; script_sha256 = the sha256 of the script at script_path, committed before the read.",
+  "statistic": "mean return per monthly cycle of the put credit spread, in σ-units per month",
+  "value": "in the figures file",
+  "sigma": "in the figures file",
+  "bar": "zero on the registered sign (+): the row declares no baseline bar",
+  "clears": true,
+  "window": {
+    "start": "2016-01-04",
+    "end": "2022-04-30"
+  },
+  "pulled_via": "rawFetch (held store, no new request)",
+  "script_path": "orient/options/probe-spy-bounded-put-premium.py",
+  "script_sha256": "1fd4995591635718937a741abae90213cc5a3dcd941bbd667ec9d6dd0c3e9efa",
+  "figures_path": "orient/options/probe-spy-bounded-put-premium.json",
+  "figures_sha256": "6614c6f40ffd362d68014219445974514d5fbd59a3ea9f519ab32a4073bbc161"
+}
