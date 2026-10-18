@@ -1,0 +1,22 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "spy-exercise-financing-pressure",
+  "vendor": "thetadata",
+  "computed_at": "2026-10-18T08:28:56-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii) and (4); publication ruling D147 (a), 2026-10-03; Amendment 2026-10-17 (K1) (1), the operator's answer (b) of 2026-10-18",
+  "note": "One read of the discovery window, no p-value, a counted trial, never re-run. No request: the held chain store data/options.db (answers in data/raw/thetadata through rawFetch), the held SPY daily closes and the held DGS1MO (dashboard.db fred_history). This file carries dates, digests and the clears flag; the statistic's value and its sigma are in the figures file at figures_path, which no bundle prefix reads. figures_sha256 = the sha256 of that file; script_sha256 = the sha256 of the script at script_path, committed before the read.",
+  "statistic": "mean return per triggered five-session event of the long ATM / short 95 % SPY put vertical, net of the row's cost floor, in percent of entry debit",
+  "value": "in the figures file",
+  "sigma": "in the figures file",
+  "bar": "zero on the registered sign (+): the row declares no baseline bar",
+  "clears": false,
+  "window": {
+    "start": "2016-01-04",
+    "end": "2022-04-30"
+  },
+  "pulled_via": "rawFetch (held store, no new request)",
+  "script_path": "orient/options/probe-spy-exercise-financing-pressure.py",
+  "script_sha256": "f1a7268b68c80bd02de4c9c2eee1c2a1bc5caf32b6f0153ba7f6077e44f82660",
+  "figures_path": "orient/options/probe-spy-exercise-financing-pressure.json",
+  "figures_sha256": "48d46f00cb253525d5f2833b09a577ee7217dc27b5c81689515754d7eb409e33"
+}

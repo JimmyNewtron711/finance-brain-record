@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-18",
+  "label": "running — not a verdict",
+  "generated_at": "2026-10-18T17:00:01+00:00",
+  "pool_size": 2,
+  "members": [
+    {
+      "program": "market-intraday-momentum",
+      "member": "TLT",
+      "status": "ok",
+      "units": "bp/day",
+      "stat_units": "Spearman rho",
+      "first_date": "2026-10-05",
+      "last_date": "2026-10-14",
+      "n_forward": 7,
+      "mean_net": -1.1857904252413076,
+      "mean_gross": 0.05145104831690998,
+      "sd": 8.132283694648931,
+      "prior": 0.022,
+      "in_sample_mean": 0.0934636488370329,
+      "rows_sha256": "384271d138aab5be2f03755286b67b10879e38f7d13d2aa2db8d0b47f4a1554a"
+    },
+    {
+      "program": "fx-clock-1",
+      "member": "europe_am_short",
+      "status": "ok",
+      "units": "bp/day",
+      "stat_units": "bp/day",
+      "first_date": "2026-09-16",
+      "last_date": "2026-10-16",
+      "n_forward": 22,
+      "mean_net": 5.773402068544342,
+      "mean_gross": 6.146177432809258,
+      "sd": 24.32592837000079,
+      "prior": 1.19,
+      "in_sample_mean": 1.6960752953377995,
+      "rows_sha256": "e4fd180e8dc31cabc03cd984f9b19624c355e1fb29dba2cc10b9cbd429a29dd9"
+    }
+  ]
+}

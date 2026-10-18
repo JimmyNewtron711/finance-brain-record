@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-18",
+  "source": "observe/cron-health.md",
+  "generated_at": "2026-10-18T10:50:01.490Z",
+  "summary": {
+    "ok": 22,
+    "late": 0,
+    "silent": 0,
+    "failing": 3
+  },
+  "jobs": [
+    {
+      "job": "provenance-snapshot",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "sweep-derivatives",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "heartbeat-substrate",
+      "status": "FAILING",
+      "detail": "no \"[heartbeat] done — all sources ok\" in log output since last healthy check"
+    },
+    {
+      "job": "stream-health",
+      "status": "OK",
+      "detail": "log 0.1h old (allowed 26h)"
+    },
+    {
+      "job": "map-run",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "collect-portwatch",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "heartbeat-gold",
+      "status": "OK",
+      "detail": "log 11.1h old (allowed 26h)"
+    },
+    {
+      "job": "heartbeat-crypto",
+      "status": "OK",
+      "detail": "log 0.2h old (allowed 8h)"
+    },
+    {
+      "job": "pattern-eval",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "anchor-push",
+      "status": "OK",
+      "detail": "log 11.7h old (allowed 26h)"
+    },
+    {
+      "job": "forward-record",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "factory-tick",
+      "status": "OK",
+      "detail": "log 5.8h old (allowed 26h)"
+    },
+    {
+      "job": "backup",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "backup-drill",
+      "status": "OK",
+      "detail": "not armed (log absent, expected)"
+    },
+    {
+      "job": "nowcast-run",
+      "status": "OK",
+      "detail": "log 10.7h old (allowed 26h)"
+    },
+    {
+      "job": "drift-flags",
+      "status": "OK",
+      "detail": "log 9.8h old (allowed 26h)"
+    },
+    {
+      "job": "db-reconcile",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "wallet-run",
+      "status": "FAILING",
+      "detail": "no \"[wallet] ok\" in log output since last healthy check"
+    },
+    {
+      "job": "wallet-options",
+      "status": "OK",
+      "detail": "log 11.7h old (allowed 26h)"
+    },
+    {
+      "job": "t110-refresh",
+      "status": "OK",
+      "detail": "log 0.6h old (allowed 26h)"
+    },
+    {
+      "job": "databento-daily",
+      "status": "FAILING",
+      "detail": "no \"[databento] ok\" in log output since last healthy check"
+    },
+    {
+      "job": "blocks-run",
+      "status": "OK",
+      "detail": "no new output since last healthy check"
+    },
+    {
+      "job": "vendor-eod-daily-sharadar",
+      "status": "OK",
+      "detail": "log 0.2h old (allowed 26h)"
+    },
+    {
+      "job": "options-daily",
+      "status": "OK",
+      "detail": "log 0.1h old (allowed 26h)"
+    },
+    {
+      "job": "ndu-run",
+      "status": "OK",
+      "detail": "log 1.5h old (allowed 26h)"
+    }
+  ]
+}
