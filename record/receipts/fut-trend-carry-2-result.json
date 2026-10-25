@@ -1,0 +1,50 @@
+{
+  "withheld": "figures derived from the licensed Norgate store stay in the private repo (Amendment 2026-10-17 (K1) (4)(a), the strict reading ruled 2026-10-23)",
+  "sha256": "5be7a74c833b0c86dd3dcedb03ced875e942ee552c7c36e53cad9bc7da6d3ad8",
+  "schema": "book_result_v1",
+  "program": "fut-trend-carry-2",
+  "verdict": "DIE",
+  "evaluated_at": "2026-10-20",
+  "kills": [
+    {
+      "id": "dsr_family",
+      "result": "DIE"
+    },
+    {
+      "id": "oos_sharpe",
+      "result": "DIE"
+    },
+    {
+      "id": "max_drawdown",
+      "result": "PASS"
+    },
+    {
+      "id": "sleeve",
+      "result": "PASS"
+    },
+    {
+      "id": "block_sign",
+      "result": "PASS"
+    },
+    {
+      "id": "deployable",
+      "result": "DIE"
+    },
+    {
+      "id": "leverage",
+      "result": "PASS"
+    },
+    {
+      "id": "plateau_sign",
+      "result": "PASS"
+    },
+    {
+      "id": "era_sign",
+      "result": "PASS"
+    },
+    {
+      "id": "pool_corr",
+      "result": "PASS"
+    }
+  ]
+}

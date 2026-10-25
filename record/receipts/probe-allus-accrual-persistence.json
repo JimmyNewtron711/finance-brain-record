@@ -1,0 +1,25 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "allus-accrual-persistence",
+  "vendor": "sharadar",
+  "computed_at": "2026-10-25T11:31:44-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form; the factory's F1 of 2026-10-25",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery window, a counted trial, never re-run. No request: the held Sharadar store, read-only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "the net return of the row's own book over each year (the field's frozen rule xs_allus_accrual_persistence, PARAMS {\"min_age\": 4, \"max_age\": 16}, formed each June-end and held to the next, on the field's engine at the entry replay's B7 cost line): its sigma, turnover and cost alone",
+  "sigma": 10.134431796260005,
+  "sigma_gross": 10.492753254601803,
+  "units": "percent per year, a June-end to the next (the row's Stage-1 unit; prior 0.624)",
+  "n": 11,
+  "turnover": 1.4916921385390425,
+  "cost": 1.8229434673578475,
+  "formations_empty": 0,
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "1998-06-30",
+    "last_window_end": "2009-06-30"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-allus-accrual-persistence.py",
+  "script_sha256": "f1d3f2fad60efb36f3459ea44a036fa540d59cde3b63c85030ef5848affa22b1"
+}

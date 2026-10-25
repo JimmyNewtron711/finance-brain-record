@@ -1,0 +1,25 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "sp500-sector-return-continuation",
+  "vendor": "sharadar",
+  "computed_at": "2026-10-25T11:06:13-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form; the factory's F1 of 2026-10-25",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery window, a counted trial, never re-run. No request: the held Sharadar store, read-only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "the net return of the row's own book over each month (the field's frozen rule xs_sp500_sector_return_continuation, PARAMS {\"top\": 3}, formed each month-end and held to the next, on the field's engine at the entry replay's B7 cost line): its sigma, turnover and cost alone",
+  "sigma": 2.691559539536175,
+  "sigma_gross": 2.4880813519692917,
+  "units": "percent per month, a month-end to the next (the row's Stage-1 unit; prior 0.525)",
+  "n": 141,
+  "turnover": 1.4855355820889704,
+  "cost": 0.5630983883878263,
+  "formations_empty": 0,
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "1998-03-31",
+    "last_window_end": "2009-12-31"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-sp500-sector-return-continuation.py",
+  "script_sha256": "2058adb9d7ebd9804d25d68700d2e4b723c4d7771a699c527e99fd27b9995b5c"
+}

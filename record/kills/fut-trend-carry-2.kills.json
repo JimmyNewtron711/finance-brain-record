@@ -1,0 +1,37 @@
+{
+  "withheld": "figures derived from the licensed Norgate store stay in the private repo (Amendment 2026-10-17 (K1) (4)(a), the strict reading ruled 2026-10-23)",
+  "sha256": "44070c89b82da97cf2c1a9f823d6958a6fcc7678e6caa4d6ee939de7fe166f8f",
+  "schema": "kills_v1",
+  "kills": [
+    {
+      "id": "dsr_family"
+    },
+    {
+      "id": "oos_sharpe"
+    },
+    {
+      "id": "max_drawdown"
+    },
+    {
+      "id": "sleeve"
+    },
+    {
+      "id": "block_sign"
+    },
+    {
+      "id": "deployable"
+    },
+    {
+      "id": "leverage"
+    },
+    {
+      "id": "plateau_sign"
+    },
+    {
+      "id": "era_sign"
+    },
+    {
+      "id": "pool_corr"
+    }
+  ]
+}

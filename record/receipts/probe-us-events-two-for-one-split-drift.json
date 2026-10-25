@@ -1,0 +1,26 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "us-events-two-for-one-split-drift",
+  "vendor": "sharadar",
+  "computed_at": "2026-10-25T11:52:11-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form; the factory's F1 of 2026-10-25",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery window, a counted trial, never re-run. No request: the held Sharadar store, read-only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "the net return of the row's own book over each calendar year (the field's frozen rule xs_us_events_two_for_one_split_drift, PARAMS {\"value\": 2.0, \"cohorts\": 12}, 12 overlapping month-end cohorts of two-for-one splits, each held twelve months, on the field's engine at the entry replay's B7 cost line): its sigma, turnover and cost alone",
+  "sigma": 6.834693508001172,
+  "sigma_gross": 6.827539955124329,
+  "units": "percent per calendar year, a December-end to the next (the row's Stage-1 unit; prior 0.9516)",
+  "n": 10,
+  "turnover": 2.102251937997287,
+  "cost": 1.178505068122603,
+  "formations_empty": 0,
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "1998-12-31",
+    "full_book_from": "1999-11-30",
+    "last_window_end": "2009-12-31"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-us-events-two-for-one-split-drift.py",
+  "script_sha256": "b59a22d92ca68faa88dfa34459f81316090ad6cfd208752dfdb41d5a5b56cb11"
+}

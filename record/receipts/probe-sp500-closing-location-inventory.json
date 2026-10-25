@@ -1,0 +1,33 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "sp500-closing-location-inventory",
+  "vendor": "sharadar",
+  "computed_at": "2026-10-25T11:16:00-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form; the factory's F1 of 2026-10-25",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery window, a counted trial, never re-run. No request: the held Sharadar store, read-only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "the net signed SPY return of the row's own book over each two-session cluster (X = the dollar-volume-weighted PIT S&P 500 mean of (2*close-high-low)/(high-low) on the formation session, zero-range bars excluded; SPY faded on X's sign from the next open through the second session's close; the field's ETF cost line, 10 bp a side and 25 bp a year of short borrow), over the extreme clusters (X in the window's lower or upper quintile, the row's Stage-1 n): its sigma, turnover and cost alone",
+  "sigma": 191.70148171475077,
+  "sigma_gross": 192.08377311151338,
+  "sigma_all": 176.9410992244414,
+  "units": "bp per two-session cluster (the row's Stage-1 unit; prior 12)",
+  "n": 592,
+  "n_all": 1479,
+  "turnover": 2.0,
+  "cost": 20.073531811384385,
+  "formations_empty": 0,
+  "bars_malformed": 0,
+  "bars_used": {
+    "min": 466,
+    "median": 499,
+    "max": 501
+  },
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "1998-03-31",
+    "last_cluster_end": "2009-12-31"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-sp500-closing-location-inventory.py",
+  "script_sha256": "3344a6261f17af030c5a84516a80032774bc17317bc4c2e2ac0a1bf805fe83af"
+}

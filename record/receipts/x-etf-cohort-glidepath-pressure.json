@@ -1,0 +1,1224 @@
+{
+ "row": "etf-cohort-glidepath-pressure",
+ "what": "X by quarter start (D543's x phase): EDGAR filings only, before any tape read",
+ "built_at": "2026-10-25T11:41:34.302Z",
+ "script": {
+  "path": "orient/investigations/x-etf-cohort-glidepath-pressure.mjs",
+  "sha256": "b65d4963e4ae75d24173e504ef5578f96ccc101a6743621d46641619a3a9d085"
+ },
+ "inputs": {
+  "series": {
+   "path": "/var/tmp/gpb/series.json",
+   "sha256": "703183f6f2113e8aab11d671a48da7005fe091d97b08ca6da336769d25d7d951"
+  },
+  "flows": {
+   "path": "/var/tmp/gpx/flows.json",
+   "sha256": "12d5fb82bac47768c9d868d44fcbc3777dab0dfcdbf9af9e2c8af995be199111"
+  },
+  "glide": {
+   "path": "/var/tmp/gpx/glide.json",
+   "sha256": "dfbf165649b30c71d12f94def0e066f14774ca0e34acacf4cb768cd1ce17b473"
+  }
+ },
+ "rule": "the header of x() in the script; the tail's rule in its file header",
+ "units": "$bn (x = glide − flow)",
+ "quarters": [
+  {
+   "q": "2010-07-01",
+   "x": -7.481,
+   "glide": 0.929,
+   "flow": 8.409,
+   "aum": 261.014,
+   "series": 402,
+   "tail_pct": 76.8,
+   "on": false,
+   "vintages": {
+    "Vanguard": "2009-09-30"
+   }
+  },
+  {
+   "q": "2010-10-01",
+   "x": -8.206,
+   "glide": 0.911,
+   "flow": 9.117,
+   "aum": 267.859,
+   "series": 403,
+   "tail_pct": 61.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2010-09-30",
+    "Vanguard": "2010-06-30"
+   }
+  },
+  {
+   "q": "2011-01-01",
+   "x": -6.297,
+   "glide": 0.966,
+   "flow": 7.263,
+   "aum": 284.468,
+   "series": 409,
+   "tail_pct": 60.9,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2010-09-30",
+    "Vanguard": "2010-06-30"
+   }
+  },
+  {
+   "q": "2011-04-01",
+   "x": -5.852,
+   "glide": 1,
+   "flow": 6.852,
+   "aum": 297.71,
+   "series": 407,
+   "tail_pct": 60.3,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2010-09-30",
+    "Vanguard": "2010-06-30"
+   }
+  },
+  {
+   "q": "2011-07-01",
+   "x": -9.303,
+   "glide": 1.033,
+   "flow": 10.335,
+   "aum": 344.399,
+   "series": 404,
+   "tail_pct": 23.4,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2010-09-30",
+    "Vanguard": "2010-06-30",
+    "Fidelity": "2011-03-31"
+   }
+  },
+  {
+   "q": "2011-10-01",
+   "x": -9.623,
+   "glide": 1.078,
+   "flow": 10.701,
+   "aum": 359.587,
+   "series": 405,
+   "tail_pct": 21.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2011-09-01",
+    "Vanguard": "2010-06-30",
+    "Fidelity": "2011-03-31",
+    "TIAA-CREF": "2012-06-30"
+   }
+  },
+  {
+   "q": "2012-01-01",
+   "x": -3.656,
+   "glide": 1,
+   "flow": 4.656,
+   "aum": 332.468,
+   "series": 389,
+   "tail_pct": 22.9,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2011-09-01",
+    "Vanguard": "2010-06-30",
+    "Fidelity": "2011-03-31"
+   }
+  },
+  {
+   "q": "2012-04-01",
+   "x": -3.469,
+   "glide": 1.034,
+   "flow": 4.502,
+   "aum": 340.493,
+   "series": 410,
+   "tail_pct": 22.7,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2011-09-01",
+    "Vanguard": "2011-09-30",
+    "Fidelity": "2011-03-31",
+    "TIAA-CREF": "2012-06-30"
+   }
+  },
+  {
+   "q": "2012-07-01",
+   "x": -7.561,
+   "glide": 1.168,
+   "flow": 8.729,
+   "aum": 387.878,
+   "series": 411,
+   "tail_pct": 21.4,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2011-09-01",
+    "Vanguard": "2011-09-30",
+    "Fidelity": "2012-03-31",
+    "TIAA-CREF": "2012-06-30"
+   }
+  },
+  {
+   "q": "2012-10-01",
+   "x": -7.489,
+   "glide": 1.212,
+   "flow": 8.701,
+   "aum": 400.697,
+   "series": 417,
+   "tail_pct": 22.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2012-10-01",
+    "Vanguard": "2011-09-30",
+    "Fidelity": "2012-03-31",
+    "TIAA-CREF": "2013-06-30"
+   }
+  },
+  {
+   "q": "2013-01-01",
+   "x": -5.584,
+   "glide": 1.324,
+   "flow": 6.907,
+   "aum": 434.756,
+   "series": 420,
+   "tail_pct": 23.7,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2012-10-01",
+    "Vanguard": "2011-09-30",
+    "Fidelity": "2012-03-31",
+    "TIAA-CREF": "2013-06-30"
+   }
+  },
+  {
+   "q": "2013-04-01",
+   "x": -6.33,
+   "glide": 1.341,
+   "flow": 7.671,
+   "aum": 453.608,
+   "series": 416,
+   "tail_pct": 24.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2012-10-01",
+    "Vanguard": "2012-09-30",
+    "Fidelity": "2012-03-31",
+    "TIAA-CREF": "2013-06-30"
+   }
+  },
+  {
+   "q": "2013-07-01",
+   "x": -12.366,
+   "glide": 1.424,
+   "flow": 13.791,
+   "aum": 485.752,
+   "series": 417,
+   "tail_pct": 21.4,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2012-10-01",
+    "Vanguard": "2012-09-30",
+    "Fidelity": "2013-03-31",
+    "TIAA-CREF": "2013-06-30"
+   }
+  },
+  {
+   "q": "2013-10-01",
+   "x": -12.898,
+   "glide": 1.498,
+   "flow": 14.397,
+   "aum": 508.641,
+   "series": 440,
+   "tail_pct": 22.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2013-10-01",
+    "Vanguard": "2012-09-30",
+    "Fidelity": "2013-03-31",
+    "TIAA-CREF": "2014-06-30"
+   }
+  },
+  {
+   "q": "2014-01-01",
+   "x": -3.05,
+   "glide": 1.577,
+   "flow": 4.627,
+   "aum": 534.682,
+   "series": 433,
+   "tail_pct": 19.8,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2013-10-01",
+    "Vanguard": "2012-09-30",
+    "Fidelity": "2013-03-31",
+    "TIAA-CREF": "2014-06-30",
+    "JPMorgan": "2013-11-23"
+   }
+  },
+  {
+   "q": "2014-04-01",
+   "x": -4.291,
+   "glide": 1.679,
+   "flow": 5.969,
+   "aum": 555.549,
+   "series": 446,
+   "tail_pct": 19.3,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2013-10-01",
+    "Vanguard": "2013-09-30",
+    "Fidelity": "2013-03-31",
+    "TIAA-CREF": "2014-06-30",
+    "JPMorgan": "2014-01-16",
+    "T. Rowe Price Target": "2013-10-01"
+   }
+  },
+  {
+   "q": "2014-07-01",
+   "x": -7.32,
+   "glide": 1.958,
+   "flow": 9.278,
+   "aum": 590.789,
+   "series": 455,
+   "tail_pct": 19.4,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2013-10-01",
+    "Vanguard": "2013-09-30",
+    "Fidelity": "2014-03-31",
+    "TIAA-CREF": "2014-06-30",
+    "JPMorgan": "2014-01-16",
+    "T. Rowe Price Target": "2013-10-01"
+   }
+  },
+  {
+   "q": "2014-10-01",
+   "x": -8.309,
+   "glide": 2.077,
+   "flow": 10.386,
+   "aum": 626.455,
+   "series": 467,
+   "tail_pct": 17.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2014-10-01",
+    "Vanguard": "2013-09-30",
+    "Fidelity": "2014-03-31",
+    "TIAA-CREF": "2015-06-30",
+    "JPMorgan": "2014-01-16",
+    "American Funds": "2014-08-28",
+    "T. Rowe Price Target": "2014-10-01"
+   }
+  },
+  {
+   "q": "2015-01-01",
+   "x": -9.063,
+   "glide": 2.091,
+   "flow": 11.154,
+   "aum": 644.855,
+   "series": 476,
+   "tail_pct": 17,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2014-10-01",
+    "Vanguard": "2013-09-30",
+    "Fidelity": "2014-03-31",
+    "TIAA-CREF": "2015-06-30",
+    "JPMorgan": "2014-11-17",
+    "American Funds": "2014-12-31",
+    "T. Rowe Price Target": "2014-10-01"
+   }
+  },
+  {
+   "q": "2015-04-01",
+   "x": -7.189,
+   "glide": 2.173,
+   "flow": 9.362,
+   "aum": 662.391,
+   "series": 487,
+   "tail_pct": 16.9,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2014-10-01",
+    "Vanguard": "2014-09-30",
+    "Fidelity": "2014-03-31",
+    "TIAA-CREF": "2015-06-30",
+    "JPMorgan": "2015-03-02",
+    "American Funds": "2014-12-31",
+    "T. Rowe Price Target": "2014-10-01"
+   }
+  },
+  {
+   "q": "2015-07-01",
+   "x": -8.937,
+   "glide": 2.196,
+   "flow": 11.132,
+   "aum": 690.884,
+   "series": 486,
+   "tail_pct": 16.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2014-10-01",
+    "Vanguard": "2014-09-30",
+    "Fidelity": "2015-06-16",
+    "TIAA-CREF": "2015-06-30",
+    "JPMorgan": "2015-03-02",
+    "American Funds": "2014-12-31",
+    "T. Rowe Price Target": "2014-10-01"
+   }
+  },
+  {
+   "q": "2015-10-01",
+   "x": -11.266,
+   "glide": 2.252,
+   "flow": 13.518,
+   "aum": 707.984,
+   "series": 464,
+   "tail_pct": 15.2,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2015-10-01",
+    "Vanguard": "2014-09-30",
+    "Fidelity": "2015-07-10",
+    "TIAA-CREF": "2016-06-30",
+    "JPMorgan": "2015-03-02",
+    "American Funds": "2014-12-31",
+    "T. Rowe Price Target": "2015-10-01"
+   }
+  },
+  {
+   "q": "2016-01-01",
+   "x": -10.362,
+   "glide": 2.368,
+   "flow": 12.73,
+   "aum": 691.736,
+   "series": 470,
+   "tail_pct": 14,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2015-10-01",
+    "Vanguard": "2014-09-30",
+    "Fidelity": "2015-10-01",
+    "TIAA-CREF": "2016-06-30",
+    "JPMorgan": "2015-11-20",
+    "American Funds": "2015-10-29",
+    "T. Rowe Price Target": "2015-10-01"
+   }
+  },
+  {
+   "q": "2016-04-01",
+   "x": -6.888,
+   "glide": 2.384,
+   "flow": 9.272,
+   "aum": 685.689,
+   "series": 453,
+   "tail_pct": 13.2,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2015-10-01",
+    "Vanguard": "2015-09-30",
+    "Fidelity": "2015-10-01",
+    "TIAA-CREF": "2016-06-30",
+    "JPMorgan": "2015-11-20",
+    "American Funds": "2015-10-29",
+    "T. Rowe Price Target": "2016-02-26"
+   }
+  },
+  {
+   "q": "2016-07-01",
+   "x": -12.241,
+   "glide": 2.497,
+   "flow": 14.738,
+   "aum": 735.182,
+   "series": 477,
+   "tail_pct": 13.5,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2015-10-01",
+    "Vanguard": "2015-09-30",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2016-06-30",
+    "JPMorgan": "2016-06-08",
+    "American Funds": "2015-10-29",
+    "T. Rowe Price Target": "2016-02-26"
+   }
+  },
+  {
+   "q": "2016-10-01",
+   "x": -12.25,
+   "glide": 2.551,
+   "flow": 14.801,
+   "aum": 750.259,
+   "series": 505,
+   "tail_pct": 13.5,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2016-10-01",
+    "Vanguard": "2015-09-30",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2017-06-30",
+    "JPMorgan": "2016-09-19",
+    "American Funds": "2015-10-29",
+    "T. Rowe Price Target": "2016-10-01"
+   }
+  },
+  {
+   "q": "2017-01-01",
+   "x": -8.801,
+   "glide": 2.824,
+   "flow": 11.625,
+   "aum": 801.461,
+   "series": 512,
+   "tail_pct": 11.8,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2016-10-01",
+    "Vanguard": "2015-09-30",
+    "BlackRock": "2016-11-30",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2017-06-30",
+    "JPMorgan": "2016-11-03",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2016-10-01"
+   }
+  },
+  {
+   "q": "2017-04-01",
+   "x": -7.336,
+   "glide": 2.945,
+   "flow": 10.28,
+   "aum": 826.537,
+   "series": 501,
+   "tail_pct": 12.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2016-10-01",
+    "Vanguard": "2016-09-30",
+    "BlackRock": "2016-11-30",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2017-06-30",
+    "JPMorgan": "2016-11-03",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2016-10-01"
+   }
+  },
+  {
+   "q": "2017-07-01",
+   "x": -14.479,
+   "glide": 3.146,
+   "flow": 17.625,
+   "aum": 890.057,
+   "series": 528,
+   "tail_pct": 11.5,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2016-10-01",
+    "Vanguard": "2016-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2017-06-30",
+    "JPMorgan": "2017-04-27",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2016-10-01"
+   }
+  },
+  {
+   "q": "2017-10-01",
+   "x": -14.151,
+   "glide": 3.304,
+   "flow": 17.455,
+   "aum": 924.52,
+   "series": 529,
+   "tail_pct": 11.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2017-10-01",
+    "Vanguard": "2017-03-31",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2018-06-30",
+    "JPMorgan": "2017-04-27",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2017-10-01"
+   }
+  },
+  {
+   "q": "2018-01-01",
+   "x": -12.128,
+   "glide": 3.408,
+   "flow": 15.536,
+   "aum": 991.885,
+   "series": 544,
+   "tail_pct": 10.8,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2017-10-01",
+    "Vanguard": "2017-03-31",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2018-06-30",
+    "JPMorgan": "2017-11-16",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2017-10-01"
+   }
+  },
+  {
+   "q": "2018-04-01",
+   "x": -8.982,
+   "glide": 3.32,
+   "flow": 12.302,
+   "aum": 1015.571,
+   "series": 554,
+   "tail_pct": 11.5,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2017-10-01",
+    "Vanguard": "2017-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2018-06-30",
+    "JPMorgan": "2017-11-16",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2017-10-01"
+   }
+  },
+  {
+   "q": "2018-07-01",
+   "x": -13.79,
+   "glide": 3.486,
+   "flow": 17.276,
+   "aum": 1068.59,
+   "series": 571,
+   "tail_pct": 11.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2017-10-01",
+    "Vanguard": "2017-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2016-05-26",
+    "TIAA-CREF": "2018-06-30",
+    "JPMorgan": "2017-11-16",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2017-10-01"
+   }
+  },
+  {
+   "q": "2018-10-01",
+   "x": -15.72,
+   "glide": 3.71,
+   "flow": 19.43,
+   "aum": 1068.28,
+   "series": 582,
+   "tail_pct": 11.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2018-10-01",
+    "Vanguard": "2017-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2018-08-29",
+    "TIAA-CREF": "2019-06-30",
+    "JPMorgan": "2017-11-16",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2018-10-01"
+   }
+  },
+  {
+   "q": "2019-01-01",
+   "x": -9.497,
+   "glide": 3.769,
+   "flow": 13.266,
+   "aum": 1107.427,
+   "series": 596,
+   "tail_pct": 10.7,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2018-10-01",
+    "Vanguard": "2017-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2018-08-29",
+    "TIAA-CREF": "2019-06-30",
+    "JPMorgan": "2018-11-07",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2018-10-01"
+   }
+  },
+  {
+   "q": "2019-04-01",
+   "x": -9.172,
+   "glide": 3.908,
+   "flow": 13.08,
+   "aum": 1110.029,
+   "series": 596,
+   "tail_pct": 10.5,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2018-10-01",
+    "Vanguard": "2018-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2018-08-29",
+    "TIAA-CREF": "2019-06-30",
+    "JPMorgan": "2019-03-01",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2018-10-01"
+   }
+  },
+  {
+   "q": "2019-07-01",
+   "x": -7.336,
+   "glide": 3.914,
+   "flow": 11.25,
+   "aum": 1100.605,
+   "series": 596,
+   "tail_pct": 10.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2018-10-01",
+    "Vanguard": "2018-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2019-06-30",
+    "JPMorgan": "2019-03-01",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2018-10-01"
+   }
+  },
+  {
+   "q": "2019-10-01",
+   "x": -7.429,
+   "glide": 3.972,
+   "flow": 11.4,
+   "aum": 1112.855,
+   "series": 599,
+   "tail_pct": 10.8,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2019-10-01",
+    "Vanguard": "2018-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2020-06-30",
+    "JPMorgan": "2019-03-01",
+    "American Funds": "2016-12-29",
+    "T. Rowe Price Target": "2019-10-01"
+   }
+  },
+  {
+   "q": "2020-01-01",
+   "x": -7.432,
+   "glide": 4.226,
+   "flow": 11.658,
+   "aum": 1257.42,
+   "series": 649,
+   "tail_pct": 10,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2019-10-01",
+    "Vanguard": "2018-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2020-06-30",
+    "JPMorgan": "2019-11-07",
+    "American Funds": "2019-12-31",
+    "T. Rowe Price Target": "2019-10-01"
+   }
+  },
+  {
+   "q": "2020-04-01",
+   "x": -21.156,
+   "glide": 4.558,
+   "flow": 25.714,
+   "aum": 1336.621,
+   "series": 632,
+   "tail_pct": 9.8,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2019-10-01",
+    "Vanguard": "2019-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2020-06-30",
+    "JPMorgan": "2020-02-25",
+    "American Funds": "2019-12-31",
+    "T. Rowe Price Target": "2019-10-01"
+   }
+  },
+  {
+   "q": "2020-07-01",
+   "x": -27.273,
+   "glide": 4.01,
+   "flow": 31.283,
+   "aum": 1175.739,
+   "series": 651,
+   "tail_pct": 9.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2019-10-01",
+    "Vanguard": "2019-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2020-06-30",
+    "JPMorgan": "2020-02-25",
+    "American Funds": "2019-12-31",
+    "T. Rowe Price Target": "2019-10-01"
+   }
+  },
+  {
+   "q": "2020-10-01",
+   "x": -15.235,
+   "glide": 4.441,
+   "flow": 19.676,
+   "aum": 1311.889,
+   "series": 650,
+   "tail_pct": 9.5,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2020-10-01",
+    "Vanguard": "2019-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2021-06-30",
+    "JPMorgan": "2020-02-25",
+    "American Funds": "2019-12-31",
+    "T. Rowe Price Target": "2020-10-01"
+   }
+  },
+  {
+   "q": "2021-01-01",
+   "x": -8.334,
+   "glide": 4.711,
+   "flow": 13.045,
+   "aum": 1383.283,
+   "series": 630,
+   "tail_pct": 9.3,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2020-10-01",
+    "Vanguard": "2019-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2021-06-30",
+    "JPMorgan": "2020-10-28",
+    "American Funds": "2020-12-31",
+    "T. Rowe Price Target": "2020-10-01"
+   }
+  },
+  {
+   "q": "2021-04-01",
+   "x": -14.43,
+   "glide": 5.294,
+   "flow": 19.724,
+   "aum": 1521.651,
+   "series": 612,
+   "tail_pct": 8.3,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2020-10-01",
+    "Vanguard": "2020-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2021-06-30",
+    "JPMorgan": "2020-10-28",
+    "American Funds": "2020-12-31",
+    "T. Rowe Price Target": "2020-10-01"
+   }
+  },
+  {
+   "q": "2021-07-01",
+   "x": -35.821,
+   "glide": 5.547,
+   "flow": 41.368,
+   "aum": 1605.527,
+   "series": 622,
+   "tail_pct": 8.4,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2020-10-01",
+    "Vanguard": "2020-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2019-05-28",
+    "TIAA-CREF": "2021-06-30",
+    "JPMorgan": "2021-05-27",
+    "American Funds": "2020-12-31",
+    "T. Rowe Price Target": "2020-10-01"
+   }
+  },
+  {
+   "q": "2021-10-01",
+   "x": -21.298,
+   "glide": 5.84,
+   "flow": 27.138,
+   "aum": 1692.327,
+   "series": 623,
+   "tail_pct": 8.3,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2021-10-01",
+    "Vanguard": "2020-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2021-07-13",
+    "TIAA-CREF": "2022-06-30",
+    "JPMorgan": "2021-09-08",
+    "American Funds": "2020-12-31",
+    "T. Rowe Price Target": "2021-10-01"
+   }
+  },
+  {
+   "q": "2022-01-01",
+   "x": -18.846,
+   "glide": 5.927,
+   "flow": 24.773,
+   "aum": 1701.734,
+   "series": 637,
+   "tail_pct": 8.4,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2021-10-01",
+    "Vanguard": "2020-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2021-07-13",
+    "TIAA-CREF": "2022-06-30",
+    "JPMorgan": "2021-12-02",
+    "American Funds": "2021-12-30",
+    "T. Rowe Price Target": "2021-10-01"
+   }
+  },
+  {
+   "q": "2022-04-01",
+   "x": -9.696,
+   "glide": 6.085,
+   "flow": 15.781,
+   "aum": 1729.472,
+   "series": 630,
+   "tail_pct": 8.3,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2021-10-01",
+    "Vanguard": "2021-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2021-07-13",
+    "TIAA-CREF": "2022-06-30",
+    "JPMorgan": "2022-03-11",
+    "American Funds": "2021-12-30",
+    "T. Rowe Price Target": "2021-10-01"
+   }
+  },
+  {
+   "q": "2022-07-01",
+   "x": -25.451,
+   "glide": 5.69,
+   "flow": 31.141,
+   "aum": 1613.062,
+   "series": 610,
+   "tail_pct": 8.4,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2021-10-01",
+    "Vanguard": "2021-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2022-05-27",
+    "TIAA-CREF": "2022-06-30",
+    "JPMorgan": "2022-03-11",
+    "American Funds": "2021-12-30",
+    "T. Rowe Price Target": "2021-10-01"
+   }
+  },
+  {
+   "q": "2022-10-01",
+   "x": -15.815,
+   "glide": 5.134,
+   "flow": 20.949,
+   "aum": 1462.4,
+   "series": 610,
+   "tail_pct": 8.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2022-10-01",
+    "Vanguard": "2021-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2022-05-27",
+    "TIAA-CREF": "2023-06-30",
+    "JPMorgan": "2022-03-11",
+    "American Funds": "2021-12-30",
+    "T. Rowe Price Target": "2022-10-01"
+   }
+  },
+  {
+   "q": "2023-01-01",
+   "x": -19.854,
+   "glide": 4.735,
+   "flow": 24.59,
+   "aum": 1364.87,
+   "series": 598,
+   "tail_pct": 8.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2022-10-01",
+    "Vanguard": "2021-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2022-05-27",
+    "TIAA-CREF": "2023-06-30",
+    "JPMorgan": "2022-10-26",
+    "American Funds": "2021-12-30",
+    "T. Rowe Price Target": "2022-10-01"
+   }
+  },
+  {
+   "q": "2023-04-01",
+   "x": -7.295,
+   "glide": 4.787,
+   "flow": 12.082,
+   "aum": 1455.506,
+   "series": 602,
+   "tail_pct": 8.7,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2022-10-01",
+    "Vanguard": "2022-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2022-05-27",
+    "TIAA-CREF": "2023-06-30",
+    "JPMorgan": "2023-01-13",
+    "American Funds": "2021-12-30",
+    "T. Rowe Price Target": "2022-10-01"
+   }
+  },
+  {
+   "q": "2023-07-01",
+   "x": -25.546,
+   "glide": 5.135,
+   "flow": 30.682,
+   "aum": 1528.442,
+   "series": 585,
+   "tail_pct": 8.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2022-10-01",
+    "Vanguard": "2022-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2023-05-12",
+    "TIAA-CREF": "2023-06-30",
+    "JPMorgan": "2023-01-13",
+    "American Funds": "2021-12-30",
+    "T. Rowe Price Target": "2022-10-01"
+   }
+  },
+  {
+   "q": "2023-10-01",
+   "x": -22.23,
+   "glide": 5.332,
+   "flow": 27.563,
+   "aum": 1603.701,
+   "series": 606,
+   "tail_pct": 8.6,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2023-10-01",
+    "Vanguard": "2022-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2023-05-12",
+    "TIAA-CREF": "2024-06-30",
+    "JPMorgan": "2023-01-13",
+    "American Funds": "2021-12-30",
+    "T. Rowe Price Target": "2023-10-01"
+   }
+  },
+  {
+   "q": "2024-01-01",
+   "x": -17.25,
+   "glide": 5.31,
+   "flow": 22.56,
+   "aum": 1556.268,
+   "series": 605,
+   "tail_pct": 8.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2023-10-01",
+    "Vanguard": "2022-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2023-05-12",
+    "TIAA-CREF": "2024-06-30",
+    "JPMorgan": "2023-10-25",
+    "American Funds": "2023-12-29",
+    "T. Rowe Price Target": "2023-10-01"
+   }
+  },
+  {
+   "q": "2024-04-01",
+   "x": -15.911,
+   "glide": 5.856,
+   "flow": 21.767,
+   "aum": 1703.242,
+   "series": 585,
+   "tail_pct": 8.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2023-10-01",
+    "Vanguard": "2023-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2023-05-12",
+    "TIAA-CREF": "2024-06-30",
+    "JPMorgan": "2024-01-04",
+    "American Funds": "2024-01-25",
+    "T. Rowe Price Target": "2023-10-01"
+   }
+  },
+  {
+   "q": "2024-07-01",
+   "x": -10.085,
+   "glide": 6.136,
+   "flow": 16.221,
+   "aum": 1791.397,
+   "series": 562,
+   "tail_pct": 8.1,
+   "on": false,
+   "vintages": {
+    "T. Rowe Price Retirement": "2023-10-01",
+    "Vanguard": "2023-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2024-06-11",
+    "TIAA-CREF": "2024-06-30",
+    "JPMorgan": "2024-01-04",
+    "American Funds": "2024-01-25",
+    "T. Rowe Price Target": "2023-10-01"
+   }
+  },
+  {
+   "q": "2024-10-01",
+   "x": 0.567,
+   "glide": 6.278,
+   "flow": 5.711,
+   "aum": 1841.076,
+   "series": 565,
+   "tail_pct": 8,
+   "on": true,
+   "vintages": {
+    "T. Rowe Price Retirement": "2024-08-01",
+    "Vanguard": "2023-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2024-07-01",
+    "TIAA-CREF": "2025-06-30",
+    "JPMorgan": "2024-01-04",
+    "American Funds": "2024-01-25",
+    "T. Rowe Price Target": "2024-08-01"
+   }
+  },
+  {
+   "q": "2025-01-01",
+   "x": 7.368,
+   "glide": 6.309,
+   "flow": -1.059,
+   "aum": 1928.961,
+   "series": 569,
+   "tail_pct": 7.9,
+   "on": true,
+   "vintages": {
+    "T. Rowe Price Retirement": "2024-08-01",
+    "Vanguard": "2023-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2024-11-14",
+    "TIAA-CREF": "2025-06-30",
+    "JPMorgan": "2024-10-25",
+    "American Funds": "2024-12-31",
+    "T. Rowe Price Target": "2024-08-01"
+   }
+  },
+  {
+   "q": "2025-04-01",
+   "x": 9.119,
+   "glide": 6.293,
+   "flow": -2.826,
+   "aum": 1907.42,
+   "series": 571,
+   "tail_pct": 8,
+   "on": true,
+   "vintages": {
+    "T. Rowe Price Retirement": "2024-08-01",
+    "Vanguard": "2024-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2024-11-14",
+    "TIAA-CREF": "2025-06-30",
+    "JPMorgan": "2024-10-25",
+    "American Funds": "2024-12-31",
+    "T. Rowe Price Target": "2024-08-01"
+   }
+  },
+  {
+   "q": "2025-07-01",
+   "x": 10.57,
+   "glide": 6.223,
+   "flow": -4.347,
+   "aum": 1882.185,
+   "series": 560,
+   "tail_pct": 7.7,
+   "on": true,
+   "vintages": {
+    "T. Rowe Price Retirement": "2024-08-01",
+    "Vanguard": "2024-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2025-05-27",
+    "TIAA-CREF": "2025-06-30",
+    "JPMorgan": "2024-10-25",
+    "American Funds": "2024-12-31",
+    "T. Rowe Price Target": "2024-08-01"
+   }
+  },
+  {
+   "q": "2025-10-01",
+   "x": 5.246,
+   "glide": 6.414,
+   "flow": 1.169,
+   "aum": 2018.93,
+   "series": 555,
+   "tail_pct": 7.6,
+   "on": true,
+   "vintages": {
+    "T. Rowe Price Retirement": "2024-08-01",
+    "Vanguard": "2024-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2025-09-09",
+    "TIAA-CREF": "2026-06-30",
+    "JPMorgan": "2024-10-25",
+    "American Funds": "2024-12-31",
+    "T. Rowe Price Target": "2024-08-01"
+   }
+  },
+  {
+   "q": "2026-01-01",
+   "x": 13.273,
+   "glide": 7.185,
+   "flow": -6.088,
+   "aum": 2120.169,
+   "series": 522,
+   "tail_pct": 7.3,
+   "on": true,
+   "vintages": {
+    "T. Rowe Price Retirement": "2024-08-01",
+    "Vanguard": "2024-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2025-09-09",
+    "TIAA-CREF": "2026-06-30",
+    "JPMorgan": "2025-10-22",
+    "American Funds": "2024-12-31",
+    "T. Rowe Price Target": "2024-08-01"
+   }
+  },
+  {
+   "q": "2026-04-01",
+   "x": 10.553,
+   "glide": 7.515,
+   "flow": -3.038,
+   "aum": 2173.757,
+   "series": 527,
+   "tail_pct": 7.3,
+   "on": true,
+   "vintages": {
+    "T. Rowe Price Retirement": "2024-08-01",
+    "Vanguard": "2025-09-30",
+    "BlackRock": "2017-05-20",
+    "Fidelity": "2025-09-09",
+    "TIAA-CREF": "2026-06-30",
+    "JPMorgan": "2025-10-22",
+    "American Funds": "2024-12-31",
+    "T. Rowe Price Target": "2024-08-01"
+   }
+  }
+ ]
+}

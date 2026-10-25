@@ -1,0 +1,8 @@
+{
+  "withheld": "figures derived from the licensed Norgate store stay in the private repo (Amendment 2026-10-17 (K1) (4)(a), the strict reading ruled 2026-10-23)",
+  "sha256": "f8636f1e611a3fa634decb65a03a5aa3804a7555b9232404eb2239a52d0d59b4",
+  "schema": "probe_receipt_v1",
+  "row": "futures-negative-skew-premium",
+  "clears": true,
+  "computed_at": "2026-10-23T07:42:54-04:00"
+}

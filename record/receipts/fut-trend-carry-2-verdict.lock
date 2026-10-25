@@ -1,0 +1,7 @@
+{
+  "program": "fut-trend-carry-2",
+  "commit_a": "3e28e71b9d68325e38b6e9e8c35284de27404ad4",
+  "run_command": "PYTHONPATH=orient/research-py/src python -m superbrain.cli book evaluate --prereg docs/superpowers/plans/2026-10-20-fut-trend-carry-2-prereg.md",
+  "host": "AI-node",
+  "ts": "2026-10-20T14:41:59.578Z"
+}

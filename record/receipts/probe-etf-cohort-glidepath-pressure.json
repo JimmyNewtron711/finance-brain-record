@@ -1,0 +1,59 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "etf-cohort-glidepath-pressure",
+  "vendor": "fmp (discovery) / alpaca (confirmation)",
+  "computed_at": "2026-10-25T14:02:23-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-17 (K1) (4)(b) and (5); the inbox rulings of 2026-10-25 (b), (b2) (the windows) and (a) (the always-on fit, c05b47e8); D543",
+  "note": "One read of the two ruled windows, no p-value, a counted trial, never re-run. X is never on in discovery, so the rulings name the confirmation read: the coefficients are fitted on discovery and frozen in this script before the confirmation's statistic. No request: the held stores, read-only. Strategy-level figures only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "mean net residual return of the row's book per quarterly cluster over the confirmation: half-notional short SPY and long IEF from the quarter's first open to its last close when X > 0, otherwise cash (0); the residual = the book's net return less beta × the fixed 60/40 SPY/IEF total return over the same interval, beta fitted on discovery to the book held on in every quarter and frozen; the field's ETF cost line, 10 bp a side and 25 bp a year of short borrow",
+  "value": 11.376042087827926,
+  "sigma": 104.91520901442226,
+  "units": "bp per quarterly cluster (the row's Stage-1 unit; prior 0.075)",
+  "n": 42,
+  "n_on": 7,
+  "sigma_on": 265.86908881737565,
+  "gross_value": 15.255297042429401,
+  "cost": 23.275529727608856,
+  "fit": {
+    "beta": -1.0873801546850599,
+    "intercept_bp": 132.8266101699308,
+    "r2": 0.6393651047916618,
+    "n": 22,
+    "on": "the net book on in every discovery quarter (ruling (a)); OLS with an intercept, beta alone used"
+  },
+  "bar": "zero on the registered sign (+): the row declares no baseline bar",
+  "clears": true,
+  "window": {
+    "discovery": {
+      "start": "2010-07-01",
+      "end_exclusive": "2016-01-04",
+      "first_session": "2010-07-01",
+      "last_session": "2015-12-31",
+      "quarters": 22
+    },
+    "confirmation": {
+      "start": "2016-01-04",
+      "end_exclusive": "2026-07-03",
+      "first_session": "2016-01-04",
+      "last_session": "2026-06-30",
+      "quarters": 42
+    }
+  },
+  "x_receipt": {
+    "path": "govern/receipts/x-etf-cohort-glidepath-pressure.json",
+    "sha256": "9db677da6aa2fda63b56f278f5d6a411d7ee0df53ee11356639223934ae61730"
+  },
+  "tapes": {
+    "fmp-etf": "data/fmp-etf.db eod kind divadj",
+    "equity_daily_tr": {
+      "db": "data/dashboard.db",
+      "vintages": {
+        "SPY": "2026-09-18T22:35:00Z",
+        "IEF": "2026-10-01T22:35:00Z"
+      }
+    }
+  },
+  "pulled_via": "the held stores data/fmp-etf.db and data/dashboard.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-etf-cohort-glidepath-pressure.py",
+  "script_sha256": "7078993101d679628281880046fdf32dcae9596d918e5d2d29a6e2f454785f87"
+}

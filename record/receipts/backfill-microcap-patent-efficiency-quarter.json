@@ -1,0 +1,56 @@
+{
+ "row": "microcap-patent-efficiency-quarter",
+ "sitting": "1 of 2–3 (the K1 line, the listing, the three files read and counted; no map, no price read)",
+ "k1_line": "6b49dd94 (main)",
+ "ruling": "the operator's (b) of 2026-10-25 (drop file patents-source.md), applied 0f9d252b on feature/fx-spot-proposer-1",
+ "source": "PatentsView bulk download tables (USPTO); cited as \"Source: PatentsView\" and the USPTO (K1 line (f)); depot source patentsview",
+ "terms": {
+  "uspto_terms": "patentsview#6",
+  "patentsview_terms": "patentsview#13 (Wayback 2025-05-06; same text #10)",
+  "download_page_cc_by_4": "patentsview#9 (Wayback 2025-02-10)",
+  "robots": "patentsview#5 (www.uspto.gov); #1, #4 no robots file (app page)",
+  "redirect": "patentsview#3 (301 to data.uspto.gov/support/transition-guide/patentsview)"
+ },
+ "status": "STOPPED",
+ "script": "orient/investigations/backfill-microcap-patent-efficiency-quarter.mjs",
+ "script_sha256": "56ef9c7dd8d0c89030fbcc124aca2106679d176f35071a2466578695661e6b55",
+ "listing": {
+  "url": "https://s3.amazonaws.com/data.patentsview.org/?prefix=download/g_",
+  "status": 403,
+  "raw_id": 14,
+  "keys": 0,
+  "truncated": false
+ },
+ "files": [
+  {
+   "name": "g_patent",
+   "key": "download/g_patent.tsv.zip",
+   "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_patent.tsv.zip",
+   "listed": null,
+   "read": {
+    "status": 403,
+    "manifest_id": 16,
+    "chunks": 1,
+    "bytes": 263,
+    "sha256": "3d09f54b2b564086d3b52db6157c5329bea5e3ff4097ae3c65b1be7d188d6b50",
+    "held": false,
+    "size_matches_listing": null
+   }
+  },
+  {
+   "name": "g_assignee_not_disambiguated",
+   "key": "download/g_assignee_not_disambiguated.tsv.zip",
+   "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_assignee_not_disambiguated.tsv.zip",
+   "listed": null
+  },
+  {
+   "name": "g_assignee_disambiguated",
+   "key": "download/g_assignee_disambiguated.tsv.zip",
+   "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_assignee_disambiguated.tsv.zip",
+   "listed": null
+  }
+ ],
+ "script_sha256_read": "bc6494fff94f088ffeb6a6d9154e47e87192dd34d98628c5574e15b23d44be02",
+ "stop_note": "K1 line 6b49dd94 (c): the bucket no longer serves the files. The listing answered 403 AccessDenied (patentsview#14); g_patent.tsv.zip answered 403 AccessDenied (chunk patentsview#15, manifest #16), so the two assignee files were not asked. USPTO notice of 2026-03-18 (patentsview#17): PatentsView migrated to the Open Data Portal on 2026-03-20, its data downloads available through ODP; USPTO PatentsView page (patentsview#18): granted patents through 2025-12-31 as the ODP dataset pvgpatdis (data.uspto.gov/bulkdata/datasets/pvgpatdis). The portal serves its app page to this client (patentsview#4, #7) and its API takes a key, so no other route was tried: the inbox block of 2026-10-25 names the choices. No byte of a grant or assignee table is held.",
+ "requests_this_sitting": "patentsview#1-#18: robots and home (#1-#4), USPTO robots and terms (#5, #6), the portal bundle (#7), Wayback index and snapshots (#8-#13), the listing (#14), g_patent (#15, #16), the notice and page (#17, #18); /bin/bash"
+}

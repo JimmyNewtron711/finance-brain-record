@@ -1,0 +1,25 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "sp500-liquidity-shock-beta",
+  "vendor": "sharadar",
+  "computed_at": "2026-10-25T10:32:21-04:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form; the factory's F1 of 2026-10-25",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery window, a counted trial, never re-run. No request: the held Sharadar store, read-only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "the net return of the row's own book over each month (the field's frozen rule xs_sp500_liquidity_shock_beta, PARAMS {\"months\": 60, \"min_months\": 36, \"min_obs\": 16, \"min_price\": 5, \"max_price\": 1000}, formed each December-end and held to the next, on the field's engine at the entry replay's B7 cost line): its sigma, turnover and cost alone",
+  "sigma": 1.6020470122700832,
+  "sigma_gross": 1.5718177018947326,
+  "units": "percent per month, a month-end to the next (the row's Stage-1 unit; prior 0.31)",
+  "n": 60,
+  "turnover": 0.08915637023487086,
+  "cost": 0.016154086499127942,
+  "formations_empty": 0,
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "2004-12-31",
+    "last_window_end": "2009-12-31"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-sp500-liquidity-shock-beta.py",
+  "script_sha256": "d52331dfc33160e216b2f3fa0f8d43c7a06e7f1f420b651a64ec77441e67f299"
+}

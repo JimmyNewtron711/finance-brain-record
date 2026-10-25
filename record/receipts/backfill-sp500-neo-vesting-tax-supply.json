@@ -1,0 +1,994 @@
+{
+ "row": "sp500-neo-vesting-tax-supply",
+ "parent": "sp500-vesting-tax-supply",
+ "sitting": "3 of 4 (the table parse revision c; the settlement parse: references, sources, classes)",
+ "k1_line": "8050fa30 (main)",
+ "ruling": "the operator's (c) of 2026-10-25 (drop file rsu-proxy.md), applied 0f9d252b on feature/fx-spot-proposer-1",
+ "source": "SEC EDGAR quarterly form indexes (full-index), 2006 Q1 → 2009 Q3; the SEC is the source. Membership: the field's sp500 pool on data/sharadar.db (Sharadar SP500 + tickers), capped at 2009-12-31",
+ "status": "SETTLED",
+ "script": "orient/investigations/backfill-sp500-neo-vesting-tax-supply.mjs",
+ "script_sha256": "9ef79f5f74f543edf36e4e8499bf04b701186aece940023c51d7c9a25b9482f3",
+ "rule": "proxies: DEF 14A filed 2007-01-01 → 2009-09-30 (DEFR14A beside); 10-Ks: 10-K filed 2006-01-01 → 2009-09-30 (10-K/A beside), for their exhibit indexes; issuers: every member of the field's sp500 pool on a month-end session 2007-01 → 2009-09, its CIK from Sharadar tickers.secfilings (a member with none or with two is counted, not mapped; a CIK two members share maps to both); formations: those 33 month-ends, filings knowable from acceptance (read in sitting 2)",
+ "form_index": [
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2006/QTR1/form.gz",
+   "status": 200,
+   "raw_id": 251343,
+   "held": true,
+   "rows": 335578
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2006/QTR2/form.gz",
+   "status": 200,
+   "raw_id": 251344,
+   "held": false,
+   "rows": 278959
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2006/QTR3/form.gz",
+   "status": 200,
+   "raw_id": 251345,
+   "held": false,
+   "rows": 232128
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2006/QTR4/form.gz",
+   "status": 200,
+   "raw_id": 251346,
+   "held": false,
+   "rows": 249960
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2007/QTR1/form.gz",
+   "status": 200,
+   "raw_id": 251347,
+   "held": false,
+   "rows": 339880
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2007/QTR2/form.gz",
+   "status": 200,
+   "raw_id": 251348,
+   "held": false,
+   "rows": 289083
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2007/QTR3/form.gz",
+   "status": 200,
+   "raw_id": 251349,
+   "held": false,
+   "rows": 252073
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2007/QTR4/form.gz",
+   "status": 200,
+   "raw_id": 251350,
+   "held": false,
+   "rows": 256468
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2008/QTR1/form.gz",
+   "status": 200,
+   "raw_id": 251351,
+   "held": false,
+   "rows": 328710
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2008/QTR2/form.gz",
+   "status": 200,
+   "raw_id": 251352,
+   "held": false,
+   "rows": 267722
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2008/QTR3/form.gz",
+   "status": 200,
+   "raw_id": 251353,
+   "held": false,
+   "rows": 220734
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2008/QTR4/form.gz",
+   "status": 200,
+   "raw_id": 251354,
+   "held": false,
+   "rows": 219670
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2009/QTR1/form.gz",
+   "status": 200,
+   "raw_id": 251355,
+   "held": false,
+   "rows": 300076
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2009/QTR2/form.gz",
+   "status": 200,
+   "raw_id": 251356,
+   "held": false,
+   "rows": 229347
+  },
+  {
+   "url": "https://www.sec.gov/Archives/edgar/full-index/2009/QTR3/form.gz",
+   "status": 200,
+   "raw_id": 251357,
+   "held": false,
+   "rows": 200689
+  }
+ ],
+ "requests_sent": 14,
+ "counts": {
+  "formations": 33,
+  "members": 591,
+  "members_no_cik": 0,
+  "members_two_ciks": 0,
+  "mapped_ciks": 589,
+  "ciks_shared_by_two_members": 2,
+  "filings": 4005,
+  "forms": {
+   "10-K": 2135,
+   "DEF 14A": 1567,
+   "10-K/A": 265,
+   "DEFR14A": 38
+  },
+  "proxies_by_year": {
+   "2006": 0,
+   "2007": 550,
+   "2008": 546,
+   "2009": 509
+  },
+  "tenk_by_year": {
+   "2006": 637,
+   "2007": 613,
+   "2008": 612,
+   "2009": 538
+  },
+  "issuers_with_proxy": 546,
+  "issuers_with_10k": 569
+ },
+ "filings_sha256": "20704ce8ffea98585e699c963e510fd6489e330a3058fe6cf498f31ab5bd97bf",
+ "formations": [
+  {
+   "date": "2007-01-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 13
+  },
+  {
+   "date": "2007-02-28",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 24
+  },
+  {
+   "date": "2007-03-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 214
+  },
+  {
+   "date": "2007-04-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 364
+  },
+  {
+   "date": "2007-05-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 386
+  },
+  {
+   "date": "2007-06-29",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 392
+  },
+  {
+   "date": "2007-07-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 407
+  },
+  {
+   "date": "2007-08-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 417
+  },
+  {
+   "date": "2007-09-28",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 435
+  },
+  {
+   "date": "2007-10-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 445
+  },
+  {
+   "date": "2007-11-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 450
+  },
+  {
+   "date": "2007-12-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 463
+  },
+  {
+   "date": "2008-01-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 465
+  },
+  {
+   "date": "2008-02-29",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 466
+  },
+  {
+   "date": "2008-03-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 471
+  },
+  {
+   "date": "2008-04-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 472
+  },
+  {
+   "date": "2008-05-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 469
+  },
+  {
+   "date": "2008-06-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 465
+  },
+  {
+   "date": "2008-07-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 468
+  },
+  {
+   "date": "2008-08-29",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 468
+  },
+  {
+   "date": "2008-09-30",
+   "pool": 499,
+   "with_cik": 499,
+   "with_proxy_400d": 469
+  },
+  {
+   "date": "2008-10-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 468
+  },
+  {
+   "date": "2008-11-28",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 471
+  },
+  {
+   "date": "2008-12-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 472
+  },
+  {
+   "date": "2009-01-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 472
+  },
+  {
+   "date": "2009-02-27",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 472
+  },
+  {
+   "date": "2009-03-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 474
+  },
+  {
+   "date": "2009-04-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 475
+  },
+  {
+   "date": "2009-05-29",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 474
+  },
+  {
+   "date": "2009-06-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 477
+  },
+  {
+   "date": "2009-07-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 476
+  },
+  {
+   "date": "2009-08-31",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 477
+  },
+  {
+   "date": "2009-09-30",
+   "pool": 500,
+   "with_cik": 500,
+   "with_proxy_400d": 476
+  }
+ ],
+ "cost_usd": 0,
+ "read": {
+  "script_sha256": "1fb807b31792d52430282e177029a7bdf6a2d40d31f53d83081949205ca78dd7",
+  "rule": "each filing's full submission (the form index's path), once through rawFetch; its acceptance time from the SEC header's ACCEPTANCE-DATETIME (America/New_York)",
+  "filings": 4005,
+  "requests_sent": 1178,
+  "held_before": 2827,
+  "by_status": {
+   "200": 4005
+  },
+  "bytes": 9039798417,
+  "no_acceptance_time": 5,
+  "filing_date_minus_acceptance_date_days": {
+   "0": 3594,
+   "1": 337,
+   "2": 1,
+   "3": 63,
+   "4": 3,
+   "-11": 1,
+   "-1": 1
+  },
+  "accepted_at_or_after_1730": 443,
+  "accepted_first": "2006-01-10T16:50:56",
+  "accepted_last": "2009-09-30T13:23:35",
+  "list_sha256": "fc9bdbdc9b0e10851a7ae738ac66dbe5a7cfcabc5739f4b88f1845f44d049691",
+  "acceptance_from_index_page": {
+   "filings": 5,
+   "requests_sent": 5,
+   "found": 5,
+   "forms": [
+    "10-K",
+    "10-K",
+    "10-K",
+    "10-K",
+    "10-K"
+   ]
+  },
+  "runs": [
+   {
+    "script": "2d0ca28a",
+    "requests_sent": 2820,
+    "ended": "node's undici threw an internal assertion (assert(!this.paused), Parser.finish) after 2,820 filings; every response before it was held, all status 200"
+   },
+   {
+    "script": "the working file (2d0ca28a + uncommitted parse code; the read phase unchanged)",
+    "requests_sent": 7,
+    "ended": "stopped by hand to run the read from the committed blob"
+   },
+   {
+    "script": "2d0ca28a's blob, run as a copy (its script_sha256 above)",
+    "requests_sent": 1178,
+    "ended": "exit 0, all 4,005 held"
+   }
+  ],
+  "requests_sent_all_runs": 4005,
+  "note": "two 10-K/A were accepted after their form-index filing date (11 days and 1 day): knowable time is the acceptance, the later of the two. The five 10-Ks of 2009 whose header acceptance is empty take their date from the index page, whose time reads 00:00:00 (date only)."
+ },
+ "tables": {
+  "revision": "d",
+  "script_sha256": "c174752abcf2c4694aeaae1000661419276fa545172b0a2ba09eeafd05f9f4d7",
+  "proxies": 1605,
+  "by_kind": {
+   "table": 1308,
+   "no table": 86,
+   "no time-vesting column": 209,
+   "text table (not parsed)": 2
+  },
+  "fye_from": {
+   "10-K": 1308
+  },
+  "rows_with_shares": 12554,
+  "rows_dated": 3556,
+  "tranches": 7124,
+  "rows_by_rule": {
+   "stated percentages": 229,
+   "stated pairs": 472,
+   "one stated date": 1143,
+   "anniversaries of a grant date": 371,
+   "stated dates, equal shares": 626,
+   "installments from a date": 123,
+   "name-cell note, stated pairs": 28,
+   "unmarked list, stated pairs": 37,
+   "ratably over years from a grant date": 98,
+   "quantity and date in one sentence": 111,
+   "year-column table": 54,
+   "cliff from a grant date": 100,
+   "vest-date cell": 35,
+   "each anniversary of a grant date": 87,
+   "annual fraction to a stated last date": 41,
+   "ratably over years from a stated start": 1
+  },
+  "rows_out_by_reason": {
+   "no stated schedule": 1731,
+   "no vesting text": 758,
+   "no footnote": 2379,
+   "dates without stated shares": 1800,
+   "performance condition": 1707,
+   "subtotal": 401,
+   "vest-date cell unread": 2,
+   "no date after the fiscal year end": 102,
+   "one stated date, another quantity stated": 57,
+   "anniversaries without equal shares": 61
+  },
+  "hand_check": "the 12 proxies of the sample rule (sha256('vest-s2d:' + path) lowest), their names in /var/tmp/vest-s2/hand-tables-vest-s2d.json",
+  "hand_check_result": {
+   "proxies": 12,
+   "table_found_as_the_eye_reads_it": 12,
+   "tables_with_no_time_vesting_row_as_the_eye_reads_them": {
+    "options only": 1,
+    "stock awards all in the equity incentive plan column": 1
+   },
+   "dated_rows_checked": 15,
+   "dated_rows_agree": 13,
+   "dated_rows_agree_note": "four of the 13 are equal thirds where the note states 33 % on two dates and the remaining on the third (a 1 % rounding)",
+   "dated_rows_wrong": 2,
+   "wrong": {
+    "stated pairs over a note listing every officer: the first run summing to the row crossed two officers (one of three tranches misdated); the run had two readings": 1,
+    "units fully vested at grant, delivered on a stated date: the delivery read as a vest date": 1
+   },
+   "subtotal_rows_checked": 10,
+   "subtotal_rows_right": 10,
+   "single_date_guard": {
+    "rows_out": 2,
+    "rows_the_guard_saved_from_a_wrong_date": 2,
+    "note": "each note a list the eye dates instead (counted in the misses)"
+   },
+   "rows_the_eye_dates_that_the_parse_left_out_at_least": {
+    "a vesting-date list under an officer named with a footnote marker (\"Name (1) 06/01/2008 81,250 …\"): the quantity-first check reads the marker as a number and skips the date-then-quantity pairs (revision d's own guard)": 8,
+    "the grant date stated as ten years before the same row's option expiration, then the third anniversary; out on \"conditions\" (the performance regex reads \"terms and conditions\")": 18,
+    "one sentence naming several officers for one date (\"For A, B and C, the shares vest on D\")": 2,
+    "\"N of the shares vested on D\" (a quantity, \"of the\", then the date)": 1,
+    "a stated part on one date and \"the remaining\" on a later date": 1,
+    "a quantity on a month and day \"in years Y1 through Y2\"": 1
+   },
+   "rows_out_by_rule_as_the_eye_reads_them": {
+    "anniversaries of a grant date the table does not state (no grant-date column)": 19,
+    "a note over time-vesting and ROI-criteria awards, the row's kind not stated": 23,
+    "a total-stockholder-return condition": 5
+   },
+   "reading": "precision 13 / 15 on dated rows (revisions a 9 / 9, b 24 / 24, c 4 / 5, d 13 / 15: 50 / 53 over the four samples); the subtotal guard 10 / 10 (15 / 15 over c and d); the single-date guard 2 / 2. On the full set revision d dates 3,556 rows (c 3,323), its new rules 41 annual-fraction, 54 year-column, 87 each-anniversary and 28 name-cell rows; recall still low. The two wrong rows and the marker misfire set revision e: stated pairs over a several-officer note only with one reading, a delivery is no vest, the quantity-first check reads no footnote marker"
+  },
+  "s_issuer_check": {
+   "sitting": "P1 sitting 5 (2026-10-25)",
+   "revision": "d",
+   "issuers": 3,
+   "proxies": 9,
+   "proxies_with_the_table": 8,
+   "proxies_without": {
+    "a special-meeting proxy": 1
+   },
+   "rows": 71,
+   "rows_dated": 8,
+   "dated_rows_right": 8,
+   "dated_rows_wrong": 0,
+   "rows_the_eye_dates_that_the_parse_left_out": 61,
+   "rows_not_datable_from_the_proxy": 2,
+   "left_out_by_cause": {
+    "a dates-only note (\"Vesting dates are February 7, 2008, 2009 and 2010\", \"Vesting date is …\") joined to the stock column's header note \"vests in three equal, annual increments\": the joined note reads \"dates without stated shares\" — single dates and equal splits of the remaining increments": 44,
+    "letter labels (a)… reused under two numbered notes (an option schedule and a restricted stock schedule): the parse takes the option note's (a)": 8,
+    "a marker not in \"(n)\" form: bare digits after the quantity (\"149,934 5\", 5), \"(5 )\" with a space (2), a marker split across two cells (\"29,230(h\" and \")\", 2)": 9
+   },
+   "not_datable": "one retention award's two dates under the \"three equal\" header note, its split not stated in the proxy (its award agreement states 66 % / 34 %), in two proxies",
+   "reading": "precision 8 / 8; recall 8 / 69 eye-datable rows at the only issuers where X is above zero. No wrong dated row, so the handoff's step (3) makes no table revision; the three causes are booked for one"
+  }
+ },
+ "tables_earlier": [
+  {
+   "script_sha256": "02bc1af574e5002a4c0148d2ee0d5241cb41accbd1d9aba9af261609fe35de24",
+   "proxies": 1605,
+   "by_kind": {
+    "table": 1276,
+    "no table": 86,
+    "no time-vesting column": 243
+   },
+   "fye_from": {
+    "10-K": 1274,
+    "heading": 2
+   },
+   "rows_with_shares": 11458,
+   "rows_dated": 2818,
+   "tranches": 5231,
+   "rows_by_rule": {
+    "one stated date": 1180,
+    "stated pairs": 384,
+    "stated dates, equal shares": 593,
+    "installments from a date": 91,
+    "ratably over years from a grant date": 62,
+    "anniversaries of a grant date": 383,
+    "cliff from a grant date": 90,
+    "vest-date cell": 35
+   },
+   "rows_out_by_reason": {
+    "no stated schedule": 1795,
+    "no vesting text": 764,
+    "no footnote": 2592,
+    "dates without stated shares": 1822,
+    "performance condition": 1552,
+    "no date after the fiscal year end": 96,
+    "anniversaries without equal shares": 19
+   },
+   "hand_check": "the 12 proxies of the sample rule (sha256('vest-s2:' + path) lowest), their names in /var/tmp/vest-s2/hand-tables.json",
+   "hand_check_result": {
+    "proxies": 12,
+    "table_found_as_the_eye_reads_it": 10,
+    "table_missed": {
+     "heading inside the table (its first row)": 1,
+     "pre-formatted text table (no <table> markup)": 1
+    },
+    "dated_rows_checked": 9,
+    "dated_rows_agree": 9,
+    "dated_rows_wrong": 0,
+    "rows_the_eye_dates_that_the_parse_left_out": {
+     "header taller than the 24-row window (a first table skipped)": 2,
+     "'Month D, YYYY and YYYY' date lists": 5,
+     "a footnote table of dates and shares": 7
+    },
+    "rows_out_where_the_eye_finds_no_stated_schedule": 34,
+    "reading": "precision 9 / 9 on dated rows, recall low: the six causes above (and a footnote label set mid-paragraph) are the next parse revision, checked on a fresh sample (a new salt), the sample here being spent"
+   }
+  },
+  {
+   "revision": "b",
+   "script_sha256": "6142e25dfa4859a7176527f6238bf79bc4e5151497a815306072331a6f6f7847",
+   "proxies": 1605,
+   "by_kind": {
+    "table": 1290,
+    "no table": 86,
+    "no time-vesting column": 227,
+    "text table (not parsed)": 2
+   },
+   "fye_from": {
+    "10-K": 1288,
+    "heading": 1,
+    "null": 1
+   },
+   "rows_with_shares": 12346,
+   "rows_dated": 3279,
+   "tranches": 6350,
+   "rows_by_rule": {
+    "one stated date": 1223,
+    "stated pairs": 489,
+    "anniversaries of a grant date": 382,
+    "stated dates, equal shares": 761,
+    "installments from a date": 123,
+    "ratably over years from a grant date": 62,
+    "quantity and date in one sentence": 104,
+    "cliff from a grant date": 100,
+    "vest-date cell": 35
+   },
+   "rows_out_by_reason": {
+    "no stated schedule": 1778,
+    "no vesting text": 779,
+    "no footnote": 2798,
+    "dates without stated shares": 1903,
+    "performance condition": 1674,
+    "vest-date cell unread": 2,
+    "no date after the fiscal year end": 113,
+    "anniversaries without equal shares": 19,
+    "no fiscal year end": 1
+   },
+   "hand_check": "the 12 proxies of the sample rule (sha256('vest-s2b:' + path) lowest), their names in /var/tmp/vest-s2/hand-tables-vest-s2b.json",
+   "hand_check_result": {
+    "proxies": 12,
+    "table_found_as_the_eye_reads_it": 11,
+    "table_missed": {
+     "the table more than 8,000 bytes after its heading (another table between)": 1
+    },
+    "dated_rows_checked": 24,
+    "dated_rows_agree": 24,
+    "dated_rows_wrong": 0,
+    "rows_the_eye_dates_that_the_parse_left_out_at_least": {
+     "quantities stated as percentages on stated dates": 7,
+     "an unmarked footnote list of shares and dates": 4,
+     "one or two installments left of a stated schedule": 2
+    },
+    "hazards_seen": {
+     "a subtotal row (the sum of the officer's rows above it; out each time here, but a dated one would double count)": 5,
+     "a proxy accepted before its fiscal year's 10-K, so the year end read is the prior year's (21 of the 1,605 proxies; equal splits then run over too many dates)": 1,
+     "a joined general footnote naming performance excludes time-vesting rows beside it": 1
+    },
+    "reading": "precision 24 / 24 on dated rows (revision a 9 / 9), recall still low; revision c: the subtotal guard, the year end as the latest 10-K period before the proxy, percentages, an unmarked list, the window — checked on a fresh sample"
+   }
+  },
+  {
+   "revision": "c",
+   "script_sha256": "a1173cc574b6c3a07a237a18ce1ad58fb181b55d30d85f785c63e6d270e33469",
+   "proxies": 1605,
+   "by_kind": {
+    "table": 1303,
+    "no table": 86,
+    "no time-vesting column": 214,
+    "text table (not parsed)": 2
+   },
+   "fye_from": {
+    "10-K": 1303
+   },
+   "rows_with_shares": 12431,
+   "rows_dated": 3323,
+   "tranches": 6427,
+   "rows_by_rule": {
+    "stated percentages": 229,
+    "one stated date": 1201,
+    "stated pairs": 494,
+    "anniversaries of a grant date": 351,
+    "stated dates, equal shares": 585,
+    "installments from a date": 123,
+    "unmarked list, stated pairs": 34,
+    "ratably over years from a grant date": 62,
+    "quantity and date in one sentence": 109,
+    "cliff from a grant date": 100,
+    "vest-date cell": 35
+   },
+   "rows_out_by_reason": {
+    "no stated schedule": 1785,
+    "no vesting text": 758,
+    "no footnote": 2535,
+    "dates without stated shares": 1809,
+    "performance condition": 1655,
+    "subtotal": 401,
+    "vest-date cell unread": 2,
+    "no date after the fiscal year end": 102,
+    "anniversaries without equal shares": 61
+   },
+   "hand_check": "the 12 proxies of the sample rule (sha256('vest-s2c:' + path) lowest), their names in /var/tmp/vest-s2/hand-tables-vest-s2c.json",
+   "fye_moved": {
+    "proxies": 24,
+    "one_year_later": 20,
+    "of_which_within_30_days_of_the_period_all_without_the_table": 3,
+    "from_none_to_a_period": 2,
+    "one_month_later": 1,
+    "to_none": 1,
+    "note": "the 10-K-acceptance rule of revisions a and b against the period rule of revision c, over the 1,605 proxies"
+   },
+   "hand_check_result": {
+    "proxies": 12,
+    "table_found_as_the_eye_reads_it": 11,
+    "table_missed": {
+     "the stock-awards table 59,813 bytes after its heading (two option tables between), past the 40,000-byte window": 1
+    },
+    "dated_rows_checked": 5,
+    "dated_rows_agree": 4,
+    "dated_rows_wrong": 1,
+    "wrong": {
+     "one stated date: the footnote states that part of the row (a smaller quantity) vests on the date and the rest is fully vested units under a transfer restriction; the rule gave the whole row to the date": 1
+    },
+    "subtotal_rows_checked": 5,
+    "subtotal_rows_right": 5,
+    "rows_the_eye_dates_that_the_parse_left_out_at_least": {
+     "the table past the window (the miss above)": 18,
+     "a footnote table of grant dates and quantities under year columns (the vest date the grant date anniversary in the column year)": 13,
+     "25 % on each anniversary of the grant, the grant date in its cell": 13,
+     "one-fifth or one-third annually on a stated day, the last date stated": 34,
+     "the marker on the grant-date cell": 1,
+     "the marker on the officer name cell (Last, F(1)), a footnote listing each grant shares and dates": 10
+    },
+    "rows_the_eye_dates_in_part": {
+     "a footnote over several grants, each with its shares and an as-of date, part fully vested units under a transfer restriction": 4
+    },
+    "rows_out_by_rule_the_eye_reads_as_time_vesting_now": {
+     "a performance target stated as met, then a stated vest date (out: the rule excludes a footnote naming a performance condition)": 14
+    },
+    "hazard_sized_on_the_dev_set": "one stated date: 233 of the dev set 1,183 such rows have a note stating another quantity (an upper bound: some are another officer or a percent); the examples read wrong",
+    "reading": "precision 4 / 5 on dated rows (revisions a 9 / 9, b 24 / 24: 37 / 38 over the three samples); the subtotal guard 5 / 5; recall still low. Revision d before the probe: the one-stated-date rule refuses a note stating another quantity, then the misses above (markers on the name and grant-date cells, a Last, F name, annual dates to a stated last date, each anniversary at 25 %, a year-column footnote table, a wider window) — checked on a fresh sample (salt vest-s2d)"
+   }
+  }
+ ],
+ "settle": {
+  "step": "refs (0 requests)",
+  "script_sha256": "4599072b2ce469f60648ed9ff8771edc856b16ef7968607101d85b7e773177c4",
+  "tenks": 2400,
+  "tenks_with_no_award_agreement_line": 1071,
+  "issuers_with_no_line_in_any_10k": 178,
+  "lines_by_class": {
+   "by reference, before 2006": 2069,
+   "by reference, 2006 on": 1986,
+   "no source named in the line": 933,
+   "by reference, undated": 125,
+   "filed with the 10-K": 377,
+   "by reference, near 2006-01-01": 88
+  },
+  "forms_by_class": {
+   "by reference, before 2006": 845,
+   "by reference, 2006 on": 1078,
+   "no source named in the line": 550,
+   "by reference, undated": 63,
+   "filed with the 10-K": 267,
+   "by reference, near 2006-01-01": 38
+  },
+  "issuers_by_class": {
+   "by reference, before 2006": 240,
+   "by reference, 2006 on": 253,
+   "no source named in the line": 146,
+   "by reference, undated": 25,
+   "filed with the 10-K": 118,
+   "by reference, near 2006-01-01": 24
+  },
+  "issuers_with_a_line": 391,
+  "issuers_by_reach": {
+   "a form locatable in the 15 indexes or held": 286,
+   "only forms before 2006, near 2006-01-01 or undated": 105
+  },
+  "sources": {
+   "script_sha256": "e77fd9af53068d702aa30bbf57d8baeab567c81b306161c427252f5bdbed77b4",
+   "forms": {
+    "not read: by reference, before 2006": 845,
+    "by reference, 2006 on: located": 888,
+    "not read: no source named in the line": 550,
+    "not read: by reference, undated": 63,
+    "filed with the 10-K: held": 246,
+    "by reference, 2006 on: not in the 15 indexes": 55,
+    "by reference, 2006 on: no source exhibit number": 117,
+    "not read: by reference, near 2006-01-01": 38,
+    "filed with the 10-K: no exhibit of its number": 21,
+    "by reference, 2006 on: two or more candidates": 2,
+    "by reference, 2006 on: no source form": 16
+   },
+   "filings_wanted": 540,
+   "requests_sent": 357,
+   "by_status": {
+    "200": 357
+   },
+   "exhibits": 749,
+   "exhibits_missed": {
+    "no EX document of that number in the source": 144
+   },
+   "issuers_with_an_exhibit": 223,
+   "list_sha256": "b48a994b67f94bce310e45bf2f59948840f481a3033431fc9f4ccb3c193776f6"
+  },
+  "classes": {
+   "revision": "e",
+   "script_sha256": "8d50181126d9d982664ccc7482df7e2496940a47dd2a0edeab78267fc1ef9652",
+   "rule": "revision b's (a sale of shares, the issuer withholding or retaining shares, the holder paying, remitting, reimbursing or paying an amount, surrendering a portion of the award's shares; one method its class; two or more: the one the clauses name as the rule — an option clause and its conditions aside — the default, else choice with no default; none unstated; an exhibit naming no restricted stock, shares or units counted, not classed), with revision e's: a sale a method only by its purpose (to satisfy, cover, pay, meet, fund or generate, sufficient, necessary to, its proceeds, by or through a sale, arranging a sale), never under a ban, a holding requirement, an escrow or an option's exercise; 'withhold and/or sell' both; 'withholding obligations plus additional shares' no share withholding; 'may use shares … to satisfy' share withholding; 'require from you the amount' and cash from an account cash; a distribution made in cash and cash proceeds no cash method; an excess, a shortfall, a remaining or fractional amount no method; a plan amendment counted, not classed; a leading 'Unless …,' frames a default (an option there only where the holder elects, chooses, requests or wishes), a leading 'If …,' an option only where it names an election or a determination, a lead naming the issuer providing, determining or unable an option, a heading read past; a clause after 'unless' or an alternative an option; 'may' in 'as … may' or 'that may be designated' no option; the issuer having or being given a right or authority an option, the holder's authorization or direction not; a sentence on taxes due before vesting no rule",
+   "exhibits": 749,
+   "exhibits_by_class": {
+    "unstated": 264,
+    "share withholding": 155,
+    "choice": 193,
+    "cash": 106,
+    "not an award agreement": 24,
+    "sell-to-cover": 7
+   },
+   "exhibits_by_class_from_a_default": {
+    "share withholding": 71,
+    "cash": 35,
+    "sell-to-cover": 7
+   },
+   "issuers": 218,
+   "issuers_by_class": {
+    "mixed (share withholding / unstated)": 19,
+    "choice": 37,
+    "mixed (cash / choice / share withholding / unstated)": 3,
+    "cash": 18,
+    "mixed (cash / choice / unstated)": 10,
+    "share withholding": 26,
+    "unstated": 55,
+    "mixed (cash / unstated)": 15,
+    "mixed (cash / choice)": 6,
+    "mixed (choice / unstated)": 14,
+    "mixed (choice / share withholding / unstated)": 3,
+    "mixed (sell-to-cover / share withholding)": 1,
+    "mixed (choice / share withholding)": 5,
+    "mixed (cash / choice / share withholding)": 1,
+    "mixed (cash / share withholding)": 3,
+    "sell-to-cover": 2
+   },
+   "hand_check": "the 12 exhibits of the sample rule (sha256('vest-s2g:' + accession + ':' + sequence) lowest), their text in /var/tmp/vest-s2/hand-settle-vest-s2g.json",
+   "sell_to_cover_census": {
+    "exhibits_read_whole": 7,
+    "issuers": 3,
+    "sell_to_cover_by_the_eye": 7,
+    "from_a_default_by_the_eye": 7,
+    "shapes": {
+     "one issuer's RSU form, its tax paragraph byte-identical in four exhibits: \"Unless Grantee chooses … other means …, Grantee's acceptance of the Award constitutes Grantee's instruction and authorization to … any brokerage firm … to sell\", check or wire by election": 4,
+     "one issuer's executive restricted stock agreement (a form and one officer's agreement): the executive \"directs\" the transfer agent to sell shares with proceeds equal to the withholding; share withholding only if the committee finds a sale prohibited, cash only by election; an 83(b) elector pays cash": 2,
+     "one issuer's RSU form: the grantee \"authorizes the Company to instruct a third party broker … to sell Shares … sufficient to satisfy the amount required to be withheld\"; the issuer's rights to withhold or require payment reserved": 1
+    },
+    "issuers_mixed": "one of the 3: its 2008 restricted stock form (not RSU) holds share withholding as the fallback (vest-s2e's booked shape); the other two hold sell-to-cover alone",
+    "in_neither_earlier_sample": true
+   },
+   "hand_check_result": {
+    "exhibits": 12,
+    "class_agrees_with_the_eye": 9,
+    "class_wrong": 3,
+    "wrong": {
+     "a share-withholding election in a sentence the 83(b) filter drops (\"If you do not make an election under Section 83(b) …, you may satisfy … by electing to have the Company withhold … shares\"): classed unstated, the eye choice": 1,
+     "an option-exercise sentence (\"Except when using the Cashless Exercise …, Employee shall deliver … money or shares\") lends a cash default to the RSU section, whose own text is the issuer's authority over cash or stock remuneration: classed cash, the eye choice": 1,
+     "a cap on share withholding (\"In the event that Withholding Taxes are satisfied by withholding … Shares, the Corporation shall not withhold any Shares in excess …\") read as a rule beside the holder remitting the amount: classed choice, the eye cash (the default)": 1
+    },
+    "stated_classes_checked": 6,
+    "stated_classes_right": 3,
+    "defaults_checked": 2,
+    "defaults_right": 1,
+    "unstated_right": {
+     "a director form, no tax text (one of them cash-settled units)": 2,
+     "an issuer withholding \"any amount\" (no method)": 1,
+     "an amendment whose withholding is in the original agreement": 1,
+     "a director's units, self-employment taxes": 1
+    },
+    "not_an_award_agreement_right": 1,
+    "sell_to_cover_in_the_sample": {
+     "by_the_parse": 0,
+     "by_the_eye": 0
+    },
+    "reading": "precision on the class X counts: 7 / 7 by the census (revision b 0 / 6); recall searched on the dev set: every exhibit naming a sale without the class (43 issuers, 101 exhibits) read by its sale sentences, none a sale by default by the eye. The three wrong classes all count zero in X (cash, choice, share withholding and unstated alike); their shapes (the 83(b) filter, an option's exercise sentence, a cap read as a rule) are booked for any later revision, and the dividend filter drops 33 share-withholding and 75 cash sentences on the dev set, none naming a sale by default",
+    "defaults_missed": 1,
+    "defaults_false": 1
+   },
+   "commit_note": "the rules commit 2e0ccf56's message miscounts its dev diff: the 7 entrants are one issuer's \"Unless … chooses …\" form (4 exhibits), one issuer's \"Executive hereby … directs … to sell\" agreements (2) and one broker-sale authorization (1); its self-check holds 41 cases, not 46"
+  },
+  "classes_earlier": [
+   {
+    "script_sha256": "37bb0ac003b68f9e65174d1444df727b503fa7e1a2d353a7f8dae2723961d6fc",
+    "rule": "the sentences naming tax withholding (a dividend's or an 83(b) election's aside) name the methods: a sale of shares (sell-to-cover), the issuer withholding or retaining shares, the holder paying (cash, check, payroll, shares already owned); one method its class, two or more choice, none unstated",
+    "exhibits": 749,
+    "exhibits_by_class": {
+     "unstated": 286,
+     "share withholding": 70,
+     "choice": 329,
+     "cash": 56,
+     "sell-to-cover": 8
+    },
+    "issuers": 223,
+    "issuers_by_class": {
+     "mixed (share withholding / unstated)": 11,
+     "choice": 59,
+     "mixed (cash / choice / unstated)": 11,
+     "cash": 12,
+     "unstated": 59,
+     "mixed (choice / unstated)": 27,
+     "share withholding": 13,
+     "mixed (cash / choice)": 5,
+     "mixed (cash / share withholding)": 2,
+     "mixed (cash / unstated)": 6,
+     "mixed (choice / share withholding / unstated)": 4,
+     "mixed (choice / share withholding)": 5,
+     "mixed (cash / share withholding / unstated)": 3,
+     "mixed (choice / sell-to-cover)": 1,
+     "mixed (cash / choice / share withholding / unstated)": 1,
+     "mixed (sell-to-cover / unstated)": 2,
+     "mixed (choice / sell-to-cover / unstated)": 2
+    },
+    "hand_check": "the 12 exhibits of the sample rule (sha256('vest-s2:' + accession + ':' + sequence) lowest), their text in /var/tmp/vest-s2/hand-settle.json",
+    "hand_check_result": {
+     "exhibits": 12,
+     "class_agrees_with_the_eye": 9,
+     "class_wrong": 3,
+     "wrong": {
+      "unstated where the text names the holder paying or surrendering shares (\"remit an amount\", \"reimburse\", \"surrender a portion of the Shares\", \"pay to the Company an amount sufficient\")": 3
+     },
+     "stated_classes_checked": 4,
+     "stated_classes_right": 4,
+     "not_an_award_agreement": {
+      "the source exhibit of that number is another document (a severance agreement termination; read unstated)": 1
+     },
+     "unstated_right": {
+      "a director (non-employee) form, no withholding": 2,
+      "an amendment whose withholding paragraph is in the original agreement": 1,
+      "withholding from the payment, the form not named": 1,
+      "no method named": 1
+     },
+     "reading": "no wrong stated class (4 / 4 choice); the misses all fall to unstated (biasing X toward 0); the next revision of the method rules: the holder remitting, reimbursing or paying an amount, and surrendering a portion of the award shares — checked on a fresh sample (salt vest-s2e)"
+    },
+    "reading": "sell-to-cover alone: 8 of 749 exhibits and no issuer with every form so; a sale among the methods (choice with S): 3 issuers mixed with choice; choice dominates (329 exhibits, 59 issuers), then unstated (286, 59)"
+   },
+   {
+    "revision": "b",
+    "script_sha256": "ab09e178a08b0f19eedeccb47745d915814d35de0acf3f7b69e687387334674f",
+    "rule": "revision a's methods (a sale of shares, the issuer withholding or retaining shares, the holder paying), with the holder remitting, reimbursing or paying an amount and surrendering a portion of the award's shares; one method its class; two or more: the one the clauses name as the rule (an option clause — may, elect, permit, authorized, a right to, discretion, request, in lieu — and its conditions aside) is the default and gives the class (sell-to-cover required or the default, share withholding, cash), else choice with no default; none unstated; an exhibit naming no restricted stock, shares or units counted, not classed",
+    "exhibits": 749,
+    "exhibits_by_class": {
+     "unstated": 275,
+     "share withholding": 114,
+     "choice": 223,
+     "cash": 108,
+     "not an award agreement": 23,
+     "sell-to-cover": 6
+    },
+    "exhibits_by_class_from_a_default": {
+     "share withholding": 54,
+     "cash": 27
+    },
+    "issuers": 218,
+    "issuers_by_class": {
+     "mixed (share withholding / unstated)": 14,
+     "choice": 42,
+     "mixed (cash / choice / share withholding / unstated)": 3,
+     "cash": 20,
+     "mixed (cash / choice / unstated)": 9,
+     "unstated": 57,
+     "share withholding": 23,
+     "mixed (cash / unstated)": 13,
+     "mixed (cash / choice)": 8,
+     "mixed (choice / unstated)": 15,
+     "mixed (choice / share withholding / unstated)": 2,
+     "mixed (choice / share withholding)": 4,
+     "mixed (choice / sell-to-cover)": 1,
+     "mixed (cash / share withholding / unstated)": 1,
+     "mixed (sell-to-cover / unstated)": 2,
+     "mixed (cash / share withholding)": 3,
+     "mixed (choice / sell-to-cover / unstated)": 1
+    },
+    "hand_check": "the 12 exhibits of the sample rule (sha256('vest-s2e:' + accession + ':' + sequence) lowest), their text in /var/tmp/vest-s2/hand-settle-vest-s2e.json",
+    "hand_check_result": {
+     "exhibits": 12,
+     "class_agrees_with_the_eye": 8,
+     "class_wrong": 4,
+     "wrong": {
+      "a plan amendment naming restricted stock read as an award agreement (classed unstated; the eye: not an award agreement)": 1,
+      "\"the Corporation may use shares … to satisfy withholding obligations\" unread (classed unstated; the eye: share withholding as the fallback)": 1,
+      "\"withhold from any distribution made in cash\" (the award's own cash settlement) read as the holder paying (classed cash; the eye: unstated)": 1,
+      "taxes \"deducted from your paycheck … unless you elect\" a check or a same-date sale (classed choice with no default; the eye: cash, the default)": 1
+     },
+     "stated_classes_checked": 7,
+     "stated_classes_right": 5,
+     "defaults_checked": 2,
+     "defaults_right": 2,
+     "defaults_missed": 1,
+     "sell_to_cover_in_the_sample": {
+      "by_the_parse": 0,
+      "by_the_eye": 0
+     },
+     "unstated_right": {
+      "a director form, no withholding sentence": 1,
+      "an amendment whose withholding is in the original agreement": 1,
+      "arrangements alone, no method named": 1
+     },
+     "reading": "no exhibit of the sample is sell-to-cover by the eye or the parse, so the sample does not test the one class X counts; every wrong class here counts zero in X either way (cash, choice, share withholding and unstated alike). On the full set sell-to-cover is 6 of 749 exhibits, none from a default (revision a: 8), its issuers 4 of 218 (each mixed with choice or unstated); the defaults name share withholding (54) or cash (27). The S class is thin enough that its six exhibits can be read whole by eye before the probe"
+    },
+    "sell_to_cover_census": {
+     "sitting": "P1 sitting 5 (2026-10-25)",
+     "exhibits_read_whole": 6,
+     "issuers": 4,
+     "sell_to_cover_by_the_eye": 0,
+     "the_eye_reads": {
+      "unstated: a ban on a director selling vested shares \"except as necessary to satisfy any tax obligations\" (no settlement method)": 2,
+      "share withholding: an elective share withholding; the sale the parse read is a later sale taxed at capital-gains rates": 1,
+      "choice: \"the Company may, in its sole direction, withhold and/or sell Shares\" (both, no default)": 2,
+      "choice: \"withhold or require from you the amount\", and a sale only if the holder has not paid in time (no default)": 1
+     },
+     "reading": "precision 0 / 6 on the one class X counts; with them X would sit above zero at 4 issuers where no form settles by a sale. Revision e (2e0ccf56) takes these four shapes and vest-s2e's four booked misses"
+    }
+   }
+  ]
+ }
+}
