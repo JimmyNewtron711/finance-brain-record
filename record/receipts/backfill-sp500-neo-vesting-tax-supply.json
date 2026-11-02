@@ -2,7 +2,7 @@
  "row": "sp500-neo-vesting-tax-supply",
  "parent": "sp500-vesting-tax-supply",
  "sitting": "3 of 4 (the table parse revision c; the settlement parse: references, sources, classes)",
- "k1_line": "8050fa30 (main)",
+ "k1_line": "8050fa30 (main); d00196be (main), the form indexes of 2004–2005",
  "ruling": "the operator's (c) of 2026-10-25 (drop file rsu-proxy.md), applied 0f9d252b on feature/fx-spot-proposer-1",
  "source": "SEC EDGAR quarterly form indexes (full-index), 2006 Q1 → 2009 Q3; the SEC is the source. Membership: the field's sp500 pool on data/sharadar.db (Sharadar SP500 + tickers), capped at 2009-12-31",
  "status": "SETTLED",
@@ -749,112 +749,175 @@
    "only forms before 2006, near 2006-01-01 or undated": 105
   },
   "sources": {
-   "script_sha256": "e77fd9af53068d702aa30bbf57d8baeab567c81b306161c427252f5bdbed77b4",
+   "script_sha256": "6eb20c40c4c7e6365b871b640c73abef674b5fe5e8b4c62d7d9d9be23eba0a15",
+   "form_index_2004_2005": [
+    {
+     "url": "https://www.sec.gov/Archives/edgar/full-index/2004/QTR1/form.gz",
+     "status": 200,
+     "raw_id": 255745,
+     "held": true,
+     "rows": 312028
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/full-index/2004/QTR2/form.gz",
+     "status": 200,
+     "raw_id": 255746,
+     "held": true,
+     "rows": 253014
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/full-index/2004/QTR3/form.gz",
+     "status": 200,
+     "raw_id": 255747,
+     "held": true,
+     "rows": 217724
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/full-index/2004/QTR4/form.gz",
+     "status": 200,
+     "raw_id": 255748,
+     "held": true,
+     "rows": 241435
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/full-index/2005/QTR1/form.gz",
+     "status": 200,
+     "raw_id": 255749,
+     "held": true,
+     "rows": 317763
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/full-index/2005/QTR2/form.gz",
+     "status": 200,
+     "raw_id": 255750,
+     "held": true,
+     "rows": 271631
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/full-index/2005/QTR3/form.gz",
+     "status": 200,
+     "raw_id": 255751,
+     "held": true,
+     "rows": 242170
+    },
+    {
+     "url": "https://www.sec.gov/Archives/edgar/full-index/2005/QTR4/form.gz",
+     "status": 200,
+     "raw_id": 255752,
+     "held": true,
+     "rows": 240725
+    }
+   ],
+   "index_requests_sent": 0,
    "forms": {
-    "not read: by reference, before 2006": 845,
+    "by reference, before 2006: located": 557,
     "by reference, 2006 on: located": 888,
     "not read: no source named in the line": 550,
+    "by reference, before 2006: not in the 8 indexes of 2004–2005": 135,
     "not read: by reference, undated": 63,
+    "by reference, before 2006: no source exhibit number": 149,
     "filed with the 10-K: held": 246,
     "by reference, 2006 on: not in the 15 indexes": 55,
     "by reference, 2006 on: no source exhibit number": 117,
     "not read: by reference, near 2006-01-01": 38,
     "filed with the 10-K: no exhibit of its number": 21,
     "by reference, 2006 on: two or more candidates": 2,
-    "by reference, 2006 on: no source form": 16
+    "by reference, before 2006: undated": 2,
+    "by reference, 2006 on: no source form": 16,
+    "by reference, before 2006: no source form": 2
    },
-   "filings_wanted": 540,
-   "requests_sent": 357,
+   "filings_wanted": 808,
+   "requests_sent": 268,
    "by_status": {
-    "200": 357
+    "200": 268
    },
-   "exhibits": 749,
+   "exhibits": 1018,
    "exhibits_missed": {
-    "no EX document of that number in the source": 144
+    "no EX document of that number in the source": 259
    },
-   "issuers_with_an_exhibit": 223,
-   "list_sha256": "b48a994b67f94bce310e45bf2f59948840f481a3033431fc9f4ccb3c193776f6"
+   "issuers_with_an_exhibit": 256,
+   "list_sha256": "45c4ee30c071812053347da882e3a2601f4e27210a1fbc341993173decd54960",
+   "index_note": "the 8 form indexes were read once by the committed script's --dry run (068ad230, raw ids 255745–255752, each 200; 8 requests); this run read them from the depot"
   },
   "classes": {
    "revision": "e",
-   "script_sha256": "8d50181126d9d982664ccc7482df7e2496940a47dd2a0edeab78267fc1ef9652",
+   "script_sha256": "6eb20c40c4c7e6365b871b640c73abef674b5fe5e8b4c62d7d9d9be23eba0a15",
    "rule": "revision b's (a sale of shares, the issuer withholding or retaining shares, the holder paying, remitting, reimbursing or paying an amount, surrendering a portion of the award's shares; one method its class; two or more: the one the clauses name as the rule — an option clause and its conditions aside — the default, else choice with no default; none unstated; an exhibit naming no restricted stock, shares or units counted, not classed), with revision e's: a sale a method only by its purpose (to satisfy, cover, pay, meet, fund or generate, sufficient, necessary to, its proceeds, by or through a sale, arranging a sale), never under a ban, a holding requirement, an escrow or an option's exercise; 'withhold and/or sell' both; 'withholding obligations plus additional shares' no share withholding; 'may use shares … to satisfy' share withholding; 'require from you the amount' and cash from an account cash; a distribution made in cash and cash proceeds no cash method; an excess, a shortfall, a remaining or fractional amount no method; a plan amendment counted, not classed; a leading 'Unless …,' frames a default (an option there only where the holder elects, chooses, requests or wishes), a leading 'If …,' an option only where it names an election or a determination, a lead naming the issuer providing, determining or unable an option, a heading read past; a clause after 'unless' or an alternative an option; 'may' in 'as … may' or 'that may be designated' no option; the issuer having or being given a right or authority an option, the holder's authorization or direction not; a sentence on taxes due before vesting no rule",
-   "exhibits": 749,
+   "exhibits": 1018,
    "exhibits_by_class": {
-    "unstated": 264,
-    "share withholding": 155,
-    "choice": 193,
-    "cash": 106,
-    "not an award agreement": 24,
-    "sell-to-cover": 7
+    "unstated": 396,
+    "share withholding": 209,
+    "choice": 237,
+    "cash": 130,
+    "not an award agreement": 37,
+    "sell-to-cover": 9
    },
    "exhibits_by_class_from_a_default": {
-    "share withholding": 71,
-    "cash": 35,
-    "sell-to-cover": 7
+    "share withholding": 78,
+    "cash": 39,
+    "sell-to-cover": 9
    },
-   "issuers": 218,
+   "issuers": 252,
    "issuers_by_class": {
-    "mixed (share withholding / unstated)": 19,
-    "choice": 37,
-    "mixed (cash / choice / share withholding / unstated)": 3,
-    "cash": 18,
-    "mixed (cash / choice / unstated)": 10,
-    "share withholding": 26,
-    "unstated": 55,
-    "mixed (cash / unstated)": 15,
+    "mixed (share withholding / unstated)": 22,
+    "choice": 35,
+    "unstated": 62,
+    "mixed (cash / choice / share withholding / unstated)": 4,
+    "cash": 19,
+    "mixed (cash / choice / unstated)": 9,
+    "share withholding": 29,
+    "mixed (cash / unstated)": 24,
     "mixed (cash / choice)": 6,
-    "mixed (choice / unstated)": 14,
-    "mixed (choice / share withholding / unstated)": 3,
-    "mixed (sell-to-cover / share withholding)": 1,
+    "mixed (choice / unstated)": 19,
+    "mixed (choice / share withholding / unstated)": 9,
+    "mixed (sell-to-cover / share withholding / unstated)": 2,
     "mixed (choice / share withholding)": 5,
     "mixed (cash / choice / share withholding)": 1,
-    "mixed (cash / share withholding)": 3,
-    "sell-to-cover": 2
+    "mixed (cash / share withholding)": 4,
+    "mixed (cash / share withholding / unstated)": 1,
+    "sell-to-cover": 1
    },
    "hand_check": "the 12 exhibits of the sample rule (sha256('vest-s2g:' + accession + ':' + sequence) lowest), their text in /var/tmp/vest-s2/hand-settle-vest-s2g.json",
+   "sitting": "P1 sitting 6 (2026-10-25): D550 (a), the sources of 2004–2005 located in the 8 form indexes of K1 line d00196be; the rules revision e's, unchanged",
    "sell_to_cover_census": {
-    "exhibits_read_whole": 7,
-    "issuers": 3,
-    "sell_to_cover_by_the_eye": 7,
-    "from_a_default_by_the_eye": 7,
-    "shapes": {
-     "one issuer's RSU form, its tax paragraph byte-identical in four exhibits: \"Unless Grantee chooses … other means …, Grantee's acceptance of the Award constitutes Grantee's instruction and authorization to … any brokerage firm … to sell\", check or wire by election": 4,
-     "one issuer's executive restricted stock agreement (a form and one officer's agreement): the executive \"directs\" the transfer agent to sell shares with proceeds equal to the withholding; share withholding only if the committee finds a sale prohibited, cash only by election; an 83(b) elector pays cash": 2,
-     "one issuer's RSU form: the grantee \"authorizes the Company to instruct a third party broker … to sell Shares … sufficient to satisfy the amount required to be withheld\"; the issuer's rights to withhold or require payment reserved": 1
-    },
-    "issuers_mixed": "one of the 3: its 2008 restricted stock form (not RSU) holds share withholding as the fallback (vest-s2e's booked shape); the other two hold sell-to-cover alone",
-    "in_neither_earlier_sample": true
+    "exhibits_read_whole": 2,
+    "carried": "revision e's census of 7 (classes_earlier, last), each classed as then",
+    "issuers": 1,
+    "issuers_new_to_the_class": 0,
+    "sell_to_cover_by_the_eye": 2,
+    "from_a_default_by_the_eye": 2,
+    "shape": "one issuer's executive restricted stock form of 2005 (filed 2005-03-02 under its 1999 plan and 2005-10-31 under its 2005 plan): the executive \"directs\" the transfer of the shares whose sale proceeds equal the withholding; share withholding only if the committee finds a sale prohibited, cash only by election, an 83(b) elector pays cash — the paragraph of revision e's census (its 2007 form)"
    },
+   "issuers_changed": "the 3 issuers of revision e's census stand and none is new. One (sell-to-cover alone in revision e) gains its 2005 RSU form (share withholding, the default; a sale only by an election the issuer allows) and a director stock-unit form (unstated: units delivered at retirement, no method); one (sell-to-cover and share withholding in revision e) gains two 2005 restricted stock forms (a mutual agreement, then the issuer's use of shares: share withholding; a mutual agreement alone: unstated); the third holds sell-to-cover alone. Each of the 4 read by its tax sentences: the class as the eye reads it. Which form governs which award (its grant date and kind) is the X script's, in the probe's sitting",
+   "issuer_table_check": "no issuer new to X: the 3 issuers' 9 proxies were checked in P1 sitting 5 (tables.s_issuer_check) and the table parse is unchanged, so no proxy is re-read",
    "hand_check_result": {
     "exhibits": 12,
-    "class_agrees_with_the_eye": 9,
-    "class_wrong": 3,
-    "wrong": {
-     "a share-withholding election in a sentence the 83(b) filter drops (\"If you do not make an election under Section 83(b) …, you may satisfy … by electing to have the Company withhold … shares\"): classed unstated, the eye choice": 1,
-     "an option-exercise sentence (\"Except when using the Cashless Exercise …, Employee shall deliver … money or shares\") lends a cash default to the RSU section, whose own text is the issuer's authority over cash or stock remuneration: classed cash, the eye choice": 1,
-     "a cap on share withholding (\"In the event that Withholding Taxes are satisfied by withholding … Shares, the Corporation shall not withhold any Shares in excess …\") read as a rule beside the holder remitting the amount: classed choice, the eye cash (the default)": 1
+    "kept_from_revision_e_sample": 8,
+    "kept_agree": 6,
+    "kept_wrong": 2,
+    "kept_wrong_note": "as booked in revision e's entry (the 83(b) filter; the option-exercise sentence); revision e's other 4 left the 12 lowest (their text: /var/tmp/vest-s2/hand-settle-vest-s2g-sitting5.json)",
+    "new": 4,
+    "new_agree": 1,
+    "new_agree_note": "a stock option form, not an award agreement",
+    "new_wrong": {
+     "an elective share withholding beside delivering \"shares of Common Stock of the Company or other securities\" (owned shares the cash rule does not read): classed share withholding, the eye choice": 1,
+     "the holder's four ways (cash, shares held including newly vested, a payroll deduction, other) in a sentence naming \"the required amount\", not a tax: classed unstated, the eye choice": 1,
+     "one exhibit bundling three forms (option, restricted stock, restricted deferral), the option's elective cash or shares read with the restricted stock form's rule (the issuer retains shares where the grantee has not paid): classed choice, the eye share withholding (the default)": 1
     },
-    "stated_classes_checked": 6,
-    "stated_classes_right": 3,
-    "defaults_checked": 2,
-    "defaults_right": 1,
-    "unstated_right": {
-     "a director form, no tax text (one of them cash-settled units)": 2,
-     "an issuer withholding \"any amount\" (no method)": 1,
-     "an amendment whose withholding is in the original agreement": 1,
-     "a director's units, self-employment taxes": 1
-    },
-    "not_an_award_agreement_right": 1,
+    "class_agrees_with_the_eye": 7,
+    "class_wrong": 5,
     "sell_to_cover_in_the_sample": {
      "by_the_parse": 0,
      "by_the_eye": 0
     },
-    "reading": "precision on the class X counts: 7 / 7 by the census (revision b 0 / 6); recall searched on the dev set: every exhibit naming a sale without the class (43 issuers, 101 exhibits) read by its sale sentences, none a sale by default by the eye. The three wrong classes all count zero in X (cash, choice, share withholding and unstated alike); their shapes (the 83(b) filter, an option's exercise sentence, a cap read as a rule) are booked for any later revision, and the dividend filter drops 33 share-withholding and 75 cash sentences on the dev set, none naming a sale by default",
-    "defaults_missed": 1,
-    "defaults_false": 1
+    "reading": "the 5 wrong classes all count zero in X (choice, share withholding and unstated alike); the 3 new shapes are booked for any later revision"
    },
-   "commit_note": "the rules commit 2e0ccf56's message miscounts its dev diff: the 7 entrants are one issuer's \"Unless … chooses …\" form (4 exhibits), one issuer's \"Executive hereby … directs … to sell\" agreements (2) and one broker-sale authorization (1); its self-check holds 41 cases, not 46"
+   "recall_new": {
+    "searched": "the 269 exhibits new since revision e's list, those naming a sale in a tax sentence without the class (an exercise price, an option price or an 83(b) sentence aside), each read by its sale sentences",
+    "exhibits": 36,
+    "sale_by_default_by_the_eye": 0,
+    "shapes": "a holder's elective sale (of the whole award two years ahead; through a broker on election; a sale deemed only when a broker cash account falls short), the issuer's alternatives (deduct, require payment, retain or sell), a ban on a sale until taxes are paid or during a blackout, a sale's later taxation or a representation, a sale-limit or an option's exercise"
+   }
   },
   "classes_earlier": [
    {
@@ -988,6 +1051,116 @@
      },
      "reading": "precision 0 / 6 on the one class X counts; with them X would sit above zero at 4 issuers where no form settles by a sale. Revision e (2e0ccf56) takes these four shapes and vest-s2e's four booked misses"
     }
+   },
+   {
+    "revision": "e",
+    "script_sha256": "8d50181126d9d982664ccc7482df7e2496940a47dd2a0edeab78267fc1ef9652",
+    "rule": "revision b's (a sale of shares, the issuer withholding or retaining shares, the holder paying, remitting, reimbursing or paying an amount, surrendering a portion of the award's shares; one method its class; two or more: the one the clauses name as the rule — an option clause and its conditions aside — the default, else choice with no default; none unstated; an exhibit naming no restricted stock, shares or units counted, not classed), with revision e's: a sale a method only by its purpose (to satisfy, cover, pay, meet, fund or generate, sufficient, necessary to, its proceeds, by or through a sale, arranging a sale), never under a ban, a holding requirement, an escrow or an option's exercise; 'withhold and/or sell' both; 'withholding obligations plus additional shares' no share withholding; 'may use shares … to satisfy' share withholding; 'require from you the amount' and cash from an account cash; a distribution made in cash and cash proceeds no cash method; an excess, a shortfall, a remaining or fractional amount no method; a plan amendment counted, not classed; a leading 'Unless …,' frames a default (an option there only where the holder elects, chooses, requests or wishes), a leading 'If …,' an option only where it names an election or a determination, a lead naming the issuer providing, determining or unable an option, a heading read past; a clause after 'unless' or an alternative an option; 'may' in 'as … may' or 'that may be designated' no option; the issuer having or being given a right or authority an option, the holder's authorization or direction not; a sentence on taxes due before vesting no rule",
+    "exhibits": 749,
+    "exhibits_by_class": {
+     "unstated": 264,
+     "share withholding": 155,
+     "choice": 193,
+     "cash": 106,
+     "not an award agreement": 24,
+     "sell-to-cover": 7
+    },
+    "exhibits_by_class_from_a_default": {
+     "share withholding": 71,
+     "cash": 35,
+     "sell-to-cover": 7
+    },
+    "issuers": 218,
+    "issuers_by_class": {
+     "mixed (share withholding / unstated)": 19,
+     "choice": 37,
+     "mixed (cash / choice / share withholding / unstated)": 3,
+     "cash": 18,
+     "mixed (cash / choice / unstated)": 10,
+     "share withholding": 26,
+     "unstated": 55,
+     "mixed (cash / unstated)": 15,
+     "mixed (cash / choice)": 6,
+     "mixed (choice / unstated)": 14,
+     "mixed (choice / share withholding / unstated)": 3,
+     "mixed (sell-to-cover / share withholding)": 1,
+     "mixed (choice / share withholding)": 5,
+     "mixed (cash / choice / share withholding)": 1,
+     "mixed (cash / share withholding)": 3,
+     "sell-to-cover": 2
+    },
+    "hand_check": "the 12 exhibits of the sample rule (sha256('vest-s2g:' + accession + ':' + sequence) lowest), their text in /var/tmp/vest-s2/hand-settle-vest-s2g.json",
+    "sell_to_cover_census": {
+     "exhibits_read_whole": 7,
+     "issuers": 3,
+     "sell_to_cover_by_the_eye": 7,
+     "from_a_default_by_the_eye": 7,
+     "shapes": {
+      "one issuer's RSU form, its tax paragraph byte-identical in four exhibits: \"Unless Grantee chooses … other means …, Grantee's acceptance of the Award constitutes Grantee's instruction and authorization to … any brokerage firm … to sell\", check or wire by election": 4,
+      "one issuer's executive restricted stock agreement (a form and one officer's agreement): the executive \"directs\" the transfer agent to sell shares with proceeds equal to the withholding; share withholding only if the committee finds a sale prohibited, cash only by election; an 83(b) elector pays cash": 2,
+      "one issuer's RSU form: the grantee \"authorizes the Company to instruct a third party broker … to sell Shares … sufficient to satisfy the amount required to be withheld\"; the issuer's rights to withhold or require payment reserved": 1
+     },
+     "issuers_mixed": "one of the 3: its 2008 restricted stock form (not RSU) holds share withholding as the fallback (vest-s2e's booked shape); the other two hold sell-to-cover alone",
+     "in_neither_earlier_sample": true
+    },
+    "hand_check_result": {
+     "exhibits": 12,
+     "class_agrees_with_the_eye": 9,
+     "class_wrong": 3,
+     "wrong": {
+      "a share-withholding election in a sentence the 83(b) filter drops (\"If you do not make an election under Section 83(b) …, you may satisfy … by electing to have the Company withhold … shares\"): classed unstated, the eye choice": 1,
+      "an option-exercise sentence (\"Except when using the Cashless Exercise …, Employee shall deliver … money or shares\") lends a cash default to the RSU section, whose own text is the issuer's authority over cash or stock remuneration: classed cash, the eye choice": 1,
+      "a cap on share withholding (\"In the event that Withholding Taxes are satisfied by withholding … Shares, the Corporation shall not withhold any Shares in excess …\") read as a rule beside the holder remitting the amount: classed choice, the eye cash (the default)": 1
+     },
+     "stated_classes_checked": 6,
+     "stated_classes_right": 3,
+     "defaults_checked": 2,
+     "defaults_right": 1,
+     "unstated_right": {
+      "a director form, no tax text (one of them cash-settled units)": 2,
+      "an issuer withholding \"any amount\" (no method)": 1,
+      "an amendment whose withholding is in the original agreement": 1,
+      "a director's units, self-employment taxes": 1
+     },
+     "not_an_award_agreement_right": 1,
+     "sell_to_cover_in_the_sample": {
+      "by_the_parse": 0,
+      "by_the_eye": 0
+     },
+     "reading": "precision on the class X counts: 7 / 7 by the census (revision b 0 / 6); recall searched on the dev set: every exhibit naming a sale without the class (43 issuers, 101 exhibits) read by its sale sentences, none a sale by default by the eye. The three wrong classes all count zero in X (cash, choice, share withholding and unstated alike); their shapes (the 83(b) filter, an option's exercise sentence, a cap read as a rule) are booked for any later revision, and the dividend filter drops 33 share-withholding and 75 cash sentences on the dev set, none naming a sale by default",
+     "defaults_missed": 1,
+     "defaults_false": 1
+    },
+    "commit_note": "the rules commit 2e0ccf56's message miscounts its dev diff: the 7 entrants are one issuer's \"Unless … chooses …\" form (4 exhibits), one issuer's \"Executive hereby … directs … to sell\" agreements (2) and one broker-sale authorization (1); its self-check holds 41 cases, not 46"
+   }
+  ],
+  "sources_earlier": [
+   {
+    "script_sha256": "e77fd9af53068d702aa30bbf57d8baeab567c81b306161c427252f5bdbed77b4",
+    "forms": {
+     "not read: by reference, before 2006": 845,
+     "by reference, 2006 on: located": 888,
+     "not read: no source named in the line": 550,
+     "not read: by reference, undated": 63,
+     "filed with the 10-K: held": 246,
+     "by reference, 2006 on: not in the 15 indexes": 55,
+     "by reference, 2006 on: no source exhibit number": 117,
+     "not read: by reference, near 2006-01-01": 38,
+     "filed with the 10-K: no exhibit of its number": 21,
+     "by reference, 2006 on: two or more candidates": 2,
+     "by reference, 2006 on: no source form": 16
+    },
+    "filings_wanted": 540,
+    "requests_sent": 357,
+    "by_status": {
+     "200": 357
+    },
+    "exhibits": 749,
+    "exhibits_missed": {
+     "no EX document of that number in the source": 144
+    },
+    "issuers_with_an_exhibit": 223,
+    "list_sha256": "b48a994b67f94bce310e45bf2f59948840f481a3033431fc9f4ccb3c193776f6"
    }
   ]
  }

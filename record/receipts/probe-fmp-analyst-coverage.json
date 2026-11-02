@@ -1,0 +1,669 @@
+{
+  "probe": "fmp-analyst-coverage",
+  "row": "microcap-coverage-withdrawal-quarter",
+  "run_at": "2026-10-26T10:28:26.200Z",
+  "symbols": {
+    "AAPL": "large cap",
+    "FLUX": "micro-cap (Sharadar 2 - Micro, listed)",
+    "FFNW": "delisted micro-cap (Sharadar last price 2025-04-21)",
+    "SIVB": "delisted large cap (Sharadar SIVBQ, last price 2023-03-28)"
+  },
+  "reads": [
+    {
+      "endpoint": "analyst-estimates/annual",
+      "symbol": "AAPL",
+      "status": 200,
+      "raw": "fmp#1897826",
+      "bytes": 18278,
+      "rows": 28,
+      "keys": [
+        "symbol",
+        "date",
+        "revenueLow",
+        "revenueHigh",
+        "revenueAvg",
+        "ebitdaLow",
+        "ebitdaHigh",
+        "ebitdaAvg",
+        "ebitLow",
+        "ebitHigh",
+        "ebitAvg",
+        "netIncomeLow",
+        "netIncomeHigh",
+        "netIncomeAvg",
+        "sgaExpenseLow",
+        "sgaExpenseHigh",
+        "sgaExpenseAvg",
+        "epsAvg",
+        "epsHigh",
+        "epsLow",
+        "numAnalystsRevenue",
+        "numAnalystsEps"
+      ],
+      "date": {
+        "earliest": "1996-09-27",
+        "latest": "2030-09-27"
+      },
+      "numAnalystsRevenue": {
+        "min": 1,
+        "max": 29
+      },
+      "numAnalystsEps": {
+        "min": 1,
+        "max": 30
+      }
+    },
+    {
+      "endpoint": "analyst-estimates/annual",
+      "symbol": "FLUX",
+      "status": 200,
+      "raw": "fmp#1897827",
+      "bytes": 8830,
+      "rows": 15,
+      "keys": [
+        "symbol",
+        "date",
+        "revenueLow",
+        "revenueHigh",
+        "revenueAvg",
+        "ebitdaLow",
+        "ebitdaHigh",
+        "ebitdaAvg",
+        "ebitLow",
+        "ebitHigh",
+        "ebitAvg",
+        "netIncomeLow",
+        "netIncomeHigh",
+        "netIncomeAvg",
+        "sgaExpenseLow",
+        "sgaExpenseHigh",
+        "sgaExpenseAvg",
+        "epsAvg",
+        "epsHigh",
+        "epsLow",
+        "numAnalystsRevenue",
+        "numAnalystsEps"
+      ],
+      "date": {
+        "earliest": "2016-06-30",
+        "latest": "2031-06-30"
+      },
+      "numAnalystsRevenue": {
+        "min": 1,
+        "max": 3
+      },
+      "numAnalystsEps": {
+        "min": 0,
+        "max": 3
+      }
+    },
+    {
+      "endpoint": "analyst-estimates/annual",
+      "symbol": "FFNW",
+      "status": 200,
+      "raw": "fmp#1897828",
+      "bytes": 7203,
+      "rows": 12,
+      "keys": [
+        "symbol",
+        "date",
+        "revenueLow",
+        "revenueHigh",
+        "revenueAvg",
+        "ebitdaLow",
+        "ebitdaHigh",
+        "ebitdaAvg",
+        "ebitLow",
+        "ebitHigh",
+        "ebitAvg",
+        "netIncomeLow",
+        "netIncomeHigh",
+        "netIncomeAvg",
+        "sgaExpenseLow",
+        "sgaExpenseHigh",
+        "sgaExpenseAvg",
+        "epsAvg",
+        "epsHigh",
+        "epsLow",
+        "numAnalystsRevenue",
+        "numAnalystsEps"
+      ],
+      "date": {
+        "earliest": "2015-12-31",
+        "latest": "2026-12-31"
+      },
+      "numAnalystsRevenue": {
+        "min": 1,
+        "max": 11
+      },
+      "numAnalystsEps": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    {
+      "endpoint": "analyst-estimates/annual",
+      "symbol": "SIVB",
+      "status": 200,
+      "raw": "fmp#1897829",
+      "bytes": 2,
+      "rows": 0,
+      "keys": []
+    },
+    {
+      "endpoint": "analyst-estimates/quarter",
+      "symbol": "AAPL",
+      "status": 200,
+      "raw": "fmp#1897830",
+      "bytes": 74556,
+      "rows": 117,
+      "keys": [
+        "symbol",
+        "date",
+        "revenueLow",
+        "revenueHigh",
+        "revenueAvg",
+        "ebitdaLow",
+        "ebitdaHigh",
+        "ebitdaAvg",
+        "ebitLow",
+        "ebitHigh",
+        "ebitAvg",
+        "netIncomeLow",
+        "netIncomeHigh",
+        "netIncomeAvg",
+        "sgaExpenseLow",
+        "sgaExpenseHigh",
+        "sgaExpenseAvg",
+        "epsAvg",
+        "epsHigh",
+        "epsLow",
+        "numAnalystsRevenue",
+        "numAnalystsEps"
+      ],
+      "date": {
+        "earliest": "1995-06-30",
+        "latest": "2028-09-27"
+      },
+      "numAnalystsRevenue": {
+        "min": 4,
+        "max": 27
+      },
+      "numAnalystsEps": {
+        "min": 5,
+        "max": 25
+      }
+    },
+    {
+      "endpoint": "analyst-estimates/quarter",
+      "symbol": "FLUX",
+      "status": 200,
+      "raw": "fmp#1897831",
+      "bytes": 19148,
+      "rows": 32,
+      "keys": [
+        "symbol",
+        "date",
+        "revenueLow",
+        "revenueHigh",
+        "revenueAvg",
+        "ebitdaLow",
+        "ebitdaHigh",
+        "ebitdaAvg",
+        "ebitLow",
+        "ebitHigh",
+        "ebitAvg",
+        "netIncomeLow",
+        "netIncomeHigh",
+        "netIncomeAvg",
+        "sgaExpenseLow",
+        "sgaExpenseHigh",
+        "sgaExpenseAvg",
+        "epsAvg",
+        "epsHigh",
+        "epsLow",
+        "numAnalystsRevenue",
+        "numAnalystsEps"
+      ],
+      "date": {
+        "earliest": "2020-09-30",
+        "latest": "2028-06-30"
+      },
+      "numAnalystsRevenue": {
+        "min": 1,
+        "max": 3
+      },
+      "numAnalystsEps": {
+        "min": 1,
+        "max": 3
+      }
+    },
+    {
+      "endpoint": "analyst-estimates/quarter",
+      "symbol": "FFNW",
+      "status": 200,
+      "raw": "fmp#1897832",
+      "bytes": 21742,
+      "rows": 37,
+      "keys": [
+        "symbol",
+        "date",
+        "revenueLow",
+        "revenueHigh",
+        "revenueAvg",
+        "ebitdaLow",
+        "ebitdaHigh",
+        "ebitdaAvg",
+        "ebitLow",
+        "ebitHigh",
+        "ebitAvg",
+        "netIncomeLow",
+        "netIncomeHigh",
+        "netIncomeAvg",
+        "sgaExpenseLow",
+        "sgaExpenseHigh",
+        "sgaExpenseAvg",
+        "epsAvg",
+        "epsHigh",
+        "epsLow",
+        "numAnalystsRevenue",
+        "numAnalystsEps"
+      ],
+      "date": {
+        "earliest": "2014-12-31",
+        "latest": "2026-12-31"
+      },
+      "numAnalystsRevenue": {
+        "min": 1,
+        "max": 17
+      },
+      "numAnalystsEps": {
+        "min": 1,
+        "max": 17
+      }
+    },
+    {
+      "endpoint": "analyst-estimates/quarter",
+      "symbol": "SIVB",
+      "status": 200,
+      "raw": "fmp#1897833",
+      "bytes": 2,
+      "rows": 0,
+      "keys": []
+    },
+    {
+      "endpoint": "grades",
+      "symbol": "AAPL",
+      "status": 200,
+      "raw": "fmp#1897834",
+      "bytes": 322891,
+      "rows": 1808,
+      "keys": [
+        "symbol",
+        "date",
+        "gradingCompany",
+        "previousGrade",
+        "newGrade",
+        "action"
+      ],
+      "date": {
+        "earliest": "2012-02-08",
+        "latest": "2026-10-20"
+      },
+      "distinct_gradingCompany": 112,
+      "actions": [
+        "downgrade",
+        "maintain",
+        "upgrade"
+      ]
+    },
+    {
+      "endpoint": "grades",
+      "symbol": "FLUX",
+      "status": 200,
+      "raw": "fmp#1897835",
+      "bytes": 2579,
+      "rows": 15,
+      "keys": [
+        "symbol",
+        "date",
+        "gradingCompany",
+        "previousGrade",
+        "newGrade",
+        "action"
+      ],
+      "date": {
+        "earliest": "2020-10-12",
+        "latest": "2026-08-21"
+      },
+      "distinct_gradingCompany": 6,
+      "actions": [
+        "maintain"
+      ]
+    },
+    {
+      "endpoint": "grades",
+      "symbol": "FFNW",
+      "status": 200,
+      "raw": "fmp#1897836",
+      "bytes": 2773,
+      "rows": 15,
+      "keys": [
+        "symbol",
+        "date",
+        "gradingCompany",
+        "previousGrade",
+        "newGrade",
+        "action"
+      ],
+      "date": {
+        "earliest": "2016-02-01",
+        "latest": "2025-01-30"
+      },
+      "distinct_gradingCompany": 8,
+      "actions": [
+        "downgrade",
+        "maintain",
+        "upgrade"
+      ]
+    },
+    {
+      "endpoint": "grades",
+      "symbol": "SIVB",
+      "status": 200,
+      "raw": "fmp#1897837",
+      "bytes": 48350,
+      "rows": 264,
+      "keys": [
+        "symbol",
+        "date",
+        "gradingCompany",
+        "previousGrade",
+        "newGrade",
+        "action"
+      ],
+      "date": {
+        "earliest": "2012-02-15",
+        "latest": "2023-03-13"
+      },
+      "distinct_gradingCompany": 34,
+      "actions": [
+        "downgrade",
+        "maintain",
+        "upgrade"
+      ]
+    },
+    {
+      "endpoint": "grades-historical",
+      "symbol": "AAPL",
+      "status": 200,
+      "raw": "fmp#1897838",
+      "bytes": 20049,
+      "rows": 94,
+      "keys": [
+        "symbol",
+        "date",
+        "analystRatingsStrongBuy",
+        "analystRatingsBuy",
+        "analystRatingsHold",
+        "analystRatingsSell",
+        "analystRatingsStrongSell"
+      ],
+      "date": {
+        "earliest": "2018-12-01",
+        "latest": "2026-10-01"
+      }
+    },
+    {
+      "endpoint": "grades-historical",
+      "symbol": "FLUX",
+      "status": 200,
+      "raw": "fmp#1897839",
+      "bytes": 13295,
+      "rows": 63,
+      "keys": [
+        "symbol",
+        "date",
+        "analystRatingsStrongBuy",
+        "analystRatingsBuy",
+        "analystRatingsHold",
+        "analystRatingsSell",
+        "analystRatingsStrongSell"
+      ],
+      "date": {
+        "earliest": "2021-08-01",
+        "latest": "2026-10-01"
+      }
+    },
+    {
+      "endpoint": "grades-historical",
+      "symbol": "FFNW",
+      "status": 200,
+      "raw": "fmp#1897840",
+      "bytes": 15405,
+      "rows": 73,
+      "keys": [
+        "symbol",
+        "date",
+        "analystRatingsStrongBuy",
+        "analystRatingsBuy",
+        "analystRatingsHold",
+        "analystRatingsSell",
+        "analystRatingsStrongSell"
+      ],
+      "date": {
+        "earliest": "2019-01-01",
+        "latest": "2025-05-01"
+      }
+    },
+    {
+      "endpoint": "grades-historical",
+      "symbol": "SIVB",
+      "status": 200,
+      "raw": "fmp#1897841",
+      "bytes": 10368,
+      "rows": 49,
+      "keys": [
+        "symbol",
+        "date",
+        "analystRatingsStrongBuy",
+        "analystRatingsBuy",
+        "analystRatingsHold",
+        "analystRatingsSell",
+        "analystRatingsStrongSell"
+      ],
+      "date": {
+        "earliest": "2019-01-01",
+        "latest": "2024-11-01"
+      }
+    },
+    {
+      "endpoint": "price-target-news",
+      "symbol": "AAPL",
+      "status": 200,
+      "raw": "fmp#1897842",
+      "bytes": 49669,
+      "rows": 100,
+      "keys": [
+        "symbol",
+        "publishedDate",
+        "newsURL",
+        "newsTitle",
+        "analystName",
+        "priceTarget",
+        "adjPriceTarget",
+        "priceWhenPosted",
+        "newsPublisher",
+        "newsBaseURL",
+        "analystCompany"
+      ],
+      "publishedDate": {
+        "earliest": "2024-11-13T13:52:11.000Z",
+        "latest": "2026-10-20T10:43:18.000Z"
+      },
+      "distinct_analystCompany": 32,
+      "distinct_analystName": 20
+    },
+    {
+      "endpoint": "price-target-news",
+      "symbol": "FLUX",
+      "status": 200,
+      "raw": "fmp#1897843",
+      "bytes": 936,
+      "rows": 2,
+      "keys": [
+        "symbol",
+        "publishedDate",
+        "newsURL",
+        "newsTitle",
+        "analystName",
+        "priceTarget",
+        "adjPriceTarget",
+        "priceWhenPosted",
+        "newsPublisher",
+        "newsBaseURL",
+        "analystCompany"
+      ],
+      "publishedDate": {
+        "earliest": "2024-04-23T08:45:00.000Z",
+        "latest": "2026-08-21T14:20:45.000Z"
+      },
+      "distinct_analystCompany": 2,
+      "distinct_analystName": 1
+    },
+    {
+      "endpoint": "price-target-news",
+      "symbol": "FFNW",
+      "status": 200,
+      "raw": "fmp#1897844",
+      "bytes": 1095,
+      "rows": 2,
+      "keys": [
+        "symbol",
+        "publishedDate",
+        "newsURL",
+        "newsTitle",
+        "analystName",
+        "priceTarget",
+        "adjPriceTarget",
+        "priceWhenPosted",
+        "newsPublisher",
+        "newsBaseURL",
+        "analystCompany"
+      ],
+      "publishedDate": {
+        "earliest": "2024-07-26T06:38:00.000Z",
+        "latest": "2024-07-26T07:10:00.000Z"
+      },
+      "distinct_analystCompany": 2,
+      "distinct_analystName": 2
+    },
+    {
+      "endpoint": "price-target-news",
+      "symbol": "SIVB",
+      "status": 200,
+      "raw": "fmp#1897845",
+      "bytes": 12362,
+      "rows": 23,
+      "keys": [
+        "symbol",
+        "publishedDate",
+        "newsURL",
+        "newsTitle",
+        "analystName",
+        "priceTarget",
+        "adjPriceTarget",
+        "priceWhenPosted",
+        "newsPublisher",
+        "newsBaseURL",
+        "analystCompany"
+      ],
+      "publishedDate": {
+        "earliest": "2021-08-04T00:00:00.000Z",
+        "latest": "2023-03-10T10:43:00.000Z"
+      },
+      "distinct_analystCompany": 16,
+      "distinct_analystName": 14
+    },
+    {
+      "endpoint": "price-target-summary",
+      "symbol": "AAPL",
+      "status": 200,
+      "raw": "fmp#1897846",
+      "bytes": 430,
+      "rows": 1,
+      "keys": [
+        "symbol",
+        "lastMonthCount",
+        "lastMonthAvgPriceTarget",
+        "lastQuarterCount",
+        "lastQuarterAvgPriceTarget",
+        "lastYearCount",
+        "lastYearAvgPriceTarget",
+        "allTimeCount",
+        "allTimeAvgPriceTarget",
+        "publishers"
+      ]
+    },
+    {
+      "endpoint": "price-target-summary",
+      "symbol": "FLUX",
+      "status": 200,
+      "raw": "fmp#1897847",
+      "bytes": 296,
+      "rows": 1,
+      "keys": [
+        "symbol",
+        "lastMonthCount",
+        "lastMonthAvgPriceTarget",
+        "lastQuarterCount",
+        "lastQuarterAvgPriceTarget",
+        "lastYearCount",
+        "lastYearAvgPriceTarget",
+        "allTimeCount",
+        "allTimeAvgPriceTarget",
+        "publishers"
+      ]
+    },
+    {
+      "endpoint": "price-target-summary",
+      "symbol": "FFNW",
+      "status": 200,
+      "raw": "fmp#1897848",
+      "bytes": 310,
+      "rows": 1,
+      "keys": [
+        "symbol",
+        "lastMonthCount",
+        "lastMonthAvgPriceTarget",
+        "lastQuarterCount",
+        "lastQuarterAvgPriceTarget",
+        "lastYearCount",
+        "lastYearAvgPriceTarget",
+        "allTimeCount",
+        "allTimeAvgPriceTarget",
+        "publishers"
+      ]
+    },
+    {
+      "endpoint": "price-target-summary",
+      "symbol": "SIVB",
+      "status": 200,
+      "raw": "fmp#1897849",
+      "bytes": 340,
+      "rows": 1,
+      "keys": [
+        "symbol",
+        "lastMonthCount",
+        "lastMonthAvgPriceTarget",
+        "lastQuarterCount",
+        "lastQuarterAvgPriceTarget",
+        "lastYearCount",
+        "lastYearAvgPriceTarget",
+        "allTimeCount",
+        "allTimeAvgPriceTarget",
+        "publishers"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "program_v1",
+  "program": "cand-vm6040-1",
+  "rule": "cand_vm6040",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/candidate.py",
+    "src/superbrain/portfolio/rules/tsmom.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "equity_weight": 0.6,
+    "vol_window": 63,
+    "vol_target": 0.1,
+    "leverage": 2.0
+  },
+  "universe": [
+    "SPY",
+    "IEF",
+    "BIL"
+  ],
+  "variants": [
+    {
+      "id": "vt10",
+      "params": {
+        "vol_target": 0.1
+      }
+    },
+    {
+      "id": "vt08",
+      "params": {
+        "vol_target": 0.08
+      }
+    }
+  ],
+  "cadence": "monthly",
+  "window": {
+    "start": "2016-01-04",
+    "end_exclusive": "2026-11-02"
+  },
+  "costs": {
+    "default_bp_per_side": 10,
+    "overrides": {}
+  },
+  "family_n_trials": 2,
+  "family_note": "A candidate book under Amendment 2026-10-31 (K1) (1): no DSR gate, no CPCV gate, no alpha-wealth debit. vt10 is the selected variant; vt08 is declared because load_manifest requires two (spec section 4B) and is never emitted or traded. Pre-reg docs/superpowers/plans/2026-11-01-cand-vm6040-1-prereg.md",
+  "validation": {
+    "cpcv": false,
+    "cpcv_embargo_bars": 21,
+    "walkforward": {
+      "expanding": true,
+      "trainWindow": 750,
+      "testWindow": 250,
+      "stepSize": 250
+    }
+  },
+  "kills": {
+    "path": "decide/programs/cand-vm6040-1.kills.json",
+    "sha256": "4802a7c79868f2acdce38b8813da13c8e2daba2d98798e98a638a86b31d37c2a"
+  },
+  "blocks": {
+    "crisis": [
+      [
+        "2020-02-15",
+        "2020-06-30"
+      ],
+      [
+        "2022-01-03",
+        "2022-12-30"
+      ]
+    ],
+    "non_crisis": [
+      [
+        "2016-01-04",
+        "2019-12-31"
+      ]
+    ]
+  },
+  "prereg": {
+    "path": "docs/superpowers/plans/2026-11-01-cand-vm6040-1-prereg.md",
+    "git_sha": "356f826a"
+  },
+  "status": "preregistered"
+}

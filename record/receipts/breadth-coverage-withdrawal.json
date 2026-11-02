@@ -1,0 +1,168 @@
+{
+  "receipt": "breadth-coverage-withdrawal",
+  "row": "microcap-coverage-withdrawal-quarter",
+  "k1": "a21ab1fe",
+  "run_at": "2026-10-26T10:49:57.992Z",
+  "pool": "micro on the Sharadar tape's newest session",
+  "raw": "fmp#1897917–#1899977",
+  "note": "X alone: per quarter-end month, names with >= 1 analyst (covered), names with a count three months before >= 1 (both), and the declines among them; every series as served at this one read (no vintage), over today's pool (survivors). No return, no price, no symbol's count.",
+  "names": 2061,
+  "errors": 0,
+  "months": {
+    "2019-03": {
+      "covered": 604,
+      "both": 2,
+      "declines": 0
+    },
+    "2019-06": {
+      "covered": 618,
+      "both": 604,
+      "declines": 5
+    },
+    "2019-09": {
+      "covered": 621,
+      "both": 613,
+      "declines": 9
+    },
+    "2019-12": {
+      "covered": 664,
+      "both": 620,
+      "declines": 15
+    },
+    "2020-03": {
+      "covered": 688,
+      "both": 660,
+      "declines": 10
+    },
+    "2020-06": {
+      "covered": 697,
+      "both": 686,
+      "declines": 109
+    },
+    "2020-09": {
+      "covered": 303,
+      "both": 303,
+      "declines": 44
+    },
+    "2020-12": {
+      "covered": 541,
+      "both": 301,
+      "declines": 299
+    },
+    "2021-03": {
+      "covered": 570,
+      "both": 541,
+      "declines": 84
+    },
+    "2021-06": {
+      "covered": 570,
+      "both": 568,
+      "declines": 0
+    },
+    "2021-09": {
+      "covered": 707,
+      "both": 568,
+      "declines": 2
+    },
+    "2021-12": {
+      "covered": 616,
+      "both": 707,
+      "declines": 134
+    },
+    "2022-03": {
+      "covered": 583,
+      "both": 616,
+      "declines": 40
+    },
+    "2022-06": {
+      "covered": 585,
+      "both": 582,
+      "declines": 5
+    },
+    "2022-09": {
+      "covered": 1021,
+      "both": 585,
+      "declines": 203
+    },
+    "2022-12": {
+      "covered": 601,
+      "both": 1021,
+      "declines": 644
+    },
+    "2023-03": {
+      "covered": 599,
+      "both": 599,
+      "declines": 188
+    },
+    "2023-06": {
+      "covered": 628,
+      "both": 599,
+      "declines": 13
+    },
+    "2023-09": {
+      "covered": 602,
+      "both": 621,
+      "declines": 36
+    },
+    "2023-12": {
+      "covered": 614,
+      "both": 601,
+      "declines": 9
+    },
+    "2024-03": {
+      "covered": 622,
+      "both": 612,
+      "declines": 9
+    },
+    "2024-06": {
+      "covered": 1213,
+      "both": 622,
+      "declines": 3
+    },
+    "2024-09": {
+      "covered": 1238,
+      "both": 1212,
+      "declines": 97
+    },
+    "2024-12": {
+      "covered": 1069,
+      "both": 1062,
+      "declines": 674
+    },
+    "2025-03": {
+      "covered": 1077,
+      "both": 1024,
+      "declines": 186
+    },
+    "2025-06": {
+      "covered": 1112,
+      "both": 1059,
+      "declines": 230
+    },
+    "2025-09": {
+      "covered": 1132,
+      "both": 1080,
+      "declines": 243
+    },
+    "2025-12": {
+      "covered": 1153,
+      "both": 1098,
+      "declines": 177
+    },
+    "2026-03": {
+      "covered": 1144,
+      "both": 1108,
+      "declines": 198
+    },
+    "2026-06": {
+      "covered": 1222,
+      "both": 1127,
+      "declines": 223
+    },
+    "2026-09": {
+      "covered": 1242,
+      "both": 1195,
+      "declines": 180
+    }
+  }
+}

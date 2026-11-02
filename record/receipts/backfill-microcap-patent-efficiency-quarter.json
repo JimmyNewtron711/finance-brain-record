@@ -1,9 +1,9 @@
 {
  "row": "microcap-patent-efficiency-quarter",
- "sitting": "1 of 2–3 (the K1 line, the listing, the three files read and counted; no map, no price read)",
- "k1_line": "6b49dd94 (main)",
- "ruling": "the operator's (b) of 2026-10-25 (drop file patents-source.md), applied 0f9d252b on feature/fx-spot-proposer-1",
- "source": "PatentsView bulk download tables (USPTO); cited as \"Source: PatentsView\" and the USPTO (K1 line (f)); depot source patentsview",
+ "sitting": "3 (the K1 line, the API's file list, the three files read and counted; then the map and the probe)",
+ "k1_line": "b2b1aec4 (main, mirror-pushed before any read)",
+ "ruling": "the operator's (a) of D552 (drop file patents-key.md, relayed 0f5707e6 on feature/fx-spot-proposer-1)",
+ "source": "PatentsView tables (USPTO), Open Data Portal bulk dataset pvgpatdis; cited as \"Source: PatentsView\" and the USPTO (K1 line 6b49dd94 (f)); depot source patentsview",
  "terms": {
   "uspto_terms": "patentsview#6",
   "patentsview_terms": "patentsview#13 (Wayback 2025-05-06; same text #10)",
@@ -11,46 +11,677 @@
   "robots": "patentsview#5 (www.uspto.gov); #1, #4 no robots file (app page)",
   "redirect": "patentsview#3 (301 to data.uspto.gov/support/transition-guide/patentsview)"
  },
- "status": "STOPPED",
+ "status": "MAP",
  "script": "orient/investigations/backfill-microcap-patent-efficiency-quarter.mjs",
- "script_sha256": "56ef9c7dd8d0c89030fbcc124aca2106679d176f35071a2466578695661e6b55",
- "listing": {
-  "url": "https://s3.amazonaws.com/data.patentsview.org/?prefix=download/g_",
+ "script_sha256": "25a488f5459c3cbbee243ea2c14f0c53658fc542538a76651d9ae9e9b3858443",
+ "replayed": {
+  "robots": 40,
+  "product": 41,
+  "why": "K1 line b2b1aec4 (c): the product answered 200 (raw#41), identifier PVGPATDIS"
+ },
+ "robots": {
+  "url": "https://api.uspto.gov/robots.txt",
   "status": 403,
-  "raw_id": 14,
-  "keys": 0,
-  "truncated": false
+  "raw_id": 40,
+  "disallow": null
+ },
+ "earlier": {
+  "row": "microcap-patent-efficiency-quarter",
+  "sitting": "1 of 2–3 (the K1 line, the listing, the three files read and counted; no map, no price read)",
+  "k1_line": "6b49dd94 (main)",
+  "ruling": "the operator's (b) of 2026-10-25 (drop file patents-source.md), applied 0f9d252b on feature/fx-spot-proposer-1",
+  "source": "PatentsView bulk download tables (USPTO); cited as \"Source: PatentsView\" and the USPTO (K1 line (f)); depot source patentsview",
+  "terms": {
+   "uspto_terms": "patentsview#6",
+   "patentsview_terms": "patentsview#13 (Wayback 2025-05-06; same text #10)",
+   "download_page_cc_by_4": "patentsview#9 (Wayback 2025-02-10)",
+   "robots": "patentsview#5 (www.uspto.gov); #1, #4 no robots file (app page)",
+   "redirect": "patentsview#3 (301 to data.uspto.gov/support/transition-guide/patentsview)"
+  },
+  "status": "STOPPED",
+  "script": "orient/investigations/backfill-microcap-patent-efficiency-quarter.mjs",
+  "script_sha256": "56ef9c7dd8d0c89030fbcc124aca2106679d176f35071a2466578695661e6b55",
+  "listing": {
+   "url": "https://s3.amazonaws.com/data.patentsview.org/?prefix=download/g_",
+   "status": 403,
+   "raw_id": 14,
+   "keys": 0,
+   "truncated": false
+  },
+  "files": [
+   {
+    "name": "g_patent",
+    "key": "download/g_patent.tsv.zip",
+    "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_patent.tsv.zip",
+    "listed": null,
+    "read": {
+     "status": 403,
+     "manifest_id": 16,
+     "chunks": 1,
+     "bytes": 263,
+     "sha256": "3d09f54b2b564086d3b52db6157c5329bea5e3ff4097ae3c65b1be7d188d6b50",
+     "held": false,
+     "size_matches_listing": null
+    }
+   },
+   {
+    "name": "g_assignee_not_disambiguated",
+    "key": "download/g_assignee_not_disambiguated.tsv.zip",
+    "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_assignee_not_disambiguated.tsv.zip",
+    "listed": null
+   },
+   {
+    "name": "g_assignee_disambiguated",
+    "key": "download/g_assignee_disambiguated.tsv.zip",
+    "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_assignee_disambiguated.tsv.zip",
+    "listed": null
+   }
+  ],
+  "script_sha256_read": "bc6494fff94f088ffeb6a6d9154e47e87192dd34d98628c5574e15b23d44be02",
+  "stop_note": "K1 line 6b49dd94 (c): the bucket no longer serves the files. The listing answered 403 AccessDenied (patentsview#14); g_patent.tsv.zip answered 403 AccessDenied (chunk patentsview#15, manifest #16), so the two assignee files were not asked. USPTO notice of 2026-03-18 (patentsview#17): PatentsView migrated to the Open Data Portal on 2026-03-20, its data downloads available through ODP; USPTO PatentsView page (patentsview#18): granted patents through 2025-12-31 as the ODP dataset pvgpatdis (data.uspto.gov/bulkdata/datasets/pvgpatdis). The portal serves its app page to this client (patentsview#4, #7) and its API takes a key, so no other route was tried: the inbox block of 2026-10-25 names the choices. No byte of a grant or assignee table is held.",
+  "requests_this_sitting": "patentsview#1-#18: robots and home (#1-#4), USPTO robots and terms (#5, #6), the portal bundle (#7), Wayback index and snapshots (#8-#13), the listing (#14), g_patent (#15, #16), the notice and page (#17, #18); /bin/bash",
+  "sitting_2": {
+   "date": "2026-10-25",
+   "ruling": "the operator's (d) of D551, \"a browser read first\" (drop file patents-browser.md, relayed 10-25 ~19:48 ET), applied on feature/fx-spot-proposer-1",
+   "k1_line": "a4b7afd8 (main, mirror-pushed before any read): data.uspto.gov in place of 6b49dd94's bucket; the dataset page by the probe's browser transport under b373ed8a (2), (3)",
+   "build": "e75454fa (main, mirror-pushed before the read): data.uspto.gov and 0dd6fc7fe1e2.edge.sdk.awswaf.com on ADMITTED_READ, section 368; RD.67 test first, two mutants fail it, root chain rc 0",
+   "run": "node scripts/probe-chokepoints-c5.mjs 368, once (log /var/tmp/patents-s1/run-368.log)",
+   "rows": {
+    "waf_robots": "patentsview#19 (HTTP 404: open)",
+    "portal_robots": "patentsview#20 (HTTP 200, the app page: no robots file, admitted by ADMITTED_READ)",
+    "page": "patentsview#21 (HTTP 200, the 20,666-byte app page)",
+    "bundles": "patentsview#22-#34 (main, polyfills, scripts and 10 chunks: each HTTP 200 text/html, the same 20,666 bytes as #4)",
+    "waf": "patentsview#35 (challenge.js, 686,413 B), #36 (mp_verify: a token, issued after the bundles were asked), #37 (telemetry)",
+    "rendered": "patentsview#38 (21,006 B, no text in its body), #39 (the grab, 4,254 B)",
+    "unanswered": [
+     "https://data.uspto.gov/styles-75PCGEDN.css"
+    ],
+    "not_asked": 7
+   },
+   "finding": "The portal answers every path asked before its AWS WAF token is held with its app page, its own script bundles too, so one load renders nothing: the Angular app never starts and no dataset, file list or link is shown. The token (#36) comes from the page's WAF script after the bundles were asked; a second load in the same session would carry it, which the reader does not make (one load a read, no cookie kept past it). A file at data.uspto.gov asked by a plain request carries no token and gets the app page (patentsview#1-#7, #22-#34), and a browser's token carried into a plain request is item (6)'s 'a script that claims to be a browser it is not': K1 line a4b7afd8 (c), the route falls back to D551's (a).",
+   "requests": "19 answers (#19-#37) and 1 unanswered, each through the reader behind ask's guard; 2 rendered rows (#38, #39); $0; no byte of a table held, no trial"
+  },
+  "stop_note_2": "K1 line a4b7afd8 (c): sitting 2's browser read of the pvgpatdis dataset page (section 368, patentsview#19-#39) rendered no file list: before its WAF token the portal serves its app page for every path, its scripts included. The route falls back to D551's (a), the operator's API key, as the inbox block of 2026-10-25 (sitting 2)."
+ },
+ "product": {
+  "url": "https://api.uspto.gov/api/v1/datasets/products/pvgpatdis?includeFiles=true",
+  "status": 200,
+  "raw_id": 41,
+  "product_identifier": "PVGPATDIS",
+  "title": "PatentsView Granted Patent Disambiguated Data",
+  "from": "1976-01-01",
+  "to": "2025-12-31",
+  "total_file_size": 34207398236,
+  "file_count": 39,
+  "files_listed": 39
  },
  "files": [
   {
    "name": "g_patent",
-   "key": "download/g_patent.tsv.zip",
-   "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_patent.tsv.zip",
-   "listed": null,
+   "file": "g_patent.tsv.zip",
+   "url": "https://api.uspto.gov/api/v1/datasets/products/files/PVGPATDIS/g_patent.tsv.zip",
+   "listed": {
+    "size": 232076712,
+    "last_modified": "2026-03-12 22:29:41",
+    "released": "2026-04-10 17:53:29",
+    "data_from": "1976-01-01",
+    "data_to": "2025-12-31",
+    "type": "Data"
+   },
+   "redirect": {
+    "status": 302,
+    "raw_id": 42,
+    "host": "data.uspto.gov"
+   },
    "read": {
-    "status": 403,
-    "manifest_id": 16,
-    "chunks": 1,
-    "bytes": 263,
-    "sha256": "3d09f54b2b564086d3b52db6157c5329bea5e3ff4097ae3c65b1be7d188d6b50",
-    "held": false,
-    "size_matches_listing": null
+    "via": "rawFetchChunked (after the redirect)",
+    "status": 200,
+    "manifest_id": 47,
+    "chunks": 4,
+    "bytes": 232076712,
+    "sha256": "66fa35c7a035ae72ca8af6fa38594510239f8b52aae06418170dbcdad6fcc9a4",
+    "size_matches_list": true
+   },
+   "count": {
+    "members": [
+     {
+      "name": "g_patent.tsv",
+      "bytes": 1122514092,
+      "modified": "20260210.014848"
+     }
+    ],
+    "crc_ok": true,
+    "first_grant": "1976-01-06",
+    "grants_to_2009_by_type": {
+     "utility": 3692534,
+     "reissue": 12246,
+     "design": 363972,
+     "TVPP": 3,
+     "plant": 16586,
+     "statutory invention registration": 2198,
+     "defensive publication": 509
+    },
+    "utility_to_2009_by_year": {
+     "1976": 70199,
+     "1977": 65206,
+     "1978": 66074,
+     "1979": 48839,
+     "1980": 61807,
+     "1981": 65771,
+     "1982": 57874,
+     "1983": 56861,
+     "1984": 67212,
+     "1985": 71665,
+     "1986": 70863,
+     "1987": 82943,
+     "1988": 77936,
+     "1989": 95566,
+     "1990": 90421,
+     "1991": 96561,
+     "1992": 97473,
+     "1993": 98385,
+     "1994": 101695,
+     "1995": 101432,
+     "1996": 109654,
+     "1997": 112020,
+     "1998": 147576,
+     "1999": 153592,
+     "2000": 157595,
+     "2001": 166158,
+     "2002": 167400,
+     "2003": 169077,
+     "2004": 164384,
+     "2005": 143891,
+     "2006": 173822,
+     "2007": 157331,
+     "2008": 157788,
+     "2009": 167463
+    },
+    "rows_after_2009": 5366113,
+    "header": [
+     "patent_id",
+     "patent_type",
+     "patent_date",
+     "patent_title",
+     "wipo_kind",
+     "num_claims",
+     "withdrawn",
+     "filename"
+    ],
+    "rows": 9454161,
+    "malformed_rows": 0
    }
   },
   {
    "name": "g_assignee_not_disambiguated",
-   "key": "download/g_assignee_not_disambiguated.tsv.zip",
-   "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_assignee_not_disambiguated.tsv.zip",
-   "listed": null
+   "file": "g_assignee_not_disambiguated.tsv.zip",
+   "url": "https://api.uspto.gov/api/v1/datasets/products/files/PVGPATDIS/g_assignee_not_disambiguated.tsv.zip",
+   "listed": {
+    "size": 498457989,
+    "last_modified": "2026-03-12 22:25:21",
+    "released": "2026-04-10 17:43:00",
+    "data_from": "1976-01-01",
+    "data_to": "2025-12-31",
+    "type": "Data"
+   },
+   "redirect": {
+    "status": 302,
+    "raw_id": 48,
+    "host": "data.uspto.gov"
+   },
+   "read": {
+    "via": "rawFetchChunked (after the redirect)",
+    "status": 200,
+    "manifest_id": 57,
+    "chunks": 8,
+    "bytes": 498457989,
+    "sha256": "2830d3fd566fffa6ac5210b7a45d427449bc6c3e3b07e6836dac5e5ca4f8f5a0",
+    "size_matches_list": true
+   },
+   "count": {
+    "members": [
+     {
+      "name": "g_assignee_not_disambiguated.tsv",
+      "bytes": 1014455402,
+      "modified": "20260209.232436"
+     }
+    ],
+    "crc_ok": true,
+    "utility_to_2009_assignee_rows": 3273270,
+    "of_them_with_organization": 3230474,
+    "utility_to_2009_patents_with_assignee": 3177295,
+    "assignee_type_counts": {
+     "0": 442,
+     "1": 9,
+     "2": 1650409,
+     "3": 1533200,
+     "4": 22554,
+     "5": 16904,
+     "6": 34083,
+     "7": 10368,
+     "8": 21,
+     "9": 155,
+     "12": 1247,
+     "13": 510,
+     "14": 2580,
+     "15": 445,
+     "16": 4,
+     "17": 9,
+     "18": 1,
+     "19": 1,
+     "": 328
+    },
+    "header": [
+     "patent_id",
+     "assignee_sequence",
+     "assignee_id",
+     "raw_assignee_individual_name_first",
+     "raw_assignee_individual_name_last",
+     "raw_assignee_organization",
+     "assignee_type",
+     "rawlocation_id"
+    ],
+    "rows": 8751310,
+    "malformed_rows": 0
+   }
   },
   {
    "name": "g_assignee_disambiguated",
-   "key": "download/g_assignee_disambiguated.tsv.zip",
-   "url": "https://s3.amazonaws.com/data.patentsview.org/download/g_assignee_disambiguated.tsv.zip",
-   "listed": null
+   "file": "g_assignee_disambiguated.tsv.zip",
+   "url": "https://api.uspto.gov/api/v1/datasets/products/files/PVGPATDIS/g_assignee_disambiguated.tsv.zip",
+   "listed": {
+    "size": 362741666,
+    "last_modified": "2026-03-12 22:25:09",
+    "released": "2026-04-10 17:42:57",
+    "data_from": "1976-01-01",
+    "data_to": "2025-12-31",
+    "type": "Data"
+   },
+   "redirect": {
+    "status": 302,
+    "raw_id": 58,
+    "host": "data.uspto.gov"
+   },
+   "read": {
+    "via": "rawFetchChunked (after the redirect)",
+    "status": 200,
+    "manifest_id": 65,
+    "chunks": 6,
+    "bytes": 362741666,
+    "sha256": "96d3f3c97abd80c82e326d5def9e01cfc431daa46d4bab80e8ccb2c32044a11e",
+    "size_matches_list": true
+   },
+   "count": {
+    "members": [
+     {
+      "name": "g_assignee_disambiguated.tsv",
+      "bytes": 1106146556,
+      "modified": "20260209.232110"
+     }
+    ],
+    "crc_ok": true,
+    "utility_to_2009_assignee_rows": 3273270,
+    "of_them_with_organization": 3230474,
+    "utility_to_2009_patents_with_assignee": 3177295,
+    "assignee_type_counts": {
+     "0": 282,
+     "1": 6,
+     "2": 1600690,
+     "3": 1560926,
+     "4": 22811,
+     "5": 16911,
+     "6": 33376,
+     "7": 11301,
+     "8": 11,
+     "9": 616,
+     "12": 722,
+     "13": 235,
+     "14": 2216,
+     "15": 350,
+     "17": 1,
+     "": 22816
+    },
+    "header": [
+     "patent_id",
+     "assignee_sequence",
+     "assignee_id",
+     "disambig_assignee_individual_name_first",
+     "disambig_assignee_individual_name_last",
+     "disambig_assignee_organization",
+     "assignee_type",
+     "location_id"
+    ],
+    "rows": 8751310,
+    "malformed_rows": 0
+   }
   }
  ],
- "script_sha256_read": "bc6494fff94f088ffeb6a6d9154e47e87192dd34d98628c5574e15b23d44be02",
- "stop_note": "K1 line 6b49dd94 (c): the bucket no longer serves the files. The listing answered 403 AccessDenied (patentsview#14); g_patent.tsv.zip answered 403 AccessDenied (chunk patentsview#15, manifest #16), so the two assignee files were not asked. USPTO notice of 2026-03-18 (patentsview#17): PatentsView migrated to the Open Data Portal on 2026-03-20, its data downloads available through ODP; USPTO PatentsView page (patentsview#18): granted patents through 2025-12-31 as the ODP dataset pvgpatdis (data.uspto.gov/bulkdata/datasets/pvgpatdis). The portal serves its app page to this client (patentsview#4, #7) and its API takes a key, so no other route was tried: the inbox block of 2026-10-25 names the choices. No byte of a grant or assignee table is held.",
- "requests_this_sitting": "patentsview#1-#18: robots and home (#1-#4), USPTO robots and terms (#5, #6), the portal bundle (#7), Wayback index and snapshots (#8-#13), the listing (#14), g_patent (#15, #16), the notice and page (#17, #18); /bin/bash"
+ "script_sha256_read": "25a488f5459c3cbbee243ea2c14f0c53658fc542538a76651d9ae9e9b3858443",
+ "script_sha256_count": "25a488f5459c3cbbee243ea2c14f0c53658fc542538a76651d9ae9e9b3858443",
+ "map": {
+  "rule": "the map phase of this script (sp600 tiers 1–4, upper-cased, company assignees as printed, grants dated 1997-01-01 → 2009-12-31, before 1997-12-31 matched as on it)",
+  "counts": {
+   "grants": 2038097,
+   "assignee_rows": 1878490,
+   "company_rows": 1845897,
+   "mapped_rows": 505052,
+   "ambiguous_rows": 560,
+   "unmapped_rows": 1340285,
+   "by_tier": {
+    "1": 233082,
+    "2": 259096,
+    "3": 7923,
+    "4": 4951
+   },
+   "primary_class": 5971,
+   "permatickers": 3819,
+   "patent_permaticker_pairs": 504908,
+   "distinct_assignee_permaticker_pairs": 9172
+  },
+  "file": "/var/tmp/patents-s3/map.json",
+  "sha256": "ed6b16091dd4073ce3058ea117fd8a923e0dbcd5dd3f9d5c18db9485dfa53799",
+  "salt": "microcap-patent-efficiency-quarter issuer map 2026-10-25",
+  "sample": [
+   {
+    "perma": 122594,
+    "ticker": "IVISF",
+    "tier": 1,
+    "rows": 1,
+    "h": "000cc766fd9a"
+   },
+   {
+    "perma": 197600,
+    "ticker": "SIRI",
+    "tier": 1,
+    "rows": 2,
+    "h": "000e528e7263"
+   },
+   {
+    "perma": 197519,
+    "ticker": "DSPG",
+    "tier": 1,
+    "rows": 2,
+    "h": "001adba9c542"
+   },
+   {
+    "perma": 115647,
+    "ticker": "RIVL",
+    "tier": 2,
+    "rows": 2,
+    "h": "001dd370c4fa"
+   },
+   {
+    "perma": 174196,
+    "ticker": "MCDT",
+    "tier": 2,
+    "rows": 19,
+    "h": "002b84b8100a"
+   },
+   {
+    "perma": 199433,
+    "ticker": "PEP",
+    "tier": 1,
+    "rows": 2,
+    "h": "0035dedaa77a"
+   },
+   {
+    "perma": 123632,
+    "ticker": "SBL",
+    "tier": 1,
+    "rows": 1,
+    "h": "003e770e9ce6"
+   },
+   {
+    "perma": 122186,
+    "ticker": "IMNX",
+    "tier": 2,
+    "rows": 109,
+    "h": "00600940c1a8"
+   },
+   {
+    "perma": 115615,
+    "ticker": "THRT",
+    "tier": 1,
+    "rows": 7,
+    "h": "0065a73cfde2"
+   },
+   {
+    "perma": 199991,
+    "ticker": "AMD",
+    "tier": 1,
+    "rows": 1,
+    "h": "00772638e90b"
+   },
+   {
+    "perma": 196858,
+    "ticker": "ILIU",
+    "tier": 1,
+    "rows": 15,
+    "h": "00827a3d9b73"
+   },
+   {
+    "perma": 121920,
+    "ticker": "ABSC",
+    "tier": 1,
+    "rows": 1,
+    "h": "008749144557"
+   },
+   {
+    "perma": 196430,
+    "ticker": "LOOK",
+    "tier": 1,
+    "rows": 1,
+    "h": "008a45a663ee"
+   },
+   {
+    "perma": 113491,
+    "ticker": "YHOO",
+    "tier": 1,
+    "rows": 6,
+    "h": "008bed7954b9"
+   },
+   {
+    "perma": 197407,
+    "ticker": "SRDX",
+    "tier": 1,
+    "rows": 13,
+    "h": "0090b93263bd"
+   },
+   {
+    "perma": 121156,
+    "ticker": "MXICY",
+    "tier": 2,
+    "rows": 1,
+    "h": "009a1c57244a"
+   },
+   {
+    "perma": 196684,
+    "ticker": "EVOL",
+    "tier": 1,
+    "rows": 4,
+    "h": "00a432c49aeb"
+   },
+   {
+    "perma": 103763,
+    "ticker": "CREAF",
+    "tier": 2,
+    "rows": 1,
+    "h": "00a5490bd044"
+   },
+   {
+    "perma": 188215,
+    "ticker": "NRTLQ",
+    "tier": 4,
+    "rows": 1,
+    "h": "00ab6d8f67be"
+   },
+   {
+    "perma": 198808,
+    "ticker": "MU",
+    "tier": 1,
+    "rows": 16499,
+    "h": "00aec924ffb8"
+   },
+   {
+    "perma": 124629,
+    "ticker": "DRWIQ",
+    "tier": 1,
+    "rows": 1,
+    "h": "00baac10e6e0"
+   },
+   {
+    "perma": 173408,
+    "ticker": "ABI1",
+    "tier": 4,
+    "rows": 6,
+    "h": "00c40e1cd306"
+   },
+   {
+    "perma": 166086,
+    "ticker": "AIIXY",
+    "tier": 1,
+    "rows": 25,
+    "h": "00c752e16d0c"
+   },
+   {
+    "perma": 114583,
+    "ticker": "FUJIY",
+    "tier": 2,
+    "rows": 2,
+    "h": "00c9abc87845"
+   },
+   {
+    "perma": 194610,
+    "ticker": "ASTI",
+    "tier": 1,
+    "rows": 1,
+    "h": "00d0ec9699b9"
+   },
+   {
+    "perma": 166742,
+    "ticker": "SNY",
+    "tier": 1,
+    "rows": 20,
+    "h": "00d6ffbdd3ee"
+   },
+   {
+    "perma": 199513,
+    "ticker": "MSI",
+    "tier": 1,
+    "rows": 4,
+    "h": "00e05df20401"
+   },
+   {
+    "perma": 115782,
+    "ticker": "SDG1",
+    "tier": 1,
+    "rows": 3,
+    "h": "00e988bb97eb"
+   },
+   {
+    "perma": 121584,
+    "ticker": "NWKC",
+    "tier": 1,
+    "rows": 1,
+    "h": "00f94cba82e7"
+   },
+   {
+    "perma": 121723,
+    "ticker": "PCRFY",
+    "tier": 1,
+    "rows": 3,
+    "h": "00fa4b4c714a"
+   },
+   {
+    "perma": 195461,
+    "ticker": "FENC",
+    "tier": 1,
+    "rows": 2,
+    "h": "00fe479ee366"
+   },
+   {
+    "perma": 122691,
+    "ticker": "HMP",
+    "tier": 1,
+    "rows": 3,
+    "h": "0102ffc3f117"
+   },
+   {
+    "perma": 196571,
+    "ticker": "BIRT",
+    "tier": 2,
+    "rows": 6,
+    "h": "0107bbb0a6b4"
+   },
+   {
+    "perma": 194858,
+    "ticker": "ATRC",
+    "tier": 1,
+    "rows": 11,
+    "h": "010a62c43a9f"
+   },
+   {
+    "perma": 123572,
+    "ticker": "FRGO",
+    "tier": 1,
+    "rows": 1,
+    "h": "010b5d612b88"
+   },
+   {
+    "perma": 115150,
+    "ticker": "SANYY",
+    "tier": 1,
+    "rows": 1,
+    "h": "01163b6f9894"
+   },
+   {
+    "perma": 166144,
+    "ticker": "PTRCY",
+    "tier": 2,
+    "rows": 1,
+    "h": "0118a31cf9a7"
+   },
+   {
+    "perma": 199210,
+    "ticker": "WHR",
+    "tier": 2,
+    "rows": 498,
+    "h": "0121aec6125c"
+   },
+   {
+    "perma": 120336,
+    "ticker": "ARC1",
+    "tier": 2,
+    "rows": 122,
+    "h": "01225edc4449"
+   },
+   {
+    "perma": 121135,
+    "ticker": "PVIS",
+    "tier": 1,
+    "rows": 17,
+    "h": "0122f11fa881"
+   }
+  ],
+  "hand_check": {
+   "date": "2026-10-25",
+   "by": "the headless sitting, by eye (assignee as printed against Sharadar name and name history; names in /var/tmp/patents-s3/hand-sample.json, outside the repo)",
+   "n": 40,
+   "right": 39,
+   "doubtful": 1,
+   "wrong": 0,
+   "doubtful_pairs": [
+    {
+     "index": 18,
+     "perma": 103763,
+     "ticker": "CREAF",
+     "tier": 2,
+     "rows": 1,
+     "why": "a one-patent plural name folded by the abbreviation tier (TECHNOLOGIES → TECH) onto a Singapore issuer whose name is singular; the name alone does not decide it"
+    }
+   ],
+   "notes": "3 right by issuer group: a subsidiary printed with the listed parent name (indexes 3, 10, 19); 6 right through Sharadar name histories (17, 22, 26, 29, 30, 31). Precision 39/40 (one doubtful), on pairs drawn uniformly by the salt, not weighted by rows."
+  }
+ },
+ "script_sha256_map": "475b4fdd5be068a3b4142c43b54ff39a4de791e3289c8949e6afa108dd82d6d1"
 }

@@ -1,0 +1,26 @@
+{
+  "schema": "envelope_v1",
+  "program": "cand-vm6040-1",
+  "verdict": "CANDIDATE",
+  "selected_variant": "vt10",
+  "frozen_through": "2026-10-01",
+  "weights_frozen_prefix_sha256": "c3ac6a9d643b70cd387e1ae812e1dbe78df30cda42b03396d0930b02a0ecff75",
+  "inputs": {
+    "manifest": {
+      "path": "decide/programs/cand-vm6040-1.json",
+      "sha256": "377f7abf96f2662c4a2e500f00c40697371447c306d451640e4e433f0c43846a"
+    },
+    "kills": {
+      "path": "decide/programs/cand-vm6040-1.kills.json",
+      "sha256": "4802a7c79868f2acdce38b8813da13c8e2daba2d98798e98a638a86b31d37c2a"
+    },
+    "prereg": {
+      "path": "docs/superpowers/plans/2026-11-01-cand-vm6040-1-prereg.md",
+      "git_sha": "356f826a"
+    },
+    "rule_sha256": "5038a96d4ddfac83eb511e9e4ac997abd8a22b3b47dcf4f9dd31d007763042a4",
+    "bars": {
+      "data_fingerprint": "267cc921ef67de9b59b93fed04dcfdff6f9bd38e61fbb23e2cc508393fa2eb6a"
+    }
+  }
+}

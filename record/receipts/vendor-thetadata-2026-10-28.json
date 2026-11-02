@@ -1,0 +1,406 @@
+{
+  "schema": "vendor_tape_receipt_v1",
+  "vendor": "thetadata",
+  "written_at": "2026-10-28",
+  "authority": "Amendment 2026-10-03 (K1), megareview rulings (4)",
+  "note": "Counts, dates, byte totals and digests of data/raw/thetadata as received; no vendor row and no figure derived from one. sha256 = one digest over the body_sha256 values of the answered sessions, in date order. An empty answer is held and is never coverage. loads = the days and rows of the local chain store, a replay of these answers; a session that holds one or two of its three answers is refused, never loaded.",
+  "terminal": {
+    "bootstrap": {
+      "name": "ThetaTerminalv3.jar",
+      "bytes": 41061736,
+      "sha256": "08773e104a6df321f35fdd0d59d455065cac1ed36aa82b9962557dd740fd20b5"
+    },
+    "lib": [
+      {
+        "name": "202609301.jar",
+        "bytes": 62205903,
+        "sha256": "c4914d91fcd72705b200bdea4d9affe8114ebcdbb6001c75433b5e5b076249c4"
+      }
+    ]
+  },
+  "probe": {
+    "probed_at": "2026-10-04T01:37:55.901Z",
+    "last_session": "2026-10-02",
+    "requests": [
+      {
+        "kind": "contracts",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 13280,
+        "bytes": 445824,
+        "header_ok": true,
+        "depot_row": "thetadata#1"
+      },
+      {
+        "kind": "eod",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 13280,
+        "bytes": 1801648,
+        "header_ok": true,
+        "depot_row": "thetadata#2"
+      },
+      {
+        "kind": "greeks_eod",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 13280,
+        "bytes": 4201441,
+        "header_ok": true,
+        "depot_row": "thetadata#3"
+      },
+      {
+        "kind": "open_interest",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 12788,
+        "bytes": 778588,
+        "header_ok": true,
+        "depot_row": "thetadata#4"
+      },
+      {
+        "kind": "greeks_eod",
+        "symbol": "SPY",
+        "date": "2019-12-31",
+        "status": 200,
+        "rows": 7224,
+        "bytes": 2272867,
+        "header_ok": true,
+        "depot_row": "thetadata#5"
+      },
+      {
+        "kind": "eod",
+        "symbol": "SPY",
+        "date": "2016-01-04",
+        "status": 200,
+        "rows": 3870,
+        "bytes": 528783,
+        "header_ok": true,
+        "depot_row": "thetadata#6"
+      },
+      {
+        "kind": "eod",
+        "symbol": "SPY",
+        "date": "2015-12-31",
+        "status": 403,
+        "rows": 0,
+        "bytes": 263,
+        "header_ok": null,
+        "depot_row": "thetadata#7"
+      },
+      {
+        "kind": "eod",
+        "symbol": "SPY",
+        "date": "2024-12-25",
+        "status": 472,
+        "rows": 0,
+        "bytes": 223,
+        "header_ok": null,
+        "depot_row": "thetadata#8"
+      },
+      {
+        "kind": "quote",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 6600,
+        "bytes": 564726,
+        "header_ok": true,
+        "depot_row": "thetadata#9"
+      },
+      {
+        "kind": "trade_quote",
+        "symbol": "SPY",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 71465,
+        "bytes": 10637055,
+        "header_ok": true,
+        "depot_row": "thetadata#10"
+      },
+      {
+        "kind": "quote",
+        "symbol": "SPY",
+        "date": "2017-06-01",
+        "status": 200,
+        "rows": 187,
+        "bytes": 16044,
+        "header_ok": true,
+        "depot_row": "thetadata#11"
+      },
+      {
+        "kind": "greeks_eod",
+        "symbol": "XSP",
+        "date": "2026-10-02",
+        "status": 200,
+        "rows": 16576,
+        "bytes": 5182602,
+        "header_ok": true,
+        "depot_row": "thetadata#12"
+      }
+    ]
+  },
+  "tape": {
+    "SPY": {
+      "eod": {
+        "requests": 2719,
+        "first_id": 2,
+        "last_id": 8748,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-26",
+        "bytes_as_received": 3009127181,
+        "rows": 22079600,
+        "sessions": 2721,
+        "answered": 2719,
+        "empty": 0,
+        "missing": 2,
+        "sha256": "800c94339d0b7078b3081df11fc550d788e47c6ff6191fcde98369a1245f7e0d"
+      },
+      "greeks_eod": {
+        "requests": 2719,
+        "first_id": 3,
+        "last_id": 8755,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-26",
+        "bytes_as_received": 6605284740,
+        "rows": 20976091,
+        "sessions": 2721,
+        "answered": 2719,
+        "empty": 252,
+        "missing": 2,
+        "sha256": "cd5e361768dedcd1db213d7c52d0b0fa5d5ebeb3f4e569f33a75946516f657df"
+      },
+      "open_interest": {
+        "requests": 2719,
+        "first_id": 4,
+        "last_id": 8750,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-26",
+        "bytes_as_received": 1302764526,
+        "rows": 21320141,
+        "sessions": 2721,
+        "answered": 2719,
+        "empty": 0,
+        "missing": 2,
+        "sha256": "262984e2295aaf6f3c18674e11ce292940560737840642b27ee50d831e69abc3"
+      }
+    },
+    "QQQ": {
+      "eod": {
+        "requests": 2720,
+        "first_id": 8475,
+        "last_id": 16859,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 2122747457,
+        "rows": 15676164,
+        "sessions": 2721,
+        "answered": 2720,
+        "empty": 0,
+        "missing": 1,
+        "sha256": "60527a354e344fd7ce041b34a287b32f96c85e8554d872c37a978bae5ec25421"
+      },
+      "greeks_eod": {
+        "requests": 2720,
+        "first_id": 8486,
+        "last_id": 16860,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 4919864309,
+        "rows": 15676164,
+        "sessions": 2721,
+        "answered": 2720,
+        "empty": 0,
+        "missing": 1,
+        "sha256": "eaacf58348f154f0916863540ccf321d3b04c84b2217c63ca8c1a9a9d98a3455"
+      },
+      "open_interest": {
+        "requests": 2720,
+        "first_id": 8478,
+        "last_id": 16861,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 926559682,
+        "rows": 15212076,
+        "sessions": 2721,
+        "answered": 2720,
+        "empty": 0,
+        "missing": 1,
+        "sha256": "0e8262d6eb7c21e8487c4bbb01c450e176de02cf44bdc79a75bceb79e3704fc5"
+      }
+    },
+    "IWM": {
+      "eod": {
+        "requests": 2720,
+        "first_id": 8481,
+        "last_id": 23952,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 1506966565,
+        "rows": 11210826,
+        "sessions": 2721,
+        "answered": 2720,
+        "empty": 0,
+        "missing": 1,
+        "sha256": "44c402e91bd85137d0ef87342bacb7449c7652a8c4620b76fc49b35340c0a993"
+      },
+      "greeks_eod": {
+        "requests": 1714,
+        "first_id": 8482,
+        "last_id": 23955,
+        "first_date": "2020-01-02",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 2500282701,
+        "rows": 8015795,
+        "sessions": 1715,
+        "answered": 1714,
+        "empty": 0,
+        "missing": 1,
+        "sha256": "f4d0e11d3d501705770bcbccc099a2c1000d92e95ed0a13ce9c1b4147f092e87"
+      },
+      "open_interest": {
+        "requests": 2720,
+        "first_id": 8480,
+        "last_id": 23953,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 638942902,
+        "rows": 10507035,
+        "sessions": 2721,
+        "answered": 2720,
+        "empty": 1,
+        "missing": 1,
+        "sha256": "86e71e3c2bd5d218249180b966ca6b4a195180b00d43a4f4db734ac30ebde587"
+      }
+    },
+    "TLT": {
+      "eod": {
+        "requests": 2720,
+        "first_id": 8483,
+        "last_id": 32052,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 797892321,
+        "rows": 5966541,
+        "sessions": 2721,
+        "answered": 2720,
+        "empty": 0,
+        "missing": 1,
+        "sha256": "7871946d2a9e1ccb97b3fc1673f72e215d07bf1814d29ffa0a5dbed6a3e760f2"
+      },
+      "greeks_eod": {
+        "requests": 2720,
+        "first_id": 8485,
+        "last_id": 32055,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 1836983894,
+        "rows": 5939941,
+        "sessions": 2721,
+        "answered": 2720,
+        "empty": 20,
+        "missing": 1,
+        "sha256": "99de29e3844e821bbde3410915cbc3df3149fd9ed60f2ae37f14180c1890763d"
+      },
+      "open_interest": {
+        "requests": 2720,
+        "first_id": 8484,
+        "last_id": 32054,
+        "first_date": "2016-01-04",
+        "last_date": "2026-10-27",
+        "bytes_as_received": 341708733,
+        "rows": 5658848,
+        "sessions": 2721,
+        "answered": 2720,
+        "empty": 0,
+        "missing": 1,
+        "sha256": "9cb20a01fc460cf8e18159b0562eae2094b91ab0d271cd3d32e0b4224bfb5208"
+      }
+    },
+    "XSP": {
+      "eod": {
+        "requests": 20,
+        "first_id": 8477,
+        "last_id": 8749,
+        "first_date": "2026-09-29",
+        "last_date": "2026-10-26",
+        "bytes_as_received": 43929566,
+        "rows": 328644,
+        "sessions": 2721,
+        "answered": 20,
+        "empty": 0,
+        "missing": 2701,
+        "sha256": "f287ee044930b83dccecd56a5445e9bcb7b09e9a0e612f1e4fa8152213bcf987"
+      },
+      "greeks_eod": {
+        "requests": 20,
+        "first_id": 12,
+        "last_id": 8754,
+        "first_date": "2026-09-29",
+        "last_date": "2026-10-26",
+        "bytes_as_received": 102851546,
+        "rows": 328644,
+        "sessions": 2469,
+        "answered": 20,
+        "empty": 0,
+        "missing": 2449,
+        "sha256": "19e8696e9b7d37c4f3f57f4d310bed644ee2f69ab8f57386c9857ab8dc94bd7a"
+      },
+      "open_interest": {
+        "requests": 20,
+        "first_id": 8476,
+        "last_id": 8747,
+        "first_date": "2026-09-29",
+        "last_date": "2026-10-26",
+        "bytes_as_received": 19042284,
+        "rows": 317864,
+        "sessions": 2721,
+        "answered": 20,
+        "empty": 0,
+        "missing": 2701,
+        "sha256": "56c34f7064ed18a6ffa4159bb5e20c8109cfa9ac4c316ef7d85a0540c2ae3a30"
+      }
+    }
+  },
+  "loads": {
+    "IWM": {
+      "days_loaded": 20,
+      "rows": 113294,
+      "first_date": "2026-09-29",
+      "last_date": "2026-10-26",
+      "days_refused": 1006
+    },
+    "QQQ": {
+      "days_loaded": 20,
+      "rows": 221830,
+      "first_date": "2026-09-29",
+      "last_date": "2026-10-26",
+      "days_refused": 0
+    },
+    "SPY": {
+      "days_loaded": 2719,
+      "rows": 22443914,
+      "first_date": "2016-01-04",
+      "last_date": "2026-10-26",
+      "days_refused": 0
+    },
+    "TLT": {
+      "days_loaded": 20,
+      "rows": 58682,
+      "first_date": "2026-09-29",
+      "last_date": "2026-10-26",
+      "days_refused": 0
+    },
+    "XSP": {
+      "days_loaded": 20,
+      "rows": 328644,
+      "first_date": "2026-09-29",
+      "last_date": "2026-10-26",
+      "days_refused": 0
+    }
+  }
+}
