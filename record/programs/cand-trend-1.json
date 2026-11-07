@@ -1,0 +1,104 @@
+{
+  "schema": "program_v1",
+  "program": "cand-trend-1",
+  "rule": "cand_trend",
+  "rule_files": [
+    "src/superbrain/portfolio/rules/__init__.py",
+    "src/superbrain/portfolio/rules/candidate.py",
+    "src/superbrain/portfolio/rules/tsmom.py",
+    "src/superbrain/portfolio/canon.py",
+    "src/superbrain/portfolio/bars.py",
+    "src/superbrain/portfolio/weights.py"
+  ],
+  "params": {
+    "lookback_months": 9,
+    "vol_window": 63,
+    "vol_target": 0.1,
+    "vol_cap": 2.0,
+    "max_gross": 1.0,
+    "leverage": 2.0
+  },
+  "universe": [
+    "SPY",
+    "TLT",
+    "GLD",
+    "IEF",
+    "DBA",
+    "QQQ",
+    "IWM",
+    "EFA",
+    "EEM",
+    "VNQ",
+    "TIP",
+    "LQD",
+    "HYG",
+    "EMB",
+    "SLV",
+    "DBC",
+    "UUP",
+    "BIL"
+  ],
+  "variants": [
+    {
+      "id": "lb9",
+      "params": {
+        "lookback_months": 9
+      }
+    },
+    {
+      "id": "lb6",
+      "params": {
+        "lookback_months": 6
+      }
+    }
+  ],
+  "cadence": "monthly",
+  "window": {
+    "start": "2016-01-04",
+    "end_exclusive": "2026-11-03"
+  },
+  "costs": {
+    "default_bp_per_side": 10,
+    "overrides": {},
+    "borrow_bp_yr": 25
+  },
+  "family_n_trials": 2,
+  "family_note": "A candidate book under Amendment 2026-10-31 (K1) (1): no DSR gate, no CPCV gate, no alpha-wealth debit. lb9 is the selected variant; lb6 is declared because load_manifest requires two (spec section 4B) and is never emitted or traded. Pre-reg docs/superpowers/plans/2026-11-02-cand-trend-1-prereg.md",
+  "validation": {
+    "cpcv": false,
+    "cpcv_embargo_bars": 21,
+    "walkforward": {
+      "expanding": true,
+      "trainWindow": 750,
+      "testWindow": 250,
+      "stepSize": 250
+    }
+  },
+  "kills": {
+    "path": "decide/programs/cand-trend-1.kills.json",
+    "sha256": "4802a7c79868f2acdce38b8813da13c8e2daba2d98798e98a638a86b31d37c2a"
+  },
+  "blocks": {
+    "crisis": [
+      [
+        "2020-02-15",
+        "2020-06-30"
+      ],
+      [
+        "2022-01-03",
+        "2022-12-30"
+      ]
+    ],
+    "non_crisis": [
+      [
+        "2016-01-04",
+        "2019-12-31"
+      ]
+    ]
+  },
+  "prereg": {
+    "path": "docs/superpowers/plans/2026-11-02-cand-trend-1-prereg.md",
+    "git_sha": "85acc28c"
+  },
+  "status": "preregistered"
+}

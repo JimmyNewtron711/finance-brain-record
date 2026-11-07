@@ -24,23 +24,23 @@
     "USO": "tr"
   },
   "emitter": {
-    "git_sha": "d2406d99cf8520e26a5c7f5ba15dd9dae28a1647",
+    "git_sha": "64f6628f3a244ec1f65909b4e5d91f4d986c429c",
     "rule": "tsmom",
     "rule_sha256": "93ba566648c0aeff7858e0160c9c07cfc4cbe78639d0cb8b03cce3f8fdc5f3f0",
     "manifest_sha256": "cdf5a1bdb7462ee2a169994bea865a1cad2e786bf5415a980995bcb68bad4359",
-    "data_fingerprint": "9993e73e46194702446804e6c0e304fc70bf9c826408cbcd5586a81f12ac288a",
+    "data_fingerprint": "9394ba69c355255987fa67569fe24385f068b1fb50883000e70ee653804e8304",
     "db_path_basename": "dashboard.db",
-    "tape_asof": "2026-09-04T04:22:52Z",
+    "tape_asof": "2026-11-02T23:35:01Z",
     "causality_check": {
       "dates_tested": [
-        "2026-05-01",
-        "2026-06-01",
-        "2026-07-01"
+        "2026-09-01",
+        "2026-10-01",
+        "2026-11-02"
       ],
       "max_abs_delta": 0.0
     },
-    "emitted_at": "2026-09-04T14:02:23Z",
-    "rows_appended": 127
+    "emitted_at": "2026-11-03T00:10:11Z",
+    "rows_appended": 1
   },
   "frozen_through": "2026-07-01",
   "rows": [
@@ -1439,6 +1439,50 @@
         "SPY": 0.121343,
         "TLT": -0.188015,
         "USO": 0.028312
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "weights": {
+        "DBA": 0.117822,
+        "GLD": 0.069115,
+        "IEF": -0.332273,
+        "SPY": 0.119862,
+        "TLT": -0.176827,
+        "USO": 0.030756
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "weights": {
+        "DBA": 0.127576,
+        "GLD": 0.060757,
+        "IEF": -0.333333,
+        "SPY": 0.120956,
+        "TLT": -0.171433,
+        "USO": 0.031489
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "weights": {
+        "DBA": 0.120808,
+        "GLD": -0.067876,
+        "IEF": -0.319824,
+        "SPY": 0.150676,
+        "TLT": -0.168302,
+        "USO": 0.031941
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "weights": {
+        "DBA": 0.141857,
+        "GLD": -0.067046,
+        "IEF": -0.290633,
+        "SPY": 0.169477,
+        "TLT": -0.155095,
+        "USO": 0.040751
       }
     }
   ]

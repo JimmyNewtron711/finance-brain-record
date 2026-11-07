@@ -18,23 +18,23 @@
     "SPY": "tr"
   },
   "emitter": {
-    "git_sha": "d54898ecb85dd0aacfbbe6895577fc085238c952",
+    "git_sha": "64f6628f3a244ec1f65909b4e5d91f4d986c429c",
     "rule": "cand_vm6040",
     "rule_sha256": "5038a96d4ddfac83eb511e9e4ac997abd8a22b3b47dcf4f9dd31d007763042a4",
     "manifest_sha256": "377f7abf96f2662c4a2e500f00c40697371447c306d451640e4e433f0c43846a",
-    "data_fingerprint": "267cc921ef67de9b59b93fed04dcfdff6f9bd38e61fbb23e2cc508393fa2eb6a",
+    "data_fingerprint": "bc0f09f503073ad5900fb2734c3d2c1e62f147b015a9a7007d52b6d67497472f",
     "db_path_basename": "dashboard.db",
-    "tape_asof": "2026-10-31T23:10:02Z",
+    "tape_asof": "2026-11-03T00:10:02Z",
     "causality_check": {
       "dates_tested": [
-        "2026-08-03",
         "2026-09-01",
-        "2026-10-01"
+        "2026-10-01",
+        "2026-11-02"
       ],
       "max_abs_delta": 0.0
     },
-    "emitted_at": "2026-11-01T13:14:01Z",
-    "rows_appended": 130
+    "emitted_at": "2026-11-03T00:10:04Z",
+    "rows_appended": 1
   },
   "frozen_through": "2026-10-01",
   "rows": [
@@ -1076,6 +1076,14 @@
         "BIL": 0.000000,
         "IEF": 0.250614,
         "SPY": 0.375921
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "weights": {
+        "BIL": 0.000000,
+        "IEF": 0.303293,
+        "SPY": 0.454939
       }
     }
   ]

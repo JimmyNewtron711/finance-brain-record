@@ -18,23 +18,23 @@
     "normal_abs": 10.0
   },
   "emitter": {
-    "git_sha": "9b1795f2686879ad3f81b668688a660377a71cf5",
+    "git_sha": "cbdc325c6ca2f8ed0628880b9fa32a919f5239e6",
     "rule": "registry_composite",
-    "rule_sha256": "f2a8c1d8ecfa1fd225da1da472e592c7d7cd59021daecaafe6a261885ada3fde",
+    "rule_sha256": "3d291c1ccdbddd9e780468dcdd4aaf410d5e04c2ae3656e09c5d4e9815143409",
     "manifest_sha256": "e37bc7f351b6b479abae6a6bc3148a0c7f48406c615515c44d75fce14aa80d6d",
-    "data_fingerprint": "4634e562538b5e7f69ac0c1700f05a4c23f96a5c4c7b3f9a8085eb1e9ffc6d7e",
+    "data_fingerprint": "e45d976fad2e99ca8218901a1009fe779f8b98f204562552ee36ee0ead1bb19f",
     "db_path_basename": "dashboard.db",
-    "tape_asof": "2026-09-04",
+    "tape_asof": "2026-10-09",
     "causality_check": {
       "dates_tested": [
-        "2026-07-01",
         "2026-08-03",
-        "2026-09-01"
+        "2026-09-01",
+        "2026-10-01"
       ],
       "max_abs_delta": 0.0
     },
-    "emitted_at": "2026-09-07T14:24:50Z",
-    "rows_appended": 2
+    "emitted_at": "2026-10-12T12:15:46Z",
+    "rows_appended": 1
   },
   "frozen_through": "2026-07-01",
   "rows": [
@@ -2448,6 +2448,18 @@
         "EQ_XLU": -12.276797,
         "EQ_XLV": -2.514625,
         "SPY": -5.841426
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "forecast": {
+        "DCOILWTICO": -14.644872,
+        "EQ_GLD": -6.357171,
+        "EQ_TLT": -11.262527,
+        "EQ_XLP": -14.443041,
+        "EQ_XLU": -5.13478,
+        "EQ_XLV": -2.792689,
+        "SPY": -4.684149
       }
     }
   ]

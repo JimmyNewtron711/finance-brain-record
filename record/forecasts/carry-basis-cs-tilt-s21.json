@@ -22,23 +22,23 @@
     "normal_abs": 10.0
   },
   "emitter": {
-    "git_sha": "015eb325877bfbd79fb36ae794501ca885582c12",
+    "git_sha": "64f6628f3a244ec1f65909b4e5d91f4d986c429c",
     "rule": "carry_tilt",
     "rule_sha256": "2b80d94eb023c578b2b90172a4082732f2843ca1de6daae073debb503cb4287c",
     "manifest_sha256": "9e89bae09271265e78cb3fb0ce4203d8c603e580fe8c5f9bd69976976b3f7346",
-    "data_fingerprint": "a1dd504e3ffbca687827c3f1535267069a2738c828809ec8cb26232e20011800",
+    "data_fingerprint": "87efdbc0c8652212cb410ac79e8a72dd44628d3766468bd34c3d6453ffdf4be3",
     "db_path_basename": "dashboard.db",
-    "tape_asof": "2026-09-05T04:20:11Z",
+    "tape_asof": "2026-11-02T23:35:01Z",
     "causality_check": {
       "dates_tested": [
-        "2026-05-01",
-        "2026-06-01",
-        "2026-07-01"
+        "2026-09-01",
+        "2026-10-01",
+        "2026-11-02"
       ],
       "max_abs_delta": 0.0
     },
-    "emitted_at": "2026-09-05T13:51:03Z",
-    "rows_appended": 127
+    "emitted_at": "2026-11-03T00:10:05Z",
+    "rows_appended": 1
   },
   "frozen_through": "2026-07-01",
   "rows": [
@@ -2072,6 +2072,70 @@
         "TLT": 9.0,
         "USO": 0.0,
         "VNQ": 6.0
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "forecast": {
+        "GLD": 1.0,
+        "HYG": 9.0,
+        "IEF": 6.0,
+        "IWM": 3.0,
+        "LQD": 7.0,
+        "QQQ": 2.0,
+        "SLV": 0.0,
+        "SPY": 4.0,
+        "TLT": 8.0,
+        "USO": 10.0,
+        "VNQ": 5.0
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "forecast": {
+        "GLD": 9.0,
+        "HYG": 8.0,
+        "IEF": 5.0,
+        "IWM": 2.0,
+        "LQD": 6.0,
+        "QQQ": 0.0,
+        "SLV": 1.0,
+        "SPY": 3.0,
+        "TLT": 7.0,
+        "USO": 10.0,
+        "VNQ": 4.0
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "forecast": {
+        "GLD": 9.0,
+        "HYG": 8.0,
+        "IEF": 6.0,
+        "IWM": 2.0,
+        "LQD": 5.0,
+        "QQQ": 1.0,
+        "SLV": 0.0,
+        "SPY": 3.0,
+        "TLT": 7.0,
+        "USO": 10.0,
+        "VNQ": 4.0
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "forecast": {
+        "GLD": 1.0,
+        "HYG": 9.0,
+        "IEF": 7.0,
+        "IWM": 3.0,
+        "LQD": 6.0,
+        "QQQ": 2.0,
+        "SLV": 0.0,
+        "SPY": 4.0,
+        "TLT": 8.0,
+        "USO": 10.0,
+        "VNQ": 5.0
       }
     }
   ]
