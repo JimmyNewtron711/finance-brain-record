@@ -1,0 +1,8 @@
+{
+  "withheld": "figures derived from the licensed Norgate store stay in the private repo (Amendment 2026-10-17 (K1) (4)(a), the strict reading ruled 2026-10-23)",
+  "sha256": "f37e0097c48156103a56da5a4f3a86a9a5319bcdda5ce93f0da00cb1868a3275",
+  "schema": "probe_receipt_v1",
+  "row": "treasury-commodity-disinflation-lag",
+  "clears": false,
+  "computed_at": "2026-11-13T20:39:49-05:00"
+}

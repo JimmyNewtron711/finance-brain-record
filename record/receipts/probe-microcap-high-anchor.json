@@ -1,0 +1,1310 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "microcap-high-anchor",
+  "vendor": "sharadar",
+  "computed_at": "2026-11-13T19:26:45-05:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form; the factory's F1 of 2026-11-13",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery cohorts, a counted trial, never re-run. No request: the held Sharadar store, read-only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "the net return of one cohort of the row's own book over its six-month hold, over 6 (the field's frozen rule xs_microcap_high_anchor, PARAMS {\"window\": 252, \"cohorts\": 6}, one cohort: formed at a month-end on the micro pool's close over its 252-session tr-basis max high, long the highest decile +0.5 against the lowest -0.5, its formation weights restored at the next five month-ends and flat at the open after the sixth; the field's engine at the entry replay's B7 cost line, thickened): its sigma, turnover and cost alone",
+  "rule_path": "orient/research-py/src/superbrain/field/xs_signals/microcap_high_anchor.py",
+  "rule_sha256": "9616939bab32449bf0a7f49a92f78f277f2f2a434d10eef72671c9c7b3f6b5c7",
+  "sigma": 1.4561265180190313,
+  "sigma_gross": 1.4531844237974678,
+  "n": 127,
+  "turnover": 0.4321115078034757,
+  "cost": 0.7026549117208165,
+  "units": "percent per month: a six-month cohort's return over 6 (the row's Stage-1 unit, form mean, n 200, h 6; prior 0.225); turnover one-way per month",
+  "per_cohort": {
+    "sigma": 8.736759108114187,
+    "sigma_gross": 8.719106542784807,
+    "turnover": 2.592669046820854,
+    "cost": 4.215929470324899,
+    "units": "percent per six-month cohort"
+  },
+  "sigma_on": "all 127 month-end cohorts (formed 1998-12-31 → 2009-06-30)",
+  "cohorts": [
+    {
+      "formed": "1998-12-31",
+      "flat_at": "1999-07-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 4145,
+      "long": 380,
+      "short": 279,
+      "cash": false
+    },
+    {
+      "formed": "1999-01-29",
+      "flat_at": "1999-08-02",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 4052,
+      "long": 372,
+      "short": 270,
+      "cash": false
+    },
+    {
+      "formed": "1999-02-26",
+      "flat_at": "1999-09-01",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 4037,
+      "long": 371,
+      "short": 270,
+      "cash": false
+    },
+    {
+      "formed": "1999-03-31",
+      "flat_at": "1999-10-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 4020,
+      "long": 372,
+      "short": 273,
+      "cash": false
+    },
+    {
+      "formed": "1999-04-30",
+      "flat_at": "1999-11-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 4036,
+      "long": 375,
+      "short": 285,
+      "cash": false
+    },
+    {
+      "formed": "1999-06-01",
+      "flat_at": "1999-12-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3982,
+      "long": 372,
+      "short": 285,
+      "cash": false
+    },
+    {
+      "formed": "1999-06-30",
+      "flat_at": "2000-01-03",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3989,
+      "long": 372,
+      "short": 287,
+      "cash": false
+    },
+    {
+      "formed": "1999-07-30",
+      "flat_at": "2000-02-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3955,
+      "long": 370,
+      "short": 290,
+      "cash": false
+    },
+    {
+      "formed": "1999-08-31",
+      "flat_at": "2000-03-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3899,
+      "long": 364,
+      "short": 299,
+      "cash": false
+    },
+    {
+      "formed": "1999-09-30",
+      "flat_at": "2000-04-03",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3862,
+      "long": 360,
+      "short": 288,
+      "cash": false
+    },
+    {
+      "formed": "1999-10-29",
+      "flat_at": "2000-05-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3806,
+      "long": 354,
+      "short": 292,
+      "cash": false
+    },
+    {
+      "formed": "1999-11-30",
+      "flat_at": "2000-06-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 3672,
+      "long": 342,
+      "short": 285,
+      "cash": false
+    },
+    {
+      "formed": "1999-12-31",
+      "flat_at": "2000-07-03",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 3589,
+      "long": 335,
+      "short": 288,
+      "cash": false
+    },
+    {
+      "formed": "2000-01-31",
+      "flat_at": "2000-08-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 3527,
+      "long": 331,
+      "short": 281,
+      "cash": false
+    },
+    {
+      "formed": "2000-02-29",
+      "flat_at": "2000-09-01",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 3391,
+      "long": 318,
+      "short": 277,
+      "cash": false
+    },
+    {
+      "formed": "2000-03-31",
+      "flat_at": "2000-10-02",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 3414,
+      "long": 320,
+      "short": 268,
+      "cash": false
+    },
+    {
+      "formed": "2000-04-28",
+      "flat_at": "2000-11-01",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 3560,
+      "long": 330,
+      "short": 272,
+      "cash": false
+    },
+    {
+      "formed": "2000-05-31",
+      "flat_at": "2000-12-01",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3663,
+      "long": 339,
+      "short": 292,
+      "cash": false
+    },
+    {
+      "formed": "2000-06-30",
+      "flat_at": "2001-01-02",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 3551,
+      "long": 332,
+      "short": 285,
+      "cash": false
+    },
+    {
+      "formed": "2000-07-31",
+      "flat_at": "2001-02-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3561,
+      "long": 334,
+      "short": 287,
+      "cash": false
+    },
+    {
+      "formed": "2000-08-31",
+      "flat_at": "2001-03-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 3525,
+      "long": 330,
+      "short": 295,
+      "cash": false
+    },
+    {
+      "formed": "2000-09-29",
+      "flat_at": "2001-04-02",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3534,
+      "long": 331,
+      "short": 296,
+      "cash": false
+    },
+    {
+      "formed": "2000-10-31",
+      "flat_at": "2001-05-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 3538,
+      "long": 332,
+      "short": 298,
+      "cash": false
+    },
+    {
+      "formed": "2000-11-30",
+      "flat_at": "2001-06-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3632,
+      "long": 340,
+      "short": 312,
+      "cash": false
+    },
+    {
+      "formed": "2000-12-29",
+      "flat_at": "2001-07-02",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3640,
+      "long": 342,
+      "short": 307,
+      "cash": false
+    },
+    {
+      "formed": "2001-01-31",
+      "flat_at": "2001-08-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3566,
+      "long": 335,
+      "short": 314,
+      "cash": false
+    },
+    {
+      "formed": "2001-02-28",
+      "flat_at": "2001-09-04",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 3651,
+      "long": 345,
+      "short": 317,
+      "cash": false
+    },
+    {
+      "formed": "2001-03-30",
+      "flat_at": "2001-10-01",
+      "hold": 122,
+      "short_by_one": false,
+      "pool": 3666,
+      "long": 346,
+      "short": 301,
+      "cash": false
+    },
+    {
+      "formed": "2001-04-30",
+      "flat_at": "2001-11-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3594,
+      "long": 341,
+      "short": 304,
+      "cash": false
+    },
+    {
+      "formed": "2001-05-31",
+      "flat_at": "2001-12-03",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3525,
+      "long": 336,
+      "short": 302,
+      "cash": false
+    },
+    {
+      "formed": "2001-06-29",
+      "flat_at": "2002-01-02",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 3485,
+      "long": 333,
+      "short": 308,
+      "cash": false
+    },
+    {
+      "formed": "2001-07-31",
+      "flat_at": "2002-02-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 3492,
+      "long": 336,
+      "short": 311,
+      "cash": false
+    },
+    {
+      "formed": "2001-08-31",
+      "flat_at": "2002-03-01",
+      "hold": 119,
+      "short_by_one": false,
+      "pool": 3460,
+      "long": 336,
+      "short": 298,
+      "cash": false
+    },
+    {
+      "formed": "2001-09-28",
+      "flat_at": "2002-04-02",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3439,
+      "long": 334,
+      "short": 303,
+      "cash": false
+    },
+    {
+      "formed": "2001-10-31",
+      "flat_at": "2002-05-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 3372,
+      "long": 330,
+      "short": 300,
+      "cash": false
+    },
+    {
+      "formed": "2001-11-30",
+      "flat_at": "2002-06-03",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3303,
+      "long": 324,
+      "short": 308,
+      "cash": false
+    },
+    {
+      "formed": "2001-12-31",
+      "flat_at": "2002-07-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3292,
+      "long": 323,
+      "short": 308,
+      "cash": false
+    },
+    {
+      "formed": "2002-01-31",
+      "flat_at": "2002-08-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3269,
+      "long": 320,
+      "short": 314,
+      "cash": false
+    },
+    {
+      "formed": "2002-02-28",
+      "flat_at": "2002-09-03",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3295,
+      "long": 323,
+      "short": 316,
+      "cash": false
+    },
+    {
+      "formed": "2002-04-01",
+      "flat_at": "2002-10-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3272,
+      "long": 321,
+      "short": 321,
+      "cash": false
+    },
+    {
+      "formed": "2002-04-30",
+      "flat_at": "2002-11-01",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 3293,
+      "long": 323,
+      "short": 323,
+      "cash": false
+    },
+    {
+      "formed": "2002-05-31",
+      "flat_at": "2002-12-02",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3343,
+      "long": 328,
+      "short": 328,
+      "cash": false
+    },
+    {
+      "formed": "2002-06-28",
+      "flat_at": "2003-01-02",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3339,
+      "long": 327,
+      "short": 318,
+      "cash": false
+    },
+    {
+      "formed": "2002-07-31",
+      "flat_at": "2003-02-03",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3329,
+      "long": 325,
+      "short": 325,
+      "cash": false
+    },
+    {
+      "formed": "2002-08-30",
+      "flat_at": "2003-03-03",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3292,
+      "long": 322,
+      "short": 322,
+      "cash": false
+    },
+    {
+      "formed": "2002-09-30",
+      "flat_at": "2003-04-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3298,
+      "long": 322,
+      "short": 322,
+      "cash": false
+    },
+    {
+      "formed": "2002-10-31",
+      "flat_at": "2003-05-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 3210,
+      "long": 313,
+      "short": 313,
+      "cash": false
+    },
+    {
+      "formed": "2002-11-29",
+      "flat_at": "2003-06-02",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3196,
+      "long": 311,
+      "short": 311,
+      "cash": false
+    },
+    {
+      "formed": "2002-12-31",
+      "flat_at": "2003-07-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3219,
+      "long": 313,
+      "short": 313,
+      "cash": false
+    },
+    {
+      "formed": "2003-01-31",
+      "flat_at": "2003-08-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3182,
+      "long": 310,
+      "short": 310,
+      "cash": false
+    },
+    {
+      "formed": "2003-02-28",
+      "flat_at": "2003-09-02",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3163,
+      "long": 308,
+      "short": 308,
+      "cash": false
+    },
+    {
+      "formed": "2003-03-31",
+      "flat_at": "2003-10-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3104,
+      "long": 302,
+      "short": 302,
+      "cash": false
+    },
+    {
+      "formed": "2003-04-30",
+      "flat_at": "2003-11-03",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 3100,
+      "long": 302,
+      "short": 302,
+      "cash": false
+    },
+    {
+      "formed": "2003-05-30",
+      "flat_at": "2003-12-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3056,
+      "long": 299,
+      "short": 299,
+      "cash": false
+    },
+    {
+      "formed": "2003-06-30",
+      "flat_at": "2004-01-02",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3049,
+      "long": 298,
+      "short": 298,
+      "cash": false
+    },
+    {
+      "formed": "2003-07-31",
+      "flat_at": "2004-02-02",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 3027,
+      "long": 295,
+      "short": 295,
+      "cash": false
+    },
+    {
+      "formed": "2003-08-29",
+      "flat_at": "2004-03-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3009,
+      "long": 294,
+      "short": 294,
+      "cash": false
+    },
+    {
+      "formed": "2003-09-30",
+      "flat_at": "2004-04-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 3003,
+      "long": 293,
+      "short": 293,
+      "cash": false
+    },
+    {
+      "formed": "2003-10-31",
+      "flat_at": "2004-05-03",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2970,
+      "long": 289,
+      "short": 289,
+      "cash": false
+    },
+    {
+      "formed": "2003-11-28",
+      "flat_at": "2004-06-02",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2942,
+      "long": 286,
+      "short": 286,
+      "cash": false
+    },
+    {
+      "formed": "2003-12-31",
+      "flat_at": "2004-07-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2977,
+      "long": 288,
+      "short": 288,
+      "cash": false
+    },
+    {
+      "formed": "2004-01-30",
+      "flat_at": "2004-08-02",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 2951,
+      "long": 284,
+      "short": 284,
+      "cash": false
+    },
+    {
+      "formed": "2004-02-27",
+      "flat_at": "2004-09-01",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 2987,
+      "long": 287,
+      "short": 287,
+      "cash": false
+    },
+    {
+      "formed": "2004-03-31",
+      "flat_at": "2004-10-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2981,
+      "long": 284,
+      "short": 284,
+      "cash": false
+    },
+    {
+      "formed": "2004-04-30",
+      "flat_at": "2004-11-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2996,
+      "long": 285,
+      "short": 285,
+      "cash": false
+    },
+    {
+      "formed": "2004-06-01",
+      "flat_at": "2004-12-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2977,
+      "long": 282,
+      "short": 282,
+      "cash": false
+    },
+    {
+      "formed": "2004-06-30",
+      "flat_at": "2005-01-03",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3009,
+      "long": 283,
+      "short": 283,
+      "cash": false
+    },
+    {
+      "formed": "2004-07-30",
+      "flat_at": "2005-02-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3023,
+      "long": 284,
+      "short": 284,
+      "cash": false
+    },
+    {
+      "formed": "2004-08-31",
+      "flat_at": "2005-03-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 3026,
+      "long": 283,
+      "short": 283,
+      "cash": false
+    },
+    {
+      "formed": "2004-09-30",
+      "flat_at": "2005-04-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3029,
+      "long": 282,
+      "short": 282,
+      "cash": false
+    },
+    {
+      "formed": "2004-10-29",
+      "flat_at": "2005-05-02",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3007,
+      "long": 281,
+      "short": 281,
+      "cash": false
+    },
+    {
+      "formed": "2004-11-30",
+      "flat_at": "2005-06-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3013,
+      "long": 281,
+      "short": 281,
+      "cash": false
+    },
+    {
+      "formed": "2004-12-31",
+      "flat_at": "2005-07-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3016,
+      "long": 281,
+      "short": 281,
+      "cash": false
+    },
+    {
+      "formed": "2005-01-31",
+      "flat_at": "2005-08-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 3012,
+      "long": 281,
+      "short": 281,
+      "cash": false
+    },
+    {
+      "formed": "2005-02-28",
+      "flat_at": "2005-09-01",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 3035,
+      "long": 283,
+      "short": 283,
+      "cash": false
+    },
+    {
+      "formed": "2005-03-31",
+      "flat_at": "2005-10-03",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3028,
+      "long": 283,
+      "short": 283,
+      "cash": false
+    },
+    {
+      "formed": "2005-04-29",
+      "flat_at": "2005-11-01",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3036,
+      "long": 283,
+      "short": 283,
+      "cash": false
+    },
+    {
+      "formed": "2005-05-31",
+      "flat_at": "2005-12-01",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 3025,
+      "long": 283,
+      "short": 283,
+      "cash": false
+    },
+    {
+      "formed": "2005-06-30",
+      "flat_at": "2006-01-03",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3035,
+      "long": 284,
+      "short": 284,
+      "cash": false
+    },
+    {
+      "formed": "2005-07-29",
+      "flat_at": "2006-02-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 3022,
+      "long": 283,
+      "short": 283,
+      "cash": false
+    },
+    {
+      "formed": "2005-08-31",
+      "flat_at": "2006-03-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 2997,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2005-09-30",
+      "flat_at": "2006-04-03",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 2987,
+      "long": 279,
+      "short": 279,
+      "cash": false
+    },
+    {
+      "formed": "2005-10-31",
+      "flat_at": "2006-05-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 2975,
+      "long": 278,
+      "short": 278,
+      "cash": false
+    },
+    {
+      "formed": "2005-11-30",
+      "flat_at": "2006-06-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2981,
+      "long": 279,
+      "short": 279,
+      "cash": false
+    },
+    {
+      "formed": "2005-12-30",
+      "flat_at": "2006-07-03",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 2976,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2006-01-31",
+      "flat_at": "2006-08-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 2965,
+      "long": 279,
+      "short": 279,
+      "cash": false
+    },
+    {
+      "formed": "2006-02-28",
+      "flat_at": "2006-09-01",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 2948,
+      "long": 277,
+      "short": 277,
+      "cash": false
+    },
+    {
+      "formed": "2006-03-31",
+      "flat_at": "2006-10-02",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2984,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2006-04-28",
+      "flat_at": "2006-11-01",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 2985,
+      "long": 279,
+      "short": 279,
+      "cash": false
+    },
+    {
+      "formed": "2006-05-31",
+      "flat_at": "2006-12-01",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 2979,
+      "long": 278,
+      "short": 278,
+      "cash": false
+    },
+    {
+      "formed": "2006-06-30",
+      "flat_at": "2007-01-03",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 3011,
+      "long": 281,
+      "short": 281,
+      "cash": false
+    },
+    {
+      "formed": "2006-07-31",
+      "flat_at": "2007-02-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2989,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2006-08-31",
+      "flat_at": "2007-03-01",
+      "hold": 122,
+      "short_by_one": false,
+      "pool": 2970,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2006-09-29",
+      "flat_at": "2007-04-02",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2972,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2006-10-31",
+      "flat_at": "2007-05-01",
+      "hold": 122,
+      "short_by_one": false,
+      "pool": 2963,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2006-11-30",
+      "flat_at": "2007-06-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 2981,
+      "long": 281,
+      "short": 281,
+      "cash": false
+    },
+    {
+      "formed": "2006-12-29",
+      "flat_at": "2007-07-02",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2971,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2007-01-31",
+      "flat_at": "2007-08-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 2956,
+      "long": 279,
+      "short": 279,
+      "cash": false
+    },
+    {
+      "formed": "2007-02-28",
+      "flat_at": "2007-09-04",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 2955,
+      "long": 279,
+      "short": 279,
+      "cash": false
+    },
+    {
+      "formed": "2007-03-30",
+      "flat_at": "2007-10-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2950,
+      "long": 277,
+      "short": 277,
+      "cash": false
+    },
+    {
+      "formed": "2007-04-30",
+      "flat_at": "2007-11-01",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 2948,
+      "long": 278,
+      "short": 278,
+      "cash": false
+    },
+    {
+      "formed": "2007-05-31",
+      "flat_at": "2007-12-03",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 2956,
+      "long": 277,
+      "short": 277,
+      "cash": false
+    },
+    {
+      "formed": "2007-06-29",
+      "flat_at": "2008-01-02",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 2927,
+      "long": 275,
+      "short": 275,
+      "cash": false
+    },
+    {
+      "formed": "2007-07-31",
+      "flat_at": "2008-02-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 2898,
+      "long": 272,
+      "short": 272,
+      "cash": false
+    },
+    {
+      "formed": "2007-08-31",
+      "flat_at": "2008-03-03",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2908,
+      "long": 271,
+      "short": 271,
+      "cash": false
+    },
+    {
+      "formed": "2007-09-28",
+      "flat_at": "2008-04-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 2872,
+      "long": 268,
+      "short": 268,
+      "cash": false
+    },
+    {
+      "formed": "2007-10-31",
+      "flat_at": "2008-05-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2859,
+      "long": 268,
+      "short": 268,
+      "cash": false
+    },
+    {
+      "formed": "2007-11-30",
+      "flat_at": "2008-06-02",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2826,
+      "long": 264,
+      "short": 264,
+      "cash": false
+    },
+    {
+      "formed": "2007-12-31",
+      "flat_at": "2008-07-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 2814,
+      "long": 263,
+      "short": 263,
+      "cash": false
+    },
+    {
+      "formed": "2008-01-31",
+      "flat_at": "2008-08-01",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2861,
+      "long": 267,
+      "short": 267,
+      "cash": false
+    },
+    {
+      "formed": "2008-02-29",
+      "flat_at": "2008-09-02",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 2861,
+      "long": 268,
+      "short": 268,
+      "cash": false
+    },
+    {
+      "formed": "2008-03-31",
+      "flat_at": "2008-10-01",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 2851,
+      "long": 267,
+      "short": 267,
+      "cash": false
+    },
+    {
+      "formed": "2008-04-30",
+      "flat_at": "2008-11-03",
+      "hold": 129,
+      "short_by_one": false,
+      "pool": 2825,
+      "long": 266,
+      "short": 266,
+      "cash": false
+    },
+    {
+      "formed": "2008-05-30",
+      "flat_at": "2008-12-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 2805,
+      "long": 266,
+      "short": 266,
+      "cash": false
+    },
+    {
+      "formed": "2008-06-30",
+      "flat_at": "2009-01-02",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 2784,
+      "long": 265,
+      "short": 265,
+      "cash": false
+    },
+    {
+      "formed": "2008-07-31",
+      "flat_at": "2009-02-02",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2733,
+      "long": 261,
+      "short": 261,
+      "cash": false
+    },
+    {
+      "formed": "2008-08-29",
+      "flat_at": "2009-03-02",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2735,
+      "long": 262,
+      "short": 262,
+      "cash": false
+    },
+    {
+      "formed": "2008-09-30",
+      "flat_at": "2009-04-01",
+      "hold": 125,
+      "short_by_one": false,
+      "pool": 2727,
+      "long": 261,
+      "short": 261,
+      "cash": false
+    },
+    {
+      "formed": "2008-10-31",
+      "flat_at": "2009-05-01",
+      "hold": 123,
+      "short_by_one": false,
+      "pool": 2600,
+      "long": 250,
+      "short": 250,
+      "cash": false
+    },
+    {
+      "formed": "2008-11-28",
+      "flat_at": "2009-06-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2549,
+      "long": 247,
+      "short": 247,
+      "cash": false
+    },
+    {
+      "formed": "2008-12-31",
+      "flat_at": "2009-07-01",
+      "hold": 124,
+      "short_by_one": false,
+      "pool": 2537,
+      "long": 247,
+      "short": 247,
+      "cash": false
+    },
+    {
+      "formed": "2009-01-30",
+      "flat_at": "2009-08-03",
+      "hold": 126,
+      "short_by_one": false,
+      "pool": 2499,
+      "long": 244,
+      "short": 244,
+      "cash": false
+    },
+    {
+      "formed": "2009-02-27",
+      "flat_at": "2009-09-01",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 2432,
+      "long": 238,
+      "short": 238,
+      "cash": false
+    },
+    {
+      "formed": "2009-03-31",
+      "flat_at": "2009-10-01",
+      "hold": 127,
+      "short_by_one": false,
+      "pool": 2424,
+      "long": 238,
+      "short": 238,
+      "cash": false
+    },
+    {
+      "formed": "2009-04-30",
+      "flat_at": "2009-11-02",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 2508,
+      "long": 246,
+      "short": 246,
+      "cash": false
+    },
+    {
+      "formed": "2009-05-29",
+      "flat_at": "2009-12-01",
+      "hold": 128,
+      "short_by_one": false,
+      "pool": 2486,
+      "long": 245,
+      "short": 245,
+      "cash": false
+    },
+    {
+      "formed": "2009-06-30",
+      "flat_at": "2009-12-31",
+      "hold": 127,
+      "short_by_one": true,
+      "pool": 2441,
+      "long": 241,
+      "short": 241,
+      "cash": false
+    }
+  ],
+  "carried_past_flat": {
+    "cohorts": 64,
+    "gross": 0.16983052174563473
+  },
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "1998-12-31",
+    "last_flat": "2009-12-31"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-microcap-high-anchor.py",
+  "script_sha256": "aec1a7336f493453becb48ad971bdb246b7405725e625b395b0af7ca51f0b698"
+}

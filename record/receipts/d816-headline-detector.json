@@ -1,0 +1,504 @@
+{
+ "schema": "d816_headline_detector_v1",
+ "generated_at": "2026-11-12T16:01:13-05:00",
+ "item": "D816 \u2014 headline_shocks_v1 S4's day-one detector and its fire drill (the replay half)",
+ "spec": "docs/superpowers/specs/2026-11-12-headline-shocks-design.md \u00a7 3 S4",
+ "command": "PYTHONPATH=src python -m superbrain.data.headline_events replay --from 2015-01-02 --to 2026-11-12 --root /home/brain/finance-brain --drill 2026-11-06 (from orient/research-py)",
+ "code": {
+  "git_sha": "bcc5d0371ec19b01dd2ec5cb83f94a04a0997166",
+  "file": "orient/research-py/src/superbrain/data/headline_events.py",
+  "sha256": "637789655ef1d197068482dab19aedcd7e664c77c0d9c9fde94217ea704d8993"
+ },
+ "x_only": "no return after a card's session is read; the filing and shock legs never join (Amendment 2026-10-01 (K1) B1 (2)); counts and the drill's own cards only, no headline text, no person named",
+ "start": "2015-01-02",
+ "end": "2026-11-12",
+ "last_bar": "2026-11-11",
+ "sessions": 2984,
+ "candidates": {
+  "shock": 14323,
+  "filing": 729
+ },
+ "windows": [
+  [
+   "2015-01-02",
+   "2026-11-12"
+  ],
+  [
+   "2024-01-01",
+   "2026-11-12"
+  ]
+ ],
+ "spec_rule_by_leg": {
+  "filing": {
+   "months": 143,
+   "cards": 728,
+   "per_month": 5.09,
+   "max_month": 17,
+   "months_over_2": 111
+  },
+  "shock": {
+   "months": 143,
+   "cards": 3145,
+   "per_month": 21.99,
+   "max_month": 325,
+   "months_over_2": 138
+  }
+ },
+ "tune": [
+  {
+   "change": "spec",
+   "size": null,
+   "shock": -0.08,
+   "shock_top": -0.05,
+   "per_month": [
+    27.08,
+    43.26
+   ],
+   "max_month": [
+    329,
+    89
+   ]
+  },
+  {
+   "change": "earnings",
+   "size": null,
+   "shock": -0.08,
+   "shock_top": -0.05,
+   "per_month": [
+    15.55,
+    25.74
+   ],
+   "max_month": [
+    329,
+    58
+   ]
+  },
+  {
+   "change": "retirements",
+   "size": null,
+   "shock": -0.08,
+   "shock_top": -0.05,
+   "per_month": [
+    12.85,
+    20.54
+   ],
+   "max_month": [
+    327,
+    56
+   ]
+  },
+  {
+   "change": "size 250",
+   "size": 250,
+   "shock": -0.08,
+   "shock_top": -0.05,
+   "per_month": [
+    5.9,
+    12.31
+   ],
+   "max_month": [
+    105,
+    48
+   ]
+  },
+  {
+   "change": "size 100",
+   "size": 100,
+   "shock": -0.08,
+   "shock_top": -0.05,
+   "per_month": [
+    2.92,
+    6.8
+   ],
+   "max_month": [
+    37,
+    37
+   ]
+  },
+  {
+   "change": "size 50",
+   "size": 50,
+   "shock": -0.08,
+   "shock_top": -0.05,
+   "per_month": [
+    1.8,
+    4.31
+   ],
+   "max_month": [
+    26,
+    26
+   ]
+  },
+  {
+   "change": "size 25",
+   "size": 25,
+   "shock": -0.08,
+   "shock_top": -0.05,
+   "per_month": [
+    1.25,
+    2.86
+   ],
+   "max_month": [
+    14,
+    14
+   ]
+  },
+  {
+   "change": "deeper",
+   "size": 25,
+   "shock": -0.09,
+   "shock_top": -0.06,
+   "per_month": [
+    0.68,
+    1.66
+   ],
+   "max_month": [
+    8,
+    8
+   ]
+  }
+ ],
+ "tuned_rule": {
+  "shock": -0.09,
+  "shock_top": -0.06,
+  "skip_earnings": true,
+  "codes": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7,
+   null
+  ],
+  "size": 25
+ },
+ "tuned_by_leg": {
+  "2015-01-02..2026-11-12": {
+   "filing": {
+    "months": 143,
+    "cards": 14,
+    "per_month": 0.1,
+    "max_month": 2,
+    "months_over_2": 0
+   },
+   "shock": {
+    "months": 143,
+    "cards": 83,
+    "per_month": 0.58,
+    "max_month": 8,
+    "months_over_2": 9
+   }
+  },
+  "2024-01-01..2026-11-12": {
+   "filing": {
+    "months": 35,
+    "cards": 8,
+    "per_month": 0.23,
+    "max_month": 2,
+    "months_over_2": 0
+   },
+   "shock": {
+    "months": 35,
+    "cards": 50,
+    "per_month": 1.43,
+    "max_month": 8,
+    "months_over_2": 5
+   }
+  }
+ },
+ "drill": {
+  "from": "2026-11-06",
+  "to": "2026-11-12",
+  "rule": "tuned",
+  "cards": [
+   {
+    "day": "2026-11-09",
+    "leg": "shock",
+    "ticker": "NVDA",
+    "rank": 2,
+    "excess": -0.0664,
+    "top": true,
+    "headlines": 64,
+    "earnings": false
+   },
+   {
+    "day": "2026-11-12",
+    "leg": "filing",
+    "ticker": "NVDA",
+    "rank": 2,
+    "code": 7
+   }
+  ]
+ },
+ "first_tuning": {
+  "note": "the same replay's candidates under tune without the size step (code a169d49c): the filing leg alone stayed over the target, so the shock bar ran to DEEPEST; superseded by the size step (spec \u00a7 1, a big company)",
+  "tuned_rule": {
+   "shock": -0.3,
+   "shock_top": -0.27,
+   "skip_earnings": true,
+   "codes": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    null
+   ]
+  },
+  "steps": [
+   {
+    "change": "spec",
+    "shock": -0.08,
+    "shock_top": -0.05,
+    "months": 143,
+    "cards": 3873,
+    "per_month": 27.08,
+    "max_month": 329,
+    "months_over_2": 143
+   },
+   {
+    "change": "earnings",
+    "shock": -0.08,
+    "shock_top": -0.05,
+    "months": 143,
+    "cards": 2224,
+    "per_month": 15.55,
+    "max_month": 329,
+    "months_over_2": 141
+   },
+   {
+    "change": "retirements",
+    "shock": -0.08,
+    "shock_top": -0.05,
+    "months": 143,
+    "cards": 1837,
+    "per_month": 12.85,
+    "max_month": 327,
+    "months_over_2": 132
+   },
+   {
+    "change": "deeper",
+    "shock": -0.09,
+    "shock_top": -0.06,
+    "months": 143,
+    "cards": 1359,
+    "per_month": 9.5,
+    "max_month": 253,
+    "months_over_2": 122
+   },
+   {
+    "change": "deeper",
+    "shock": -0.1,
+    "shock_top": -0.07,
+    "months": 143,
+    "cards": 1042,
+    "per_month": 7.29,
+    "max_month": 203,
+    "months_over_2": 112
+   },
+   {
+    "change": "deeper",
+    "shock": -0.11,
+    "shock_top": -0.08,
+    "months": 143,
+    "cards": 853,
+    "per_month": 5.97,
+    "max_month": 168,
+    "months_over_2": 100
+   },
+   {
+    "change": "deeper",
+    "shock": -0.12,
+    "shock_top": -0.09,
+    "months": 143,
+    "cards": 717,
+    "per_month": 5.01,
+    "max_month": 134,
+    "months_over_2": 88
+   },
+   {
+    "change": "deeper",
+    "shock": -0.13,
+    "shock_top": -0.1,
+    "months": 143,
+    "cards": 621,
+    "per_month": 4.34,
+    "max_month": 109,
+    "months_over_2": 83
+   },
+   {
+    "change": "deeper",
+    "shock": -0.14,
+    "shock_top": -0.11,
+    "months": 143,
+    "cards": 566,
+    "per_month": 3.96,
+    "max_month": 92,
+    "months_over_2": 77
+   },
+   {
+    "change": "deeper",
+    "shock": -0.15,
+    "shock_top": -0.12,
+    "months": 143,
+    "cards": 521,
+    "per_month": 3.64,
+    "max_month": 80,
+    "months_over_2": 72
+   },
+   {
+    "change": "deeper",
+    "shock": -0.16,
+    "shock_top": -0.13,
+    "months": 143,
+    "cards": 492,
+    "per_month": 3.44,
+    "max_month": 68,
+    "months_over_2": 70
+   },
+   {
+    "change": "deeper",
+    "shock": -0.17,
+    "shock_top": -0.14,
+    "months": 143,
+    "cards": 468,
+    "per_month": 3.27,
+    "max_month": 62,
+    "months_over_2": 69
+   },
+   {
+    "change": "deeper",
+    "shock": -0.18,
+    "shock_top": -0.15,
+    "months": 143,
+    "cards": 448,
+    "per_month": 3.13,
+    "max_month": 49,
+    "months_over_2": 67
+   },
+   {
+    "change": "deeper",
+    "shock": -0.19,
+    "shock_top": -0.16,
+    "months": 143,
+    "cards": 425,
+    "per_month": 2.97,
+    "max_month": 38,
+    "months_over_2": 65
+   },
+   {
+    "change": "deeper",
+    "shock": -0.2,
+    "shock_top": -0.17,
+    "months": 143,
+    "cards": 412,
+    "per_month": 2.88,
+    "max_month": 33,
+    "months_over_2": 65
+   },
+   {
+    "change": "deeper",
+    "shock": -0.21,
+    "shock_top": -0.18,
+    "months": 143,
+    "cards": 399,
+    "per_month": 2.79,
+    "max_month": 28,
+    "months_over_2": 64
+   },
+   {
+    "change": "deeper",
+    "shock": -0.22,
+    "shock_top": -0.19,
+    "months": 143,
+    "cards": 388,
+    "per_month": 2.71,
+    "max_month": 22,
+    "months_over_2": 63
+   },
+   {
+    "change": "deeper",
+    "shock": -0.23,
+    "shock_top": -0.2,
+    "months": 143,
+    "cards": 378,
+    "per_month": 2.64,
+    "max_month": 18,
+    "months_over_2": 63
+   },
+   {
+    "change": "deeper",
+    "shock": -0.24,
+    "shock_top": -0.21,
+    "months": 143,
+    "cards": 372,
+    "per_month": 2.6,
+    "max_month": 16,
+    "months_over_2": 63
+   },
+   {
+    "change": "deeper",
+    "shock": -0.25,
+    "shock_top": -0.22,
+    "months": 143,
+    "cards": 371,
+    "per_month": 2.59,
+    "max_month": 15,
+    "months_over_2": 63
+   },
+   {
+    "change": "deeper",
+    "shock": -0.26,
+    "shock_top": -0.23,
+    "months": 143,
+    "cards": 367,
+    "per_month": 2.57,
+    "max_month": 12,
+    "months_over_2": 62
+   },
+   {
+    "change": "deeper",
+    "shock": -0.27,
+    "shock_top": -0.24,
+    "months": 143,
+    "cards": 362,
+    "per_month": 2.53,
+    "max_month": 10,
+    "months_over_2": 62
+   },
+   {
+    "change": "deeper",
+    "shock": -0.28,
+    "shock_top": -0.25,
+    "months": 143,
+    "cards": 359,
+    "per_month": 2.51,
+    "max_month": 10,
+    "months_over_2": 61
+   },
+   {
+    "change": "deeper",
+    "shock": -0.29,
+    "shock_top": -0.26,
+    "months": 143,
+    "cards": 359,
+    "per_month": 2.51,
+    "max_month": 10,
+    "months_over_2": 61
+   },
+   {
+    "change": "deeper",
+    "shock": -0.3,
+    "shock_top": -0.27,
+    "months": 143,
+    "cards": 354,
+    "per_month": 2.48,
+    "max_month": 10,
+    "months_over_2": 61
+   }
+  ]
+ },
+ "drill_note": "the replay of 2026-11-06 to 11-12 cards NVDA on 11-09 (shock) and 11-12 (the Item 5.02 filing, accession 0001045810-26-000082, accepted 08:52 ET, code 7 by S2's rule); Sharadar's bars end 2026-11-11, so 11-12's price leg is read once 11-12's bars land (11-13 05:50 ET)"
+}

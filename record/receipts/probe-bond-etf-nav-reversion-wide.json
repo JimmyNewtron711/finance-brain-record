@@ -1,0 +1,180 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "bond-etf-nav-reversion-wide",
+  "vendor": "ishares NAV export (data/raw/blackrock) + sharadar funds",
+  "computed_at": "2026-11-14T09:56:34-05:00",
+  "authority": "the 2026-11-14 (K1) dated line under Amendment 2026-09-11 (K1) (2), bond-ETF NAV (90a80ec1), its (3) and (5) (D1 (i), D2 (i)); factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); the inbox ruling of 2026-10-24 (a) (D533), its (b); D851",
+  "note": "σ-only (D533 (b)): no mean IC, no mean return, no clears; one read of the discovery window, a counted trial, never re-run. No request: the scratch pull's 25 NAV exports (one request a fund, 58420ea9) and the held Sharadar store, read-only. The cost line is 2026 spreads (D850's Alpaca SIP fills, 37da8bb8) charged against 2008 → 2015. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "per session t, the Spearman rank IC over the pooled cross-section of −x (x = ln(close ÷ NAV) at t less its group's mean) against y (the closeadj return t+1 → t+6 less its group's mean); and the L/S expression: every 5th session, within each group w ∝ −(the rank of x − the mean rank), Σ|w| = 1, held t+1 → t+6, charged the arena's cost line on Σ|dw|: its sigma, turnover and cost alone",
+  "sigma_ic": 0.37686109620358016,
+  "n_ic": 2009,
+  "sigma": 0.27542745504907507,
+  "sigma_gross": 0.27518571952556997,
+  "n": 402,
+  "turnover": 0.7673990657165863,
+  "cost": 0.017474157925912965,
+  "xs_dispersion": 0.4903301262287492,
+  "loading": 1.0377044534138387,
+  "units": "sigma, sigma_gross, cost and xs_dispersion in percent per 5-session hold; turnover one-way Σ|dw| a rebalance; sigma_ic in rank-IC units per session; loading dimensionless (Σ w s)",
+  "cost_line_bp_per_side": 2.277062705255687,
+  "cost_line_receipt": "govern/receipts/bond-etf-nav-cost-line-2026-11-14.json",
+  "names_per_hold": {
+    "min": 7,
+    "max": 25
+  },
+  "by_year": {
+    "2008": {
+      "sessions": 253,
+      "names_min": 7,
+      "names_max": 8
+    },
+    "2009": {
+      "sessions": 252,
+      "names_min": 8,
+      "names_max": 9
+    },
+    "2010": {
+      "sessions": 252,
+      "names_min": 9,
+      "names_max": 9
+    },
+    "2011": {
+      "sessions": 252,
+      "names_min": 9,
+      "names_max": 12
+    },
+    "2012": {
+      "sessions": 250,
+      "names_min": 12,
+      "names_max": 18
+    },
+    "2013": {
+      "sessions": 252,
+      "names_min": 18,
+      "names_max": 20
+    },
+    "2014": {
+      "sessions": 252,
+      "names_min": 20,
+      "names_max": 22
+    },
+    "2015": {
+      "sessions": 246,
+      "names_min": 22,
+      "names_max": 25
+    }
+  },
+  "window": {
+    "start": "2008-01-02",
+    "end": "2015-12-31",
+    "first_ic": "2008-01-02",
+    "last_ic": "2015-12-22",
+    "first_hold": "2008-01-02",
+    "last_hold": "2015-12-17"
+  },
+  "nav_payloads": {
+    "CEMB": {
+      "id": 21,
+      "sha256": "a1c58798b4725ea472b13c3ea86297b2270fe6f25a548d93ede392883073ef31"
+    },
+    "CMF": {
+      "id": 10,
+      "sha256": "5673d595b4ad947671a161049d2727d658cade90caf0ea1152fdbaa76993f0a4"
+    },
+    "EMB": {
+      "id": 12,
+      "sha256": "9dcfb23bc1b1ddb5220420602823adccd219a745aeec030269381dd2eb08761e"
+    },
+    "EMHY": {
+      "id": 18,
+      "sha256": "cd2dc86d61682402f978a03bd9f7e4df75bbce8c9b4930a3979b9135429445cd"
+    },
+    "EUHY": {
+      "id": 19,
+      "sha256": "4546939daa8d5d51b34ab548d3af99b3b574bc3403b4b107753aa342999c7057"
+    },
+    "FLOT": {
+      "id": 15,
+      "sha256": "12cde3309080d6be2970cc4844d68111a47e902e0fc88a685d5e53ea602673c0"
+    },
+    "GHYG": {
+      "id": 20,
+      "sha256": "32cd1bc606440193f16fed2e70ce2adc906cc0344350e4f8cd35046ffa2013aa"
+    },
+    "HYG": {
+      "id": 8,
+      "sha256": "4865444e206d1a835411cc5d9da3858a9f6db45a7e3831f116e38fb593706481"
+    },
+    "HYGH": {
+      "id": 24,
+      "sha256": "2517fe845bd0a7cbaa6d54ac5ad3d3c11f8a423bd0816c34a33de44816e533db"
+    },
+    "ICVT": {
+      "id": 27,
+      "sha256": "26f16c7e811520f972912564263f6983ad3298ea0ffb51842acb94fe72389e1e"
+    },
+    "IGBH": {
+      "id": 28,
+      "sha256": "eee936e664a3775991ddecef7c989867ebcac7f517c7e5705ff024e8c3115c29"
+    },
+    "IGIB": {
+      "id": 5,
+      "sha256": "35dde3b46c5998ff4ee10dab7435ddd4807d7c7d8f455b255dcdbe3e5175f328"
+    },
+    "IGLB": {
+      "id": 14,
+      "sha256": "c8204a612c0227d75dc0085f21c8304bb7ca5316e73b17aaa8c80976d63e2a16"
+    },
+    "IGSB": {
+      "id": 6,
+      "sha256": "0b150759a0458b472b437c5a86e9fa53d9419cb25f6b59b69e9049329bd23325"
+    },
+    "LEMB": {
+      "id": 16,
+      "sha256": "1778bffea4ba1bcc73fc6bb6a2b313b3c389bfb4e672f6b36b683b3cde4ab3e7"
+    },
+    "LQD": {
+      "id": 4,
+      "sha256": "3b81afa5905add554f7995aa8f6282f2d03f3e13bd7a6e810947eae218949cfe"
+    },
+    "LQDH": {
+      "id": 25,
+      "sha256": "99169c15ee932c4c765548042c9e26fda5632390b6475f0709b91bed8bca1c7f"
+    },
+    "MEAR": {
+      "id": 26,
+      "sha256": "961210ca9b040967c8200e02cc82a447d29330d04790a2b2f47da29832dd73f8"
+    },
+    "MUB": {
+      "id": 9,
+      "sha256": "152f2129895d492f4a8413eb09e32789a36f417e3bcfbeef560daf0a38d456bf"
+    },
+    "NYF": {
+      "id": 11,
+      "sha256": "bbc975f7b8d699ceb3d6cfd85599a5fef54981f1eb37b0582e6a9d931ed31228"
+    },
+    "QLTA": {
+      "id": 17,
+      "sha256": "a7b64a87d5a2d20c2462708d74f3c108e4cd531509a3f913ed94eb31e853f0ff"
+    },
+    "SHYG": {
+      "id": 22,
+      "sha256": "9f72fb9f2dbe499184ecd703146a83bec7721486550bbba65ddec6f4a0a4d852"
+    },
+    "SLQD": {
+      "id": 23,
+      "sha256": "312d7758f96bd632131b6a301bc3fc07014a73ac7136302d060d3903ca9db693"
+    },
+    "SUB": {
+      "id": 13,
+      "sha256": "f843c43c312d065045bd3006425fc7a40af956ce2eb9d5ff6dbe67d3594e4b1e"
+    },
+    "USIG": {
+      "id": 7,
+      "sha256": "1c66513f497938baf484df15b4e23d2fd32bfe0f8958ccaea3f6e1d5ef4fa11b"
+    }
+  },
+  "pulled_via": "orient/investigations/pull-bond-etf-nav-reversion-wide.mjs (58420ea9): one get-fund-document request a fund through rawFetch, 2026-11-14; prices from the held Sharadar store, read-only",
+  "script_path": "orient/investigations/probe-bond-etf-nav-reversion-wide.py",
+  "script_sha256": "87088ed1a6f74079953a60e293c6f2ada171edc5dbdaa4f25368b238a2ce4a0c"
+}

@@ -1,0 +1,899 @@
+{
+ "schema": "scan_receipt_v1",
+ "item": "D829",
+ "computed_at": "2026-11-12T18:46:06-05:00",
+ "script_path": "orient/investigations/scan-b5-jumps.py",
+ "script_sha256": "33f8d2d1b7edc5b6b3a203dcd5e94d5c782f1d42b41b61ac17263a7d9562ee61",
+ "commands": [
+  "python orient/investigations/scan-b5-jumps.py",
+  "python orient/investigations/scan-b5-jumps.py --cap 2009-12-31",
+  "python orient/investigations/scan-b5-jumps.py --cap 2009-12-31 --replay"
+ ],
+ "note": "A data-integrity scan: no signal, no event grouping, no return statistic. data/sharadar.db read-only, no request. Bound fixed before the read: a session where B5's tr moves by more than 10x either way; a B4 exit r above +900 % or below -1. 'unrestated' is static (no price): the cash events a plain `field.sharadar.cap` read books on the vendor's current split basis because the splits after the cap are hidden (D577's fault, f707cda4); factor = capped cash / as paid. The D815 reach lists, by identity alone, the D815 (c) event windows (its own events() and window plan) holding such an event of their member.",
+ "bound": 10.0,
+ "members": 15746,
+ "uncapped": {
+  "jumps": 341,
+  "members": 209,
+  "past_unsynced_guard": 329,
+  "exit_r_beyond": 0,
+  "what": "vendor penny bars (VIZY's 0.001 placeholders 2001-2002, KADR, GTAX ...): the same bars on a night; no S&P 1500 name"
+ },
+ "capped_plain_cap_2009_12_31": {
+  "jumps": 364,
+  "members": 121,
+  "past_unsynced_guard": 356,
+  "exit_r_beyond": 0,
+  "unrestated_cash_events": 13582,
+  "unrestated_members": 462,
+  "factor_above_1_members": 195,
+  "factor_below_1_members": 267,
+  "top_factors": [
+   {
+    "ticker": "SUNE",
+    "permaticker": 199830,
+    "factor": 599999.997,
+    "cash_events": 43,
+    "from": "1998-03-18",
+    "to": "2009-12-11"
+   },
+   {
+    "ticker": "CMCT",
+    "permaticker": 124564,
+    "factor": 375000.375,
+    "cash_events": 49,
+    "from": "1998-03-27",
+    "to": "2009-12-29"
+   },
+   {
+    "ticker": "EGLE2",
+    "permaticker": 194871,
+    "factor": 112000.112,
+    "cash_events": 13,
+    "from": "2005-10-13",
+    "to": "2008-11-18"
+   },
+   {
+    "ticker": "NURO",
+    "permaticker": 195124,
+    "factor": 92156.3137,
+    "cash_events": 1,
+    "from": "2007-03-28",
+    "to": "2007-03-28"
+   },
+   {
+    "ticker": "BIOL",
+    "permaticker": 198364,
+    "factor": 11484.9726,
+    "cash_events": 6,
+    "from": "2004-08-12",
+    "to": "2005-06-24"
+   },
+   {
+    "ticker": "YELLQ",
+    "permaticker": 198868,
+    "factor": 7500.0008,
+    "cash_events": 1,
+    "from": "2002-10-01",
+    "to": "2002-10-01"
+   },
+   {
+    "ticker": "VBIV",
+    "permaticker": 123184,
+    "factor": 6000.06,
+    "cash_events": 3,
+    "from": "2003-12-18",
+    "to": "2006-01-12"
+   },
+   {
+    "ticker": "ABEO",
+    "permaticker": 124221,
+    "factor": 1250.0,
+    "cash_events": 1,
+    "from": "2000-03-31",
+    "to": "2000-03-31"
+   },
+   {
+    "ticker": "AHT",
+    "permaticker": 195398,
+    "factor": 1000.0,
+    "cash_events": 21,
+    "from": "2004-03-29",
+    "to": "2008-09-26"
+   },
+   {
+    "ticker": "USAU",
+    "permaticker": 199796,
+    "factor": 720.0,
+    "cash_events": 12,
+    "from": "2005-06-13",
+    "to": "2008-02-27"
+   },
+   {
+    "ticker": "SNMP",
+    "permaticker": 194474,
+    "factor": 300.003,
+    "cash_events": 10,
+    "from": "2007-02-05",
+    "to": "2009-05-06"
+   },
+   {
+    "ticker": "LEU",
+    "permaticker": 196553,
+    "factor": 272.6281,
+    "cash_events": 29,
+    "from": "1998-11-23",
+    "to": "2005-11-22"
+   },
+   {
+    "ticker": "XBKS",
+    "permaticker": 195785,
+    "factor": 250.0,
+    "cash_events": 6,
+    "from": "2006-08-16",
+    "to": "2009-05-13"
+   },
+   {
+    "ticker": "CHKAQ",
+    "permaticker": 197696,
+    "factor": 200.0,
+    "cash_events": 33,
+    "from": "1998-03-27",
+    "to": "2009-12-30"
+   },
+   {
+    "ticker": "CLNH1",
+    "permaticker": 188040,
+    "factor": 142.8571,
+    "cash_events": 42,
+    "from": "1998-03-27",
+    "to": "2008-06-26"
+   },
+   {
+    "ticker": "AGIG",
+    "permaticker": 195762,
+    "factor": 125.0,
+    "cash_events": 6,
+    "from": "2008-08-27",
+    "to": "2009-11-27"
+   },
+   {
+    "ticker": "TIBB",
+    "permaticker": 122744,
+    "factor": 100.0,
+    "cash_events": 38,
+    "from": "1998-12-28",
+    "to": "2008-03-28"
+   },
+   {
+    "ticker": "PCBC",
+    "permaticker": 188047,
+    "factor": 100.0,
+    "cash_events": 3,
+    "from": "2008-07-18",
+    "to": "2009-03-12"
+   },
+   {
+    "ticker": "COB",
+    "permaticker": 198606,
+    "factor": 100.0,
+    "cash_events": 8,
+    "from": "2001-06-27",
+    "to": "2009-06-30"
+   },
+   {
+    "ticker": "FBC",
+    "permaticker": 196900,
+    "factor": 100.0,
+    "cash_events": 41,
+    "from": "1998-01-28",
+    "to": "2007-12-12"
+   }
+  ],
+  "cmct_124564": {
+   "dividend_day_jumps": 49,
+   "max_tr_ratio": 18010.8,
+   "max_on": "2008-12-29"
+  },
+  "biol_198364_dividend_day_jumps": [
+   {
+    "date": "2004-08-12",
+    "tr_ratio": 14.44,
+    "event": [
+     "2004-08-12",
+     "dividend",
+     "N/A",
+     114.85
+    ]
+   },
+   {
+    "date": "2004-10-08",
+    "tr_ratio": 16.84,
+    "event": [
+     "2004-10-08",
+     "dividend",
+     "N/A",
+     114.85
+    ]
+   },
+   {
+    "date": "2004-12-13",
+    "tr_ratio": 13.87,
+    "event": [
+     "2004-12-13",
+     "dividend",
+     "N/A",
+     114.85
+    ]
+   },
+   {
+    "date": "2005-02-08",
+    "tr_ratio": 13.36,
+    "event": [
+     "2005-02-08",
+     "dividend",
+     "N/A",
+     114.85
+    ]
+   },
+   {
+    "date": "2005-04-21",
+    "tr_ratio": 18.46,
+    "event": [
+     "2005-04-21",
+     "dividend",
+     "N/A",
+     114.85
+    ]
+   },
+   {
+    "date": "2005-06-24",
+    "tr_ratio": 16.66,
+    "event": [
+     "2005-06-24",
+     "dividend",
+     "N/A",
+     114.85
+    ]
+   }
+  ]
+ },
+ "capped_cap_replay_2009_12_31": {
+  "jumps": 206,
+  "members": 101,
+  "past_unsynced_guard": 202,
+  "exit_r_beyond": 0,
+  "equals_uncapped_through_2009": true,
+  "max_rel_diff": 0.0
+ },
+ "d815_reach": {
+  "counts": {
+   "all [0,+2]": 2,
+   "all [+3,+20]": 20,
+   "all [+3,+60]": 59,
+   "all [+3,+250]": 60,
+   "performance [0,+2]": 1,
+   "performance [+3,+20]": 6,
+   "performance [+3,+60]": 11,
+   "performance [+3,+250]": 12,
+   "conduct [0,+2]": 0,
+   "conduct [+3,+20]": 1,
+   "conduct [+3,+60]": 4,
+   "conduct [+3,+250]": 4
+  },
+  "conduct": {
+   "conduct [+3,+20]": [
+    {
+     "permaticker": "196904",
+     "ticker": "MMS",
+     "day0": "2006-04-26",
+     "cash_events": 1,
+     "factor": 0.25
+    }
+   ],
+   "conduct [+3,+60]": [
+    {
+     "permaticker": "198703",
+     "ticker": "HPHWQ",
+     "day0": "2005-08-30",
+     "cash_events": 1,
+     "factor": 14.999250037498127
+    },
+    {
+     "permaticker": "199070",
+     "ticker": "KLAC",
+     "day0": "2005-11-15",
+     "cash_events": 1,
+     "factor": 0.1
+    },
+    {
+     "permaticker": "196904",
+     "ticker": "MMS",
+     "day0": "2006-04-26",
+     "cash_events": 1,
+     "factor": 0.25
+    },
+    {
+     "permaticker": "196645",
+     "ticker": "MTEX",
+     "day0": "2007-08-22",
+     "cash_events": 1,
+     "factor": 10.0
+    }
+   ],
+   "conduct [+3,+250]": [
+    {
+     "permaticker": "198703",
+     "ticker": "HPHWQ",
+     "day0": "2005-08-30",
+     "cash_events": 1,
+     "factor": 14.999250037498127
+    },
+    {
+     "permaticker": "199070",
+     "ticker": "KLAC",
+     "day0": "2005-11-15",
+     "cash_events": 4,
+     "factor": 0.1
+    },
+    {
+     "permaticker": "196904",
+     "ticker": "MMS",
+     "day0": "2006-04-26",
+     "cash_events": 4,
+     "factor": 0.25
+    },
+    {
+     "permaticker": "196645",
+     "ticker": "MTEX",
+     "day0": "2007-08-22",
+     "cash_events": 4,
+     "factor": 10.0
+    }
+   ]
+  },
+  "all_[+3,+250]_factor_above_5": [
+   {
+    "permaticker": "197293",
+    "ticker": "PYXSQ",
+    "day0": "1999-05-18",
+    "cash_events": 4,
+    "factor": 10.0
+   },
+   {
+    "permaticker": "198364",
+    "ticker": "BIOL",
+    "day0": "2004-10-28",
+    "cash_events": 4,
+    "factor": 11484.972564149906
+   },
+   {
+    "permaticker": "187072",
+    "ticker": "CHHP",
+    "day0": "2005-03-24",
+    "cash_events": 3,
+    "factor": 25.48640192777105
+   },
+   {
+    "permaticker": "187072",
+    "ticker": "CHHP",
+    "day0": "2005-06-22",
+    "cash_events": 4,
+    "factor": 25.48640192777105
+   },
+   {
+    "permaticker": "198703",
+    "ticker": "HPHWQ",
+    "day0": "2005-08-30",
+    "cash_events": 1,
+    "factor": 14.999250037498127
+   },
+   {
+    "permaticker": "196645",
+    "ticker": "MTEX",
+    "day0": "2007-08-22",
+    "cash_events": 4,
+    "factor": 10.0
+   },
+   {
+    "permaticker": "199625",
+    "ticker": "FBNIQ",
+    "day0": "2007-10-12",
+    "cash_events": 4,
+    "factor": 7.000000140000003
+   },
+   {
+    "permaticker": "199513",
+    "ticker": "MSI",
+    "day0": "2007-11-30",
+    "cash_events": 4,
+    "factor": 6.999999993
+   },
+   {
+    "permaticker": "199662",
+    "ticker": "HHS",
+    "day0": "2008-01-02",
+    "cash_events": 4,
+    "factor": 10.0
+   },
+   {
+    "permaticker": "199662",
+    "ticker": "HHS",
+    "day0": "2008-12-15",
+    "cash_events": 4,
+    "factor": 10.0
+   }
+  ],
+  "the_143003_sigma": "BIOL (permaticker 198364), day 0 2004-10-28, group 'all' alone (code neither 3 nor 4): four of its dividend days fall in the event's [+3,+250] window (2004-12-13, 2005-02-08, 2005-04-21, 2005-06-24), each a 13-18x tr jump under the plain cap; their product (~5.8e4) is the size a single 143,003 % σ over n 1,050 implies (~4.6e4 x 100 %). No return of the event was read."
+ },
+ "sp500_reach": {
+  "cash_events": 2108,
+  "members": 74,
+  "by_member": [
+   {
+    "ticker": "CHKAQ",
+    "permaticker": 197696,
+    "factor": 200.0,
+    "cash_events": 16
+   },
+   {
+    "ticker": "WINMQ",
+    "permaticker": 195219,
+    "factor": 30.0,
+    "cash_events": 14
+   },
+   {
+    "ticker": "RADCQ",
+    "permaticker": 199389,
+    "factor": 20.0,
+    "cash_events": 7
+   },
+   {
+    "ticker": "APH",
+    "permaticker": 198290,
+    "factor": 0.0625,
+    "cash_events": 5
+   },
+   {
+    "ticker": "FTRCQ",
+    "permaticker": 199845,
+    "factor": 15.0,
+    "cash_events": 22
+   },
+   {
+    "ticker": "BTUUQ",
+    "permaticker": 196556,
+    "factor": 14.9925,
+    "cash_events": 13
+   },
+   {
+    "ticker": "C",
+    "permaticker": 198215,
+    "factor": 10.0,
+    "cash_events": 46
+   },
+   {
+    "ticker": "MA",
+    "permaticker": 195805,
+    "factor": 0.1,
+    "cash_events": 5
+   },
+   {
+    "ticker": "KLAC",
+    "permaticker": 199070,
+    "factor": 0.1,
+    "cash_events": 19
+   },
+   {
+    "ticker": "CSX",
+    "permaticker": 199144,
+    "factor": 0.1111,
+    "cash_events": 47
+   },
+   {
+    "ticker": "DD",
+    "permaticker": 199776,
+    "factor": 9.0001,
+    "cash_events": 48
+   },
+   {
+    "ticker": "SITC",
+    "permaticker": 197706,
+    "factor": 8.0,
+    "cash_events": 7
+   },
+   {
+    "ticker": "FAST",
+    "permaticker": 198313,
+    "factor": 0.125,
+    "cash_events": 3
+   },
+   {
+    "ticker": "GE",
+    "permaticker": 199688,
+    "factor": 8.0,
+    "cash_events": 47
+   },
+   {
+    "ticker": "SVU",
+    "permaticker": 199312,
+    "factor": 7.0,
+    "cash_events": 47
+   },
+   {
+    "ticker": "MSI",
+    "permaticker": 199513,
+    "factor": 7.0,
+    "cash_events": 43
+   },
+   {
+    "ticker": "SNV",
+    "permaticker": 199867,
+    "factor": 6.9999,
+    "cash_events": 39
+   },
+   {
+    "ticker": "DYNIQ",
+    "permaticker": 110559,
+    "factor": 5.0,
+    "cash_events": 7
+   },
+   {
+    "ticker": "CF",
+    "permaticker": 194851,
+    "factor": 0.2,
+    "cash_events": 5
+   },
+   {
+    "ticker": "CME",
+    "permaticker": 195760,
+    "factor": 0.2,
+    "cash_events": 15
+   },
+   {
+    "ticker": "HSH",
+    "permaticker": 199819,
+    "factor": 5.0,
+    "cash_events": 48
+   },
+   {
+    "ticker": "RAI",
+    "permaticker": 195259,
+    "factor": 0.25,
+    "cash_events": 30
+   },
+   {
+    "ticker": "CTRA",
+    "permaticker": 198066,
+    "factor": 0.25,
+    "cash_events": 6
+   },
+   {
+    "ticker": "NEE",
+    "permaticker": 198642,
+    "factor": 0.25,
+    "cash_events": 47
+   },
+   {
+    "ticker": "CTAS",
+    "permaticker": 198806,
+    "factor": 0.25,
+    "cash_events": 8
+   },
+   {
+    "ticker": "NKE",
+    "permaticker": 199060,
+    "factor": 0.25,
+    "cash_events": 47
+   },
+   {
+    "ticker": "VALPQ",
+    "permaticker": 199111,
+    "factor": 4.0,
+    "cash_events": 12
+   },
+   {
+    "ticker": "TJX",
+    "permaticker": 199196,
+    "factor": 0.25,
+    "cash_events": 47
+   },
+   {
+    "ticker": "XRX",
+    "permaticker": 199200,
+    "factor": 4.0,
+    "cash_events": 21
+   },
+   {
+    "ticker": "VFC",
+    "permaticker": 199238,
+    "factor": 0.25,
+    "cash_events": 47
+   },
+   {
+    "ticker": "THC",
+    "permaticker": 199501,
+    "factor": 4.0,
+    "cash_events": 1
+   },
+   {
+    "ticker": "MTW",
+    "permaticker": 199561,
+    "factor": 4.0,
+    "cash_events": 8
+   },
+   {
+    "ticker": "HRL",
+    "permaticker": 199645,
+    "factor": 0.25,
+    "cash_events": 3
+   },
+   {
+    "ticker": "BALL",
+    "permaticker": 199917,
+    "factor": 0.25,
+    "cash_events": 47
+   },
+   {
+    "ticker": "BF.B",
+    "permaticker": 199890,
+    "factor": 0.2667,
+    "cash_events": 49
+   },
+   {
+    "ticker": "LO",
+    "permaticker": 193634,
+    "factor": 0.3333,
+    "cash_events": 6
+   },
+   {
+    "ticker": "WMT",
+    "permaticker": 199233,
+    "factor": 0.3333,
+    "cash_events": 47
+   },
+   {
+    "ticker": "SHW",
+    "permaticker": 199357,
+    "factor": 0.3333,
+    "cash_events": 47
+   },
+   {
+    "ticker": "BEN",
+    "permaticker": 199705,
+    "factor": 0.3333,
+    "cash_events": 48
+   },
+   {
+    "ticker": "FLS",
+    "permaticker": 199768,
+    "factor": 0.3333,
+    "cash_events": 5
+   },
+   {
+    "ticker": "DUK",
+    "permaticker": 194830,
+    "factor": 3.0,
+    "cash_events": 49
+   },
+   {
+    "ticker": "MDRIQ",
+    "permaticker": 198916,
+    "factor": 3.0,
+    "cash_events": 9
+   },
+   {
+    "ticker": "RRD",
+    "permaticker": 199779,
+    "factor": 3.0,
+    "cash_events": 47
+   },
+   {
+    "ticker": "HWM",
+    "permaticker": 199977,
+    "factor": 3.0,
+    "cash_events": 47
+   },
+   {
+    "ticker": "GL",
+    "permaticker": 199058,
+    "factor": 0.4444,
+    "cash_events": 48
+   },
+   {
+    "ticker": "ETN",
+    "permaticker": 191882,
+    "factor": 0.5,
+    "cash_events": 47
+   },
+   {
+    "ticker": "CMCSA",
+    "permaticker": 195656,
+    "factor": 0.5,
+    "cash_events": 11
+   },
+   {
+    "ticker": "OKE",
+    "permaticker": 196837,
+    "factor": 0.5,
+    "cash_events": 14
+   },
+   {
+    "ticker": "SRE",
+    "permaticker": 196905,
+    "factor": 0.5,
+    "cash_events": 46
+   },
+   {
+    "ticker": "EL",
+    "permaticker": 197192,
+    "factor": 0.5,
+    "cash_events": 4
+   },
+   {
+    "ticker": "DFODQ",
+    "permaticker": 197341,
+    "factor": 2.0,
+    "cash_events": 1
+   },
+   {
+    "ticker": "EMN",
+    "permaticker": 197520,
+    "factor": 0.5,
+    "cash_events": 47
+   },
+   {
+    "ticker": "WFM",
+    "permaticker": 198012,
+    "factor": 0.5,
+    "cash_events": 11
+   },
+   {
+    "ticker": "FCX",
+    "permaticker": 198214,
+    "factor": 0.5,
+    "cash_events": 34
+   },
+   {
+    "ticker": "MCHP",
+    "permaticker": 198241,
+    "factor": 0.5,
+    "cash_events": 9
+   },
+   {
+    "ticker": "EOG",
+    "permaticker": 198278,
+    "factor": 0.5,
+    "cash_events": 36
+   },
+   {
+    "ticker": "WEC",
+    "permaticker": 198536,
+    "factor": 0.5,
+    "cash_events": 5
+   },
+   {
+    "ticker": "HON",
+    "permaticker": 198566,
+    "factor": 2.0,
+    "cash_events": 47
+   },
+   {
+    "ticker": "DHR",
+    "permaticker": 199122,
+    "factor": 0.5,
+    "cash_events": 45
+   },
+   {
+    "ticker": "ITT",
+    "permaticker": 199170,
+    "factor": 2.0,
+    "cash_events": 47
+   },
+   {
+    "ticker": "UNP",
+    "permaticker": 199262,
+    "factor": 0.5,
+    "cash_events": 48
+   },
+   {
+    "ticker": "PPG",
+    "permaticker": 199416,
+    "factor": 0.5,
+    "cash_events": 47
+   },
+   {
+    "ticker": "NBL",
+    "permaticker": 199485,
+    "factor": 0.5,
+    "cash_events": 9
+   },
+   {
+    "ticker": "ETR",
+    "permaticker": 199535,
+    "factor": 0.5,
+    "cash_events": 47
+   },
+   {
+    "ticker": "MKC",
+    "permaticker": 199553,
+    "factor": 0.5,
+    "cash_events": 28
+   },
+   {
+    "ticker": "KR",
+    "permaticker": 199588,
+    "factor": 0.5,
+    "cash_events": 15
+   },
+   {
+    "ticker": "GIS",
+    "permaticker": 199685,
+    "factor": 0.5,
+    "cash_events": 47
+   },
+   {
+    "ticker": "FMC",
+    "permaticker": 199715,
+    "factor": 0.5,
+    "cash_events": 2
+   },
+   {
+    "ticker": "CL",
+    "permaticker": 199836,
+    "factor": 0.5,
+    "cash_events": 47
+   },
+   {
+    "ticker": "KO",
+    "permaticker": 199839,
+    "factor": 0.5,
+    "cash_events": 47
+   },
+   {
+    "ticker": "AFL",
+    "permaticker": 199969,
+    "factor": 0.5,
+    "cash_events": 42
+   },
+   {
+    "ticker": "PCAR",
+    "permaticker": 199451,
+    "factor": 0.6667,
+    "cash_events": 58
+   },
+   {
+    "ticker": "TFCF",
+    "permaticker": 194984,
+    "factor": 1.3572,
+    "cash_events": 10
+   },
+   {
+    "ticker": "AIV",
+    "permaticker": 197425,
+    "factor": 1.2768,
+    "cash_events": 28
+   }
+  ]
+ },
+ "readers": {
+  "touched_tr_read_on_plain_cap": {
+   "probe-ceo-conduct-exit-drift": "D815 (c), outcome = B5 tr; the claim cell (conduct [+3,+250]) holds 4 touched windows (HPHWQ x15, MTEX x10, KLAC x0.1, MMS x0.25)",
+   "probe-sp500-liquidity-shock-beta": "signal reads h['tr'] (betas) on the PIT S&P 500, 1999-12 → 2009-12; booked DEAD-POWER at P(PASS) 0.48 (0.50 needs σ ≤ 1.577, 98 % of the measured 1.602)",
+   "probe-sp500-sector-return-continuation": "signal reads xsig.ret (tr) on the PIT S&P 500, 1998-03 → 2009-12; booked DEAD-POWER at P(PASS) 0.49 (0.50 needs σ ≤ 2.67, 99 % of the measured 2.692)"
+  },
+  "untouched_no_tr_read": [
+   "probe-allus-accrual-persistence",
+   "probe-microcap-patent-efficiency-quarter",
+   "probe-microcap-sp600-change-quarter",
+   "probe-sp500-closing-location-inventory",
+   "probe-sp500-neo-vesting-tax-supply",
+   "probe-sp500-volume-attention (volume = dollar volume / px; px holds no cash)",
+   "probe-us-events-two-for-one-split-drift",
+   "probe-microcap-coverage-withdrawal-quarter"
+  ],
+  "untouched_why": "their books price legs on SEP closeadj (field.sharadar.legs) and exits on B4 terms (bars alone); neither reads actions' cash",
+  "field_books": "the entry replay and the near-copy reads call enter.cap_replay since f707cda4 (D577 (a′)); clips entered before it stand by the spec's dated note (D577); nights are uncapped",
+  "nights": "uncapped: unaffected"
+ }
+}

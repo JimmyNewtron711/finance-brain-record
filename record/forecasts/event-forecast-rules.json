@@ -1,0 +1,5 @@
+{
+  "nvda-2026-11-ceo-exit-f4": { "rule": "move_abs_ge", "symbol": "NVDA", "from": "2026-11-17", "to": "2026-11-18", "x": 0.05, "reads": "|close(2026-11-18) / close(2026-11-17) − 1| ≥ 0.05" },
+  "nvda-2026-11-ceo-exit-f5": { "rule": "move_ge", "symbol": "NVDA", "from": "2026-11-11", "to": "2026-12-31", "x": 0, "reads": "close(2026-12-31) ≥ 173.73, NVDA's 2026-11-11 close on equity_daily_alpaca and equity_daily alike (read 2026-11-12), so close(2026-12-31) ≥ close(2026-11-11) with a split scaled" },
+  "nvda-2026-11-ceo-exit-f6": { "rule": "move_ge", "symbol": "NVDA", "from": "2026-11-12", "to": "2026-12-31", "x": 0, "reads": "close(2026-12-31) ≥ close(2026-11-12)" }
+}

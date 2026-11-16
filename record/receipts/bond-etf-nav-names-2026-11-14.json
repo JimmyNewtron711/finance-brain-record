@@ -1,0 +1,395 @@
+{
+ "schema": "bond_etf_nav_names_v1",
+ "item": "D848",
+ "line": {
+  "commit": "90a80ec1",
+  "text": "2026-11-14 (K1, dated line under Amendment 2026-09-11 (K1) (2), bond-ETF NAV) (2)"
+ },
+ "read": {
+  "depot": "ishares",
+  "id": 3,
+  "endpoint": "https://www.ishares.com/us/product-screener/product-screener-v3.1.jsn",
+  "fetched_at": 1794664372157,
+  "body_sha256": "0af0ce4de4b7f1c4afb65536e54acddd7478c7fc41277edfe7861cd4c5f6a442",
+  "status": 200,
+  "bytes": 1909746,
+  "sha256": "0af0ce4de4b7f1c4afb65536e54acddd7478c7fc41277edfe7861cd4c5f6a442",
+  "fixed_income_etfs": 153
+ },
+ "rule": {
+  "text": "every iShares US-listed fixed-income ETF in Pet17's corporate, high-yield, EM and municipal groups whose NAV history starts on or before 2015-12-31; Treasury-only funds out",
+  "fields": "productView has etf, aladdinAssetClass Fixed Income; em = aladdinMarketType Emerging (first); municipal = aladdinSubAssetClass Municipals; high-yield = High Yield or High Yield Bank Loan; corporate = Credit or Corporates; the list's own classes, verbatim",
+  "start": "inceptionDate <= 2015-12-31 (the NAV history's start, unread) and a Sharadar funds bar on or before 2015-12-31 (US-listed by then)"
+ },
+ "n": 25,
+ "by_group": {
+  "corporate": [
+   "LQD",
+   "IGIB",
+   "IGSB",
+   "USIG",
+   "IGLB",
+   "FLOT",
+   "QLTA",
+   "SLQD",
+   "LQDH",
+   "ICVT",
+   "IGBH"
+  ],
+  "high-yield": [
+   "HYG",
+   "EUHY",
+   "GHYG",
+   "SHYG",
+   "HYGH"
+  ],
+  "em": [
+   "EMB",
+   "LEMB",
+   "EMHY",
+   "CEMB"
+  ],
+  "municipal": [
+   "MUB",
+   "CMF",
+   "NYF",
+   "SUB",
+   "MEAR"
+  ]
+ },
+ "names": [
+  {
+   "ticker": "LQD",
+   "group": "corporate",
+   "fund": "iShares iBoxx $ Investment Grade Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2002-07-22",
+   "first_bar": "2002-07-30"
+  },
+  {
+   "ticker": "IGIB",
+   "group": "corporate",
+   "fund": "iShares 5-10 Year Investment Grade Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2007-01-05",
+   "first_bar": "2007-01-11"
+  },
+  {
+   "ticker": "IGSB",
+   "group": "corporate",
+   "fund": "iShares 1-5 Year Investment Grade Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2007-01-05",
+   "first_bar": "2007-01-11"
+  },
+  {
+   "ticker": "USIG",
+   "group": "corporate",
+   "fund": "iShares Broad USD Investment Grade Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2007-01-05",
+   "first_bar": "2007-01-11"
+  },
+  {
+   "ticker": "HYG",
+   "group": "high-yield",
+   "fund": "iShares iBoxx $ High Yield Corporate Bond ETF",
+   "sub_asset_class": "High Yield",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2007-04-04",
+   "first_bar": "2007-04-11"
+  },
+  {
+   "ticker": "MUB",
+   "group": "municipal",
+   "fund": "iShares National Muni Bond ETF",
+   "sub_asset_class": "Municipals",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2007-09-07",
+   "first_bar": "2007-09-10"
+  },
+  {
+   "ticker": "CMF",
+   "group": "municipal",
+   "fund": "iShares California Muni Bond ETF",
+   "sub_asset_class": "Municipals",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2007-10-04",
+   "first_bar": "2007-10-11"
+  },
+  {
+   "ticker": "NYF",
+   "group": "municipal",
+   "fund": "iShares New York Muni Bond ETF",
+   "sub_asset_class": "Municipals",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2007-10-04",
+   "first_bar": "2007-10-11"
+  },
+  {
+   "ticker": "EMB",
+   "group": "em",
+   "fund": "iShares J.P. Morgan USD Emerging Markets Bond ETF",
+   "sub_asset_class": "Government",
+   "market_type": "Emerging",
+   "style": "[Index]",
+   "inception": "2007-12-17",
+   "first_bar": "2007-12-19"
+  },
+  {
+   "ticker": "SUB",
+   "group": "municipal",
+   "fund": "iShares Short-Term National Muni Bond ETF",
+   "sub_asset_class": "Municipals",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2008-11-05",
+   "first_bar": "2008-11-19"
+  },
+  {
+   "ticker": "IGLB",
+   "group": "corporate",
+   "fund": "iShares 10+ Year Investment Grade Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2009-12-08",
+   "first_bar": "2009-12-09"
+  },
+  {
+   "ticker": "FLOT",
+   "group": "corporate",
+   "fund": "iShares Floating Rate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2011-06-14",
+   "first_bar": "2011-06-17"
+  },
+  {
+   "ticker": "LEMB",
+   "group": "em",
+   "fund": "iShares J.P. Morgan EM Local Currency Bond ETF",
+   "sub_asset_class": "Government",
+   "market_type": "Emerging",
+   "style": "[Index]",
+   "inception": "2011-10-18",
+   "first_bar": "2011-10-20"
+  },
+  {
+   "ticker": "QLTA",
+   "group": "corporate",
+   "fund": "iShares Aaa - A Rated Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2012-02-14",
+   "first_bar": "2012-02-16"
+  },
+  {
+   "ticker": "EMHY",
+   "group": "em",
+   "fund": "iShares J.P. Morgan EM High Yield Bond ETF",
+   "sub_asset_class": "High Yield",
+   "market_type": "Emerging",
+   "style": "[Index]",
+   "inception": "2012-04-03",
+   "first_bar": "2012-04-03"
+  },
+  {
+   "ticker": "EUHY",
+   "group": "high-yield",
+   "fund": "iShares Euro High Yield Corporate Bond USD Hedged ETF",
+   "sub_asset_class": "High Yield",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2012-04-03",
+   "first_bar": "2012-04-03"
+  },
+  {
+   "ticker": "GHYG",
+   "group": "high-yield",
+   "fund": "iShares US & Intl High Yield Corp Bond ETF",
+   "sub_asset_class": "High Yield",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2012-04-03",
+   "first_bar": "2012-04-09"
+  },
+  {
+   "ticker": "CEMB",
+   "group": "em",
+   "fund": "iShares J.P. Morgan EM Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Emerging",
+   "style": "[Index]",
+   "inception": "2012-04-17",
+   "first_bar": "2012-04-19"
+  },
+  {
+   "ticker": "SHYG",
+   "group": "high-yield",
+   "fund": "iShares 0-5 Year High Yield Corporate Bond ETF",
+   "sub_asset_class": "High Yield",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2013-10-15",
+   "first_bar": "2013-10-17"
+  },
+  {
+   "ticker": "SLQD",
+   "group": "corporate",
+   "fund": "iShares 0-5 Year Investment Grade Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2013-10-15",
+   "first_bar": "2013-10-17"
+  },
+  {
+   "ticker": "HYGH",
+   "group": "high-yield",
+   "fund": "iShares Interest Rate Hedged High Yield Bond ETF",
+   "sub_asset_class": "High Yield",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2014-05-27",
+   "first_bar": "2014-05-29"
+  },
+  {
+   "ticker": "LQDH",
+   "group": "corporate",
+   "fund": "iShares Interest Rate Hedged Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2014-05-27",
+   "first_bar": "2014-06-17"
+  },
+  {
+   "ticker": "MEAR",
+   "group": "municipal",
+   "fund": "iShares Short Maturity Municipal Bond Active ETF",
+   "sub_asset_class": "Municipals",
+   "market_type": "Developed",
+   "style": "[Active]",
+   "inception": "2015-03-03",
+   "first_bar": "2015-03-05"
+  },
+  {
+   "ticker": "ICVT",
+   "group": "corporate",
+   "fund": "iShares Convertible Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2015-06-02",
+   "first_bar": "2015-06-04"
+  },
+  {
+   "ticker": "IGBH",
+   "group": "corporate",
+   "fund": "iShares Interest Rate Hedged Long-Term Corporate Bond ETF",
+   "sub_asset_class": "Credit",
+   "market_type": "Developed",
+   "style": "[Index]",
+   "inception": "2015-07-22",
+   "first_bar": "2015-09-11"
+  }
+ ],
+ "excluded": [
+  {
+   "ticker": "HIMU",
+   "group": "municipal",
+   "fund": "iShares High Yield Muni Active ETF",
+   "sub_asset_class": "Municipals",
+   "market_type": "Developed",
+   "style": "[Active]",
+   "inception": "2006-08-01",
+   "first_bar": "2025-02-10",
+   "why": "not US-listed by 2015-12-31: Sharadar funds first bar after the cut (inception is a predecessor fund's)"
+  }
+ ],
+ "out_of_groups_incepted_by_cut": {
+  "Mortgages": [
+   "MBBA",
+   "MBB",
+   "GNMA"
+  ],
+  "Government": [
+   "IEF",
+   "SHY",
+   "TLT",
+   "IEI",
+   "SHV",
+   "TLH",
+   "AGZ",
+   "IGOV",
+   "ISHG",
+   "GOVT",
+   "TFLO"
+  ],
+  "Multi Sectors": [
+   "AGG",
+   "AGGM",
+   "GVI",
+   "ILTB",
+   "ISTB",
+   "NEAR",
+   "ICSH",
+   "BYLD",
+   "IUSB",
+   "SYSB",
+   "IAGG"
+  ],
+  "Inflation": [
+   "TIP",
+   "STIP"
+  ],
+  "Securitized": [
+   "SECU"
+  ],
+  "CMBS": [
+   "CMBS"
+  ]
+ },
+ "live_at_year_start": {
+  "2008-01-02": 9,
+  "2009-01-02": 10,
+  "2010-01-02": 11,
+  "2011-01-02": 11,
+  "2012-01-02": 13,
+  "2013-01-02": 18,
+  "2014-01-02": 20,
+  "2015-01-02": 22,
+  "2016-01-02": 25
+ },
+ "sigma_ic_null": 0.20412414523193154,
+ "parent": {
+  "row": "bond-etf-nav-reversion",
+  "names": [
+   "LQD",
+   "HYG",
+   "EMB"
+  ],
+  "sigma_ic_null": 0.7071067811865476,
+  "why": "Spearman over 3 names takes -1, -1/2, 1/2, 1 with weights 1/6, 1/3, 1/3, 1/6: null sd exactly 0.7071 (papers § 4)"
+ },
+ "limits": [
+  "survivorship: the list holds the funds alive on the read day; an iShares fixed-income ETF closed before 2026-11-14 is absent",
+  "N grows through the discovery window (live_at_year_start); sigma_ic_null is 1/sqrt(N-1) at the list's N, as the line writes it",
+  "inceptionDate stands for the NAV history's start until the export is read"
+ ]
+}

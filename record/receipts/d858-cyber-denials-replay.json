@@ -1,0 +1,208 @@
+{
+ "item": "D858",
+ "switch": "CYBER-INCIDENT-news-burst",
+ "deny": [
+  "denies",
+  "denied",
+  "rules out",
+  "ruled out",
+  "no evidence of",
+  "not a cyber",
+  "not caused by a cyber",
+  "unrelated to a cyber",
+  "no evidence",
+  "no indication",
+  "no sign of",
+  "not a cyberattack",
+  "not caused by cyberattack",
+  "not caused by a cyberattack",
+  "not a security incident",
+  "not due to a cyber",
+  "not the result of a cyber",
+  "not related to ransomware",
+  "unrelated to the ransomware",
+  "doesn't appear to be a cyber",
+  "rejects false",
+  "false alarm"
+ ],
+ "rule": {
+  "lookback_hours": 168,
+  "bucket_hours": 24,
+  "multiple": 3,
+  "floor": 3
+ },
+ "corpus": {
+  "from": "2010-03-02T21:05:48.000Z",
+  "to": "2026-11-15T21:45:06.000Z",
+  "evaluated_hours": 146256
+ },
+ "headlines": {
+  "matched": 895,
+  "moved_to_reverse": 28,
+  "by_phrase": {
+   "no evidence of": 3,
+   "rejects false": 1,
+   "not caused by cyberattack": 1,
+   "not a cyberattack": 3,
+   "not a security incident": 2,
+   "not a cyber": 3,
+   "not due to a cyber": 1,
+   "no evidence": 5,
+   "denies": 3,
+   "not related to ransomware": 1,
+   "unrelated to the ransomware": 1,
+   "no indication": 1,
+   "false alarm": 1,
+   "not the result of a cyber": 1,
+   "no sign of": 1
+  }
+ },
+ "episodes": {
+  "before": 82,
+  "after": 75,
+  "before_per_year": {
+   "2015": 5,
+   "2016": 5,
+   "2017": 11,
+   "2018": 5,
+   "2019": 2,
+   "2020": 7,
+   "2021": 9,
+   "2022": 5,
+   "2023": 11,
+   "2024": 9,
+   "2025": 3,
+   "2026": 10
+  },
+  "after_per_year": {
+   "2015": 5,
+   "2016": 4,
+   "2017": 11,
+   "2018": 4,
+   "2019": 2,
+   "2020": 6,
+   "2021": 9,
+   "2022": 5,
+   "2023": 9,
+   "2024": 8,
+   "2025": 3,
+   "2026": 9
+  },
+  "lost": [
+   {
+    "from": "2016-03-07T21Z",
+    "to": "2016-03-08T01Z",
+    "hours": 4,
+    "peak": 3,
+    "denials": [
+     "2016-03-07T21:53:36Z Susan Crabtree Tweets: 'Secret Service now letting people leave the White House complex -- apparently it was a false alarm after a high alert for a security breach'"
+    ]
+   },
+   {
+    "from": "2018-11-06T17Z",
+    "to": "2018-11-07T15Z",
+    "hours": 22,
+    "peak": 3,
+    "denials": [
+     "2018-11-06T17:25:53Z Pakistan's Central Bank Denies Mass Data Breach After Cyber-Crime Official Says 'Almost All' Banks Hit"
+    ]
+   },
+   {
+    "from": "2020-07-27T20Z",
+    "to": "2020-07-27T22Z",
+    "hours": 2,
+    "peak": 3,
+    "denials": [
+     "2020-07-27T16:33:16Z UPDATE: Garmin Confirms Was Victim Of Cyber Attack; Co. Sees No Indication Customer Data Was Accessed, Lost Or Stolen"
+    ]
+   },
+   {
+    "from": "2021-05-11T12Z",
+    "to": "2021-05-11T15Z",
+    "hours": 3,
+    "peak": 3,
+    "denials": [
+     "2021-05-11T12:43:21Z Colonial Pipeline Tweets 'We are experiencing a temporary service disruption to our corporate website, and unrelated to the ransomware. We continue to make progress on our system restart plan, and will provide an update when our website is restored.'"
+    ]
+   },
+   {
+    "from": "2023-01-11T19Z",
+    "to": "2023-01-12T16Z",
+    "hours": 21,
+    "peak": 4,
+    "denials": [
+     "2023-01-11T12:46:22Z Biden Has Been Briefed On FAA System Outage; No Evidence Of Cyberattack",
+     "2023-01-11T19:29:51Z White House Says No Evidence FAA Outage Caused By Cyber Attack; White House Says Authorities Working To Ensure Such An Outage Does Not Happen Again"
+    ]
+   },
+   {
+    "from": "2023-01-12T17Z",
+    "to": "2023-01-12T19Z",
+    "hours": 2,
+    "peak": 3,
+    "denials": [
+     "2023-01-11T19:29:51Z White House Says No Evidence FAA Outage Caused By Cyber Attack; White House Says Authorities Working To Ensure Such An Outage Does Not Happen Again"
+    ]
+   },
+   {
+    "from": "2024-07-19T19Z",
+    "to": "2024-07-20T09Z",
+    "hours": 14,
+    "peak": 3,
+    "denials": [
+     "2024-07-19T09:49:06Z Crowdstrike CEO Said This Is Not A Security Incident Or Cyberattack; The Issue Has Been Identified, Isolated And A Fix Has Been Deployed",
+     "2024-07-19T12:14:19Z CrowdStrike CEO Post On X, \"CrowdStrike is actively working with customers impacted by a defect found in a single content update for Windows hosts. Mac and Linux hosts are not impacted. This is not a security incident or cyberattack. The issue has been identified, isolated and a fix has been deployed...\"",
+     "2024-07-19T19:38:20Z Biden Will Continue To Receive Updates On The CrowdStrike Global Tech Outage; Understanding Is That This Is Not A Cyber Attack, But Rather A Faulty Technical Update; White House Is In Regular Contact With CrowdStrike's Executive Leadership And Tracking Progress, Has Offered Support"
+    ]
+   },
+   {
+    "from": "2026-11-14T06Z",
+    "to": "2026-11-15T05Z",
+    "hours": 23,
+    "peak": 4,
+    "denials": [
+     "2026-11-13T21:52:02Z 'The Reason For The Ground Stop Was Not Immediately Clear; Preliminary Reports Indicate This Is Not A Cyberattack, According To Two Law Enforcement Officials'-CNN",
+     "2026-11-14T18:11:12Z Reported Earlier, 'FAA ground stop latest updates: Duffy blames contractor L3Harris; thousands more flights canceled Saturday; no sign of cyberattack' - Yahoo"
+    ]
+   }
+  ],
+  "gained": [
+   {
+    "from": "2021-05-14T15Z",
+    "to": "2021-05-14T16Z",
+    "hours": 1,
+    "peak": 3
+   }
+  ]
+ },
+ "moved": [
+  "2015-03-30T11:31:50Z [not a cyber] JetBlue Says System Outage Not A Cyber Attack",
+  "2015-07-08T16:30:18Z [not the result of a cyber] NYSE Tweets: 'The issue we are experiencing is an internal technical issue and is not the result of a cyber breach.'",
+  "2015-07-08T18:40:10Z [no evidence] Fireeye Email To Benzinga Says 'no evidence across our network...to suggest that the NYSE & UAL disruptions were cyber attacks'",
+  "2016-03-07T21:53:36Z [false alarm] Susan Crabtree Tweets: 'Secret Service now letting people leave the White House complex -- apparently it was a false alarm after a high alert for a security breach'",
+  "2018-03-01T14:09:01Z [no evidence] UPDATE: Equifax Says 'forensics experts have found no evidence that Equifax's core consumer, employment and income, or commercial credit reporting databases were accessed as part of the cyberattack'",
+  "2018-11-06T17:25:53Z [denies] Pakistan's Central Bank Denies Mass Data Breach After Cyber-Crime Official Says 'Almost All' Banks Hit",
+  "2020-07-27T16:33:16Z [no indication] UPDATE: Garmin Confirms Was Victim Of Cyber Attack; Co. Sees No Indication Customer Data Was Accessed, Lost Or Stolen",
+  "2020-10-15T23:15:34Z [no evidence] Twitter Says No Evidence Today's Outage Was Caused by a Security Breach or Hack; Currently Investigating Internal Root Causes and Will Share More Soon",
+  "2020-12-14T15:55:49Z [not a cyber] 'Google confirms that this morning's outage was NOT a cyber attack. \"it was entirely an internal issue with quota accounting for the authentication system...' -Tweet From CNBC's Eamon Javers",
+  "2021-04-09T16:13:57Z [denies] LinkedIn Denies Data Breach Allegations: Report",
+  "2021-05-11T12:43:21Z [unrelated to the ransomware] Colonial Pipeline Tweets 'We are experiencing a temporary service disruption to our corporate website, and unrelated to the ransomware. We continue to make progress on our system restart plan, and will provide an update when our website is restored.'",
+  "2021-05-18T16:15:20Z [not related to ransomware] Shell Midstream's Colonial Pipeline Says One Of Co.'s Servers Experienced Intermittent Disruptions Tuesday Morning Due To Some Of Security Hardening Efforts, Says Issues Were Not Related To Ransomware, Any Type Of Reinfection",
+  "2021-07-07T16:23:39Z [denies] Russia Envoy To U.S. Denies Moscow Role In Ransomware Attack",
+  "2021-07-22T17:19:10Z [not a cyberattack] Akami Says Problems Were Not A Cyberattack On Its Platform",
+  "2021-09-14T14:06:21Z [no evidence] No Evidence Russia Is Trying To Stop Ransomware Attacks, According To FBI",
+  "2022-11-07T22:16:14Z [no evidence of] PGT Innovations In Form8 Filing Says On Nov. 5, Co. Detected Ransomware Infection That Impacted Portions Of Co.'s Network, Caused Disruption To Daily Business Operations; Says To Date There Is No Evidence Of Personal Information Being Accessed Or Acquired",
+  "2023-01-11T12:46:22Z [no evidence of] Biden Has Been Briefed On FAA System Outage; No Evidence Of Cyberattack",
+  "2023-01-11T19:29:51Z [no evidence] White House Says No Evidence FAA Outage Caused By Cyber Attack; White House Says Authorities Working To Ensure Such An Outage Does Not Happen Again",
+  "2024-02-23T07:33:46Z [not due to a cyber] AT&T Says Outage Was Not Due To A Cyber Attack, Confirms Service Has Been Fully Restored",
+  "2024-07-19T09:49:06Z [not a security incident] Crowdstrike CEO Said This Is Not A Security Incident Or Cyberattack; The Issue Has Been Identified, Isolated And A Fix Has Been Deployed",
+  "2024-07-19T12:14:19Z [not a security incident] CrowdStrike CEO Post On X, \"CrowdStrike is actively working with customers impacted by a defect found in a single content update for Windows hosts. Mac and Linux hosts are not impacted. This is not a security incident or cyberattack. The issue has been identified, isolated and a fix has been deployed...\"",
+  "2024-07-19T19:38:20Z [not a cyber] Biden Will Continue To Receive Updates On The CrowdStrike Global Tech Outage; Understanding Is That This Is Not A Cyber Attack, But Rather A Faulty Technical Update; White House Is In Regular Contact With CrowdStrike's Executive Leadership And Tracking Progress, Has Offered Support",
+  "2024-07-20T15:55:31Z [not a cyberattack] CrowdStrike Issues Statement Following Massive Outage That Stemmed From Content Update For Windows Hosts: 'This Was Not A Cyberattack'",
+  "2024-07-22T21:35:47Z [not caused by cyberattack] CrowdStrike Says Continues To Evaluate Impact Of Outage Event On Its Business And Operations; Says The Event Was Not Caused By Cyberattack - Filing",
+  "2025-09-26T16:24:56Z [rejects false] PNC Financial Services Rejects False Data Breach Claims; Says Strongly Rejects False Claims Of Cybersecurity Incident Made By Criminal Actors On A Dark Web Forum",
+  "2025-10-15T12:38:01Z [no evidence of] F5 Discloses Nation-State Cyberattack Targeting BIG-IP Systems; No Evidence Of Critical Exploits Or Customer Data Breach",
+  "2026-11-13T21:52:02Z [not a cyberattack] 'The Reason For The Ground Stop Was Not Immediately Clear; Preliminary Reports Indicate This Is Not A Cyberattack, According To Two Law Enforcement Officials'-CNN",
+  "2026-11-14T18:11:12Z [no sign of] Reported Earlier, 'FAA ground stop latest updates: Duffy blames contractor L3Harris; thousands more flights canceled Saturday; no sign of cyberattack' - Yahoo"
+ ]
+}

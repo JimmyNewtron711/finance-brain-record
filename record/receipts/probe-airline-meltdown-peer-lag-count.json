@@ -1,0 +1,2582 @@
+{
+ "schema": "probe_receipt_v1",
+ "row": "airline-meltdown-peer-lag",
+ "vendor": "bts",
+ "computed_at": "2026-11-14T16:55:42-05:00",
+ "authority": "factory spec § 2.2 condition 7 (F1, [factory:probe:airline-meltdown-peer-lag]); the inbox ruling of 2026-11-14 (a) (D852, the operator's \"D849: A\"): robots and BTS's terms first, X's event count first from BTS alone, under 30 events DEAD-BUDGET before any return is read (the row's kill clause); source line govern/source-admissions.jsonl line 4 (2026-11-14, bts, d2daf6d6 on main), Amendment 2026-11-11 (K1)",
+ "note": "count-only step 1: n meets the kill clause's 30, so the σ read (step 2: the parent map, the peer basket, Y over [+3,+250] on the Sharadar discovery window) is owed; this file is not the probe's receipt",
+ "statistic": "the count of events by the row's own rule from X alone: each BTS reporting carrier's daily cancellation rate (cancelled over scheduled flights) minus the median rate of the other reporting carriers that day; an event the third consecutive day at 10 percentage points or more, day 0 that day, the carrier re-armed 250 sessions later; counted where day 0 + 250 sessions closes by Sharadar's last bar 2026-11-13",
+ "value": 120,
+ "bar": "n >= 30 (the row's kill clause: fewer than 30 events, counted from X alone at the probe's scratch pull)",
+ "clears": true,
+ "sigma": null,
+ "turnover": null,
+ "cost": null,
+ "counts": {
+  "events_all": 120,
+  "events_window_closed_by_last_bar": 120,
+  "events_window_closed_by_discovery_end": 41
+ },
+ "events": [
+  {
+   "carrier": "AS",
+   "day0": "1998-01-13",
+   "run_start": "1998-01-11",
+   "excess_pp": [
+    10.2,
+    19.1,
+    11.4
+   ],
+   "rate_pct": [
+    12.7,
+    24.2,
+    13.9
+   ],
+   "flights": [
+    354,
+    392,
+    396
+   ],
+   "window_end": "1999-01-12"
+  },
+  {
+   "carrier": "NW",
+   "day0": "1998-08-30",
+   "run_start": "1998-08-28",
+   "excess_pp": [
+    11.3,
+    98.4,
+    98.9
+   ],
+   "rate_pct": [
+    12.7,
+    100.0,
+    100.0
+   ],
+   "flights": [
+    1508,
+    1388,
+    1416
+   ],
+   "window_end": "1999-08-30"
+  },
+  {
+   "carrier": "AA",
+   "day0": "1999-02-09",
+   "run_start": "1999-02-07",
+   "excess_pp": [
+    10.1,
+    22.9,
+    35.3
+   ],
+   "rate_pct": [
+    11.9,
+    25.5,
+    37.4
+   ],
+   "flights": [
+    1785,
+    1863,
+    1864
+   ],
+   "window_end": "2000-02-08"
+  },
+  {
+   "carrier": "DL",
+   "day0": "2000-01-30",
+   "run_start": "2000-01-28",
+   "excess_pp": [
+    21.7,
+    30.5,
+    15.2
+   ],
+   "rate_pct": [
+    23.9,
+    32.7,
+    20.4
+   ],
+   "flights": [
+    2530,
+    2527,
+    2525
+   ],
+   "window_end": "2001-01-29"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2000-05-13",
+   "run_start": "2000-05-11",
+   "excess_pp": [
+    17.2,
+    15.1,
+    10.2
+   ],
+   "rate_pct": [
+    19.2,
+    17.2,
+    14.6
+   ],
+   "flights": [
+    2243,
+    2250,
+    2041
+   ],
+   "window_end": "2001-05-14"
+  },
+  {
+   "carrier": "AS",
+   "day0": "2000-07-04",
+   "run_start": "2000-07-02",
+   "excess_pp": [
+    11.2,
+    13.7,
+    11.2
+   ],
+   "rate_pct": [
+    12.0,
+    15.6,
+    12.1
+   ],
+   "flights": [
+    435,
+    467,
+    461
+   ],
+   "window_end": "2001-07-03"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2000-12-13",
+   "run_start": "2000-12-11",
+   "excess_pp": [
+    19.8,
+    20.9,
+    29.8
+   ],
+   "rate_pct": [
+    28.0,
+    27.0,
+    36.5
+   ],
+   "flights": [
+    2094,
+    2100,
+    2104
+   ],
+   "window_end": "2001-12-12"
+  },
+  {
+   "carrier": "NW",
+   "day0": "2000-12-13",
+   "run_start": "2000-12-11",
+   "excess_pp": [
+    22.8,
+    10.6,
+    20.1
+   ],
+   "rate_pct": [
+    31.0,
+    16.8,
+    26.7
+   ],
+   "flights": [
+    1555,
+    1555,
+    1555
+   ],
+   "window_end": "2001-12-12"
+  },
+  {
+   "carrier": "CO",
+   "day0": "2001-09-16",
+   "run_start": "2001-09-14",
+   "excess_pp": [
+    14.0,
+    23.0,
+    30.1
+   ],
+   "rate_pct": [
+    67.0,
+    48.7,
+    46.9
+   ],
+   "flights": [
+    1156,
+    751,
+    1013
+   ],
+   "window_end": "2002-09-16"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2001-09-16",
+   "run_start": "2001-09-14",
+   "excess_pp": [
+    30.0,
+    54.1,
+    57.8
+   ],
+   "rate_pct": [
+    83.0,
+    79.9,
+    74.6
+   ],
+   "flights": [
+    2149,
+    2014,
+    2072
+   ],
+   "window_end": "2002-09-16"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2001-09-24",
+   "run_start": "2001-09-22",
+   "excess_pp": [
+    12.2,
+    13.4,
+    19.7
+   ],
+   "rate_pct": [
+    22.1,
+    21.8,
+    22.1
+   ],
+   "flights": [
+    1303,
+    1423,
+    1481
+   ],
+   "window_end": "2002-09-23"
+  },
+  {
+   "carrier": "US",
+   "day0": "2001-09-24",
+   "run_start": "2001-09-22",
+   "excess_pp": [
+    29.5,
+    23.4,
+    31.9
+   ],
+   "rate_pct": [
+    39.4,
+    31.8,
+    34.3
+   ],
+   "flights": [
+    1808,
+    1922,
+    1978
+   ],
+   "window_end": "2002-09-23"
+  },
+  {
+   "carrier": "DH",
+   "day0": "2003-02-18",
+   "run_start": "2003-02-16",
+   "excess_pp": [
+    41.8,
+    29.2,
+    25.6
+   ],
+   "rate_pct": [
+    52.8,
+    54.2,
+    31.6
+   ],
+   "flights": [
+    803,
+    842,
+    842
+   ],
+   "window_end": "2004-02-17"
+  },
+  {
+   "carrier": "US",
+   "day0": "2003-02-18",
+   "run_start": "2003-02-16",
+   "excess_pp": [
+    34.1,
+    35.0,
+    17.3
+   ],
+   "rate_pct": [
+    45.1,
+    59.9,
+    23.3
+   ],
+   "flights": [
+    1129,
+    1207,
+    1207
+   ],
+   "window_end": "2004-02-17"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2003-02-26",
+   "run_start": "2003-02-24",
+   "excess_pp": [
+    14.4,
+    23.6,
+    14.7
+   ],
+   "rate_pct": [
+    15.8,
+    25.6,
+    17.4
+   ],
+   "flights": [
+    1240,
+    1212,
+    1227
+   ],
+   "window_end": "2004-02-25"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2003-03-20",
+   "run_start": "2003-03-18",
+   "excess_pp": [
+    18.5,
+    28.7,
+    16.7
+   ],
+   "rate_pct": [
+    21.3,
+    31.6,
+    18.7
+   ],
+   "flights": [
+    1546,
+    1546,
+    1546
+   ],
+   "window_end": "2004-03-18"
+  },
+  {
+   "carrier": "XE",
+   "day0": "2003-12-07",
+   "run_start": "2003-12-05",
+   "excess_pp": [
+    12.3,
+    20.7,
+    10.1
+   ],
+   "rate_pct": [
+    17.4,
+    32.3,
+    14.0
+   ],
+   "flights": [
+    1061,
+    654,
+    876
+   ],
+   "window_end": "2004-12-06"
+  },
+  {
+   "carrier": "AS",
+   "day0": "2004-01-08",
+   "run_start": "2004-01-06",
+   "excess_pp": [
+    42.1,
+    50.1,
+    23.2
+   ],
+   "rate_pct": [
+    43.6,
+    52.4,
+    24.8
+   ],
+   "flights": [
+    443,
+    443,
+    444
+   ],
+   "window_end": "2005-01-06"
+  },
+  {
+   "carrier": "OH",
+   "day0": "2004-01-27",
+   "run_start": "2004-01-25",
+   "excess_pp": [
+    20.0,
+    20.7,
+    15.6
+   ],
+   "rate_pct": [
+    22.4,
+    26.6,
+    21.9
+   ],
+   "flights": [
+    991,
+    1009,
+    1010
+   ],
+   "window_end": "2005-01-25"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2004-09-05",
+   "run_start": "2004-09-03",
+   "excess_pp": [
+    19.6,
+    28.5,
+    29.6
+   ],
+   "rate_pct": [
+    23.0,
+    34.9,
+    37.8
+   ],
+   "flights": [
+    252,
+    249,
+    249
+   ],
+   "window_end": "2005-09-06"
+  },
+  {
+   "carrier": "US",
+   "day0": "2005-01-24",
+   "run_start": "2005-01-22",
+   "excess_pp": [
+    12.0,
+    25.5,
+    11.7
+   ],
+   "rate_pct": [
+    31.8,
+    37.1,
+    14.0
+   ],
+   "flights": [
+    1033,
+    1198,
+    1262
+   ],
+   "window_end": "2006-01-23"
+  },
+  {
+   "carrier": "EV",
+   "day0": "2005-01-31",
+   "run_start": "2005-01-29",
+   "excess_pp": [
+    76.4,
+    50.6,
+    15.8
+   ],
+   "rate_pct": [
+    78.7,
+    52.2,
+    16.9
+   ],
+   "flights": [
+    761,
+    770,
+    815
+   ],
+   "window_end": "2006-01-30"
+  },
+  {
+   "carrier": "XE",
+   "day0": "2005-09-24",
+   "run_start": "2005-09-22",
+   "excess_pp": [
+    22.6,
+    45.3,
+    48.1
+   ],
+   "rate_pct": [
+    23.5,
+    48.0,
+    50.6
+   ],
+   "flights": [
+    1256,
+    1250,
+    705
+   ],
+   "window_end": "2006-09-25"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2005-10-26",
+   "run_start": "2005-10-24",
+   "excess_pp": [
+    25.4,
+    19.6,
+    18.6
+   ],
+   "rate_pct": [
+    30.0,
+    24.7,
+    20.4
+   ],
+   "flights": [
+    313,
+    312,
+    313
+   ],
+   "window_end": "2006-10-25"
+  },
+  {
+   "carrier": "KH",
+   "day0": "2006-04-06",
+   "run_start": "2006-04-04",
+   "excess_pp": [
+    19.4,
+    17.3,
+    20.2
+   ],
+   "rate_pct": [
+    20.8,
+    18.3,
+    20.7
+   ],
+   "flights": [
+    120,
+    120,
+    121
+   ],
+   "window_end": "2007-04-05"
+  },
+  {
+   "carrier": "F9",
+   "day0": "2006-12-22",
+   "run_start": "2006-12-20",
+   "excess_pp": [
+    71.7,
+    92.2,
+    42.5
+   ],
+   "rate_pct": [
+    73.6,
+    95.5,
+    43.7
+   ],
+   "flights": [
+    250,
+    266,
+    270
+   ],
+   "window_end": "2007-12-21"
+  },
+  {
+   "carrier": "OO",
+   "day0": "2006-12-22",
+   "run_start": "2006-12-20",
+   "excess_pp": [
+    19.1,
+    25.8,
+    22.0
+   ],
+   "rate_pct": [
+    21.0,
+    29.0,
+    23.1
+   ],
+   "flights": [
+    1599,
+    1609,
+    1612
+   ],
+   "window_end": "2007-12-21"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2006-12-22",
+   "run_start": "2006-12-20",
+   "excess_pp": [
+    28.3,
+    32.4,
+    20.0
+   ],
+   "rate_pct": [
+    30.2,
+    35.7,
+    21.1
+   ],
+   "flights": [
+    1416,
+    1431,
+    1429
+   ],
+   "window_end": "2007-12-21"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2007-01-15",
+   "run_start": "2007-01-13",
+   "excess_pp": [
+    20.0,
+    22.5,
+    10.7
+   ],
+   "rate_pct": [
+    22.7,
+    25.7,
+    12.5
+   ],
+   "flights": [
+    1622,
+    1766,
+    1799
+   ],
+   "window_end": "2008-01-14"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2007-01-15",
+   "run_start": "2007-01-13",
+   "excess_pp": [
+    19.5,
+    24.1,
+    18.8
+   ],
+   "rate_pct": [
+    22.2,
+    27.3,
+    20.5
+   ],
+   "flights": [
+    1284,
+    1459,
+    1524
+   ],
+   "window_end": "2008-01-14"
+  },
+  {
+   "carrier": "OH",
+   "day0": "2007-02-14",
+   "run_start": "2007-02-12",
+   "excess_pp": [
+    10.1,
+    21.7,
+    41.5
+   ],
+   "rate_pct": [
+    11.4,
+    35.7,
+    56.9
+   ],
+   "flights": [
+    709,
+    607,
+    664
+   ],
+   "window_end": "2008-02-13"
+  },
+  {
+   "carrier": "YV",
+   "day0": "2007-02-15",
+   "run_start": "2007-02-13",
+   "excess_pp": [
+    11.5,
+    19.9,
+    10.2
+   ],
+   "rate_pct": [
+    25.6,
+    35.3,
+    13.7
+   ],
+   "flights": [
+    833,
+    835,
+    867
+   ],
+   "window_end": "2008-02-14"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2007-02-16",
+   "run_start": "2007-02-14",
+   "excess_pp": [
+    55.2,
+    42.3,
+    24.5
+   ],
+   "rate_pct": [
+    70.6,
+    45.9,
+    26.0
+   ],
+   "flights": [
+    490,
+    547,
+    558
+   ],
+   "window_end": "2008-02-15"
+  },
+  {
+   "carrier": "9E",
+   "day0": "2007-03-05",
+   "run_start": "2007-03-03",
+   "excess_pp": [
+    11.2,
+    12.6,
+    10.1
+   ],
+   "rate_pct": [
+    12.4,
+    13.0,
+    11.3
+   ],
+   "flights": [
+    678,
+    699,
+    753
+   ],
+   "window_end": "2008-03-03"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2007-12-26",
+   "run_start": "2007-12-24",
+   "excess_pp": [
+    11.8,
+    26.5,
+    12.3
+   ],
+   "rate_pct": [
+    12.5,
+    26.8,
+    12.7
+   ],
+   "flights": [
+    1175,
+    1217,
+    1364
+   ],
+   "window_end": "2008-12-23"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2008-02-06",
+   "run_start": "2008-02-04",
+   "excess_pp": [
+    19.9,
+    14.0,
+    26.7
+   ],
+   "rate_pct": [
+    23.9,
+    17.0,
+    31.2
+   ],
+   "flights": [
+    1442,
+    1445,
+    1444
+   ],
+   "window_end": "2009-02-04"
+  },
+  {
+   "carrier": "XE",
+   "day0": "2008-03-10",
+   "run_start": "2008-03-08",
+   "excess_pp": [
+    17.8,
+    13.2,
+    11.8
+   ],
+   "rate_pct": [
+    22.8,
+    15.1,
+    12.7
+   ],
+   "flights": [
+    924,
+    1130,
+    1248
+   ],
+   "window_end": "2009-03-09"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2008-04-10",
+   "run_start": "2008-04-08",
+   "excess_pp": [
+    26.2,
+    60.1,
+    52.7
+   ],
+   "rate_pct": [
+    27.0,
+    60.9,
+    54.0
+   ],
+   "flights": [
+    1745,
+    1744,
+    1745
+   ],
+   "window_end": "2009-04-09"
+  },
+  {
+   "carrier": "CO",
+   "day0": "2008-09-14",
+   "run_start": "2008-09-12",
+   "excess_pp": [
+    38.3,
+    59.9,
+    60.1
+   ],
+   "rate_pct": [
+    40.1,
+    63.0,
+    62.4
+   ],
+   "flights": [
+    778,
+    543,
+    707
+   ],
+   "window_end": "2009-09-14"
+  },
+  {
+   "carrier": "OH",
+   "day0": "2008-12-21",
+   "run_start": "2008-12-19",
+   "excess_pp": [
+    25.1,
+    21.5,
+    26.7
+   ],
+   "rate_pct": [
+    35.2,
+    24.9,
+    34.3
+   ],
+   "flights": [
+    491,
+    477,
+    484
+   ],
+   "window_end": "2009-12-21"
+  },
+  {
+   "carrier": "AS",
+   "day0": "2008-12-22",
+   "run_start": "2008-12-20",
+   "excess_pp": [
+    10.6,
+    61.8,
+    30.7
+   ],
+   "rate_pct": [
+    14.0,
+    69.4,
+    34.7
+   ],
+   "flights": [
+    364,
+    366,
+    380
+   ],
+   "window_end": "2009-12-21"
+  },
+  {
+   "carrier": "OH",
+   "day0": "2010-02-10",
+   "run_start": "2010-02-08",
+   "excess_pp": [
+    11.9,
+    13.0,
+    41.8
+   ],
+   "rate_pct": [
+    15.4,
+    22.1,
+    61.4
+   ],
+   "flights": [
+    396,
+    366,
+    381
+   ],
+   "window_end": "2011-02-09"
+  },
+  {
+   "carrier": "9E",
+   "day0": "2010-12-13",
+   "run_start": "2010-12-11",
+   "excess_pp": [
+    16.0,
+    26.8,
+    25.6
+   ],
+   "rate_pct": [
+    18.5,
+    39.1,
+    27.3
+   ],
+   "flights": [
+    529,
+    644,
+    685
+   ],
+   "window_end": "2011-12-12"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2010-12-28",
+   "run_start": "2010-12-26",
+   "excess_pp": [
+    23.7,
+    66.5,
+    46.2
+   ],
+   "rate_pct": [
+    38.0,
+    80.8,
+    49.3
+   ],
+   "flights": [
+    642,
+    642,
+    641
+   ],
+   "window_end": "2011-12-27"
+  },
+  {
+   "carrier": "DL",
+   "day0": "2011-01-11",
+   "run_start": "2011-01-09",
+   "excess_pp": [
+    10.1,
+    45.1,
+    30.1
+   ],
+   "rate_pct": [
+    11.7,
+    48.6,
+    42.6
+   ],
+   "flights": [
+    1918,
+    2006,
+    1945
+   ],
+   "window_end": "2012-01-10"
+  },
+  {
+   "carrier": "EV",
+   "day0": "2011-01-11",
+   "run_start": "2011-01-09",
+   "excess_pp": [
+    10.5,
+    70.3,
+    54.0
+   ],
+   "rate_pct": [
+    12.1,
+    73.8,
+    66.4
+   ],
+   "flights": [
+    865,
+    938,
+    926
+   ],
+   "window_end": "2012-01-10"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2011-02-03",
+   "run_start": "2011-02-01",
+   "excess_pp": [
+    39.0,
+    42.8,
+    34.6
+   ],
+   "rate_pct": [
+    63.4,
+    65.7,
+    40.2
+   ],
+   "flights": [
+    1228,
+    1228,
+    1230
+   ],
+   "window_end": "2012-02-02"
+  },
+  {
+   "carrier": "XE",
+   "day0": "2011-02-03",
+   "run_start": "2011-02-01",
+   "excess_pp": [
+    22.2,
+    23.4,
+    31.3
+   ],
+   "rate_pct": [
+    46.7,
+    46.3,
+    36.9
+   ],
+   "flights": [
+    973,
+    979,
+    1125
+   ],
+   "window_end": "2012-02-02"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2011-05-25",
+   "run_start": "2011-05-23",
+   "excess_pp": [
+    23.5,
+    12.9,
+    22.5
+   ],
+   "rate_pct": [
+    24.5,
+    13.5,
+    24.6
+   ],
+   "flights": [
+    1524,
+    1508,
+    1518
+   ],
+   "window_end": "2012-05-23"
+  },
+  {
+   "carrier": "CO",
+   "day0": "2011-08-29",
+   "run_start": "2011-08-27",
+   "excess_pp": [
+    23.1,
+    25.6,
+    12.8
+   ],
+   "rate_pct": [
+    36.1,
+    43.6,
+    16.9
+   ],
+   "flights": [
+    588,
+    706,
+    692
+   ],
+   "window_end": "2012-08-27"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2012-10-30",
+   "run_start": "2012-10-28",
+   "excess_pp": [
+    13.5,
+    21.8,
+    22.4
+   ],
+   "rate_pct": [
+    17.7,
+    47.0,
+    44.1
+   ],
+   "flights": [
+    1475,
+    1533,
+    1331
+   ],
+   "window_end": "2013-10-29"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2012-10-31",
+   "run_start": "2012-10-29",
+   "excess_pp": [
+    57.7,
+    53.3,
+    41.7
+   ],
+   "rate_pct": [
+    82.9,
+    75.0,
+    50.2
+   ],
+   "flights": [
+    625,
+    573,
+    570
+   ],
+   "window_end": "2013-10-30"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2013-04-18",
+   "run_start": "2013-04-16",
+   "excess_pp": [
+    33.6,
+    20.9,
+    26.7
+   ],
+   "rate_pct": [
+    34.3,
+    23.4,
+    28.1
+   ],
+   "flights": [
+    1284,
+    1284,
+    1290
+   ],
+   "window_end": "2014-04-17"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2013-12-07",
+   "run_start": "2013-12-05",
+   "excess_pp": [
+    11.5,
+    50.6,
+    37.4
+   ],
+   "rate_pct": [
+    13.6,
+    52.7,
+    38.5
+   ],
+   "flights": [
+    1525,
+    1528,
+    1331
+   ],
+   "window_end": "2014-12-08"
+  },
+  {
+   "carrier": "EV",
+   "day0": "2013-12-10",
+   "run_start": "2013-12-08",
+   "excess_pp": [
+    14.3,
+    12.2,
+    13.1
+   ],
+   "rate_pct": [
+    20.0,
+    14.9,
+    15.6
+   ],
+   "flights": [
+    1863,
+    2043,
+    1931
+   ],
+   "window_end": "2014-12-09"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2014-01-04",
+   "run_start": "2014-01-02",
+   "excess_pp": [
+    23.2,
+    39.0,
+    25.3
+   ],
+   "rate_pct": [
+    28.8,
+    46.5,
+    27.8
+   ],
+   "flights": [
+    740,
+    737,
+    706
+   ],
+   "window_end": "2015-01-05"
+  },
+  {
+   "carrier": "DL",
+   "day0": "2014-01-30",
+   "run_start": "2014-01-28",
+   "excess_pp": [
+    29.8,
+    34.5,
+    25.6
+   ],
+   "rate_pct": [
+    37.3,
+    38.2,
+    26.9
+   ],
+   "flights": [
+    1877,
+    1935,
+    2030
+   ],
+   "window_end": "2015-01-29"
+  },
+  {
+   "carrier": "FL",
+   "day0": "2014-01-30",
+   "run_start": "2014-01-28",
+   "excess_pp": [
+    20.0,
+    54.7,
+    19.8
+   ],
+   "rate_pct": [
+    27.4,
+    58.4,
+    21.1
+   ],
+   "flights": [
+    288,
+    286,
+    299
+   ],
+   "window_end": "2015-01-29"
+  },
+  {
+   "carrier": "US",
+   "day0": "2014-02-14",
+   "run_start": "2014-02-12",
+   "excess_pp": [
+    14.7,
+    44.6,
+    15.3
+   ],
+   "rate_pct": [
+    22.4,
+    63.8,
+    18.1
+   ],
+   "flights": [
+    1190,
+    1242,
+    1248
+   ],
+   "window_end": "2015-02-13"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2014-06-25",
+   "run_start": "2014-06-23",
+   "excess_pp": [
+    10.1,
+    10.9,
+    16.4
+   ],
+   "rate_pct": [
+    10.5,
+    11.3,
+    18.1
+   ],
+   "flights": [
+    1150,
+    1148,
+    1148
+   ],
+   "window_end": "2015-06-24"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2015-01-28",
+   "run_start": "2015-01-26",
+   "excess_pp": [
+    28.4,
+    57.0,
+    23.8
+   ],
+   "rate_pct": [
+    36.2,
+    72.1,
+    26.9
+   ],
+   "flights": [
+    709,
+    667,
+    669
+   ],
+   "window_end": "2016-01-27"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2015-03-01",
+   "run_start": "2015-02-27",
+   "excess_pp": [
+    22.1,
+    36.3,
+    15.3
+   ],
+   "rate_pct": [
+    22.7,
+    38.4,
+    19.8
+   ],
+   "flights": [
+    1467,
+    1353,
+    1450
+   ],
+   "window_end": "2016-02-29"
+  },
+  {
+   "carrier": "NK",
+   "day0": "2015-06-17",
+   "run_start": "2015-06-15",
+   "excess_pp": [
+    12.2,
+    22.0,
+    26.2
+   ],
+   "rate_pct": [
+    14.4,
+    23.6,
+    28.4
+   ],
+   "flights": [
+    326,
+    322,
+    327
+   ],
+   "window_end": "2016-06-15"
+  },
+  {
+   "carrier": "WN",
+   "day0": "2016-07-22",
+   "run_start": "2016-07-20",
+   "excess_pp": [
+    16.5,
+    22.5,
+    13.0
+   ],
+   "rate_pct": [
+    16.6,
+    23.3,
+    13.9
+   ],
+   "flights": [
+    3870,
+    3870,
+    3870
+   ],
+   "window_end": "2017-07-21"
+  },
+  {
+   "carrier": "NK",
+   "day0": "2016-10-08",
+   "run_start": "2016-10-06",
+   "excess_pp": [
+    22.4,
+    22.4,
+    11.4
+   ],
+   "rate_pct": [
+    26.5,
+    26.8,
+    13.2
+   ],
+   "flights": [
+    377,
+    380,
+    379
+   ],
+   "window_end": "2017-10-10"
+  },
+  {
+   "carrier": "F9",
+   "day0": "2016-12-19",
+   "run_start": "2016-12-17",
+   "excess_pp": [
+    30.6,
+    45.7,
+    48.2
+   ],
+   "rate_pct": [
+    41.5,
+    49.1,
+    49.1
+   ],
+   "flights": [
+    265,
+    273,
+    269
+   ],
+   "window_end": "2017-12-18"
+  },
+  {
+   "carrier": "DL",
+   "day0": "2017-04-07",
+   "run_start": "2017-04-05",
+   "excess_pp": [
+    27.2,
+    29.0,
+    27.6
+   ],
+   "rate_pct": [
+    28.6,
+    34.6,
+    29.3
+   ],
+   "flights": [
+    2642,
+    2743,
+    2750
+   ],
+   "window_end": "2018-04-06"
+  },
+  {
+   "carrier": "EV",
+   "day0": "2017-08-28",
+   "run_start": "2017-08-26",
+   "excess_pp": [
+    22.0,
+    25.1,
+    22.7
+   ],
+   "rate_pct": [
+    24.1,
+    27.3,
+    24.6
+   ],
+   "flights": [
+    710,
+    866,
+    948
+   ],
+   "window_end": "2018-08-27"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2017-08-29",
+   "run_start": "2017-08-27",
+   "excess_pp": [
+    17.2,
+    17.4,
+    17.5
+   ],
+   "rate_pct": [
+    19.3,
+    19.3,
+    19.4
+   ],
+   "flights": [
+    1767,
+    1875,
+    1824
+   ],
+   "window_end": "2018-08-28"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2017-09-11",
+   "run_start": "2017-09-09",
+   "excess_pp": [
+    32.7,
+    31.6,
+    24.5
+   ],
+   "rate_pct": [
+    40.1,
+    41.4,
+    43.3
+   ],
+   "flights": [
+    716,
+    831,
+    826
+   ],
+   "window_end": "2018-09-10"
+  },
+  {
+   "carrier": "OH",
+   "day0": "2018-06-16",
+   "run_start": "2018-06-14",
+   "excess_pp": [
+    32.3,
+    68.4,
+    20.8
+   ],
+   "rate_pct": [
+    32.5,
+    68.6,
+    20.9
+   ],
+   "flights": [
+    818,
+    818,
+    717
+   ],
+   "window_end": "2019-06-17"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2019-01-21",
+   "run_start": "2019-01-19",
+   "excess_pp": [
+    26.0,
+    44.2,
+    16.2
+   ],
+   "rate_pct": [
+    33.2,
+    48.9,
+    18.3
+   ],
+   "flights": [
+    654,
+    779,
+    813
+   ],
+   "window_end": "2020-01-21"
+  },
+  {
+   "carrier": "NK",
+   "day0": "2019-04-21",
+   "run_start": "2019-04-19",
+   "excess_pp": [
+    10.3,
+    20.1,
+    10.5
+   ],
+   "rate_pct": [
+    18.1,
+    20.7,
+    10.7
+   ],
+   "flights": [
+    563,
+    566,
+    560
+   ],
+   "window_end": "2020-04-20"
+  },
+  {
+   "carrier": "EV",
+   "day0": "2019-04-27",
+   "run_start": "2019-04-25",
+   "excess_pp": [
+    11.2,
+    11.7,
+    17.0
+   ],
+   "rate_pct": [
+    11.4,
+    13.6,
+    19.8
+   ],
+   "flights": [
+    396,
+    398,
+    278
+   ],
+   "window_end": "2020-04-27"
+  },
+  {
+   "carrier": "OH",
+   "day0": "2020-02-08",
+   "run_start": "2020-02-06",
+   "excess_pp": [
+    31.0,
+    32.5,
+    11.6
+   ],
+   "rate_pct": [
+    32.8,
+    34.7,
+    11.8
+   ],
+   "flights": [
+    826,
+    825,
+    672
+   ],
+   "window_end": "2021-02-08"
+  },
+  {
+   "carrier": "WN",
+   "day0": "2020-03-19",
+   "run_start": "2020-03-17",
+   "excess_pp": [
+    10.1,
+    17.8,
+    23.6
+   ],
+   "rate_pct": [
+    11.2,
+    20.2,
+    34.3
+   ],
+   "flights": [
+    3902,
+    3902,
+    3902
+   ],
+   "window_end": "2021-03-18"
+  },
+  {
+   "carrier": "DL",
+   "day0": "2020-03-21",
+   "run_start": "2020-03-19",
+   "excess_pp": [
+    12.0,
+    29.2,
+    22.2
+   ],
+   "rate_pct": [
+    22.7,
+    43.8,
+    40.3
+   ],
+   "flights": [
+    3050,
+    3054,
+    2455
+   ],
+   "window_end": "2021-03-22"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2020-03-23",
+   "run_start": "2020-03-21",
+   "excess_pp": [
+    17.2,
+    28.7,
+    15.4
+   ],
+   "rate_pct": [
+    35.3,
+    47.5,
+    45.1
+   ],
+   "flights": [
+    1556,
+    1723,
+    1807
+   ],
+   "window_end": "2021-03-22"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2020-03-25",
+   "run_start": "2020-03-23",
+   "excess_pp": [
+    14.5,
+    11.4,
+    25.0
+   ],
+   "rate_pct": [
+    44.2,
+    45.0,
+    65.3
+   ],
+   "flights": [
+    2683,
+    2584,
+    2623
+   ],
+   "window_end": "2021-03-24"
+  },
+  {
+   "carrier": "G4",
+   "day0": "2020-03-26",
+   "run_start": "2020-03-24",
+   "excess_pp": [
+    13.4,
+    33.1,
+    38.4
+   ],
+   "rate_pct": [
+    46.9,
+    73.4,
+    85.6
+   ],
+   "flights": [
+    245,
+    308,
+    443
+   ],
+   "window_end": "2021-03-25"
+  },
+  {
+   "carrier": "F9",
+   "day0": "2020-03-29",
+   "run_start": "2020-03-27",
+   "excess_pp": [
+    16.1,
+    29.7,
+    37.9
+   ],
+   "rate_pct": [
+    67.6,
+    78.1,
+    87.4
+   ],
+   "flights": [
+    420,
+    398,
+    430
+   ],
+   "window_end": "2021-03-29"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2020-03-30",
+   "run_start": "2020-03-28",
+   "excess_pp": [
+    16.5,
+    16.4,
+    24.6
+   ],
+   "rate_pct": [
+    64.9,
+    65.9,
+    75.4
+   ],
+   "flights": [
+    716,
+    787,
+    792
+   ],
+   "window_end": "2021-03-29"
+  },
+  {
+   "carrier": "HA",
+   "day0": "2020-04-06",
+   "run_start": "2020-04-04",
+   "excess_pp": [
+    20.4,
+    24.3,
+    18.0
+   ],
+   "rate_pct": [
+    65.0,
+    65.0,
+    65.0
+   ],
+   "flights": [
+    103,
+    103,
+    103
+   ],
+   "window_end": "2021-04-05"
+  },
+  {
+   "carrier": "YX",
+   "day0": "2020-04-11",
+   "run_start": "2020-04-09",
+   "excess_pp": [
+    14.9,
+    22.4,
+    20.9
+   ],
+   "rate_pct": [
+    46.0,
+    48.8,
+    44.9
+   ],
+   "flights": [
+    465,
+    457,
+    361
+   ],
+   "window_end": "2021-04-12"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2020-04-12",
+   "run_start": "2020-04-10",
+   "excess_pp": [
+    18.4,
+    19.0,
+    19.5
+   ],
+   "rate_pct": [
+    44.8,
+    43.0,
+    46.4
+   ],
+   "flights": [
+    545,
+    465,
+    539
+   ],
+   "window_end": "2021-04-12"
+  },
+  {
+   "carrier": "YV",
+   "day0": "2020-04-23",
+   "run_start": "2020-04-21",
+   "excess_pp": [
+    15.5,
+    17.4,
+    14.6
+   ],
+   "rate_pct": [
+    37.6,
+    39.5,
+    36.3
+   ],
+   "flights": [
+    202,
+    220,
+    215
+   ],
+   "window_end": "2021-04-22"
+  },
+  {
+   "carrier": "9E",
+   "day0": "2020-05-05",
+   "run_start": "2020-05-03",
+   "excess_pp": [
+    11.2,
+    14.6,
+    20.4
+   ],
+   "rate_pct": [
+    13.7,
+    16.8,
+    21.9
+   ],
+   "flights": [
+    248,
+    256,
+    256
+   ],
+   "window_end": "2021-05-04"
+  },
+  {
+   "carrier": "OO",
+   "day0": "2020-05-05",
+   "run_start": "2020-05-03",
+   "excess_pp": [
+    12.8,
+    15.4,
+    12.0
+   ],
+   "rate_pct": [
+    15.4,
+    17.6,
+    13.5
+   ],
+   "flights": [
+    827,
+    883,
+    742
+   ],
+   "window_end": "2021-05-04"
+  },
+  {
+   "carrier": "QX",
+   "day0": "2021-02-13",
+   "run_start": "2021-02-11",
+   "excess_pp": [
+    10.7,
+    21.0,
+    78.2
+   ],
+   "rate_pct": [
+    12.3,
+    21.4,
+    80.4
+   ],
+   "flights": [
+    301,
+    308,
+    301
+   ],
+   "window_end": "2022-02-15"
+  },
+  {
+   "carrier": "NK",
+   "day0": "2021-08-02",
+   "run_start": "2021-07-31",
+   "excess_pp": [
+    15.9,
+    29.6,
+    55.7
+   ],
+   "rate_pct": [
+    16.6,
+    31.4,
+    57.1
+   ],
+   "flights": [
+    610,
+    662,
+    651
+   ],
+   "window_end": "2022-08-02"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2021-08-03",
+   "run_start": "2021-08-01",
+   "excess_pp": [
+    10.5,
+    20.5,
+    13.6
+   ],
+   "rate_pct": [
+    12.3,
+    22.0,
+    14.8
+   ],
+   "flights": [
+    2425,
+    2447,
+    2422
+   ],
+   "window_end": "2022-08-03"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2021-09-25",
+   "run_start": "2021-09-23",
+   "excess_pp": [
+    10.1,
+    11.7,
+    11.7
+   ],
+   "rate_pct": [
+    12.2,
+    12.2,
+    11.9
+   ],
+   "flights": [
+    658,
+    665,
+    546
+   ],
+   "window_end": "2022-09-27"
+  },
+  {
+   "carrier": "WN",
+   "day0": "2021-10-11",
+   "run_start": "2021-10-09",
+   "excess_pp": [
+    26.0,
+    31.3,
+    12.8
+   ],
+   "rate_pct": [
+    26.5,
+    32.0,
+    13.7
+   ],
+   "flights": [
+    3140,
+    3552,
+    3436
+   ],
+   "window_end": "2022-10-12"
+  },
+  {
+   "carrier": "AS",
+   "day0": "2021-12-28",
+   "run_start": "2021-12-26",
+   "excess_pp": [
+    33.7,
+    23.0,
+    20.2
+   ],
+   "rate_pct": [
+    39.0,
+    27.6,
+    22.9
+   ],
+   "flights": [
+    562,
+    586,
+    520
+   ],
+   "window_end": "2022-12-28"
+  },
+  {
+   "carrier": "G4",
+   "day0": "2022-01-01",
+   "run_start": "2021-12-30",
+   "excess_pp": [
+    15.9,
+    16.7,
+    15.5
+   ],
+   "rate_pct": [
+    23.9,
+    25.2,
+    28.8
+   ],
+   "flights": [
+    482,
+    457,
+    222
+   ],
+   "window_end": "2023-01-03"
+  },
+  {
+   "carrier": "OO",
+   "day0": "2022-01-02",
+   "run_start": "2021-12-31",
+   "excess_pp": [
+    10.6,
+    14.7,
+    13.3
+   ],
+   "rate_pct": [
+    19.1,
+    28.0,
+    25.3
+   ],
+   "flights": [
+    1826,
+    1829,
+    2249
+   ],
+   "window_end": "2023-01-03"
+  },
+  {
+   "carrier": "YV",
+   "day0": "2022-01-04",
+   "run_start": "2022-01-02",
+   "excess_pp": [
+    11.9,
+    18.0,
+    17.7
+   ],
+   "rate_pct": [
+    23.9,
+    32.2,
+    22.7
+   ],
+   "flights": [
+    406,
+    413,
+    366
+   ],
+   "window_end": "2023-01-04"
+  },
+  {
+   "carrier": "OH",
+   "day0": "2022-01-05",
+   "run_start": "2022-01-03",
+   "excess_pp": [
+    21.4,
+    14.7,
+    10.4
+   ],
+   "rate_pct": [
+    35.6,
+    19.7,
+    13.5
+   ],
+   "flights": [
+    717,
+    588,
+    676
+   ],
+   "window_end": "2023-01-05"
+  },
+  {
+   "carrier": "9E",
+   "day0": "2022-01-30",
+   "run_start": "2022-01-28",
+   "excess_pp": [
+    12.2,
+    24.9,
+    16.3
+   ],
+   "rate_pct": [
+    17.0,
+    39.8,
+    21.6
+   ],
+   "flights": [
+    788,
+    513,
+    735
+   ],
+   "window_end": "2023-01-31"
+  },
+  {
+   "carrier": "YX",
+   "day0": "2022-01-30",
+   "run_start": "2022-01-28",
+   "excess_pp": [
+    12.1,
+    52.2,
+    22.1
+   ],
+   "rate_pct": [
+    16.9,
+    67.1,
+    27.4
+   ],
+   "flights": [
+    941,
+    617,
+    858
+   ],
+   "window_end": "2023-01-31"
+  },
+  {
+   "carrier": "MQ",
+   "day0": "2022-02-04",
+   "run_start": "2022-02-02",
+   "excess_pp": [
+    28.3,
+    48.9,
+    20.3
+   ],
+   "rate_pct": [
+    38.8,
+    70.1,
+    32.0
+   ],
+   "flights": [
+    659,
+    786,
+    782
+   ],
+   "window_end": "2023-02-06"
+  },
+  {
+   "carrier": "F9",
+   "day0": "2022-04-03",
+   "run_start": "2022-04-01",
+   "excess_pp": [
+    10.2,
+    22.6,
+    16.1
+   ],
+   "rate_pct": [
+    13.0,
+    27.1,
+    17.4
+   ],
+   "flights": [
+    446,
+    387,
+    455
+   ],
+   "window_end": "2023-04-04"
+  },
+  {
+   "carrier": "NK",
+   "day0": "2022-09-30",
+   "run_start": "2022-09-28",
+   "excess_pp": [
+    17.6,
+    19.1,
+    23.0
+   ],
+   "rate_pct": [
+    23.5,
+    26.0,
+    30.2
+   ],
+   "flights": [
+    663,
+    688,
+    688
+   ],
+   "window_end": "2023-10-02"
+  },
+  {
+   "carrier": "WN",
+   "day0": "2022-12-24",
+   "run_start": "2022-12-22",
+   "excess_pp": [
+    17.8,
+    10.1,
+    27.1
+   ],
+   "rate_pct": [
+    26.2,
+    36.9,
+    43.7
+   ],
+   "flights": [
+    3918,
+    3918,
+    3252
+   ],
+   "window_end": "2023-12-27"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2023-02-02",
+   "run_start": "2023-01-31",
+   "excess_pp": [
+    19.8,
+    28.8,
+    14.6
+   ],
+   "rate_pct": [
+    24.4,
+    32.5,
+    15.5
+   ],
+   "flights": [
+    2394,
+    2388,
+    2548
+   ],
+   "window_end": "2024-02-02"
+  },
+  {
+   "carrier": "9E",
+   "day0": "2023-06-27",
+   "run_start": "2023-06-25",
+   "excess_pp": [
+    13.8,
+    29.5,
+    24.4
+   ],
+   "rate_pct": [
+    18.8,
+    35.6,
+    28.8
+   ],
+   "flights": [
+    565,
+    618,
+    612
+   ],
+   "window_end": "2024-06-26"
+  },
+  {
+   "carrier": "YX",
+   "day0": "2023-06-27",
+   "run_start": "2023-06-25",
+   "excess_pp": [
+    18.1,
+    33.7,
+    39.5
+   ],
+   "rate_pct": [
+    23.0,
+    39.8,
+    43.9
+   ],
+   "flights": [
+    761,
+    827,
+    814
+   ],
+   "window_end": "2024-06-26"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2023-06-28",
+   "run_start": "2023-06-26",
+   "excess_pp": [
+    15.9,
+    26.5,
+    30.5
+   ],
+   "rate_pct": [
+    22.0,
+    30.8,
+    31.7
+   ],
+   "flights": [
+    2137,
+    2141,
+    2156
+   ],
+   "window_end": "2024-06-27"
+  },
+  {
+   "carrier": "AS",
+   "day0": "2024-01-08",
+   "run_start": "2024-01-06",
+   "excess_pp": [
+    22.4,
+    21.9,
+    22.7
+   ],
+   "rate_pct": [
+    23.8,
+    22.9,
+    24.1
+   ],
+   "flights": [
+    605,
+    646,
+    589
+   ],
+   "window_end": "2025-01-07"
+  },
+  {
+   "carrier": "AA",
+   "day0": "2024-05-30",
+   "run_start": "2024-05-28",
+   "excess_pp": [
+    16.1,
+    13.6,
+    15.4
+   ],
+   "rate_pct": [
+    17.4,
+    13.8,
+    17.0
+   ],
+   "flights": [
+    2836,
+    2831,
+    2840
+   ],
+   "window_end": "2025-05-30"
+  },
+  {
+   "carrier": "9E",
+   "day0": "2024-07-19",
+   "run_start": "2024-07-17",
+   "excess_pp": [
+    20.7,
+    12.4,
+    35.8
+   ],
+   "rate_pct": [
+    23.2,
+    16.5,
+    49.0
+   ],
+   "flights": [
+    582,
+    600,
+    600
+   ],
+   "window_end": "2025-07-21"
+  },
+  {
+   "carrier": "DL",
+   "day0": "2024-07-21",
+   "run_start": "2024-07-19",
+   "excess_pp": [
+    28.6,
+    43.4,
+    46.2
+   ],
+   "rate_pct": [
+    41.8,
+    44.5,
+    47.4
+   ],
+   "flights": [
+    3167,
+    2724,
+    3154
+   ],
+   "window_end": "2025-07-22"
+  },
+  {
+   "carrier": "UA",
+   "day0": "2024-07-21",
+   "run_start": "2024-07-19",
+   "excess_pp": [
+    12.7,
+    18.2,
+    10.5
+   ],
+   "rate_pct": [
+    25.9,
+    19.3,
+    11.6
+   ],
+   "flights": [
+    2172,
+    1970,
+    2087
+   ],
+   "window_end": "2025-07-22"
+  },
+  {
+   "carrier": "YX",
+   "day0": "2024-08-04",
+   "run_start": "2024-08-02",
+   "excess_pp": [
+    25.7,
+    21.7,
+    25.6
+   ],
+   "rate_pct": [
+    28.3,
+    26.9,
+    35.0
+   ],
+   "flights": [
+    842,
+    676,
+    801
+   ],
+   "window_end": "2025-08-05"
+  },
+  {
+   "carrier": "NK",
+   "day0": "2024-08-06",
+   "run_start": "2024-08-04",
+   "excess_pp": [
+    11.8,
+    16.4,
+    11.6
+   ],
+   "rate_pct": [
+    21.1,
+    23.5,
+    16.8
+   ],
+   "flights": [
+    821,
+    821,
+    786
+   ],
+   "window_end": "2025-08-06"
+  },
+  {
+   "carrier": "B6",
+   "day0": "2024-10-10",
+   "run_start": "2024-10-08",
+   "excess_pp": [
+    12.2,
+    20.0,
+    22.4
+   ],
+   "rate_pct": [
+    13.9,
+    26.3,
+    27.4
+   ],
+   "flights": [
+    613,
+    619,
+    672
+   ],
+   "window_end": "2025-10-10"
+  },
+  {
+   "carrier": "G4",
+   "day0": "2024-10-10",
+   "run_start": "2024-10-08",
+   "excess_pp": [
+    46.5,
+    58.3,
+    39.1
+   ],
+   "rate_pct": [
+    48.2,
+    64.6,
+    44.1
+   ],
+   "flights": [
+    85,
+    164,
+    472
+   ],
+   "window_end": "2025-10-10"
+  },
+  {
+   "carrier": "F9",
+   "day0": "2024-10-11",
+   "run_start": "2024-10-09",
+   "excess_pp": [
+    13.4,
+    23.2,
+    13.8
+   ],
+   "rate_pct": [
+    19.7,
+    28.2,
+    14.8
+   ],
+   "flights": [
+    370,
+    706,
+    750
+   ],
+   "window_end": "2025-10-14"
+  },
+  {
+   "carrier": "OH",
+   "day0": "2025-01-11",
+   "run_start": "2025-01-09",
+   "excess_pp": [
+    10.7,
+    26.9,
+    13.5
+   ],
+   "rate_pct": [
+    14.1,
+    36.7,
+    15.4
+   ],
+   "flights": [
+    724,
+    713,
+    590
+   ],
+   "window_end": "2026-01-13"
+  },
+  {
+   "carrier": "YX",
+   "day0": "2025-11-11",
+   "run_start": "2025-11-09",
+   "excess_pp": [
+    18.7,
+    17.3,
+    12.4
+   ],
+   "rate_pct": [
+    30.6,
+    25.0,
+    15.4
+   ],
+   "flights": [
+    1011,
+    1054,
+    1036
+   ],
+   "window_end": "2026-11-12"
+  }
+ ],
+ "shape": {
+  "months": "1998-01 -> 2025-11",
+  "carrier_days": 157034,
+  "flights": 176970802,
+  "cancelled": 3519665,
+  "carriers": 29,
+  "days": 10196,
+  "payloads": {
+   "source": "bts",
+   "first_id": 14,
+   "last_id": 352,
+   "n": 335
+  }
+ },
+ "rule": {
+  "threshold_pp": 10.0,
+  "run_days": 3,
+  "rearm_sessions": 250,
+  "window": "[+3,+250]"
+ },
+ "window": {
+  "x": "1998-01-01 → 2025-11-30 (BTS FlightDate)",
+  "day0_last": "day 0 + 250 sessions ≤ 2026-11-13",
+  "discovery_end": "2009-12-31 (field/sharadar.py REPLAY_END; printed beside, for a step-2 σ read)"
+ },
+ "terms": {
+  "robots": "www.transtats.bts.gov and transtats.bts.gov answer 404 (bts#1, bts#2: no robots file); www.bts.gov's (bts#3) disallows CMS paths alone (/core/, /admin/, /search/, …), none on TranStats",
+  "policies": "BTS's footer (bts#4) names \"Web Policies and Notices\" at www.transportation.gov/web-policies (bts#8, USDOT, BTS's department); its Disclaimer Statement (bts#9, last updated 2012-03-11) reads in full: \"You are accessing a U.S. Government information system. This information system, including all related equipment, networks, and network devices, is provided for U.S. Government-authorized use only. Unauthorized or improper use of this system is prohibited, and may result in civil and criminal penalties, or administrative disciplinary action. The communications and data stored or transiting this system may be, for any lawful Government purpose, monitored, recorded, and subject to audit or investigation. By using this system, you understand and consent to such terms.\"",
+  "reading": "no term forbids storage or AI use (the source line's licence clause), so the source stands; the download is TranStats' own public form (bts#11, bts#13), the use it is published for"
+ },
+ "pulled_via": "rawFetch",
+ "pull": {
+  "script_path": "orient/investigations/pull-airline-meltdown-peer-lag.mjs",
+  "script_sha256": "92972a398f6640ae4fe85d8c6e9863ae120c07566aaa8c8a6a866ecc3be2662d",
+  "form": "TranStats DL_SelectFields.aspx (gnoyr_VQ=FGJ), one POST a month, FL_DATE + OP_UNIQUE_CARRIER + CANCELLED, all geographies, 2 s apart, the session of the form page each run GETs first",
+  "misses": "bts#10 a guessed PREZIP link (404); bts#12 a session-less POST (the form's own \"(loadMyTable) Cannot display data.\"); neither a refusal by the source, no month read from either"
+ },
+ "script_path": "orient/investigations/probe-airline-meltdown-peer-lag-count.py",
+ "script_sha256": "92d0a5b42a3957ba78bd9eb174329126a8b43f0f45cddc94ac826148a2ffe7bc",
+ "script_commit": "b0991c3095b151e0e16e13fc7108adca2a0c5f04"
+}

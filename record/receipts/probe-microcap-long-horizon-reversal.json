@@ -1,0 +1,103 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "microcap-long-horizon-reversal",
+  "vendor": "sharadar",
+  "computed_at": "2026-11-13T16:48:52-05:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form; the factory's F1 of 2026-11-13",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery cohorts, a counted trial, never re-run. No request: the held Sharadar store, read-only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "the net return of one cohort of the row's own book over its 36-month hold (the field's frozen rule xs_microcap_long_horizon_reversal, PARAMS {\"months\": 36, \"cohorts\": 3}, one cohort: formed at a December-end on the micro pool's 36-month total return, long the lowest decile +0.5 against the highest -0.5, its formation weights restored at the next two December-ends and flat at the open after the third; the field's engine at the entry replay's B7 cost line, thickened): its sigma, turnover and cost alone",
+  "rule_path": "orient/research-py/src/superbrain/field/xs_signals/microcap_long_horizon_reversal.py",
+  "rule_sha256": "0b6bbfa38b302adca8569875d1db47fc3c258dba747e315b601a5530a4cf1b01",
+  "sigma": 32.301310716409475,
+  "sigma_gross": 34.65617249737372,
+  "n": 7,
+  "turnover": 3.4821613270514677,
+  "cost": 5.380164710526818,
+  "units": "percent per 36-month cohort (the row's Stage-1 unit; prior 12.3)",
+  "sigma_on": "all 7 December-end cohorts (formed 2000-12-29 → 2006-12-29)",
+  "cohorts": [
+    {
+      "formed": "2000-12-29",
+      "flat_at": "2004-01-02",
+      "hold": 752,
+      "short_by_one": false,
+      "pool": 3640,
+      "long": 274,
+      "short": 274,
+      "cash": false
+    },
+    {
+      "formed": "2001-12-31",
+      "flat_at": "2005-01-03",
+      "hold": 756,
+      "short_by_one": false,
+      "pool": 3292,
+      "long": 263,
+      "short": 263,
+      "cash": false
+    },
+    {
+      "formed": "2002-12-31",
+      "flat_at": "2006-01-03",
+      "hold": 756,
+      "short_by_one": false,
+      "pool": 3219,
+      "long": 280,
+      "short": 280,
+      "cash": false
+    },
+    {
+      "formed": "2003-12-31",
+      "flat_at": "2007-01-03",
+      "hold": 755,
+      "short_by_one": false,
+      "pool": 2977,
+      "long": 273,
+      "short": 273,
+      "cash": false
+    },
+    {
+      "formed": "2004-12-31",
+      "flat_at": "2008-01-02",
+      "hold": 754,
+      "short_by_one": false,
+      "pool": 3016,
+      "long": 262,
+      "short": 262,
+      "cash": false
+    },
+    {
+      "formed": "2005-12-30",
+      "flat_at": "2009-01-02",
+      "hold": 755,
+      "short_by_one": false,
+      "pool": 2976,
+      "long": 248,
+      "short": 248,
+      "cash": false
+    },
+    {
+      "formed": "2006-12-29",
+      "flat_at": "2009-12-31",
+      "hold": 755,
+      "short_by_one": true,
+      "pool": 2971,
+      "long": 242,
+      "short": 242,
+      "cash": false
+    }
+  ],
+  "carried_past_flat": {
+    "cohorts": 6,
+    "gross": 0.023020623020200612
+  },
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "2000-12-29",
+    "last_flat": "2009-12-31"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-microcap-long-horizon-reversal.py",
+  "script_sha256": "5acf02bcadce7b076da95feec5f4688677ec093ed703acca04c2aa6f85457c75"
+}

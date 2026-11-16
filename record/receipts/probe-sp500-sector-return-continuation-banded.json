@@ -1,0 +1,28 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "sp500-sector-return-continuation-banded",
+  "vendor": "sharadar",
+  "computed_at": "2026-11-13T05:56:01-05:00",
+  "authority": "factory spec § 2.2 condition 7; successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form; the factory's F1 of 2026-10-25",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery window, a counted trial, never re-run. No request: the held Sharadar store, read-only. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "authority_d834": "the operator's chat of 2026-11-13 ~05:00 ET, verbatim \"Yes add it\" (D834); the row's rule fixed by the monitor session before any read",
+  "statistic": "the net return of the row's own book over each month (the rule xs_sp500_sector_return_continuation_banded, PARAMS {\"buy\": 3, \"hold\": 5}: the parent's sector ranking, a sector in at top / bottom 3 and held while top / bottom 5, formed each month-end and held to the next, on the field's engine at the entry replay's B7 cost line): its sigma, turnover and cost alone",
+  "rule_path": "orient/research-py/src/superbrain/field/xs_signals/sp500_sector_return_continuation_banded.py",
+  "rule_sha256": "fb01a12c76f6bf51b19401e3d66b5a5db678f006c11e408349a19b15633a742c",
+  "sigma": 2.5667944298276955,
+  "sigma_gross": 2.403530131793333,
+  "units": "percent per month, a month-end to the next (the row's Stage-1 unit; prior 0.525)",
+  "n": 141,
+  "turnover": 1.2629935911454955,
+  "cost": 0.5000789037767399,
+  "formations_empty": 0,
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "1998-03-31",
+    "last_window_end": "2009-12-31"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-sp500-sector-return-continuation-banded.py",
+  "script_sha256": "0ee7327a1daddc68a8b7400cbee2ca2afcfec05816e6c2b0d2e0f73694eaf603"
+}

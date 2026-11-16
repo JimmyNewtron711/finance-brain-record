@@ -1,0 +1,966 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "ceo-conduct-exit-drift",
+  "vendor": "sharadar",
+  "item": "D826 (1)",
+  "computed_at": "2026-11-12T19:34:11-05:00",
+  "read_started_at": "2026-11-12T19:33:17-05:00",
+  "authority": "the K1 dated line of 2026-11-12 under Amendment 2026-10-01 (K1) B1 (2) (794cb5ed on main, the operator's chat approval 'Approved'), its (1): the drift row's option (b) means on the discovery window, option (c)'s σ beside them",
+  "note": "In-sample. One read, a counted trial in the family (ceo-conduct-exit-drift, ceo-conduct-exit-reversal), never re-run. No per-event return is written or printed. The guard (D829): cap_replay for any cap, events with a one-session tr ratio beyond 10x or a B4 exit r outside [-1.0, 9.0] dropped and counted. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "per event, the name's buy-and-hold total return (B5) less the benchmark's (SPY, or the name's sector SPDR) over sessions [i, j] from day 0, percent",
+  "counts": {
+    "all": {
+      "events": 1227,
+      "members": 1221,
+      "complete": {
+        "[0,+2]": 1227,
+        "[+3,+20]": 1214,
+        "[+3,+60]": 1188,
+        "[+3,+250]": 1064
+      },
+      "since_2010": 0
+    },
+    "performance": {
+      "events": 300,
+      "members": 298,
+      "complete": {
+        "[0,+2]": 300,
+        "[+3,+20]": 298,
+        "[+3,+60]": 291,
+        "[+3,+250]": 261
+      },
+      "since_2010": 0
+    },
+    "conduct": {
+      "events": 54,
+      "members": 54,
+      "complete": {
+        "[0,+2]": 54,
+        "[+3,+20]": 53,
+        "[+3,+60]": 53,
+        "[+3,+250]": 50
+      },
+      "since_2010": 0
+    }
+  },
+  "drops": {
+    "all": {
+      "guard_tr_jump": 2,
+      "no_member": 6,
+      "[0,+2] sector: no_sector": 2,
+      "[+3,+20] sector: no_sector": 2,
+      "[+3,+60] sector: no_sector": 2,
+      "[+3,+250] sector: no_sector": 2,
+      "no_bars_or_unsynced_split": 6
+    },
+    "performance": {
+      "no_member": 2,
+      "[0,+2] sector: no_sector": 1,
+      "[+3,+20] sector: no_sector": 1,
+      "[+3,+60] sector: no_sector": 1,
+      "[+3,+250] sector: no_sector": 1
+    },
+    "conduct": {
+      "guard_tr_jump": 1
+    }
+  },
+  "table": [
+    {
+      "group": "all",
+      "split": "any",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 1198,
+      "mean": -0.7833306540438357,
+      "median": -0.3311239409722,
+      "sigma": 14.52843997703063,
+      "t": -1.8661843696504665
+    },
+    {
+      "group": "all",
+      "split": "any",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 1200,
+      "mean": -0.6367556353475633,
+      "median": -0.32117801683175795,
+      "sigma": 14.51402759717106,
+      "t": -1.5197616306623896
+    },
+    {
+      "group": "all",
+      "split": "any",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 1048,
+      "mean": 5.289409672740222,
+      "median": -0.4076557883506582,
+      "sigma": 63.58222905979137,
+      "t": 2.693097626241917
+    },
+    {
+      "group": "all",
+      "split": "any",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 1050,
+      "mean": 6.851573745316912,
+      "median": 0.5352808299799949,
+      "sigma": 63.691677742592645,
+      "t": 3.485798646949773
+    },
+    {
+      "group": "all",
+      "split": "any",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 1172,
+      "mean": 0.21563387215232066,
+      "median": -0.21235386220542773,
+      "sigma": 27.08047781659533,
+      "t": 0.2725991294369038
+    },
+    {
+      "group": "all",
+      "split": "any",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 1174,
+      "mean": 0.5556643572437766,
+      "median": 0.06745743439383611,
+      "sigma": 27.205439488214694,
+      "t": 0.699827239343615
+    },
+    {
+      "group": "all",
+      "split": "any",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 1211,
+      "mean": 0.15984947606482386,
+      "median": -0.02434778220719025,
+      "sigma": 9.558962664964268,
+      "t": 0.5819323805051274
+    },
+    {
+      "group": "all",
+      "split": "any",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 1213,
+      "mean": 0.27659724091914767,
+      "median": -0.0014441489361693982,
+      "sigma": 9.5360363540588,
+      "t": 1.0102069360790478
+    },
+    {
+      "group": "all",
+      "split": "no_shock",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 1088,
+      "mean": -0.6049905614332086,
+      "median": -0.322418848508188,
+      "sigma": 12.860843418551266,
+      "t": -1.551649394124629
+    },
+    {
+      "group": "all",
+      "split": "no_shock",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 1088,
+      "mean": -0.47716871861875065,
+      "median": -0.33592625601139847,
+      "sigma": 12.86368196955658,
+      "t": -1.2235483014967974
+    },
+    {
+      "group": "all",
+      "split": "no_shock",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 958,
+      "mean": 3.3451327746957826,
+      "median": -0.2818947033455088,
+      "sigma": 47.44190139480961,
+      "t": 2.1823983691243862
+    },
+    {
+      "group": "all",
+      "split": "no_shock",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 958,
+      "mean": 4.715672278901636,
+      "median": 0.5849312182065913,
+      "sigma": 48.09444971968501,
+      "t": 3.0348093272490804
+    },
+    {
+      "group": "all",
+      "split": "no_shock",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 1065,
+      "mean": -0.0687375176746902,
+      "median": -0.13078673534101526,
+      "sigma": 22.290201711071145,
+      "t": -0.10063629735467794
+    },
+    {
+      "group": "all",
+      "split": "no_shock",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 1065,
+      "mean": 0.2702771770348069,
+      "median": 0.3314020240031801,
+      "sigma": 22.492699322946933,
+      "t": 0.3921413145328433
+    },
+    {
+      "group": "all",
+      "split": "no_shock",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 1100,
+      "mean": 1.826362871458244,
+      "median": 0.2788393857367011,
+      "sigma": 7.785696805866675,
+      "t": 7.780113362619959
+    },
+    {
+      "group": "all",
+      "split": "no_shock",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 1100,
+      "mean": 1.910924695242265,
+      "median": 0.42645080118335343,
+      "sigma": 7.83195296148732,
+      "t": 8.092260318605458
+    },
+    {
+      "group": "all",
+      "split": "shock",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 110,
+      "mean": -2.5472762973198564,
+      "median": -0.5658229017073024,
+      "sigma": 25.788372961232543,
+      "t": -1.0359730423394182
+    },
+    {
+      "group": "all",
+      "split": "shock",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 110,
+      "mean": -2.13935929752553,
+      "median": -0.22010923794182902,
+      "sigma": 25.76187544707864,
+      "t": -0.870968794670691
+    },
+    {
+      "group": "all",
+      "split": "shock",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 90,
+      "mean": 25.985157098591024,
+      "median": -2.9582371757831236,
+      "sigma": 151.2711903399839,
+      "t": 1.6296351262422861
+    },
+    {
+      "group": "all",
+      "split": "shock",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 90,
+      "mean": 29.912986731842558,
+      "median": 0.4302470536511116,
+      "sigma": 149.49737062178818,
+      "t": 1.898224081753166
+    },
+    {
+      "group": "all",
+      "split": "shock",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 107,
+      "mean": 3.0460593877202324,
+      "median": -0.6298504644234759,
+      "sigma": 55.72510822160187,
+      "t": 0.5654306346849681
+    },
+    {
+      "group": "all",
+      "split": "shock",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 107,
+      "mean": 3.826194621135552,
+      "median": -1.127801927033345,
+      "sigma": 55.59032890715065,
+      "t": 0.7119667339733663
+    },
+    {
+      "group": "all",
+      "split": "shock",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 111,
+      "mean": -16.35514813594204,
+      "median": -13.953143934293799,
+      "sigma": 9.82315834626743,
+      "t": -17.541423212665084
+    },
+    {
+      "group": "all",
+      "split": "shock",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 111,
+      "mean": -15.904647416094999,
+      "median": -12.592121051860394,
+      "sigma": 9.906446115824435,
+      "t": -16.91483063431933
+    },
+    {
+      "group": "conduct",
+      "split": "any",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 52,
+      "mean": -1.1547629676732825,
+      "median": 0.2636750745759253,
+      "sigma": 15.879982191695603,
+      "t": -0.5243780554275819
+    },
+    {
+      "group": "conduct",
+      "split": "any",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 52,
+      "mean": -1.3113308721758286,
+      "median": -0.6544524359513637,
+      "sigma": 15.341060807443768,
+      "t": -0.6163942321947796
+    },
+    {
+      "group": "conduct",
+      "split": "any",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 49,
+      "mean": -3.4744677612563213,
+      "median": -11.16658597824356,
+      "sigma": 49.08178922844958,
+      "t": -0.49552542218034623
+    },
+    {
+      "group": "conduct",
+      "split": "any",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 49,
+      "mean": -1.576254436235604,
+      "median": -11.92768630110237,
+      "sigma": 49.45499086559917,
+      "t": -0.22310753395213567
+    },
+    {
+      "group": "conduct",
+      "split": "any",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 52,
+      "mean": 1.2159602889997412,
+      "median": 3.3017103812811754,
+      "sigma": 33.19574983393283,
+      "t": 0.26414268048465794
+    },
+    {
+      "group": "conduct",
+      "split": "any",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 52,
+      "mean": 0.8102780238394286,
+      "median": 2.5135785832610114,
+      "sigma": 31.46663399489986,
+      "t": 0.18568868616886136
+    },
+    {
+      "group": "conduct",
+      "split": "any",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 53,
+      "mean": -2.8807063592043916,
+      "median": -0.10689207189724659,
+      "sigma": 9.777938731266191,
+      "t": -2.144813894844422
+    },
+    {
+      "group": "conduct",
+      "split": "any",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 53,
+      "mean": -2.7448326183253546,
+      "median": -0.2629943124292988,
+      "sigma": 9.617526445223248,
+      "t": -2.0777362248912747
+    },
+    {
+      "group": "conduct",
+      "split": "no_shock",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 46,
+      "mean": -0.9642336994056453,
+      "median": 0.2636750745759253,
+      "sigma": 10.028846838340911,
+      "t": -0.6520940279212188
+    },
+    {
+      "group": "conduct",
+      "split": "no_shock",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 46,
+      "mean": -0.7709379420096374,
+      "median": -0.6544524359513637,
+      "sigma": 10.266686351456416,
+      "t": -0.50929339226177
+    },
+    {
+      "group": "conduct",
+      "split": "no_shock",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 44,
+      "mean": -2.737767856870696,
+      "median": -8.474337665953902,
+      "sigma": 45.231480254942774,
+      "t": -0.4014968642704666
+    },
+    {
+      "group": "conduct",
+      "split": "no_shock",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 44,
+      "mean": -0.24272997715204617,
+      "median": -10.953469333690835,
+      "sigma": 45.32452199939431,
+      "t": -0.03552356314295534
+    },
+    {
+      "group": "conduct",
+      "split": "no_shock",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 46,
+      "mean": -0.9907617726022814,
+      "median": 2.059616481893134,
+      "sigma": 24.376475029338753,
+      "t": -0.2756622222190536
+    },
+    {
+      "group": "conduct",
+      "split": "no_shock",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 46,
+      "mean": -0.8410349519769688,
+      "median": 2.4102943289307066,
+      "sigma": 24.14239838123329,
+      "t": -0.23627215828249137
+    },
+    {
+      "group": "conduct",
+      "split": "no_shock",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 46,
+      "mean": 0.19759350799203376,
+      "median": 0.23633004453597617,
+      "sigma": 3.9059592120049134,
+      "t": 0.3431025008162802
+    },
+    {
+      "group": "conduct",
+      "split": "no_shock",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 46,
+      "mean": 0.2553011384494932,
+      "median": 0.2451866765440902,
+      "sigma": 3.8044809474758754,
+      "t": 0.45513082860378623
+    },
+    {
+      "group": "conduct",
+      "split": "shock",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 6,
+      "mean": -2.615487357725167,
+      "median": -0.10836584420087503,
+      "sigma": 40.793121466907394,
+      "t": -0.15705121904740993
+    },
+    {
+      "group": "conduct",
+      "split": "shock",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 6,
+      "mean": -5.454343336783295,
+      "median": -0.818221959142007,
+      "sigma": 37.79713441851046,
+      "t": -0.35347542247873326
+    },
+    {
+      "group": "conduct",
+      "split": "shock",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 5,
+      "mean": -9.957426919849825,
+      "median": -17.581434901565494,
+      "sigma": 82.80383625028082,
+      "t": -0.2688943469535815
+    },
+    {
+      "group": "conduct",
+      "split": "shock",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 5,
+      "mean": -13.311269676170912,
+      "median": -30.055475169807867,
+      "sigma": 84.10705619591258,
+      "t": -0.35389306449410945
+    },
+    {
+      "group": "conduct",
+      "split": "shock",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 6,
+      "mean": 18.134162761281914,
+      "median": 19.39212487148555,
+      "sigma": 74.18750301389379,
+      "t": 0.5987456629912705
+    },
+    {
+      "group": "conduct",
+      "split": "shock",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 6,
+      "mean": 13.470344171765142,
+      "median": 16.411268989368445,
+      "sigma": 68.09113126281974,
+      "t": 0.48457808335040264
+    },
+    {
+      "group": "conduct",
+      "split": "shock",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 7,
+      "mean": -23.109534057923756,
+      "median": -22.331138163684372,
+      "sigma": 12.811102659025964,
+      "t": -4.772585284746462
+    },
+    {
+      "group": "conduct",
+      "split": "shock",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 7,
+      "mean": -22.459997305702927,
+      "median": -21.172988380657532,
+      "sigma": 13.061712752959668,
+      "t": -4.549446802419219
+    },
+    {
+      "group": "performance",
+      "split": "any",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 295,
+      "mean": -2.442454461680842,
+      "median": -1.075545551592627,
+      "sigma": 17.522593653804016,
+      "t": -2.394082396912995
+    },
+    {
+      "group": "performance",
+      "split": "any",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 296,
+      "mean": -2.179522180819729,
+      "median": -0.9870191327190025,
+      "sigma": 17.40542259760503,
+      "t": -2.1543813281184274
+    },
+    {
+      "group": "performance",
+      "split": "any",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 258,
+      "mean": 9.572116178453326,
+      "median": -2.7215210569476067,
+      "sigma": 95.45518559498831,
+      "t": 1.6107134591904326
+    },
+    {
+      "group": "performance",
+      "split": "any",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 259,
+      "mean": 11.186701769484577,
+      "median": -1.2008727857332646,
+      "sigma": 95.20847108902014,
+      "t": 1.8909339147685893
+    },
+    {
+      "group": "performance",
+      "split": "any",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 288,
+      "mean": -1.29982314168121,
+      "median": -3.2512110476742464,
+      "sigma": 32.77814237969213,
+      "t": -0.6729707233650394
+    },
+    {
+      "group": "performance",
+      "split": "any",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 289,
+      "mean": -1.0705946106878808,
+      "median": -2.8483283802420045,
+      "sigma": 33.154096034392936,
+      "t": -0.5489550480523975
+    },
+    {
+      "group": "performance",
+      "split": "any",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 297,
+      "mean": -1.0661235348131721,
+      "median": -0.8772250406738902,
+      "sigma": 10.428785038898395,
+      "t": -1.7617814765112167
+    },
+    {
+      "group": "performance",
+      "split": "any",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 298,
+      "mean": -1.0586302132312193,
+      "median": -0.844035138046656,
+      "sigma": 10.252568258970541,
+      "t": -1.7824598134106238
+    },
+    {
+      "group": "performance",
+      "split": "no_shock",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 251,
+      "mean": -3.3094321099367012,
+      "median": -1.3089364726084018,
+      "sigma": 15.593961970120462,
+      "t": -3.362279915366651
+    },
+    {
+      "group": "performance",
+      "split": "no_shock",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 251,
+      "mean": -3.0243659543800074,
+      "median": -1.169010905985013,
+      "sigma": 15.389861018118907,
+      "t": -3.1134113435479356
+    },
+    {
+      "group": "performance",
+      "split": "no_shock",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 220,
+      "mean": 3.7996274487652757,
+      "median": -4.217508167037964,
+      "sigma": 68.9280704920396,
+      "t": 0.8176289031713
+    },
+    {
+      "group": "performance",
+      "split": "no_shock",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 220,
+      "mean": 5.013485409468162,
+      "median": -1.8238138806720872,
+      "sigma": 69.73846932087498,
+      "t": 1.0662982216515178
+    },
+    {
+      "group": "performance",
+      "split": "no_shock",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 246,
+      "mean": -3.5806298253510405,
+      "median": -3.6191261120569362,
+      "sigma": 26.984071564635066,
+      "t": -2.0812272253347306
+    },
+    {
+      "group": "performance",
+      "split": "no_shock",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 246,
+      "mean": -3.3261427588816606,
+      "median": -3.570942850117853,
+      "sigma": 27.370932750562293,
+      "t": -1.9059822035715326
+    },
+    {
+      "group": "performance",
+      "split": "no_shock",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 253,
+      "mean": 1.6756747209411198,
+      "median": -0.08726003490404644,
+      "sigma": 7.5582534405615105,
+      "t": 3.5263752777203887
+    },
+    {
+      "group": "performance",
+      "split": "no_shock",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 253,
+      "mean": 1.5912586808990197,
+      "median": 0.20005539113019388,
+      "sigma": 7.57007730062231,
+      "t": 3.343495417009129
+    },
+    {
+      "group": "performance",
+      "split": "shock",
+      "window": "[+3,+20]",
+      "benchmark": "sector",
+      "n": 44,
+      "mean": 2.503258940869625,
+      "median": 0.8460217321617003,
+      "sigma": 25.61445745369943,
+      "t": 0.6482566085949175
+    },
+    {
+      "group": "performance",
+      "split": "shock",
+      "window": "[+3,+20]",
+      "benchmark": "spy",
+      "n": 44,
+      "mean": 2.5796510487835413,
+      "median": 1.6289125452470132,
+      "sigma": 25.958439689855236,
+      "t": 0.6591871253498682
+    },
+    {
+      "group": "performance",
+      "split": "shock",
+      "window": "[+3,+250]",
+      "benchmark": "sector",
+      "n": 38,
+      "mean": 42.991787771384146,
+      "median": -0.4899042835925682,
+      "sigma": 183.9099879076999,
+      "t": 1.4410265672117695
+    },
+    {
+      "group": "performance",
+      "split": "shock",
+      "window": "[+3,+250]",
+      "benchmark": "spy",
+      "n": 38,
+      "mean": 47.33663063202071,
+      "median": 1.0170930781087273,
+      "sigma": 181.23435825379394,
+      "t": 1.6100842662116472
+    },
+    {
+      "group": "performance",
+      "split": "shock",
+      "window": "[+3,+60]",
+      "benchmark": "sector",
+      "n": 42,
+      "mean": 12.059187434099227,
+      "median": 0.7319448781198723,
+      "sigma": 54.3666877091966,
+      "t": 1.4375064968446725
+    },
+    {
+      "group": "performance",
+      "split": "shock",
+      "window": "[+3,+60]",
+      "benchmark": "spy",
+      "n": 42,
+      "mean": 12.575911293992677,
+      "median": 0.08995728148070703,
+      "sigma": 54.90884170231885,
+      "t": 1.4843004808659719
+    },
+    {
+      "group": "performance",
+      "split": "shock",
+      "window": "[0,+2]",
+      "benchmark": "sector",
+      "n": 44,
+      "mean": -16.83146350540035,
+      "median": -14.136844542668562,
+      "sigma": 10.7387989061518,
+      "t": -10.396628078768476
+    },
+    {
+      "group": "performance",
+      "split": "shock",
+      "window": "[0,+2]",
+      "benchmark": "spy",
+      "n": 44,
+      "mean": -16.273953566952642,
+      "median": -13.54848383835645,
+      "sigma": 10.581206621733713,
+      "t": -10.20197407852984
+    }
+  ],
+  "read_span": [
+    "1999-01-13",
+    "2009-12-30"
+  ],
+  "calendar": [
+    "1997-12-31",
+    "2009-12-31"
+  ],
+  "sector_etf": {
+    "Basic Materials": "XLB",
+    "Communication Services": "XLK",
+    "Consumer Cyclical": "XLY",
+    "Consumer Defensive": "XLP",
+    "Energy": "XLE",
+    "Financial Services": "XLF",
+    "Healthcare": "XLV",
+    "Industrials": "XLI",
+    "Real Estate": "XLF",
+    "Technology": "XLK",
+    "Utilities": "XLU"
+  },
+  "shock": -8.0,
+  "guard": {
+    "cap": "field.enter.cap_replay",
+    "tr_jump": 10.0,
+    "exit_r": [
+      -1.0,
+      9.0
+    ]
+  },
+  "script_path": "orient/investigations/probe-ceo-exit-d826.py",
+  "script_sha256": "f00fb43bc4770f6724096d44d07d044a5b3dbc2fd47f83c555131c8aecedb1cc",
+  "claim_cell": {
+    "group": "conduct",
+    "split": "any",
+    "window": "[+3,+250]",
+    "benchmark": "sector",
+    "n": 49,
+    "mean": -3.4744677612563213,
+    "median": -11.16658597824356,
+    "sigma": 49.08178922844958,
+    "t": -0.49552542218034623
+  },
+  "sigma": 49.08178922844958,
+  "n": 49,
+  "units": "percent sector-excess buy-and-hold return per event over sessions [+3,+250]",
+  "faulted_sigma": {
+    "receipt": "govern/receipts/probe-ceo-conduct-exit-drift.json",
+    "sigma": 49.19917479109295,
+    "n": 50,
+    "why": "read on the plain sharadar.cap (D829); D830 open"
+  },
+  "stage1": {
+    "form": "mean",
+    "h": 1,
+    "alpha": 0.025,
+    "sided": "two",
+    "c": "the measured σ at the row's declared prior 7.2 %",
+    "b": "the measured σ at the in-sample mean as the prior, on the registered negative sign",
+    "c_n43": {
+      "n": 43,
+      "sigma": 49.08178922844958,
+      "prior": 7.2,
+      "se": 7.484902686704797,
+      "threshold": 16.776681297837722,
+      "mde_80": 23.076134330195437,
+      "p_pass": 0.10036643682322666,
+      "verdict": "DEAD-POWER",
+      "line": "power: form mean, n 43, h 1, σ 49.08 measured (govern/receipts/probe-ceo-conduct-exit-drift-b.json), α 0.025, prior 7.2 percent sector-excess buy-and-hold return per event over sessions [+3,+250], falsifies: sign / p ≥ α / era_sign → P(PASS) 0.10 < 0.50 (upper bound: era_sign / plateau_sign ignored), 2026-11-12"
+    },
+    "c_n61": {
+      "n": 61,
+      "sigma": 49.08178922844958,
+      "prior": 7.2,
+      "se": 6.2842791543347065,
+      "threshold": 14.085600437556717,
+      "mde_80": 19.374583211544444,
+      "p_pass": 0.13660797519358964,
+      "verdict": "DEAD-POWER"
+    },
+    "b_n43": {
+      "n": 43,
+      "sigma": 49.08178922844958,
+      "prior": 3.4744677612563213,
+      "se": 7.484902686704797,
+      "threshold": 16.776681297837722,
+      "mde_80": 23.076134330195437,
+      "p_pass": 0.03776718101533011,
+      "verdict": "DEAD-POWER"
+    },
+    "b_n61": {
+      "n": 61,
+      "sigma": 49.08178922844958,
+      "prior": 3.4744677612563213,
+      "se": 6.2842791543347065,
+      "threshold": 14.085600437556717,
+      "mde_80": 19.374583211544444,
+      "p_pass": 0.045655701520911696,
+      "verdict": "DEAD-POWER"
+    },
+    "differs": {
+      "n43": false,
+      "n61": false
+    }
+  }
+}
