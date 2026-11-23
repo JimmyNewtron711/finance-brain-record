@@ -1,0 +1,156 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "etf-primary-flow-reversal-month",
+  "vendor": "ishares and SPDR fund exports (data/raw/blackrock, data/raw/ssga) + sharadar funds",
+  "computed_at": "2026-11-18T06:06:51-05:00",
+  "authority": "factory spec § 2.2 condition 7 (F1 [factory:probe:etf-primary-flow-reversal-month]); successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-17 (K1) (4)(b) and (5); the K1 dated line 2026-11-02 (funds before 2016); the 2026-11-14 (K1) line's (1) read, extended by D881 (a) of 2026-11-18; govern/source-admissions.jsonl lines 29-32 (2026-11-18 invesco, ssga, uscf, vanguard)",
+  "note": "One read of the discovery window, no p-value, a counted trial, never re-run. No request at the read: the issuers' exports held in the depot (pulled once through rawFetch before the script was committed) and the held Sharadar store. Strategy-level figures only: no price, no shares outstanding, no flow, no month's return. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "mean net residual month return of the row's book: the previous month's split-adjusted change in shares outstanding, long the N // 5 lowest and short the N // 5 highest of the mature eligible funds (SO changed on at least half their last 252 rows), half notional a leg, flat unless the legs span two asset classes, at most 1.00 notional traded a rebalance (excess deferred), entered at the close of the first session after the formation month and held one month; the ETF arena's cost line (10 bp a side, 25 bp a year of short borrow); the residual = net − beta × the 60/40 SPY/IEF return over the same hold, beta fitted in this read on the months the book is on",
+  "value": 0.595305263478821,
+  "sigma": 2.579169483631409,
+  "units": "percent per month (the row's Stage-1 unit; prior 0.1196 gross); turnover Σ|Δw| traded a rebalance",
+  "n": 79,
+  "n_on": 42,
+  "flat_formations": 35,
+  "turnover": 0.738104511522233,
+  "cost": 0.07879171086623232,
+  "gross_value": 0.6740969743450532,
+  "sigma_gross": 2.587909736281175,
+  "gross_exposure_mean": 0.47820093254486584,
+  "fit": {
+    "beta": -0.032547862978752895,
+    "r2": 0.0004241229075478765,
+    "n": 42,
+    "on": "OLS of net on the 60/40 return over the months on"
+  },
+  "bar": "zero on the registered sign (+, low flow minus high flow): the row declares no baseline bar",
+  "clears": true,
+  "eligible_by_year": {
+    "2009": {
+      "n_min": 4,
+      "n_max": 6,
+      "formations": 9
+    },
+    "2010": {
+      "n_min": 4,
+      "n_max": 7,
+      "formations": 12
+    },
+    "2011": {
+      "n_min": 8,
+      "n_max": 9,
+      "formations": 12
+    },
+    "2012": {
+      "n_min": 7,
+      "n_max": 8,
+      "formations": 12
+    },
+    "2013": {
+      "n_min": 7,
+      "n_max": 9,
+      "formations": 12
+    },
+    "2014": {
+      "n_min": 7,
+      "n_max": 9,
+      "formations": 12
+    },
+    "2015": {
+      "n_min": 7,
+      "n_max": 8,
+      "formations": 10
+    }
+  },
+  "splits": {
+    "IWM": 1,
+    "EFA": 1,
+    "EEM": 2,
+    "SLV": 1
+  },
+  "window": {
+    "first_formation": "2009-04",
+    "last_formation": "2015-10",
+    "first_entry": "2009-05-01",
+    "last_exit": "2015-12-01",
+    "end": "2015-12-31"
+  },
+  "universe": {
+    "read": {
+      "SPY": {
+        "class": "equity",
+        "payload": "ssga#296",
+        "sha256": "767395b908fcf36da2f4a14dc25fe2d05125a37769828248076f2f1d5437cf76"
+      },
+      "IWM": {
+        "class": "equity",
+        "payload": "blackrock#29",
+        "sha256": "70e6762c66740ed67f5313c2ca707cbb42c1af26843594f207641f2cf121202a"
+      },
+      "EFA": {
+        "class": "equity",
+        "payload": "blackrock#30",
+        "sha256": "dd1bf528c191ac4f0e95863d281bb06231d4a157574b8166fa87d888957c876c"
+      },
+      "EEM": {
+        "class": "equity",
+        "payload": "blackrock#31",
+        "sha256": "42c5e3e9e5ba6e2fad83879382b5d373356f12fd4ec078139f72cd268775f788"
+      },
+      "TLT": {
+        "class": "fixed income",
+        "payload": "blackrock#32",
+        "sha256": "72f024c5eb55d9eb9792135e1592b618381ab63b9fe94157eb0134048c7a4dfd"
+      },
+      "IEF": {
+        "class": "fixed income",
+        "payload": "blackrock#33",
+        "sha256": "99d11c70c1b228dd42f97dd72b728dc478e86358366eb3ac174aa0bb231c9106"
+      },
+      "TIP": {
+        "class": "fixed income",
+        "payload": "blackrock#34",
+        "sha256": "2256fb8161c536fd781d3b3fe1183684e09baf349b8775e856e5b5ff4051c672"
+      },
+      "LQD": {
+        "class": "fixed income",
+        "payload": "blackrock#4",
+        "sha256": "3b81afa5905add554f7995aa8f6282f2d03f3e13bd7a6e810947eae218949cfe"
+      },
+      "HYG": {
+        "class": "fixed income",
+        "payload": "blackrock#8",
+        "sha256": "4865444e206d1a835411cc5d9da3858a9f6db45a7e3831f116e38fb593706481"
+      },
+      "EMB": {
+        "class": "fixed income",
+        "payload": "blackrock#12",
+        "sha256": "9dcfb23bc1b1ddb5220420602823adccd219a745aeec030269381dd2eb08761e"
+      },
+      "GLD": {
+        "class": "commodities",
+        "payload": "ssga#290",
+        "sha256": "fa2520d32bbe11059f95492c264aa5c97d1eb36af36b418d6aa7b96dd4d09f10"
+      },
+      "SLV": {
+        "class": "commodities",
+        "payload": "blackrock#35",
+        "sha256": "af1427a5c9f60aebeeece9879e734a1ead75c2193b0ec9f522171c013d2818e6"
+      }
+    },
+    "not_read": {
+      "QQQ": "invesco (line 29): terms bar automated access",
+      "DBA": "invesco (line 29): terms bar automated access",
+      "DBC": "invesco (line 29): terms bar automated access",
+      "UUP": "invesco (line 29): terms bar automated access",
+      "FXE": "invesco (line 29): terms bar automated access",
+      "FXY": "invesco (line 29): terms bar automated access",
+      "USO": "uscf (line 31): terms bar storage in another database, struck under the amendment's (4)",
+      "VNQ": "vanguard (line 32): terms bar repeated automated access"
+    },
+    "terms": "govern/receipts/f1-etf-issuer-terms.md"
+  },
+  "pulled_via": "rawFetch (the twelve exports, before the script's commit); the held store data/sharadar.db, read-only",
+  "script_path": "orient/investigations/probe-etf-primary-flow-reversal-month.py",
+  "script_sha256": "9ea90d3b0fd78086dd56b5525274d27f296515a5d5864343c869846243eba899"
+}

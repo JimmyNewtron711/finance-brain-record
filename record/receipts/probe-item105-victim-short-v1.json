@@ -1,0 +1,306 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "item105-victim-short-v1",
+  "vendor": "sharadar",
+  "item": "F1 [factory:probe:item105-victim-short-v1]",
+  "computed_at": "2026-11-16T13:13:04-05:00",
+  "authority": "factory spec \u00a7 2.2 condition 7 (F1); successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2), carved for this row alone by the operator's inbox answer of 2026-11-16 ~12:33 ET to D869, option (a); the inbox ruling of 2026-10-24 (a) (D533), its (b) \u03c3-only form; the 2026-11-13 (K1) cost line",
+  "note": "\u03c3-only (D533 (b)): no value, no mean, no median, no t, no clears; no per-event return is written or printed. One read of the discovery events, a counted trial, never re-run. No request in this step: the held Sharadar store read-only, capped at 2024-05-31; X from step 1's receipt. script_sha256 = the sha256 of the script at script_path, committed and mirror-pushed before the read.",
+  "statistic": "per event, 100 \u00d7 (the sector SPDR's return \u2212 the Item 1.05 filer's) from the first regular-session open after acceptance to the close of session +5 from day 0, net of 4 sides and the short's borrow; its sigma, turnover and cost alone",
+  "sigma": 4.181446638994959,
+  "sigma_gross": 4.485310923972568,
+  "n": 14,
+  "turnover": 4,
+  "turnover_units": "sides of unit notional an event (the name in and out, the SPDR in and out)",
+  "cost": 0.6304594137653329,
+  "cost_range": [
+    0.33577420340433606,
+    2.093859796011474
+  ],
+  "units": "percent short return per event (the sector SPDR's return less the filer's) from the first open after acceptance to the close of session +5 from day 0 (the row's Stage-1 unit; prior 1.535)",
+  "sigma_on": "the 14 kept events of the 15 X events accepted 2023-12-18 \u2192 2024-05-31",
+  "shape": {
+    "x_events": 15,
+    "kept": 14,
+    "out": {
+      "under_floor": 1
+    }
+  },
+  "events": [
+    {
+      "cik": 103379,
+      "acc": "0000950123-23-011228",
+      "accepted_et": "2023-12-18T06:37:32-05:00",
+      "ticker": "VFC",
+      "exchange": "NYSE",
+      "day0": "2023-12-18",
+      "entry": "2023-12-18",
+      "exit": "2023-12-26",
+      "sessions": 6,
+      "etf": "XLY",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 1472787,
+      "acc": "0000950170-23-072513",
+      "accepted_et": "2023-12-22T12:13:25-05:00",
+      "ticker": "FAF",
+      "exchange": "NYSE",
+      "day0": "2023-12-22",
+      "entry": "2023-12-26",
+      "exit": "2024-01-02",
+      "sessions": 5,
+      "etf": "XLF",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 789019,
+      "acc": "0001193125-24-011295",
+      "accepted_et": "2024-01-19T16:39:35-05:00",
+      "ticker": "MSFT",
+      "exchange": "NASDAQ",
+      "day0": "2024-01-22",
+      "entry": "2024-01-22",
+      "exit": "2024-01-29",
+      "sessions": 6,
+      "etf": "XLK",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 1645590,
+      "acc": "0001645590-24-000009",
+      "accepted_et": "2024-01-24T16:05:25-05:00",
+      "ticker": "HPE",
+      "exchange": "NYSE",
+      "day0": "2024-01-25",
+      "entry": "2024-01-25",
+      "exit": "2024-02-01",
+      "sessions": 6,
+      "etf": "XLK",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 764038,
+      "acc": "0000950103-24-002017",
+      "accepted_et": "2024-02-09T17:15:21-05:00",
+      "ticker": "SSB",
+      "exchange": "NYSE",
+      "day0": "2024-02-12",
+      "entry": "2024-02-12",
+      "exit": "2024-02-20",
+      "sessions": 6,
+      "etf": "XLF",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 1137774,
+      "acc": "0001193125-24-033753",
+      "accepted_et": "2024-02-13T16:21:11-05:00",
+      "ticker": "PRU",
+      "exchange": "NYSE",
+      "day0": "2024-02-14",
+      "entry": "2024-02-14",
+      "exit": "2024-02-22",
+      "sessions": 6,
+      "etf": "XLF",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 731766,
+      "acc": "0000731766-24-000045",
+      "accepted_et": "2024-02-22T16:08:47-05:00",
+      "ticker": "UNH",
+      "exchange": "NYSE",
+      "day0": "2024-02-23",
+      "entry": "2024-02-23",
+      "exit": "2024-03-01",
+      "sessions": 6,
+      "etf": "XLV",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 1140859,
+      "acc": "0001104659-24-028288",
+      "accepted_et": "2024-02-27T17:15:26-05:00",
+      "ticker": "COR",
+      "exchange": "NYSE",
+      "day0": "2024-02-28",
+      "entry": "2024-02-28",
+      "exit": "2024-03-06",
+      "sessions": 6,
+      "etf": "XLV",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 1057060,
+      "acc": "0000950170-24-030041",
+      "accepted_et": "2024-03-12T16:42:10-04:00",
+      "ticker": "HZO",
+      "exchange": "NYSE",
+      "day0": "2024-03-13",
+      "entry": "2024-03-13",
+      "exit": "2024-03-20",
+      "sessions": 6,
+      "etf": "XLY",
+      "bucket": [
+        "s",
+        "s"
+      ],
+      "out": null
+    },
+    {
+      "cik": 1171155,
+      "acc": "0000950170-24-033954",
+      "accepted_et": "2024-03-20T08:30:12-04:00",
+      "ticker": "RLGT",
+      "exchange": "NYSEMKT",
+      "day0": "2024-03-20",
+      "entry": "2024-03-20",
+      "exit": "2024-03-27",
+      "sessions": 6,
+      "etf": "XLI",
+      "bucket": null,
+      "out": "under_floor"
+    },
+    {
+      "cik": 1464790,
+      "acc": "0001213900-24-031252",
+      "accepted_et": "2024-04-08T17:20:23-04:00",
+      "ticker": "RILY",
+      "exchange": "NASDAQ",
+      "day0": "2024-04-09",
+      "entry": "2024-04-09",
+      "exit": "2024-04-16",
+      "sessions": 6,
+      "etf": "XLF",
+      "bucket": [
+        "m",
+        "m"
+      ],
+      "out": null
+    },
+    {
+      "cik": 1116463,
+      "acc": "0001193125-24-094797",
+      "accepted_et": "2024-04-12T16:45:30-04:00",
+      "ticker": "OSUR",
+      "exchange": "NASDAQ",
+      "day0": "2024-04-15",
+      "entry": "2024-04-15",
+      "exit": "2024-04-22",
+      "sessions": 6,
+      "etf": "XLV",
+      "bucket": [
+        "m",
+        "m"
+      ],
+      "out": null
+    },
+    {
+      "cik": 20520,
+      "acc": "0001193125-24-100764",
+      "accepted_et": "2024-04-18T16:05:56-04:00",
+      "ticker": "FYBR",
+      "exchange": "NASDAQ",
+      "day0": "2024-04-19",
+      "entry": "2024-04-19",
+      "exit": "2024-04-26",
+      "sessions": 6,
+      "etf": "XLC",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 1467623,
+      "acc": "0001467623-24-000024",
+      "accepted_et": "2024-05-01T16:36:09-04:00",
+      "ticker": "DBX",
+      "exchange": "NASDAQ",
+      "day0": "2024-05-02",
+      "entry": "2024-05-02",
+      "exit": "2024-05-09",
+      "sessions": 6,
+      "etf": "XLK",
+      "bucket": [
+        "b",
+        "b"
+      ],
+      "out": null
+    },
+    {
+      "cik": 790816,
+      "acc": "0001193125-24-133132",
+      "accepted_et": "2024-05-07T16:18:05-04:00",
+      "ticker": "BDN",
+      "exchange": "NYSE",
+      "day0": "2024-05-08",
+      "entry": "2024-05-08",
+      "exit": "2024-05-15",
+      "sessions": 6,
+      "etf": "XLRE",
+      "bucket": [
+        "s",
+        "s"
+      ],
+      "out": null
+    }
+  ],
+  "window": {
+    "start": "2023-12-18",
+    "end": "2024-05-31",
+    "calendar": [
+      "2023-06-01",
+      "2024-05-31"
+    ],
+    "rule": "first open after acceptance \u2192 close of session +5 from day 0",
+    "confirmation": "2024-06-01 \u2192"
+  },
+  "cost_line": {
+    "name": "field.sharadar.cost_bp (subset-price receipt p75 per side by B2 bucket)",
+    "etf_bp_per_side": 10.0,
+    "borrow_bp_yr": 25.0,
+    "receipt": "govern/receipts/subset-price-2026-10-02.json"
+  },
+  "input": {
+    "x_receipt": "govern/receipts/probe-item105-victim-short-v1-x.json",
+    "sha256": "ff5baeb4cae8a2d9c8e3d2b56540a927eef241ff6f966a69ba632dbf0444cd87"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request); X through rawFetch (depot edgar)",
+  "script_path": "orient/investigations/probe-item105-victim-short-v1.py",
+  "script_sha256": "6f1f151990487169e8dbea06a273e0af38e09be96600efe2e0e0be6128e7c884"
+}

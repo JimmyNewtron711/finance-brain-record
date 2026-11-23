@@ -1,0 +1,197 @@
+{
+  "schema": "probe_x_v1",
+  "row": "item105-victim-short-v1",
+  "item": "F1 [factory:probe:item105-victim-short-v1], step 1 (X)",
+  "authority": "the operator's inbox answer of 2026-11-16 ~12:33 ET to D869, option (a) (govern/operator-inbox.md, Applied); ledger line 16 (govern/source-admissions.jsonl 2026-11-16 edgar); factory spec § 2.2 condition 7",
+  "computed_at": "2026-11-16T18:11:15.738Z",
+  "window": {
+    "from": "2023-12-18",
+    "to": "2024-05-31",
+    "by": "acceptance date, ET"
+  },
+  "filers": {
+    "rule": "Sharadar tickers (SEP) CIK, ticker with daily.marketcap >= 300 ($M) on some day 2023-12-15 → 2024-05-31",
+    "ciks": 3617,
+    "sha256": "65a64258be1b66d13f039dfa41f434f41d080b8546729670cbd92b48030adb31"
+  },
+  "counts": {
+    "requests": 2521,
+    "held": 1135,
+    "subs": 3617,
+    "pages": 39,
+    "problems": 0,
+    "events": 15,
+    "amendments_in_window": 10
+  },
+  "problems": [],
+  "events": [
+    {
+      "cik": 103379,
+      "name": "V F CORP",
+      "acc": "0000950123-23-011228",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2023-12-18T11:37:32.000Z",
+      "accepted_et_date": "2023-12-18",
+      "filing_date": "2023-12-18",
+      "doc": "d659095d8k.htm"
+    },
+    {
+      "cik": 1472787,
+      "name": "First American Financial Corp",
+      "acc": "0000950170-23-072513",
+      "form": "8-K",
+      "items": "1.05,9.01",
+      "accepted": "2023-12-22T17:13:25.000Z",
+      "accepted_et_date": "2023-12-22",
+      "filing_date": "2023-12-22",
+      "doc": "faf-20231220.htm"
+    },
+    {
+      "cik": 789019,
+      "name": "MICROSOFT CORP",
+      "acc": "0001193125-24-011295",
+      "form": "8-K",
+      "items": "1.05,7.01,9.01",
+      "accepted": "2024-01-19T21:39:35.000Z",
+      "accepted_et_date": "2024-01-19",
+      "filing_date": "2024-01-19",
+      "doc": "d708866d8k.htm"
+    },
+    {
+      "cik": 1645590,
+      "name": "Hewlett Packard Enterprise Co",
+      "acc": "0001645590-24-000009",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2024-01-24T21:05:25.000Z",
+      "accepted_et_date": "2024-01-24",
+      "filing_date": "2024-01-24",
+      "doc": "hpe-20240119.htm"
+    },
+    {
+      "cik": 764038,
+      "name": "SouthState Bank Corp",
+      "acc": "0000950103-24-002017",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2024-02-09T22:15:21.000Z",
+      "accepted_et_date": "2024-02-09",
+      "filing_date": "2024-02-09",
+      "doc": "dp206600_8k.htm"
+    },
+    {
+      "cik": 1137774,
+      "name": "PRUDENTIAL FINANCIAL INC",
+      "acc": "0001193125-24-033753",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2024-02-13T21:21:11.000Z",
+      "accepted_et_date": "2024-02-13",
+      "filing_date": "2024-02-13",
+      "doc": "d770643d8k.htm"
+    },
+    {
+      "cik": 731766,
+      "name": "UNITEDHEALTH GROUP INC",
+      "acc": "0000731766-24-000045",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2024-02-22T21:08:47.000Z",
+      "accepted_et_date": "2024-02-22",
+      "filing_date": "2024-02-22",
+      "doc": "unh-20240221.htm"
+    },
+    {
+      "cik": 1140859,
+      "name": "Cencora, Inc.",
+      "acc": "0001104659-24-028288",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2024-02-27T22:15:26.000Z",
+      "accepted_et_date": "2024-02-27",
+      "filing_date": "2024-02-27",
+      "doc": "tm247267d1_8k.htm"
+    },
+    {
+      "cik": 1057060,
+      "name": "MARINEMAX INC",
+      "acc": "0000950170-24-030041",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2024-03-12T20:42:10.000Z",
+      "accepted_et_date": "2024-03-12",
+      "filing_date": "2024-03-12",
+      "doc": "hzo-20240310.htm"
+    },
+    {
+      "cik": 1171155,
+      "name": "RADIANT LOGISTICS, INC",
+      "acc": "0000950170-24-033954",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2024-03-20T12:30:12.000Z",
+      "accepted_et_date": "2024-03-20",
+      "filing_date": "2024-03-20",
+      "doc": "rlgt-20240319.htm"
+    },
+    {
+      "cik": 1464790,
+      "name": "BRC Group Holdings, Inc.",
+      "acc": "0001213900-24-031252",
+      "form": "8-K",
+      "items": "1.05",
+      "accepted": "2024-04-08T21:20:23.000Z",
+      "accepted_et_date": "2024-04-08",
+      "filing_date": "2024-04-08",
+      "doc": "ea0203500-8k_briley.htm"
+    },
+    {
+      "cik": 1116463,
+      "name": "ORASURE TECHNOLOGIES INC",
+      "acc": "0001193125-24-094797",
+      "form": "8-K",
+      "items": "1.05,7.01,9.01",
+      "accepted": "2024-04-12T20:45:30.000Z",
+      "accepted_et_date": "2024-04-12",
+      "filing_date": "2024-04-12",
+      "doc": "d825009d8k.htm"
+    },
+    {
+      "cik": 20520,
+      "name": "Frontier Communications Parent, Inc.",
+      "acc": "0001193125-24-100764",
+      "form": "8-K",
+      "items": "1.05,9.01",
+      "accepted": "2024-04-18T20:05:56.000Z",
+      "accepted_et_date": "2024-04-18",
+      "filing_date": "2024-04-18",
+      "doc": "d784189d8k.htm"
+    },
+    {
+      "cik": 1467623,
+      "name": "DROPBOX, INC.",
+      "acc": "0001467623-24-000024",
+      "form": "8-K",
+      "items": "1.05,7.01,9.01",
+      "accepted": "2024-05-01T20:36:09.000Z",
+      "accepted_et_date": "2024-05-01",
+      "filing_date": "2024-05-01",
+      "doc": "dbx-20240429.htm"
+    },
+    {
+      "cik": 790816,
+      "name": "BRANDYWINE REALTY TRUST",
+      "acc": "0001193125-24-133132",
+      "form": "8-K",
+      "items": "1.05,5.02",
+      "accepted": "2024-05-07T20:18:05.000Z",
+      "accepted_et_date": "2024-05-07",
+      "filing_date": "2024-05-07",
+      "doc": "d824906d8k.htm"
+    }
+  ],
+  "pulled_via": "rawFetch (depot edgar), held copies first",
+  "script_path": "orient/investigations/probe-item105-victim-short-v1-x.mjs",
+  "script_sha256": "7b068f24ea229129fecddc3b9a7e17822dfdc523ceb1804f26af28c9d84037e3"
+}

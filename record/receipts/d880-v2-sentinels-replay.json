@@ -1,0 +1,365 @@
+{
+ "item": "D880",
+ "corpus": {
+  "from": "2010-03-02T21:05:48.000Z",
+  "to": "2026-11-17T22:33:10.000Z",
+  "rows": 2303625
+ },
+ "rule": {
+  "multiple": 3,
+  "floors_tried": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   10
+  ],
+  "pick": "keep the floor when v2 averages at most 2 episodes a month over the corpus and its busiest full calendar year holds at most 24; otherwise the smallest floor of floors_tried that does"
+ },
+ "switches": [
+  {
+   "switch": "CYBER-INCIDENT-news-burst",
+   "scores": "c1 → c1v2",
+   "rule": {
+    "lookback_hours": 168,
+    "bucket_hours": 24,
+    "multiple": 3,
+    "floor": 3
+   },
+   "headlines": {
+    "v1_counted": 871,
+    "v2_counted": 867,
+    "out": 4,
+    "in": 0,
+    "live_parts_from_v2": 0
+   },
+   "episodes_at_floor": {
+    "before": 76,
+    "after": 75,
+    "before_per_year": {
+     "2015": 5,
+     "2016": 4,
+     "2017": 11,
+     "2018": 4,
+     "2019": 2,
+     "2020": 6,
+     "2021": 9,
+     "2022": 5,
+     "2023": 9,
+     "2024": 8,
+     "2025": 3,
+     "2026": 10
+    },
+    "after_per_year": {
+     "2015": 4,
+     "2016": 4,
+     "2017": 11,
+     "2018": 4,
+     "2019": 2,
+     "2020": 6,
+     "2021": 9,
+     "2022": 5,
+     "2023": 9,
+     "2024": 8,
+     "2025": 3,
+     "2026": 10
+    },
+    "lost": [
+     {
+      "from": "2015-07-08T18Z",
+      "to": "2015-07-09T17Z",
+      "hours": 23,
+      "peak": 3
+     }
+    ],
+    "gained": []
+   },
+   "floors": [
+    {
+     "floor": 2,
+     "episodes": 189,
+     "per_month": 0.94,
+     "max_year": 35,
+     "per_year": {
+      "2015": 8,
+      "2016": 9,
+      "2017": 14,
+      "2018": 9,
+      "2019": 5,
+      "2020": 12,
+      "2021": 23,
+      "2022": 20,
+      "2023": 25,
+      "2024": 35,
+      "2025": 10,
+      "2026": 19
+     }
+    },
+    {
+     "floor": 3,
+     "episodes": 75,
+     "per_month": 0.37,
+     "max_year": 11,
+     "per_year": {
+      "2015": 4,
+      "2016": 4,
+      "2017": 11,
+      "2018": 4,
+      "2019": 2,
+      "2020": 6,
+      "2021": 9,
+      "2022": 5,
+      "2023": 9,
+      "2024": 8,
+      "2025": 3,
+      "2026": 10
+     }
+    },
+    {
+     "floor": 4,
+     "episodes": 29,
+     "per_month": 0.14,
+     "max_year": 7,
+     "per_year": {
+      "2015": 1,
+      "2016": 2,
+      "2017": 7,
+      "2018": 3,
+      "2020": 2,
+      "2021": 2,
+      "2022": 2,
+      "2023": 5,
+      "2024": 3,
+      "2026": 2
+     }
+    },
+    {
+     "floor": 5,
+     "episodes": 8,
+     "per_month": 0.04,
+     "max_year": 1,
+     "per_year": {
+      "2017": 1,
+      "2018": 1,
+      "2021": 1,
+      "2022": 1,
+      "2023": 1,
+      "2024": 1,
+      "2026": 2
+     }
+    },
+    {
+     "floor": 6,
+     "episodes": 4,
+     "per_month": 0.02,
+     "max_year": 1,
+     "per_year": {
+      "2017": 1,
+      "2018": 1,
+      "2021": 1,
+      "2024": 1
+     }
+    },
+    {
+     "floor": 8,
+     "episodes": 0,
+     "per_month": 0,
+     "max_year": 0,
+     "per_year": {}
+    },
+    {
+     "floor": 10,
+     "episodes": 0,
+     "per_month": 0,
+     "max_year": 0,
+     "per_year": {}
+    }
+   ],
+   "chosen": 3,
+   "out": [
+    "2023-01-11T16:48:35Z U.S. Transportation Secretary Says No Direct Evidence Or Indication Of Cyberattack In FAA Computer Issue",
+    "2015-07-08T17:28:30Z Target, Staples, Wal-Mart, Saks Fifth Avenue, Neiman All Confirm They Have Had No Security Breach Or Issues",
+    "2015-07-08T18:55:32Z American Airlines Rep: Co. Facing No Technical Issues On Website, No Security Breach",
+    "2026-11-14T05:59:37Z FAA Lifts Nationwide Ground Stop, Resumes Flights; Says No Cyberattack Evidence or Link to Microsoft Outage, Sean Duffy Blames Legacy Equipment, Seeks $50 Billion"
+   ],
+   "in": [],
+   "parted": []
+  },
+  {
+   "switch": "IT-OUTAGE-news-burst",
+   "scores": "o1 → o1v2",
+   "rule": {
+    "lookback_hours": 168,
+    "bucket_hours": 24,
+    "multiple": 3,
+    "floor": 2
+   },
+   "headlines": {
+    "v1_counted": 315,
+    "v2_counted": 327,
+    "out": 0,
+    "in": 12,
+    "live_parts_from_v2": 0
+   },
+   "episodes_at_floor": {
+    "before": 40,
+    "after": 42,
+    "before_per_year": {
+     "2015": 2,
+     "2016": 1,
+     "2017": 2,
+     "2019": 2,
+     "2020": 2,
+     "2021": 3,
+     "2023": 4,
+     "2024": 15,
+     "2025": 6,
+     "2026": 3
+    },
+    "after_per_year": {
+     "2015": 3,
+     "2016": 1,
+     "2017": 2,
+     "2019": 2,
+     "2020": 2,
+     "2021": 4,
+     "2023": 4,
+     "2024": 15,
+     "2025": 6,
+     "2026": 3
+    },
+    "lost": [],
+    "gained": [
+     {
+      "from": "2015-07-08T17Z",
+      "to": "2015-07-09T18Z",
+      "hours": 25,
+      "peak": 4
+     },
+     {
+      "from": "2021-07-22T17Z",
+      "to": "2021-07-23T17Z",
+      "hours": 24,
+      "peak": 2
+     }
+    ]
+   },
+   "floors": [
+    {
+     "floor": 2,
+     "episodes": 42,
+     "per_month": 0.21,
+     "max_year": 15,
+     "per_year": {
+      "2015": 3,
+      "2016": 1,
+      "2017": 2,
+      "2019": 2,
+      "2020": 2,
+      "2021": 4,
+      "2023": 4,
+      "2024": 15,
+      "2025": 6,
+      "2026": 3
+     }
+    },
+    {
+     "floor": 3,
+     "episodes": 23,
+     "per_month": 0.11,
+     "max_year": 9,
+     "per_year": {
+      "2015": 2,
+      "2016": 1,
+      "2019": 2,
+      "2020": 1,
+      "2021": 2,
+      "2023": 4,
+      "2024": 9,
+      "2025": 1,
+      "2026": 1
+     }
+    },
+    {
+     "floor": 4,
+     "episodes": 15,
+     "per_month": 0.07,
+     "max_year": 7,
+     "per_year": {
+      "2015": 1,
+      "2016": 1,
+      "2023": 3,
+      "2024": 7,
+      "2025": 1,
+      "2026": 2
+     }
+    },
+    {
+     "floor": 5,
+     "episodes": 8,
+     "per_month": 0.04,
+     "max_year": 3,
+     "per_year": {
+      "2016": 1,
+      "2023": 1,
+      "2024": 3,
+      "2026": 3
+     }
+    },
+    {
+     "floor": 6,
+     "episodes": 8,
+     "per_month": 0.04,
+     "max_year": 3,
+     "per_year": {
+      "2016": 1,
+      "2023": 1,
+      "2024": 3,
+      "2026": 3
+     }
+    },
+    {
+     "floor": 8,
+     "episodes": 6,
+     "per_month": 0.03,
+     "max_year": 2,
+     "per_year": {
+      "2016": 1,
+      "2023": 1,
+      "2024": 2,
+      "2026": 2
+     }
+    },
+    {
+     "floor": 10,
+     "episodes": 2,
+     "per_month": 0.01,
+     "max_year": 1,
+     "per_year": {
+      "2024": 1,
+      "2026": 1
+     }
+    }
+   ],
+   "chosen": 2,
+   "out": [],
+   "in": [
+    "2024-07-19T09:49:06Z Crowdstrike CEO Said This Is Not A Security Incident Or Cyberattack; The Issue Has Been Identified, Isolated And A Fix Has Been Deployed",
+    "2024-07-19T12:14:19Z CrowdStrike CEO Post On X, \"CrowdStrike is actively working with customers impacted by a defect found in a single content update for Windows hosts. Mac and Linux hosts are not impacted. This is not a security incident or cyberattack. The issue has been identified, isolated and a fix has been deployed...\"",
+    "2023-01-11T16:48:35Z U.S. Transportation Secretary Says No Direct Evidence Or Indication Of Cyberattack In FAA Computer Issue",
+    "2022-11-07T22:16:14Z PGT Innovations In Form8 Filing Says On Nov. 5, Co. Detected Ransomware Infection That Impacted Portions Of Co.'s Network, Caused Disruption To Daily Business Operations; Says To Date There Is No Evidence Of Personal Information Being Accessed Or Acquired",
+    "2021-07-22T17:19:10Z Akami Says Problems Were Not A Cyberattack On Its Platform",
+    "2021-05-18T16:15:20Z Shell Midstream's Colonial Pipeline Says One Of Co.'s Servers Experienced Intermittent Disruptions Tuesday Morning Due To Some Of Security Hardening Efforts, Says Issues Were Not Related To Ransomware, Any Type Of Reinfection",
+    "2021-05-11T12:43:21Z Colonial Pipeline Tweets 'We are experiencing a temporary service disruption to our corporate website, and unrelated to the ransomware. We continue to make progress on our system restart plan, and will provide an update when our website is restored.'",
+    "2020-10-15T23:15:34Z Twitter Says No Evidence Today's Outage Was Caused by a Security Breach or Hack; Currently Investigating Internal Root Causes and Will Share More Soon",
+    "2015-07-08T16:30:18Z NYSE Tweets: 'The issue we are experiencing is an internal technical issue and is not the result of a cyber breach.'",
+    "2015-07-08T17:28:30Z Target, Staples, Wal-Mart, Saks Fifth Avenue, Neiman All Confirm They Have Had No Security Breach Or Issues",
+    "2015-07-08T18:40:10Z Fireeye Email To Benzinga Says 'no evidence across our network...to suggest that the NYSE & UAL disruptions were cyber attacks'",
+    "2026-11-13T21:52:02Z 'The Reason For The Ground Stop Was Not Immediately Clear; Preliminary Reports Indicate This Is Not A Cyberattack, According To Two Law Enforcement Officials'-CNN"
+   ],
+   "parted": []
+  }
+ ]
+}

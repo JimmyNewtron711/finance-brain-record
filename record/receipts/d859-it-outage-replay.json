@@ -1,0 +1,683 @@
+{
+ "item": "D859",
+ "switch": "IT-OUTAGE-news-burst",
+ "rule": {
+  "lookback_hours": 168,
+  "bucket_hours": 24,
+  "multiple": 3,
+  "floors_tried": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   10
+  ],
+  "pick": "the smallest floor whose episodes average at most 2 a month over the corpus and whose busiest full calendar year holds at most 24"
+ },
+ "lists": {
+  "terms": 16,
+  "vendors": 48,
+  "deny": [
+   "denies",
+   "denied",
+   "did not experience",
+   "no outage"
+  ]
+ },
+ "corpus": {
+  "from": "2010-03-02T21:05:48.000Z",
+  "to": "2026-11-16T00:01:41.000Z",
+  "evaluated_hours": 146259,
+  "months": 200.2
+ },
+ "headlines": {
+  "term_matched": 887,
+  "vendor_joined": 304,
+  "counted": 302,
+  "moved_to_reverse": 2,
+  "by_vendor": {
+   "911": 4,
+   "microsoft": 42,
+   "crowdstrike": 42,
+   "faa": 35,
+   "delta": 27,
+   "amazon": 21,
+   "google": 16,
+   "coinbase": 15,
+   "american airlines": 12,
+   "verizon": 9,
+   "at&t": 9,
+   "alaska airlines": 8,
+   "t-mobile": 7,
+   "southwest airlines": 7,
+   "aws": 6,
+   "outlook": 6,
+   "jetblue": 6,
+   "cloudflare": 5,
+   "cdk": 5,
+   "united airlines": 5,
+   "sabre": 5,
+   "binance": 3,
+   "github": 1,
+   "spirit airlines": 1,
+   "akamai": 1,
+   "fastly": 1,
+   "visa": 1,
+   "claude": 1,
+   "air traffic control": 1
+  }
+ },
+ "floors": [
+  {
+   "floor": 2,
+   "episodes": 40,
+   "per_month": 0.2,
+   "max_year": 15,
+   "per_year": {
+    "2015": 2,
+    "2016": 1,
+    "2017": 2,
+    "2019": 2,
+    "2020": 2,
+    "2021": 3,
+    "2023": 4,
+    "2024": 15,
+    "2025": 6,
+    "2026": 3
+   }
+  },
+  {
+   "floor": 3,
+   "episodes": 23,
+   "per_month": 0.11,
+   "max_year": 9,
+   "per_year": {
+    "2015": 1,
+    "2016": 1,
+    "2019": 2,
+    "2020": 1,
+    "2021": 2,
+    "2023": 5,
+    "2024": 9,
+    "2025": 1,
+    "2026": 1
+   }
+  },
+  {
+   "floor": 4,
+   "episodes": 12,
+   "per_month": 0.06,
+   "max_year": 7,
+   "per_year": {
+    "2016": 1,
+    "2023": 2,
+    "2024": 7,
+    "2025": 1,
+    "2026": 1
+   }
+  },
+  {
+   "floor": 5,
+   "episodes": 6,
+   "per_month": 0.03,
+   "max_year": 3,
+   "per_year": {
+    "2016": 1,
+    "2023": 1,
+    "2024": 3,
+    "2026": 1
+   }
+  },
+  {
+   "floor": 6,
+   "episodes": 6,
+   "per_month": 0.03,
+   "max_year": 3,
+   "per_year": {
+    "2016": 1,
+    "2023": 1,
+    "2024": 3,
+    "2026": 1
+   }
+  },
+  {
+   "floor": 8,
+   "episodes": 5,
+   "per_month": 0.02,
+   "max_year": 2,
+   "per_year": {
+    "2016": 1,
+    "2023": 1,
+    "2024": 2,
+    "2026": 1
+   }
+  },
+  {
+   "floor": 10,
+   "episodes": 2,
+   "per_month": 0.01,
+   "max_year": 1,
+   "per_year": {
+    "2024": 1,
+    "2026": 1
+   }
+  }
+ ],
+ "chosen": 2,
+ "episodes": [
+  {
+   "from": "2015-03-30T17Z",
+   "to": "2015-03-31T11Z",
+   "hours": 18,
+   "peak": 2,
+   "headlines": [
+    "2015-03-30T11:31:50Z JetBlue Says System Outage Not A Cyber Attack",
+    "2015-03-30T17:35:10Z Google Apps Status Dashboard Shows Gmail Service Disruption has been Issue Resolved -Reuters"
+   ]
+  },
+  {
+   "from": "2015-09-17T17Z",
+   "to": "2015-09-18T17Z",
+   "hours": 24,
+   "peak": 3,
+   "headlines": [
+    "2015-09-17T17:04:24Z American Airlines Suffers System Wide Outage",
+    "2015-09-17T17:09:14Z American Airlines Unavailble For Comment When Contacted By Benzinga Pro Regarding System Outage",
+    "2015-09-17T17:10:02Z CNBC Now Tweets: 'BREAKING: Widespread ground stops for American Airlines nationwide » http://cnb.cx/1OhBd5f'"
+   ]
+  },
+  {
+   "from": "2016-08-08T12Z",
+   "to": "2016-08-09T19Z",
+   "hours": 31,
+   "peak": 9,
+   "headlines": [
+    "2016-08-08T12:20:50Z Delta ‏@Delta Tweet: @F3THarold A power outage in Atlanta, which began at approximately 2:30 a.m. ET, has impacted Delta computer systems and operations worldwide, resulting in flight delays. Large-scale cancellations are expected today.",
+    "2016-08-08T12:39:56Z Delta Says Ground Stop Lifted; Resuming Limited Departures, Cancellations, Delays Continue -Reuters",
+    "2016-08-08T13:08:32Z Technical Alert - Finding Support In Delta Airlines After Computer Power Outage",
+    "2016-08-08T13:43:23Z Delta Deal With System-Wide Outage; Investors Sell The News",
+    "2016-08-08T14:14:23Z Delta News Hub ‏@DeltaNewsHub  Tweet: @Delta has cancelled approx. 300 flights due to power outage. Systems are coming back online, but delays and cancellations continue.",
+    "2016-08-08T14:18:06Z PulteGroup Spokesperson Confirms To Benzinga That PulteGroup Management Cancelling Out Of Conference Due To Delta Outage",
+    "2016-08-08T14:57:53Z Georgia Power Says Delta Air Lines  Power Outage That Affected Computer Systems Caused by Equipment Failure -Reuters",
+    "2016-08-08T19:58:26Z How Much Revenue Did Delta Lose Amid Major Outage?",
+    "2016-08-08T21:12:41Z Delta To Provide $200 In Travel Vouchers To All Customers Experiencing Delay Greater Than 3 Hrs Due To Today's Outage"
+   ]
+  },
+  {
+   "from": "2017-01-30T12Z",
+   "to": "2017-01-31T01Z",
+   "hours": 13,
+   "peak": 2,
+   "headlines": [
+    "2017-01-30T01:06:54Z Delta Says Working to Fix Systems Outage; Says Flights in Air Not Affected",
+    "2017-01-30T12:19:09Z President Trump Tweets: Only 109 people out of 325,000 were detained and held for questioning. Big problems at airports were caused by Delta computer outage,....."
+   ]
+  },
+  {
+   "from": "2017-03-01T13Z",
+   "to": "2017-03-01T21Z",
+   "hours": 8,
+   "peak": 2,
+   "headlines": [
+    "2017-03-01T13:19:14Z The AWS Outage Impacted A Lot More Than Amazon",
+    "2017-02-28T21:22:54Z The Way Amazon Handled Its AWS System Outage: 'Bad Business'"
+   ]
+  },
+  {
+   "from": "2019-03-26T15Z",
+   "to": "2019-03-27T15Z",
+   "hours": 24,
+   "peak": 3,
+   "headlines": [
+    "2019-03-26T15:35:18Z Hearing Sabre Is Having An Outage",
+    "2019-03-26T15:39:06Z 'Sabre had a brief technical issue that impacted multiple carriers, including American Airlines. This technical issue has been resolved.' -Tweets American Airlines",
+    "2019-03-26T15:58:03Z American Air Highlights Earlier Brief Technical Issues With Sabre Which Impacted Multiple Carriers, Including American; Issue Has Been Resolved"
+   ]
+  },
+  {
+   "from": "2019-04-01T11Z",
+   "to": "2019-04-02T11Z",
+   "hours": 24,
+   "peak": 3,
+   "headlines": [
+    "2019-04-01T11:21:52Z United Airlines, Southwest Airlines Report Technical Issues Causing Flight Delays",
+    "2019-04-01T11:33:19Z American Airlines Tweets AeroData is currently experiencing a technical issue that is impacting multiple carriers. They're working on a fix as quickly as they can.",
+    "2019-04-01T12:45:37Z Southwest Airlines Says it Implemented a Ground Stop for 40 Minutes Monday Morning Due to an Outage"
+   ]
+  },
+  {
+   "from": "2020-10-22T15Z",
+   "to": "2020-10-23T15Z",
+   "hours": 24,
+   "peak": 2,
+   "headlines": [
+    "2020-10-22T15:08:48Z T-Mobile Shares Quiet Amid Headline FCC Has Issued A Staff Report On Networks' Outage",
+    "2020-10-22T15:18:26Z FCC Chairman Calls T-Mobile June 15 Outage A Failure, Says Company Did Not Follow Some Network Reliability Best Practices"
+   ]
+  },
+  {
+   "from": "2020-12-14T12Z",
+   "to": "2020-12-15T12Z",
+   "hours": 24,
+   "peak": 3,
+   "headlines": [
+    "2020-12-14T12:05:47Z Some Users Reporting Outages of Google Services Include Gmail and YouTube",
+    "2020-12-14T12:31:35Z Multiple Google Services Hit By Outage",
+    "2020-12-14T15:55:49Z 'Google confirms that this morning's outage was NOT a cyber attack. \"it was entirely an internal issue with quota accounting for the authentication system...' -Tweet From CNBC's Eamon Javers"
+   ]
+  },
+  {
+   "from": "2021-06-16T19Z",
+   "to": "2021-06-16T20Z",
+   "hours": 1,
+   "peak": 2,
+   "headlines": [
+    "2021-06-16T19:53:33Z Coinbase Says Experiencing Technical Issues That Will Temporarily Delay The Launch Of SHIB On Coinbase Pro",
+    "2021-06-15T20:25:24Z FAA Says Southwest Airlines Ground Stop Has Been Lifted"
+   ]
+  },
+  {
+   "from": "2021-12-07T18Z",
+   "to": "2021-12-08T18Z",
+   "hours": 24,
+   "peak": 3,
+   "headlines": [
+    "2021-12-07T17:56:05Z Amazon Web Service Reports Outage, Disrupting Several Major Sites",
+    "2021-12-07T18:51:10Z 'Disney+, Roku Suffer Outages Because of AWS' -The Streamable Report",
+    "2021-12-07T19:01:30Z Amazon Web Outage Is Said To Affect Delivery Operation; Vans Said To Sit Idle With No Communication"
+   ]
+  },
+  {
+   "from": "2021-12-15T15Z",
+   "to": "2021-12-16T15Z",
+   "hours": 24,
+   "peak": 3,
+   "headlines": [
+    "2021-12-15T15:33:44Z Watching Amazon Shares; Hearing AWS Experiencing Outages, Seeing Reports Twitch Is Down",
+    "2021-12-15T15:35:13Z Seeing Reports DoorDash, Facebook, Playstation Network, Intuit Also Experiencing Outages Alongside AWS",
+    "2021-12-15T15:49:12Z UPDATE: Seeing Reports Of Outages With Disney, Apple, DISH Networks, Comcast, Netflix, Google, Discovery Amid AWS Outage"
+   ]
+  },
+  {
+   "from": "2023-01-11T12Z",
+   "to": "2023-01-13T15Z",
+   "hours": 51,
+   "peak": 8,
+   "headlines": [
+    "2023-01-13T12:25:03Z Delta CEO Ed Bastian On CNBC Said Outage Was Not FAA's Fault",
+    "2023-01-12T13:00:51Z FAA System Outage Causes Second Day of Flight Delays",
+    "2023-01-12T15:59:44Z U.S. FAA Says Operations Are Back To Normal, Seeing No Unusual Delays Or Cancellations After Wednesday's Computer Outage",
+    "2023-01-11T11:29:36Z FAA Advisory ays System Failure Is Impacting Flights Nationwide, Flights Reportedly Grounded Across US",
+    "2023-01-11T12:46:22Z Biden Has Been Briefed On FAA System Outage; No Evidence Of Cyberattack",
+    "2023-01-11T13:52:10Z U.S. FAA Lifts Nationwide Ground Stop",
+    "2023-01-11T14:09:51Z Southwest Airlines Co Says Anticipates Some Schedule Adjustments After Notice to Air Missions System Outage",
+    "2023-01-11T14:11:22Z United Airlines Says FAA Has Lifted Their Nationwide Ground Stop And United Has Resumed Operations; Customers May Continue To See Some Delays And Cancellations;  Company Has Activated Travel Waiver For Any Customers Who Need To Change Their Plans",
+    "2023-01-11T13:17:01Z US Air Traffic Operations Resume After FAA Grounds Flights Due To System Outage: Here's The Latest",
+    "2023-01-11T14:31:56Z U.S. Committee Chair Says Senate Commerce Committee Will Investigate Cause Of FAA Computer System Outage That Sparked Massive Flight Delays",
+    "2023-01-11T19:29:51Z White House Says No Evidence FAA Outage Caused By Cyber Attack; White House Says Authorities Working To Ensure Such An Outage Does Not Happen Again"
+   ]
+  },
+  {
+   "from": "2023-01-25T10Z",
+   "to": "2023-01-26T10Z",
+   "hours": 24,
+   "peak": 3,
+   "headlines": [
+    "2023-01-25T10:08:51Z Microsoft Was Hit Earlier Wednesday With Networking Outage That Took Impacted Azure, Teams And Outlook",
+    "2023-01-25T12:03:24Z Microsoft Azure Cloud Outage Disrupts Multiple Microsoft 365 Services Globally, Several users Affected",
+    "2023-01-24T14:58:18Z NYSE Technical Glitch Leads To Stock Halts In Uber, AT&T, Others: What We Know So Far"
+   ]
+  },
+  {
+   "from": "2023-03-23T17Z",
+   "to": "2023-03-24T16Z",
+   "hours": 23,
+   "peak": 2,
+   "headlines": [
+    "2023-03-23T16:59:40Z Coinbase Says Investigating A Technical Issue Causing Some Trades To Fail On Simple Trade For Coinbase.com And Coinbase Pay",
+    "2023-03-23T17:16:05Z Coinbase Says Resolved The Technical Issue That Was Causing Some Customers To Experience Simple Trade Failures"
+   ]
+  },
+  {
+   "from": "2023-09-05T17Z",
+   "to": "2023-09-07T05Z",
+   "hours": 36,
+   "peak": 4,
+   "headlines": [
+    "2023-09-06T05:01:56Z Coinbase-Incubated Base Faces Major Outage, Assures 'No Funds Are At Risk'",
+    "2023-09-06T13:52:07Z JetBlue Says Experiencing A System Outage Affecting Bookings",
+    "2023-09-05T17:18:12Z 'United Airlines Issues Nationwide Ground Stop Due To Computer Issue; Shares Moving Lower' - ABC News",
+    "2023-09-05T17:53:31Z FAA Tweets \"Update: United Airlines Has Lifted The Ground Stop For The U.S. And Canada.\""
+   ]
+  },
+  {
+   "from": "2024-02-22T13Z",
+   "to": "2024-02-23T18Z",
+   "hours": 29,
+   "peak": 4,
+   "headlines": [
+    "2024-02-23T07:33:46Z AT&T Says Outage Was Not Due To A Cyber Attack, Confirms Service Has Been Fully Restored",
+    "2024-02-22T12:51:17Z 'AT&T, T-Mobile and Verizon users hit by cellular outage in US' -New York Post",
+    "2024-02-22T13:40:00Z Major Outage Hits AT&T, Verizon, And T-Mobile—Services Down Nationwide, Including 911 Calls",
+    "2024-02-22T18:22:33Z U.S. Cyber Watchdog Agency Says It Is 'Working Closely' With AT&T To Understand The Cause Of Outage"
+   ]
+  },
+  {
+   "from": "2024-04-17T15Z",
+   "to": "2024-04-18T15Z",
+   "hours": 24,
+   "peak": 4,
+   "headlines": [
+    "2024-04-18T07:38:10Z Critical Emergency Services Disrupted: 911 Outages Cause Chaos Across US States",
+    "2024-04-17T15:07:39Z Alaska Airlines Ground Stop Due To IT Issue",
+    "2024-04-17T15:17:09Z Alaska Airlines Says It Experienced An Issue While Performing An Upgrade To The System That Calculates Weight And Balance; Ground Stop For All Alaska And Horizon Flights Was Instituted At ~ 7:50 am PT Wednesday; Working To Resolve The Issue As Quickly As Possible",
+    "2024-04-17T15:49:09Z Alaska Airlines Ground Stop On Aircraft Has Been Lifted; Says We Have Begun Releasing Flights And Residual Delays Are Expected Throughout The Day"
+   ]
+  },
+  {
+   "from": "2024-06-25T15Z",
+   "to": "2024-06-26T15Z",
+   "hours": 24,
+   "peak": 3,
+   "headlines": [
+    "2024-06-25T15:33:44Z FCC Settles Verizon 911 Outage Violations For Over $1M",
+    "2024-06-25T15:38:32Z FCC Says Verizon To Pay $1.05M Fine Over 2022 Outage Of 911 System In Alabama, Florida, Georgia, North Carolina, South Carolina, And Tennessee",
+    "2024-06-25T17:47:16Z 'CDK tells dealers DMS outage won't be resolved before June 30' - Automotive News"
+   ]
+  },
+  {
+   "from": "2024-07-19T08Z",
+   "to": "2024-07-21T13Z",
+   "hours": 53,
+   "peak": 23,
+   "headlines": [
+    "2024-07-20T06:13:12Z Microsoft-CrowdStrike Issue Caused 'Largest IT Outage In History,' Showing How Much We Depend On A Handful Of Companies",
+    "2024-07-20T07:05:23Z Elon Musk Says Tesla Deleted CrowdStrike From Its Systems But Was Not Untouched By Global IT Outage: 'Unfortunately, Many Of Our Suppliers...Use It'",
+    "2024-07-20T13:34:24Z Microsoft Outage, CrowdStrike Share Decline Hits Nancy Pelosi's, Marjorie Taylor Greene's Wealth: Here's How Much Congress Members Lost",
+    "2024-07-20T15:55:31Z CrowdStrike Issues Statement Following Massive Outage That Stemmed From Content Update For Windows Hosts: 'This Was Not A Cyberattack'",
+    "2024-07-19T08:20:49Z Cybersecurity Giant CrowdStrike Hit By Significant Outage Impacting Businesses Globally",
+    "2024-07-19T08:42:11Z Microsoft Outage Wreaks Havoc On World As 911, International Airlines, Banks And Airport Services Disrupted (UPDATED)",
+    "2024-07-19T09:36:37Z CrowdStrike Shares Drop 13%, Microsoft Takes A Hit During Pre-Market After Major Outage Causes Global Havoc",
+    "2024-07-19T11:21:21Z Wall Street Set To End Week On Subdued Note As CrowdStrike, Microsoft Drop Amid Global Outage: Analyst Sees 10% Upside Potential For S&P 500 Over Next 12 Months",
+    "2024-07-19T12:53:36Z CrowdStrike Shares Trim Heavy Losses As Microsoft Announces Resolution Of Global Tech Outage: 'This Is Clearly A Major Black Eye'",
+    "2024-07-19T13:22:30Z Union Pacific Says CrowdStrike Software Outage Had Varying Levels Of Impact Across Network; Backup Protocols Enable Us To Communicate With Teams And Dispatchers; Doing Everything Possible To Keep Freight Moving, But There Have Been Some Processing Delays In Customer Shipments",
+    "2024-07-19T13:53:11Z U.S. Edgar Online Services (Not SEC) Says Services Currently Unavailable Due To Technical Issue Attributed To CrowdStrike",
+    "2024-07-19T14:15:26Z Bitcoin, Ethereum, Dogecoin Fall As Trump's Presidency Odds Dip; CrowdStrike Shares Recover As Microsoft Resolves Global Tech Outage - Top Headlines Today While US Slept",
+    "2024-07-19T14:28:21Z Southwest Airlines Spokesperson Says Airline Not Impacted By Global IT Outage",
+    "2024-07-19T14:31:35Z Benzinga Market Summary: Microsoft And Airlines Outages Linked To Crowdstrike, Crowdstrike Opens Down Over 13%, Eli Lilly Rises After Zepbound Chinese Approval",
+    "2024-07-19T14:42:41Z U.S. Transportation Secretary Buttigieg Tracking Impact Of It Outage Across All Transportation Sectors; Buttigieg Have Reminded Airlines Of Their Responsibilities Amid Outage; Have Seen No Indication Of An Impact To FAA, Other U.S. Transportation Systems; Buttigieg Likely To Continue To See A Number Of Spot Transportation Issues As Systems Get Back Online Friday; Hopeful That Transport Systems Can Get Back To Normal By Saturday",
+    "2024-07-19T14:53:44Z FAA Says United Airlines Ground Stop Canceled",
+    "2024-07-19T15:04:31Z Microsoft Outage: What States, Services, Companies Saw The 'Blue Screen Of Death'",
+    "2024-07-19T15:04:59Z Labcorp Says Systems Are Currently Impacted By The CrowdStrike Computer Outage Affecting Companies Globally",
+    "2024-07-19T16:37:54Z Stock Of The Day: CrowdStrike Stock Shows Technical Support Despite IT Outages",
+    "2024-07-19T17:00:15Z Goldman Sachs Analyst Stays Course On CrowdStrike Despite Outage, Expects Strong Company Reputation To Aid Recovery",
+    "2024-07-19T17:13:38Z 'Tesla halted some of its production lines due to the Microsoft-CrowdStrike outage' - Insider",
+    "2024-07-19T19:37:59Z Government Agency Advises Public Against Testing 911 In Wake of CrowdStrike Outage",
+    "2024-07-19T19:38:20Z Biden Will Continue To Receive Updates On The CrowdStrike Global Tech Outage; Understanding Is That This Is Not A Cyber Attack, But Rather A Faulty Technical Update; White House Is In Regular Contact With CrowdStrike's Executive Leadership And Tracking Progress, Has Offered Support",
+    "2024-07-19T20:28:54Z Union Pacific, On CrowdStrike Software Outage, Says Key Customer Applications, Including Waybill Systems, Functional; Says Manifest Terminals & Yard Operations Quickly Returned To Normal Production & Fluidity; All Intermodal Ramps & PGT Terminals Operational And Co Continues To Process Trains",
+    "2024-07-19T20:36:34Z Markets Tremble Over Planned China Chip Restrictions, Trump's Election Odds Rise, CrowdStrike Triggers Global Tech Outage: This Week In The Market"
+   ]
+  },
+  {
+   "from": "2024-07-22T08Z",
+   "to": "2024-07-23T19Z",
+   "hours": 35,
+   "peak": 8,
+   "headlines": [
+    "2024-07-23T18:34:50Z Delta Air Lines Needs More Recovery Time After CrowdStrike Outage, Flight Disruptions To Extend 2 More Days",
+    "2024-07-22T08:42:32Z Microsoft Blames European Commission Agreement As Reason It Can't Secure Windows Like Apple Secures MacOS After CrowdStrike Outage",
+    "2024-07-22T11:12:39Z 'If You're A Lawyer For Crowdstrike, You're Probably Not Going To Enjoy The Rest Of Your Summer': Microsoft-Crowdstrike Outage Could Top $1B In Costs, Analyst Says",
+    "2024-07-22T13:51:32Z Benzinga Market Summary: Biden Drops Out Of Race And Endorses Harris, Crowdstrike Shares Continue To Fall Following Global Outage, Israel's Netanyahu To Visit Washington, Verizon Slips On Revenue Miss",
+    "2024-07-22T15:59:18Z Jim Cramer Applauds CrowdStrike's Response To Global IT Outage, Sees Swift Recovery Ahead: 'It Just Happened To Be Bad Luck'",
+    "2024-07-22T16:46:23Z Federal Communications Commission Says AT&T Wireless Outage In February Blocked More Than 92M U.S. Calls, Prevented More Than 25,000 Attempts To Reach 911",
+    "2024-07-22T18:08:12Z Southwest Airlines Saved By Procrastination: How 32-Year-Old Software Protected Company From Microsoft Outage, CrowdStrike Issues",
+    "2024-07-22T19:56:22Z 'House committee calls on CrowdStrike CEO to testify on global outage' - The Washington Post",
+    "2024-07-22T21:35:47Z CrowdStrike Says Continues To Evaluate Impact Of Outage Event On Its Business And Operations; Says The Event Was Not Caused By Cyberattack - Filing",
+    "2024-07-21T15:24:00Z CrowdStrike Outage Impacted Less Than 1% Of Windows Devices But Still Managed To Wreak Havoc: Report"
+   ]
+  },
+  {
+   "from": "2024-07-24T21Z",
+   "to": "2024-07-25T11Z",
+   "hours": 14,
+   "peak": 6,
+   "headlines": [
+    "2024-07-25T05:11:49Z CrowdStrike Offers $10 Uber Eats Gift Card As Apology For Its Outage That Took Down 8.5M Windows Computers Globally: Some Users Report Their Vouchers Being Canceled",
+    "2024-07-24T12:12:41Z Group 1 Automotive Posts Mixed Q2 Earnings Hit By CDK Outage & Adverse Weather Events",
+    "2024-07-24T16:02:26Z Delta Air Lines Faces $500M Financial Hit As IT Outage Causes Thousands Of Cancellations",
+    "2024-07-24T17:37:38Z No Sign Microsoft Plans To Limit Crowdstrike Access To Windows Operating System Following Global Tech Outage",
+    "2024-07-24T20:12:11Z CrowdStrike Admits Bug Caused Massive Global IT Outages",
+    "2024-07-24T20:25:16Z American Airlines, Southwest Airlines Q2 Earnings Previews: Will They Address The Microsoft Outage Fallout?"
+   ]
+  },
+  {
+   "from": "2024-07-30T20Z",
+   "to": "2024-07-31T14Z",
+   "hours": 18,
+   "peak": 4,
+   "headlines": [
+    "2024-07-31T13:22:40Z CrowdStrike Faces Investor Class Action Over Outage, Selloff",
+    "2024-07-30T15:02:26Z Microsoft 365 Outage: Users Report Issues with Outlook, Website, and App",
+    "2024-07-30T18:03:12Z Starbucks App Outage Was Linked To Microsoft Azure Issues",
+    "2024-07-30T18:05:46Z Delta Seeks Damages From Microsoft, CrowdStrike After Major System Outage",
+    "2024-07-29T21:04:45Z Delta Hires Lawfirm Following Software Outage"
+   ]
+  },
+  {
+   "from": "2024-08-07T01Z",
+   "to": "2024-08-07T06Z",
+   "hours": 5,
+   "peak": 2,
+   "headlines": [
+    "2024-08-07T01:31:24Z Microsoft Blames Delta's Outdated IT For Delayed Global Cyber Outage Recovery After Airline Decides To Seek Damages Against Software Giant And CrowdStrike",
+    "2024-08-06T06:20:08Z CrowdStrike Hit With Lawsuit Over Global Outage Impacting Air Travel, Plaintiffs Say Cybersecurity Firm Should Pay Compensatory And Punitive Damages"
+   ]
+  },
+  {
+   "from": "2024-08-07T19Z",
+   "to": "2024-08-08T01Z",
+   "hours": 6,
+   "peak": 2,
+   "headlines": [
+    "2024-08-07T01:31:24Z Microsoft Blames Delta's Outdated IT For Delayed Global Cyber Outage Recovery After Airline Decides To Seek Damages Against Software Giant And CrowdStrike",
+    "2024-08-07T19:24:20Z Delta Passengers Sue Airline For Refusing Refunds After Last Month's Computer Outage"
+   ]
+  },
+  {
+   "from": "2024-08-22T22Z",
+   "to": "2024-08-23T03Z",
+   "hours": 5,
+   "peak": 2,
+   "headlines": [
+    "2024-08-22T03:19:47Z CrowdStrike President Strikes Back Against Competition Capitalizing On Global Microsoft Windows Outage: 'People Know Really Quickly Fact From…Shady Commentary'",
+    "2024-08-22T22:32:22Z CrowdStrike Shares Showing Signs Of Recovery After Microsoft Outage: Can Q2 Earnings Help Continue Trend?"
+   ]
+  },
+  {
+   "from": "2024-08-23T15Z",
+   "to": "2024-08-23T22Z",
+   "hours": 7,
+   "peak": 2,
+   "headlines": [
+    "2024-08-23T15:03:41Z 'Microsoft Plans September Cybersecurity Event To Discuss Changes After CrowdStrike Outage' - CNBC",
+    "2024-08-22T22:32:22Z CrowdStrike Shares Showing Signs Of Recovery After Microsoft Outage: Can Q2 Earnings Help Continue Trend?"
+   ]
+  },
+  {
+   "from": "2024-08-28T15Z",
+   "to": "2024-08-30T09Z",
+   "hours": 42,
+   "peak": 3,
+   "headlines": [
+    "2024-08-29T09:39:28Z Crowdstrike Drops In Pre-Market As Cybersecurity Firm Revises Annual Revenue Forecast Downward After Global Microsoft Windows Outage",
+    "2024-08-29T16:06:20Z CrowdStrike Analysts See Execution At High Level After Microsoft Outage: Why 'Doomsday Scenario' Didn't Happen",
+    "2024-08-28T09:12:37Z AT&T Resolves Software Glitch Behind Wireless Service Disruption Affecting Multiple US Cities, Including Los Angeles, Dallas, And New York",
+    "2024-08-28T15:57:40Z SentinelOne Posts Q2 Beat, 6 Analysts Cite Benefits Of CrowdStrike Customer Churn: 'Outage Was A Net Positive'",
+    "2024-08-28T20:45:17Z CrowdStrike Q2 Earnings: Revenue Beat, EPS Beat, ARR Up 32% 'Even More Customer-Obsessed' Company Following IT Outage In July"
+   ]
+  },
+  {
+   "from": "2024-08-30T15Z",
+   "to": "2024-08-30T16Z",
+   "hours": 1,
+   "peak": 2,
+   "headlines": [
+    "2024-08-30T15:24:54Z CrowdStrike VP to Testify Before U.S. House Panel Next Month Regarding IT Outage",
+    "2024-08-29T16:06:20Z CrowdStrike Analysts See Execution At High Level After Microsoft Outage: Why 'Doomsday Scenario' Didn't Happen"
+   ]
+  },
+  {
+   "from": "2024-09-10T13Z",
+   "to": "2024-09-11T12Z",
+   "hours": 23,
+   "peak": 2,
+   "headlines": [
+    "2024-09-10T12:16:56Z Microsoft Plans Major Cybersecurity Summit After Global IT Outage Hits 8.5M Devices Earlier This Year",
+    "2024-09-10T13:10:01Z BMW Revises 2024 Financial Outlook Amid Sales Slump And Technical Issues Impacting 1.5M Vehicles"
+   ]
+  },
+  {
+   "from": "2024-11-26T21Z",
+   "to": "2024-11-27T14Z",
+   "hours": 17,
+   "peak": 2,
+   "headlines": [
+    "2024-11-26T14:34:50Z Microsoft Service Disruption Hits Outlook And Teams, Thousands Report Issues",
+    "2024-11-26T21:33:47Z CrowdStrike Beats Q3 Earnings, Revenue Estimates; Cybersecurity Company Highlights 'Incredible Success' Retaining Customers Following IT Outage"
+   ]
+  },
+  {
+   "from": "2025-10-20T13Z",
+   "to": "2025-10-21T10Z",
+   "hours": 21,
+   "peak": 2,
+   "headlines": [
+    "2025-10-20T10:16:05Z 'Major AWS Outage Takes Down Fortnite, Alexa, Snapchat, And More' - The Verge",
+    "2025-10-20T13:57:31Z Amazon Web Services Outage Knocks Major Websites Offline — Disney+, Reddit, McDonald's App, United Airlines Among Those Hit"
+   ]
+  },
+  {
+   "from": "2025-10-24T08Z",
+   "to": "2025-10-25T13Z",
+   "hours": 29,
+   "peak": 4,
+   "headlines": [
+    "2025-10-24T02:00:50Z Alaska Airlines Grounds All Flights Nationwide After Major Technology Outage Halts Operations",
+    "2025-10-24T08:56:48Z Reported Earlier, Alaska Airlines Restores Operations After IT Outage Causes 229 Flight Cancellations, Additional Disruptions Expected During Network Recovery",
+    "2025-10-24T13:15:30Z Amazon's Cloud Unit Issues Apology, Explains How Rare Software Bug Triggered Global AWS Outage This Week",
+    "2025-10-24T14:54:01Z Alaska Airlines Says Throughout Thursday And Into Friday Morning, We Have Canceled More Than 360 Flights On Alaska And Horizon; Additional Flight Disruptions Likely. Hawaiian Airlines Flights Are Not Impacted; The It Outage Is Not A Cybersecurity Incident"
+   ]
+  },
+  {
+   "from": "2025-10-29T17Z",
+   "to": "2025-10-29T20Z",
+   "hours": 3,
+   "peak": 2,
+   "headlines": [
+    "2025-10-29T17:23:08Z Alaska Airlines News Posts On X \"Due to a global outage impacting the Microsoft Azure platform where several Alaska and Hawaiian Airlines services are hosted, we are currently experiencing a disruption to key systems, including our websites..\"",
+    "2025-10-28T20:51:50Z Amazon Q3 Preview: Will AWS Outage, Job Cuts Overshadow Earnings, Growth Plans?"
+   ]
+  },
+  {
+   "from": "2025-10-29T21Z",
+   "to": "2025-10-30T02Z",
+   "hours": 5,
+   "peak": 2,
+   "headlines": [
+    "2025-10-29T17:23:08Z Alaska Airlines News Posts On X \"Due to a global outage impacting the Microsoft Azure platform where several Alaska and Hawaiian Airlines services are hosted, we are currently experiencing a disruption to key systems, including our websites..\"",
+    "2025-10-29T21:19:14Z Microsoft Says Azure Recovery Underway After Major Outage; AWS Says Services Operating Normally (UPDATED)"
+   ]
+  },
+  {
+   "from": "2025-10-30T14Z",
+   "to": "2025-10-30T17Z",
+   "hours": 3,
+   "peak": 2,
+   "headlines": [
+    "2025-10-29T17:23:08Z Alaska Airlines News Posts On X \"Due to a global outage impacting the Microsoft Azure platform where several Alaska and Hawaiian Airlines services are hosted, we are currently experiencing a disruption to key systems, including our websites..\"",
+    "2025-10-29T21:19:14Z Microsoft Says Azure Recovery Underway After Major Outage; AWS Says Services Operating Normally (UPDATED)"
+   ]
+  },
+  {
+   "from": "2025-11-18T15Z",
+   "to": "2025-11-19T15Z",
+   "hours": 24,
+   "peak": 2,
+   "headlines": [
+    "2025-11-18T15:17:30Z Cloudflare Stock Slides As Global Outage Knocks X, ChatGPT Offline",
+    "2025-11-18T15:27:58Z Cloudflare Says Root Cause Of The Outage Was Automatically Generated Configuration File For Managing Threat Traffic; No Evidence The Outage Was The Result Of An Attack Or Malicious Activity; We Are Continuing To Monitor For Any Further Issues"
+   ]
+  },
+  {
+   "from": "2026-01-15T17Z",
+   "to": "2026-01-15T20Z",
+   "hours": 3,
+   "peak": 2,
+   "headlines": [
+    "2026-01-15T17:15:29Z Verizon Outage Ends — And The Stock Is Bracing For The Damage",
+    "2026-01-14T20:57:19Z Verizon Outage Hits Customers, Phones Showing 'SOS': VZ Stock Trades Higher"
+   ]
+  },
+  {
+   "from": "2026-05-08T21Z",
+   "to": "2026-05-09T21Z",
+   "hours": 24,
+   "peak": 2,
+   "headlines": [
+    "2026-05-08T21:02:59Z Coinbase CEO Posts On X \"We experienced an outage at Coinbase last night, which is never acceptable. The root cause was a room overheating in an AWS datacenter when multiple chillers failed. We design our services to be redundant to downtime in any one AWS Availability Zone (AZ), and most of our systems worked this way last night, but not all. ...\"",
+    "2026-05-08T21:25:01Z SailPoint Reports April 20, 2026 GitHub Repository Breach, Says Incident Contained With No Customer Data Or Service Disruption"
+   ]
+  },
+  {
+   "from": "2026-11-12T22Z",
+   "to": "2026-11-16T00Z",
+   "hours": 74,
+   "peak": 20,
+   "headlines": [
+    "2026-11-12T21:04:45Z Workhorse Announces Q3 Earnings Call Rescheduled To November 16, Citing Business Disruptions From Global Microsoft Outages",
+    "2026-11-12T22:31:35Z Microsoft 365 Experiences Service Outage",
+    "2026-11-13T04:41:39Z Microsoft Outage Triggers Chaos Across Outlook, Teams and Copilot — Spills Over to OpenAI and Anthropic",
+    "2026-11-13T04:41:35Z Microsoft Outage Triggers Chaos Across Outlook, Teams and Copilot — Spills Over to OpenAI and Anthropic (UPDATED)",
+    "2026-11-13T04:41:35Z Microsoft Outage Triggers Chaos Across Outlook, Teams and Copilot — Spills Over to OpenAI and Anthropic (UPDATED)",
+    "2026-11-13T09:09:58Z Microsoft Outlook Outage Hits Colorado Jail, Forces Families to Post Bail In Person to Secure Release",
+    "2026-11-13T13:01:57Z Fraport Confirms Operational Stability During Global Microsoft Outage",
+    "2026-11-13T13:02:00Z Euronext Reports Email Communication Outage Due to Global Microsoft Disruption",
+    "2026-11-13T14:50:45Z Microsoft Outage Hit More Than Outlook: Even Its Cybersecurity Defenses Were Affected",
+    "2026-11-13T16:22:20Z Microsoft Stock in Focus as Massive 365 Outage Hits Outlook, Teams and Copilot: What Investors Should Know",
+    "2026-11-13T17:02:48Z Maersk Reports Operational Disruptions Due to Global Microsoft Outage",
+    "2026-11-13T18:01:48Z CMC Markets Operations Impacted by Global Microsoft Service Outage",
+    "2026-11-13T19:01:22Z Microsoft Experiences Widespread Global Service Outage",
+    "2026-11-13T21:19:20Z 'FAA confirms nationwide ground stop due to widespread ATC frequency issues' - The Air Current",
+    "2026-11-13T21:42:23Z United Airlines Says Due To A Nationwide Ground Stop By The FAA, We're Holding Planes From Taking Off At This Time; Planes Already In Flight Will Continue",
+    "2026-11-13T22:11:16Z 'FBI Said to Probe Whether Software Update Caused Mass FAA Outage'- Bloomberg",
+    "2026-11-13T22:31:51Z JetBlue Operations Impacted by FAA Ground Stop",
+    "2026-11-13T22:47:18Z 'Outages Include Air Traffic Control Radars And Radio Frequencies, Source Says'- CNN",
+    "2026-11-14T03:01:49Z Delta Air Lines Impacted by Nationwide FAA Ground Stop",
+    "2026-11-14T03:02:19Z L3Harris Technologies Network Issue Linked to Nationwide FAA Ground Stop",
+    "2026-11-14T05:59:37Z FAA Lifts Nationwide Ground Stop, Resumes Flights; Says No Cyberattack Evidence or Link to Microsoft Outage, Sean Duffy Blames Legacy Equipment, Seeks $50 Billion",
+    "2026-11-14T06:28:22Z FAA Resumes Flights After Nationwide Ground Stop, Says No Link to Microsoft Outage or Cyberattack; Marjorie Taylor Greene Slams Duffy's $50 Billion Ask (UPDATED)",
+    "2026-11-14T09:01:42Z Aviva Activates Backup Systems During Global Microsoft Outage",
+    "2026-11-14T14:01:11Z Microsoft Restores Services Following Global Outage",
+    "2026-11-14T14:01:41Z Southwest Airlines Supports Federal Funding Request Following Nationwide Ground Stop",
+    "2026-11-14T14:01:42Z United Airlines Operations Impacted by Nationwide FAA Ground Stop",
+    "2026-11-14T14:02:05Z American Airlines Operations Impacted by Nationwide FAA Ground Stop",
+    "2026-11-14T14:02:39Z Frontier Group Holdings Shares Impacted by FAA Ground Stop",
+    "2026-11-14T14:02:41Z JetBlue Resumes Operations Following Nationwide FAA Ground Stop",
+    "2026-11-14T18:11:12Z Reported Earlier, 'FAA ground stop latest updates: Duffy blames contractor L3Harris; thousands more flights canceled Saturday; no sign of cyberattack' - Yahoo",
+    "2026-11-15T02:01:53Z Delta Air Lines Resumes Operations Following Nationwide FAA Ground Stop",
+    "2026-11-15T02:02:28Z Air Canada Cancels Cross-Border Flights Following U.S. FAA Ground Stop",
+    "2026-11-15T02:03:11Z Hertz Shares Rise Following Nationwide FAA Ground Stop",
+    "2026-11-15T03:30:45Z Mike Johnson Calls for 'Investment,' Not Probe, After FAA Ground Stop as Duffy's $50 Billion Ask Draws Fire From Greene",
+    "2026-11-15T10:08:11Z US Air Travel Chaos to Persist Until Late Sunday After FAA Ground Stop, Agency Chief Warns: Report",
+    "2026-11-15T13:58:56Z Consumer Tech (Nov 9-13): Jensen Resigns From Nvidia Amid Affair Controvery, Microsoft Faces Massive Outage & More",
+    "2026-11-15T14:00:21Z Jensen Huang Exits Nvidia, Musk’s SpaceX Gets a Big Bet and Microsoft’s Outage Spreads: This Week In Tech"
+   ]
+  }
+ ],
+ "moved": [
+  "2024-02-22T12:53:24Z [did not experience] T-Mobile Says Did Not Experience An Outage, Says Network Is Operating Normally",
+  "2025-11-07T06:27:34Z [denies] Amazon Denies Reports Of AWS Outage In US Despite User Complaints (UPDATED)"
+ ]
+}

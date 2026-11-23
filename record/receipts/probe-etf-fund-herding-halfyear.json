@@ -1,0 +1,286 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "etf-fund-herding-halfyear",
+  "vendor": "SEC Form N-PORT quarterly data sets (data/raw/edgar) + sharadar funds",
+  "item": "F1 [factory:probe:etf-fund-herding-halfyear]",
+  "computed_at": "2026-11-18T08:53:52-05:00",
+  "authority": "factory spec § 2.2 condition 7 (F1); successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2), carved for this row alone by the operator's answer of 2026-11-18 ~05:09 ET to D883, option (a); the inbox ruling of 2026-10-24 (a) (D533), its (b) σ-only form; Amendment 2026-10-17 (K1) (5); govern/source-admissions.jsonl line 28 (2026-11-17 edgar, the N-PORT data sets)",
+  "note": "σ-only (D533 (b)): no value, no mean, no t, no clears; no holding, share count, buy ratio, price or hold's return is written or printed. One read of N-PORT's whole span, a counted trial, never re-run. No request at the read: the data sets held in the depot (pulled once through rawFetchChunked) and the held Sharadar store. script_sha256 = the sha256 of the script at script_path, committed and mirror-pushed before the read.",
+  "statistic": "net residual six-month return of the row's book: at each June 30 and December 31, each N-PORT series' split-adjusted shares of a roster fund in its newest public NPORT-P against its newest public at the formation before (public = the later of the filing date and the report date + 60 days); p = buyers ÷ (buyers + sellers), funds with at least five; long the N // 5 highest p and short the N // 5 lowest of the eligible 20-ETF roster, half notional a leg, flat unless the legs span two asset classes, at most 1.00 notional traded a rebalance (excess deferred), entered at the close of the first session after the formation date and held to the first session after the next; the ETF arena's cost line (10 bp a side, 25 bp a year of short borrow); the residual = net − beta × the 60/40 SPY/IEF return over the same hold, beta fitted in this read on the holds the book is on; its sigma, turnover and cost alone",
+  "sigma": 4.165385203405345,
+  "sigma_gross": 4.167156233945256,
+  "units": "percent per six months (the row's Stage-1 unit; prior 0.24 gross); turnover Σ|Δw| traded a rebalance",
+  "n": 12,
+  "n_on": 12,
+  "flat_formations": 0,
+  "turnover": 1.0,
+  "cost": 0.15128782414273537,
+  "gross_exposure_mean": 0.8206051862837661,
+  "fit": {
+    "beta": -0.1897152520316983,
+    "n": 12,
+    "on": "OLS of net on the 60/40 return over the holds on"
+  },
+  "by_formation": {
+    "2020-06-30": {
+      "N": 19,
+      "series_read": 8424,
+      "active_min": 3,
+      "active_max": 142
+    },
+    "2020-12-31": {
+      "N": 18,
+      "series_read": 11094,
+      "active_min": 2,
+      "active_max": 166
+    },
+    "2021-06-30": {
+      "N": 19,
+      "series_read": 11242,
+      "active_min": 4,
+      "active_max": 174
+    },
+    "2021-12-31": {
+      "N": 18,
+      "series_read": 11268,
+      "active_min": 2,
+      "active_max": 159
+    },
+    "2022-06-30": {
+      "N": 18,
+      "series_read": 11445,
+      "active_min": 2,
+      "active_max": 142
+    },
+    "2022-12-31": {
+      "N": 19,
+      "series_read": 11640,
+      "active_min": 3,
+      "active_max": 153
+    },
+    "2023-06-30": {
+      "N": 19,
+      "series_read": 11754,
+      "active_min": 4,
+      "active_max": 142
+    },
+    "2023-12-31": {
+      "N": 20,
+      "series_read": 11749,
+      "active_min": 6,
+      "active_max": 139
+    },
+    "2024-06-30": {
+      "N": 18,
+      "series_read": 11715,
+      "active_min": 3,
+      "active_max": 136
+    },
+    "2024-12-31": {
+      "N": 18,
+      "series_read": 11820,
+      "active_min": 2,
+      "active_max": 131
+    },
+    "2025-06-30": {
+      "N": 15,
+      "series_read": 11927,
+      "active_min": 2,
+      "active_max": 131
+    },
+    "2025-12-31": {
+      "N": 15,
+      "series_read": 12157,
+      "active_min": 1,
+      "active_max": 124
+    }
+  },
+  "shape": {
+    "accessions": 313485,
+    "series": 16838,
+    "accessions_amended": 4826,
+    "accessions_no_series": 16253,
+    "accessions_later_duplicate": 271,
+    "rows": 30079,
+    "rows_not_NS": 160,
+    "rows_no_balance": 0,
+    "lines_malformed": 0
+  },
+  "window": {
+    "first_formation": "2020-06-30",
+    "last_formation": "2025-12-31",
+    "first_entry": "2020-07-01",
+    "last_exit": "2026-07-01",
+    "nport_filed": [
+      "2019q4 → 2025q4",
+      "2019-10-01",
+      "2025-12-31"
+    ],
+    "confirmation": "none: B1 (2) carved for this row alone (D883 (a)); the span is spent"
+  },
+  "nport": {
+    "url": "https://www.sec.gov/files/dera/data/form-n-port-data-sets/{}_nport.zip",
+    "zips": {
+      "2019q4": {
+        "manifest": 281164,
+        "whole_sha256": "f8e10bce83ac2251bcdb80111faa362b7c2b1ffb6581513e11559af0eac31390"
+      },
+      "2020q1": {
+        "manifest": 281171,
+        "whole_sha256": "4763fe2a71c67bd95934d8a961b88d29d0726e8ee7d1d0f57de9bddb2b087dbd"
+      },
+      "2020q2": {
+        "manifest": 281177,
+        "whole_sha256": "c0d02e0fc87a73387ff8390045639deac4ec84d4356eca1484a36637cbabaccb"
+      },
+      "2020q3": {
+        "manifest": 281184,
+        "whole_sha256": "e048462a9cedc857b56075b0a7db47f1b7f98cc1752017b3220b86e43431283b"
+      },
+      "2020q4": {
+        "manifest": 281191,
+        "whole_sha256": "37eac516e1f8af19ef87718eaa100a9a05905a33f8c11ec7c38ab5fc784b02e1"
+      },
+      "2021q1": {
+        "manifest": 281198,
+        "whole_sha256": "b88674c295ca8b1f25d7396d6e779dc66428bc8ba8d7d435b28e05efb9e1f0b8"
+      },
+      "2021q2": {
+        "manifest": 281205,
+        "whole_sha256": "1a84e50fa13053ea2a66dd82726b741d818248a3b6722a5a8e72dd1739d37289"
+      },
+      "2021q3": {
+        "manifest": 281212,
+        "whole_sha256": "57900ea865f16f5fc717b0185ba7a73a0d0fb84a00441f9ccebdde0437c937a1"
+      },
+      "2021q4": {
+        "manifest": 281219,
+        "whole_sha256": "94169bcf86b40095a9590599291b40ee67ceb56d1e2cc88a085e1d018430917d"
+      },
+      "2022q1": {
+        "manifest": 281228,
+        "whole_sha256": "9d28cad347e433f921e9154efd77c4f3755634d7c105a1dc0b9c3b72be69872e"
+      },
+      "2022q2": {
+        "manifest": 281236,
+        "whole_sha256": "228dc1a21e3e5813d2cad2cb776a25b1a9580da1129d060b6ed1ec7bdb7f8250"
+      },
+      "2022q3": {
+        "manifest": 281248,
+        "whole_sha256": "6494465b63ef3450437019794d0d15bfae72c6752e4fc589b6f71953d9203f1b"
+      },
+      "2022q4": {
+        "manifest": 281256,
+        "whole_sha256": "add0a14dc5f7a753a897c3daeea674cbbf75c8167670cdeaa3d647068db8416d"
+      },
+      "2023q1": {
+        "manifest": 281265,
+        "whole_sha256": "3c970127ca2315ac35ec7e6fc2f8c1eed0dadb64a8bfb760dc6f0609d540ca87"
+      },
+      "2023q2": {
+        "manifest": 281273,
+        "whole_sha256": "29cee81fdbe41ac9ebde1dcf76c6a7088e5c9b3e345829ab9f5773574946ef00"
+      },
+      "2023q3": {
+        "manifest": 281281,
+        "whole_sha256": "d27b2645f282b1230ca998a2fe759eca3547542f0e25c568046509152a5ad21e"
+      },
+      "2023q4": {
+        "manifest": 281289,
+        "whole_sha256": "238ca64537a7b6febcb7adbc444645db7a847cdf1bd7579eb8372f2ae29f1c55"
+      },
+      "2024q1": {
+        "manifest": 281297,
+        "whole_sha256": "7f391a05a71cec3fde5ce382e8ca8af9b11606ae85c465f99d98846e2d695254"
+      },
+      "2024q2": {
+        "manifest": 281306,
+        "whole_sha256": "960ee7685ee0da352b0e59c1e34ce7ec383a04d90f7d1a877c891b2b31aa4332"
+      },
+      "2024q3": {
+        "manifest": 281315,
+        "whole_sha256": "e2c4d7e7cbf346338476e65231918917d327776f348065b3329d55274ec35f74"
+      },
+      "2024q4": {
+        "manifest": 281323,
+        "whole_sha256": "449963cd187fc40774dd947c6302863c9d958369f747b196d957eab999501465"
+      },
+      "2025q1": {
+        "manifest": 281331,
+        "whole_sha256": "7593dc6f6eaed347ba21bf0e95bb1c1fb14701de98bdf09410a1e975871d2f1b"
+      },
+      "2025q2": {
+        "manifest": 281339,
+        "whole_sha256": "08b90e310da506ae46e8a5b276022861808d61d56ce434ce310f52f31f608ca7"
+      },
+      "2025q3": {
+        "manifest": 281347,
+        "whole_sha256": "4cc5c2431bf8997ef0af1cb7b69568255a1d6a1840e41499d9ffd1fc42e030f6"
+      },
+      "2025q4": {
+        "manifest": 281355,
+        "whole_sha256": "4ebb169e6cc0745b4cc65de4e83ea4916c7ad39146c383007e078b6223af8dea"
+      }
+    }
+  },
+  "universe": {
+    "classes": {
+      "SPY": "equity",
+      "QQQ": "equity",
+      "IWM": "equity",
+      "EFA": "equity",
+      "EEM": "equity",
+      "VNQ": "equity",
+      "TLT": "fixed income",
+      "IEF": "fixed income",
+      "TIP": "fixed income",
+      "LQD": "fixed income",
+      "HYG": "fixed income",
+      "EMB": "fixed income",
+      "GLD": "commodities",
+      "SLV": "commodities",
+      "DBC": "commodities",
+      "USO": "commodities",
+      "DBA": "commodities",
+      "UUP": "currencies",
+      "FXE": "currencies",
+      "FXY": "currencies"
+    },
+    "cusips": {
+      "464287655": "IWM",
+      "464287242": "LQD",
+      "46090E103": "QQQ",
+      "73935A104": "QQQ",
+      "631100104": "QQQ",
+      "46428Q109": "SLV",
+      "78462F103": "SPY",
+      "464287176": "TIP",
+      "464287432": "TLT",
+      "91232N108": "USO",
+      "91232N207": "USO",
+      "46141D203": "UUP",
+      "73936D107": "UUP",
+      "922908553": "VNQ",
+      "46140H106": "DBA",
+      "73936B408": "DBA",
+      "46138B103": "DBC",
+      "73935S105": "DBC",
+      "240225102": "DBC",
+      "464287234": "EEM",
+      "464287465": "EFA",
+      "464288281": "EMB",
+      "46138K103": "FXE",
+      "23130C108": "FXE",
+      "29871P109": "FXE",
+      "46138W107": "FXY",
+      "23130A102": "FXY",
+      "78463V107": "GLD",
+      "863307104": "GLD",
+      "464288513": "HYG",
+      "464287440": "IEF"
+    }
+  },
+  "pulled_via": "rawFetchChunked (.review-scratch/f1-herding/pull.mjs, one zip at a time, before the read); the held store data/sharadar.db, read-only",
+  "script_path": "orient/investigations/probe-etf-fund-herding-halfyear.py",
+  "script_sha256": "e3cc8891d2c91a71c662b3fa1c110cb751a1ebd8bd9bd3f451523c07a814a78f"
+}

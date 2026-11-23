@@ -1,0 +1,123 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "etf-acquisition-cost-overhang-year",
+  "vendor": "ishares and SPDR fund exports (data/raw/blackrock, data/raw/ssga) + sharadar funds",
+  "computed_at": "2026-11-18T06:22:34-05:00",
+  "authority": "factory spec § 2.2 condition 7 (F1 [factory:probe:etf-acquisition-cost-overhang-year]); successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-17 (K1) (4)(b) and (5); the K1 dated line 2026-11-02 (funds before 2016); the 2026-11-14 (K1) line's (1) read, extended by D881 (a) of 2026-11-18; govern/source-admissions.jsonl lines 29-32 (2026-11-18 invesco, ssga, uscf, vanguard)",
+  "note": "One read of the discovery window, no p-value, a counted trial, never re-run. No request at the read: the issuers' exports held in the depot (the sibling probe's pins, its readers imported by path and its sha256 checked) and the held Sharadar store. Strategy-level figures only: no price, no shares outstanding, no turnover of a fund, no overhang, no year's return. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "mean net residual annual return of the row's book: Grinblatt and Han's (2005) turnover-weighted reference price over the 260 five-session weeks to December's last session (Sharadar close, weekly volume ÷ the export's SO, capped at 1), overhang (P − R) ÷ P; long the N // 5 highest and short the N // 5 lowest of the seasoned eligible funds (all 260 weeks present), half notional a leg, flat unless the legs span two asset classes, at most 2.00 notional traded a rebalance (excess deferred), entered at the close of January's first session and held to the next January's first; the ETF arena's cost line (10 bp a side, 25 bp a year of short borrow); the residual = net − beta × the 60/40 SPY/IEF return over the same hold, beta fitted in this read on the years the book is on",
+  "value": 10.677500172647514,
+  "sigma": 10.343818729631169,
+  "units": "percent per year (the row's Stage-1 unit; prior 0.75 gross); turnover Σ|Δw| traded a rebalance",
+  "n": 7,
+  "n_on": 5,
+  "flat_formations": 2,
+  "turnover": 0.9285714285714286,
+  "cost": 0.18214285714285716,
+  "gross_value": 10.859643029790373,
+  "sigma_gross": 10.398168457799136,
+  "gross_exposure_mean": 0.7142857142857143,
+  "fit": {
+    "beta": -0.6504258984674541,
+    "r2": 0.4285449223490157,
+    "n": 5,
+    "on": "OLS of net on the 60/40 return over the years on"
+  },
+  "bar": "zero on the registered sign (+, high overhang minus low): the row declares no baseline bar",
+  "clears": true,
+  "eligible_by_formation": {
+    "2007": 5,
+    "2008": 6,
+    "2009": 7,
+    "2010": 8,
+    "2011": 10,
+    "2012": 11,
+    "2013": 12
+  },
+  "window": {
+    "first_formation": "2007",
+    "last_formation": "2013",
+    "first_entry": "2008-01-02",
+    "last_exit": "2015-01-02",
+    "end": "2015-12-31"
+  },
+  "universe": {
+    "read": {
+      "SPY": {
+        "class": "equity",
+        "payload": "ssga#296",
+        "sha256": "767395b908fcf36da2f4a14dc25fe2d05125a37769828248076f2f1d5437cf76"
+      },
+      "IWM": {
+        "class": "equity",
+        "payload": "blackrock#29",
+        "sha256": "70e6762c66740ed67f5313c2ca707cbb42c1af26843594f207641f2cf121202a"
+      },
+      "EFA": {
+        "class": "equity",
+        "payload": "blackrock#30",
+        "sha256": "dd1bf528c191ac4f0e95863d281bb06231d4a157574b8166fa87d888957c876c"
+      },
+      "EEM": {
+        "class": "equity",
+        "payload": "blackrock#31",
+        "sha256": "42c5e3e9e5ba6e2fad83879382b5d373356f12fd4ec078139f72cd268775f788"
+      },
+      "TLT": {
+        "class": "fixed income",
+        "payload": "blackrock#32",
+        "sha256": "72f024c5eb55d9eb9792135e1592b618381ab63b9fe94157eb0134048c7a4dfd"
+      },
+      "IEF": {
+        "class": "fixed income",
+        "payload": "blackrock#33",
+        "sha256": "99d11c70c1b228dd42f97dd72b728dc478e86358366eb3ac174aa0bb231c9106"
+      },
+      "TIP": {
+        "class": "fixed income",
+        "payload": "blackrock#34",
+        "sha256": "2256fb8161c536fd781d3b3fe1183684e09baf349b8775e856e5b5ff4051c672"
+      },
+      "LQD": {
+        "class": "fixed income",
+        "payload": "blackrock#4",
+        "sha256": "3b81afa5905add554f7995aa8f6282f2d03f3e13bd7a6e810947eae218949cfe"
+      },
+      "HYG": {
+        "class": "fixed income",
+        "payload": "blackrock#8",
+        "sha256": "4865444e206d1a835411cc5d9da3858a9f6db45a7e3831f116e38fb593706481"
+      },
+      "EMB": {
+        "class": "fixed income",
+        "payload": "blackrock#12",
+        "sha256": "9dcfb23bc1b1ddb5220420602823adccd219a745aeec030269381dd2eb08761e"
+      },
+      "GLD": {
+        "class": "commodities",
+        "payload": "ssga#290",
+        "sha256": "fa2520d32bbe11059f95492c264aa5c97d1eb36af36b418d6aa7b96dd4d09f10"
+      },
+      "SLV": {
+        "class": "commodities",
+        "payload": "blackrock#35",
+        "sha256": "af1427a5c9f60aebeeece9879e734a1ead75c2193b0ec9f522171c013d2818e6"
+      }
+    },
+    "not_read": {
+      "QQQ": "invesco (line 29): terms bar automated access",
+      "DBA": "invesco (line 29): terms bar automated access",
+      "DBC": "invesco (line 29): terms bar automated access",
+      "UUP": "invesco (line 29): terms bar automated access",
+      "FXE": "invesco (line 29): terms bar automated access",
+      "FXY": "invesco (line 29): terms bar automated access",
+      "USO": "uscf (line 31): terms bar storage in another database, struck under the amendment's (4)",
+      "VNQ": "vanguard (line 32): terms bar repeated automated access"
+    },
+    "terms": "govern/receipts/f1-etf-issuer-terms.md",
+    "readers": "orient/investigations/probe-etf-primary-flow-reversal-month.py (sha256 9ea90d3b0fd78086dd56b5525274d27f296515a5d5864343c869846243eba899)"
+  },
+  "pulled_via": "rawFetch (the twelve exports, before the sibling script's commit); the held store data/sharadar.db, read-only",
+  "script_path": "orient/investigations/probe-etf-acquisition-cost-overhang-year.py",
+  "script_sha256": "eb3d7f5eef8583096e80a44aaeba0d6995db3223c1b68642214f0ee2dbe8147b"
+}

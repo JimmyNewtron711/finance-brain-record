@@ -1,0 +1,132 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "etf-executed-short-flow-month",
+  "vendor": "FINRA per-facility Reg SHO daily short-sale volume files (data/raw/finra) + sharadar funds",
+  "computed_at": "2026-11-18T08:25:38-05:00",
+  "authority": "factory spec § 2.2 condition 7 (F1 [factory:probe:etf-executed-short-flow-month]); successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-17 (K1) (4)(b) and (5); the K1 dated line 2026-11-02 (funds before 2016); govern/source-admissions.jsonl line 33 (2026-11-18 finra, the per-facility files), its strike waived by the operator's D882 (a) of 2026-11-18",
+  "note": "One read of the discovery window, no p-value, a counted trial, never re-run. No request at the read: the facility files held in the depot (pulled once through rawFetch, one a second) and the held Sharadar store. Strategy-level figures only: no volume, no short ratio, no price, no month's return; FINRA's values stay in the depot. script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "mean net residual month return of the row's book: the formation month's Σ ShortVolume ÷ Σ TotalVolume over FINRA's four facility files (two TRFs, the ADF, the ORF), long the N // 5 lowest and short the N // 5 highest of the eligible 20-ETF roster, half notional a leg, flat unless the legs span two asset classes, at most 0.50 notional traded a rebalance (excess deferred), entered at the close of the first session after the formation month and held one month; the ETF arena's cost line (10 bp a side, 25 bp a year of short borrow); the residual = net − beta × the 60/40 SPY/IEF return over the same hold, beta fitted in this read on the months the book is on",
+  "value": 0.05350220896954239,
+  "sigma": 1.1513103331123848,
+  "units": "percent per month (the row's Stage-1 unit; prior 0.0696 gross); turnover Σ|Δw| traded a rebalance",
+  "n": 75,
+  "n_on": 75,
+  "flat_formations": 0,
+  "turnover": 0.5,
+  "cost": 0.05957520937584144,
+  "gross_value": 0.11307741834538383,
+  "sigma_gross": 1.1513592205105898,
+  "gross_exposure_mean": 0.9192201000807787,
+  "fit": {
+    "beta": -0.27725022889784645,
+    "r2": 0.22020901066918946,
+    "n": 75,
+    "on": "OLS of net on the 60/40 return over the months on"
+  },
+  "bar": "zero on the registered sign (+, low short flow minus high short flow): the row declares no baseline bar",
+  "clears": true,
+  "eligible_by_year": {
+    "2009": {
+      "n_min": 20,
+      "n_max": 20,
+      "formations": 5
+    },
+    "2010": {
+      "n_min": 20,
+      "n_max": 20,
+      "formations": 12
+    },
+    "2011": {
+      "n_min": 20,
+      "n_max": 20,
+      "formations": 12
+    },
+    "2012": {
+      "n_min": 20,
+      "n_max": 20,
+      "formations": 12
+    },
+    "2013": {
+      "n_min": 20,
+      "n_max": 20,
+      "formations": 12
+    },
+    "2014": {
+      "n_min": 20,
+      "n_max": 20,
+      "formations": 12
+    },
+    "2015": {
+      "n_min": 20,
+      "n_max": 20,
+      "formations": 10
+    }
+  },
+  "window": {
+    "first_formation": "2009-08",
+    "last_formation": "2015-10",
+    "first_entry": "2009-09-01",
+    "last_exit": "2015-12-01",
+    "end": "2015-12-31"
+  },
+  "files": {
+    "held": {
+      "FNSQ": 1616,
+      "FNYX": 1616,
+      "FNRA": 1127,
+      "FORF": 1616
+    },
+    "first": {
+      "FNSQ": "2009-08-03",
+      "FNYX": "2009-08-03",
+      "FNRA": "2009-08-03",
+      "FORF": "2009-08-03"
+    },
+    "missing_inside_span": {
+      "FNSQ": 0,
+      "FNYX": 0,
+      "FNRA": 489,
+      "FORF": 0
+    },
+    "headerless": [
+      "FNSQ 2010-11-22",
+      "FORF 2010-11-22"
+    ],
+    "duplicated": [
+      "FNYX 2011-05-31",
+      "FNYX 2011-09-12"
+    ],
+    "digest": "sha256 over each read row's `<id>:<body_sha256>` line, facility then session order",
+    "sha256": "83f15d019269565c2c93f2cb5b5e86050cf974febd1dfe96a28421b867cb283f"
+  },
+  "universe": {
+    "classes": {
+      "SPY": "equity",
+      "QQQ": "equity",
+      "IWM": "equity",
+      "EFA": "equity",
+      "EEM": "equity",
+      "VNQ": "equity",
+      "TLT": "fixed income",
+      "IEF": "fixed income",
+      "TIP": "fixed income",
+      "LQD": "fixed income",
+      "HYG": "fixed income",
+      "EMB": "fixed income",
+      "GLD": "commodities",
+      "SLV": "commodities",
+      "DBC": "commodities",
+      "USO": "commodities",
+      "DBA": "commodities",
+      "UUP": "currencies",
+      "FXE": "currencies",
+      "FXY": "currencies"
+    },
+    "alias": {
+      "QQQQ": "QQQ"
+    }
+  },
+  "pulled_via": "rawFetch (.review-scratch/f1-short-flow/pull-facility.mjs, one request a second, before the read); the held store data/sharadar.db, read-only",
+  "script_path": "orient/investigations/probe-etf-executed-short-flow-month.py",
+  "script_sha256": "387b57fad615df5cefbcb97c31e9463c0b592150d8a887ba061ade2bea93c350"
+}

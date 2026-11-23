@@ -1,0 +1,3148 @@
+{
+ "item": "D867",
+ "backfill": {
+  "commit": "ca46c14052c93cd2de01ca54f2ea055ffca20224",
+  "branch": "feature/fx-spot-proposer-1",
+  "blobs": {
+   "server/services/chokepoints/systemicScores.js": "67975488e4e74e9e70efcac05f13739fc278de0e",
+   "server/services/hormuz/news.js": "f5149389cc4a9a375a3b7dc606e844f7146933f1",
+   "server/services/news/corpusDb.js": "148d1b733b1e6e5b8f7d1b05d2c835ab8a6a7391",
+   "config/chokepoints/cyber-incident.json": "10c9d069c20a376cf240a8aa7fe8006dd873f554",
+   "config/chokepoints/it-outage.json": "340efee501b641bd9d3565508a56b2eb4354cc31"
+  },
+  "at": "2026-11-17T21:40:21.240Z",
+  "seconds": 14.6,
+  "written": 16872,
+  "from": "2015-01-01",
+  "through": "2026-11-16",
+  "last": null,
+  "latest": {
+   "SYS_CYBER_NEWS": 1.347449,
+   "SYS_CYBER": 0.27764,
+   "SYS_OUTAGE_NEWS": 4,
+   "SYS_OUTAGE": 4,
+   "SYS_CYBER_NEWS_V2": 1.359207,
+   "SYS_CYBER_V2": 0.28352,
+   "SYS_OUTAGE_NEWS_V2": 4,
+   "SYS_OUTAGE_V2": 4
+  },
+  "series": [
+   "SYS_CYBER_NEWS_V2",
+   "SYS_CYBER_V2",
+   "SYS_OUTAGE_NEWS_V2",
+   "SYS_OUTAGE_V2"
+  ],
+  "other_series_rows_written": 0
+ },
+ "spec": "docs/superpowers/specs/2026-11-15-systemic-disruption-score-design.md § 3 S3",
+ "read_at": "2026-11-17T21:40:57.172Z",
+ "read_commit": "ca46c14052c93cd2de01ca54f2ea055ffca20224",
+ "distributions": {
+  "SYS_CYBER_NEWS_V2": {
+   "n": 4218,
+   "first": "2015-05-01",
+   "last": "2026-11-16",
+   "mean": 0.0134,
+   "sd": 0.9952,
+   "quantiles": {
+    "p0": -0.6049,
+    "p1": -0.596,
+    "p5": -0.537,
+    "p25": -0.4482,
+    "p50": -0.3437,
+    "p75": -0.2713,
+    "p95": 2.5443,
+    "p99": 3.9966,
+    "p100": 4
+   },
+   "at_plus4": 42,
+   "at_minus4": 0
+  },
+  "SYS_CYBER_V2": {
+   "n": 4218,
+   "first": "2015-05-01",
+   "last": "2026-11-16",
+   "mean": 0.0163,
+   "sd": 0.8906,
+   "quantiles": {
+    "p0": -0.6681,
+    "p1": -0.5735,
+    "p5": -0.5477,
+    "p25": -0.4254,
+    "p50": -0.3153,
+    "p75": -0.2129,
+    "p95": 2.1785,
+    "p99": 3.7851,
+    "p100": 4
+   },
+   "at_plus4": 36,
+   "at_minus4": 0
+  },
+  "SYS_OUTAGE_NEWS_V2": {
+   "n": 4218,
+   "first": "2015-05-01",
+   "last": "2026-11-16",
+   "mean": -0.0281,
+   "sd": 0.7572,
+   "quantiles": {
+    "p0": -0.3746,
+    "p1": -0.3634,
+    "p5": -0.3194,
+    "p25": -0.225,
+    "p50": -0.1785,
+    "p75": -0.1332,
+    "p95": -0.0632,
+    "p99": 4,
+    "p100": 4
+   },
+   "at_plus4": 85,
+   "at_minus4": 0
+  },
+  "SYS_OUTAGE_V2": {
+   "n": 4218,
+   "first": "2015-05-01",
+   "last": "2026-11-16",
+   "mean": -0.0281,
+   "sd": 0.7572,
+   "quantiles": {
+    "p0": -0.3746,
+    "p1": -0.3634,
+    "p5": -0.3194,
+    "p25": -0.225,
+    "p50": -0.1785,
+    "p75": -0.1332,
+    "p95": -0.0632,
+    "p99": 4,
+    "p100": 4
+   },
+   "at_plus4": 85,
+   "at_minus4": 0
+  }
+ },
+ "correlation": {
+  "news_editions": {
+   "days": 4218,
+   "r": 0.0507
+  },
+  "composites": {
+   "days": 4218,
+   "r": 0.051
+  }
+ },
+ "gate": {
+  "rule": "a dated candidate event is a hit when its side's news edition reaches its own 95th percentile on a day of [onset, onset + 2]; the edition misses most when fewer than half of either side's dated events are hits, and S4 then waits for an inbox block",
+  "side_rule": "CYBER when the kind matches /cyber|ransom|supply_chain|exploit|intrusion|theft|ddos|espionage|malware|worm|forged|hack/i, OUTAGE otherwise",
+  "report": "docs/research/2026-11-14-systems-chokepoints-deep-research.md",
+  "events_read": 155,
+  "misses_most": true,
+  "CYBER": {
+   "p95": 2.5443,
+   "events_of_side": 53,
+   "undated": 5,
+   "before_first_row": 2,
+   "after_backfill": 0,
+   "dated_in_window": 46,
+   "hits": 8,
+   "hit_share": 0.174,
+   "chance_share": 0.143,
+   "misses_most": true,
+   "events": [
+    {
+     "id": "C12",
+     "onset": "2016-10-21",
+     "system": "Dyn managed DNS",
+     "kind": "cyber_availability",
+     "peak_day": "2016-10-21",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Dyn Warns Customers Of Another Cyber Attack, Currently 'Monitoring & Mitigating' A DDOS Attack",
+      "Paypal Earlier Released Statement On Service Interruptions, Related To Dyn Inc. Cyber Attack"
+     ]
+    },
+    {
+     "id": "C34",
+     "onset": "2025-08-27",
+     "system": "Salt Typhoon (AA25-239A)",
+     "kind": "state_intrusion",
+     "peak_day": "2025-08-29",
+     "peak": 1.962864,
+     "percentile": 91.96,
+     "hit": false,
+     "headlines": [
+      "UnitedHealth Under Fire As Senators Question Debt Collection Tactics After Massive Cyberattack"
+     ]
+    },
+    {
+     "id": "C36",
+     "onset": "2023-06-07",
+     "system": "M365 (Storm-1359)",
+     "kind": "cyber_availability",
+     "peak_day": "2023-06-07",
+     "peak": -0.458275,
+     "percentile": 23.52,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C37",
+     "onset": "2024-01-19",
+     "system": "Microsoft (Midnight Blizzard)",
+     "kind": "state_intrusion",
+     "peak_day": "2024-01-19",
+     "peak": 2.789834,
+     "percentile": 96.4,
+     "hit": true,
+     "headlines": [
+      "VF Corp Loses 35.5M Personal Data In Cyberattack, CEO Says No Payment Info Compromised",
+      "Microsoft Executive Emails Hacked By Russian Intelligence Group: Company Confirms Security Breach, Assures No Impact On Customer Data"
+     ]
+    },
+    {
+     "id": "C39",
+     "onset": "2020-12-13",
+     "system": "SolarWinds Orion",
+     "kind": "supply_chain_compromise",
+     "peak_day": "2020-12-14",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "What Investors Need To Know About The US Treasury Cyberattack",
+      "Solarwinds 8-K Shows Co. Has Been Made Aware Of Cyberattack That Inserted A Vulnerability Within Its Orion Monitoring Products",
+      "After Pfizer, Moderna's COVID-19 Vaccine Data Comprised In Cyberattack"
+     ]
+    },
+    {
+     "id": "C40",
+     "onset": "2023-10-20",
+     "system": "Okta support system",
+     "kind": "cyber_theft",
+     "peak_day": "2023-10-22",
+     "peak": -0.49035,
+     "percentile": 12.4,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C41",
+     "onset": "2021-12-09",
+     "system": "log4j",
+     "kind": "exploit_campaign",
+     "peak_day": "2021-12-09",
+     "peak": -0.536964,
+     "percentile": 5.31,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C42",
+     "onset": "2024-03-29",
+     "system": "xz utils",
+     "kind": "supply_chain_compromise",
+     "peak_day": "2024-03-29",
+     "peak": 1.532087,
+     "percentile": 88.1,
+     "hit": false,
+     "headlines": [
+      "Cyberattack Targets Call Of Duty Cheaters, Draining Bitcoin Wallets In Malware Scam: Report"
+     ]
+    },
+    {
+     "id": "C43",
+     "onset": "2025-09-15",
+     "system": "npm Shai-Hulud",
+     "kind": "supply_chain_compromise",
+     "peak_day": "2025-09-15",
+     "peak": -0.449076,
+     "percentile": 24.85,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C44",
+     "onset": "2026-08-04",
+     "system": "npm ChainDrop",
+     "kind": "supply_chain_compromise",
+     "peak_day": "2026-08-06",
+     "peak": 1.973199,
+     "percentile": 92.03,
+     "hit": false,
+     "headlines": [
+      "Blackstone, Apollo, KKR Employees Duped in Cyberattack Campaign"
+     ]
+    },
+    {
+     "id": "C45",
+     "onset": "2023-05-27",
+     "system": "MOVEit (Cl0p)",
+     "kind": "exploit_campaign",
+     "peak_day": "2023-05-29",
+     "peak": -0.452319,
+     "percentile": 24.37,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C46",
+     "onset": "2024-05-30",
+     "system": "Snowflake tenants (UNC5537)",
+     "kind": "cyber_theft",
+     "peak_day": "2024-05-30",
+     "peak": -0.598193,
+     "percentile": 0.69,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C47",
+     "onset": "2025-08-08",
+     "system": "Salesloft Drift → Salesforce",
+     "kind": "supply_chain_compromise",
+     "peak_day": "2025-08-08",
+     "peak": -0.429995,
+     "percentile": 29.07,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C48",
+     "onset": "2024-04-12",
+     "system": "PAN-OS CVE-2024-3400",
+     "kind": "exploit_campaign",
+     "peak_day": "2024-04-12",
+     "peak": -0.561714,
+     "percentile": 4.03,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C49",
+     "onset": "2025-09-25",
+     "system": "Cisco ASA/FTD (ED 25-03)",
+     "kind": "exploit_campaign",
+     "peak_day": "2025-09-25",
+     "peak": -0.433821,
+     "percentile": 28.31,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C50",
+     "onset": "2025-10-15",
+     "system": "F5 (ED 26-01)",
+     "kind": "state_intrusion",
+     "peak_day": "2025-10-15",
+     "peak": -0.427373,
+     "percentile": 30.04,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C51",
+     "onset": "2026-06-18",
+     "system": "FortiBleed",
+     "kind": "exploit_campaign",
+     "peak_day": "2026-06-18",
+     "peak": -0.42089,
+     "percentile": 30.96,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C52",
+     "onset": "2021-12-11",
+     "system": "Kronos/UKG Private Cloud",
+     "kind": "cyber_availability",
+     "peak_day": "2021-12-13",
+     "peak": -0.531192,
+     "percentile": 5.9,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C53",
+     "onset": "2024-02-21",
+     "system": "Change Healthcare",
+     "kind": "cyber_availability",
+     "peak_day": "2024-02-21",
+     "peak": -0.494712,
+     "percentile": 11.26,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C54",
+     "onset": "2024-06-19",
+     "system": "CDK Global",
+     "kind": "cyber_availability",
+     "peak_day": "2024-06-20",
+     "peak": 1.291172,
+     "percentile": 86.11,
+     "hit": false,
+     "headlines": [
+      "Nvidia Rival AMD Downplays Cyberattack, Says No 'Material Impact' On Business: 'Limited Amount Of Information' Was Accessed"
+     ]
+    },
+    {
+     "id": "C57",
+     "onset": "2026-07-16",
+     "system": "Coca-Cola / fairlife",
+     "kind": "cyber_availability",
+     "peak_day": "2026-07-16",
+     "peak": 1.962072,
+     "percentile": 91.84,
+     "hit": false,
+     "headlines": [
+      "Coca-Cola's fairlife Hit By Ransomware Attack, Temporarily Suspends U.S. Production; Product Quality And Safety Have Not Been Impacted"
+     ]
+    },
+    {
+     "id": "C64",
+     "onset": "2023-11-08",
+     "system": "ICBC FS (LockBit)",
+     "kind": "cyber_availability",
+     "peak_day": "2023-11-09",
+     "peak": 2.810994,
+     "percentile": 96.49,
+     "hit": true,
+     "headlines": [
+      "Fed's Barkin Says Financial Stability Risks Include Potential For Cyber Attacks",
+      "'Live News: Ransomware Attack On China's ICBC Disrupts U.S. Treasury Market' - Financial Times"
+     ]
+    },
+    {
+     "id": "C68",
+     "onset": "2025-02-21",
+     "system": "Bybit",
+     "kind": "cyber_theft ($1.5B)",
+     "peak_day": "2025-02-21",
+     "peak": -0.486918,
+     "percentile": 12.75,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C69",
+     "onset": "2026-10-29",
+     "system": "Binance",
+     "kind": "cyber_theft ($6.3–6.4B)",
+     "peak_day": "2026-10-30",
+     "peak": 2.802684,
+     "percentile": 96.44,
+     "hit": true,
+     "headlines": [
+      "Montega AG Updates Research on TAKKT AG Following Q3 Results and Cyberattack",
+      "CleanSpark Shares Decline Amid Market Reaction to Binance Security Breach"
+     ]
+    },
+    {
+     "id": "C70",
+     "onset": "2025-05-15",
+     "system": "Coinbase (insider)",
+     "kind": "cyber_theft (data)",
+     "peak_day": "2025-05-15",
+     "peak": 1.688171,
+     "percentile": 90.14,
+     "hit": false,
+     "headlines": [
+      "Coinbase Hit By Data Breach, Refuses To Pay $20M Ransom"
+     ]
+    },
+    {
+     "id": "C72",
+     "onset": "2016-02-04",
+     "system": "SWIFT / Bangladesh Bank",
+     "kind": "cyber_theft",
+     "peak_day": "2016-02-04",
+     "peak": -0.293123,
+     "percentile": 70.7,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C81",
+     "onset": "2015-12-23",
+     "system": "Ukraine grid",
+     "kind": "cyber_availability",
+     "peak_day": "2015-12-23",
+     "peak": -0.307831,
+     "percentile": 63.54,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C85",
+     "onset": "2024-10-03",
+     "system": "American Water",
+     "kind": "cyber_availability (billing)",
+     "peak_day": "2024-10-03",
+     "peak": -0.596035,
+     "percentile": 1.09,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C98",
+     "onset": "2025-09-19",
+     "system": "Collins MUSE",
+     "kind": "cyber_availability",
+     "peak_day": "2025-09-21",
+     "peak": -0.436384,
+     "percentile": 27.24,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C99",
+     "onset": "2017-06-27",
+     "system": "Maersk (NotPetya)",
+     "kind": "supply_chain_compromise",
+     "peak_day": "2017-06-27",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Norway National Security Says Ransomware Attack Ongoing And Assumed TO Be Similar To Attack On Maersk, Says Ongoing Attacks Affect 'One International Company' But Decline To Name It",
+      "CNBC Now Tweets: DEVELOPING: Cyberattacks hit WPP ad agency, Russia's Rosneft, Maersk, Ukrainian govt, Kiev airport & other targets cnb.cx/2sXcRr0",
+      "Splunk Issues Release Highlighting Unveiling Of Splunk Insights For Ransomware"
+     ]
+    },
+    {
+     "id": "C100",
+     "onset": "2023-11-10",
+     "system": "DP World Australia",
+     "kind": "cyber_availability (intrusion + isolation; **not ransomware**)",
+     "peak_day": "2023-11-10",
+     "peak": 1.559313,
+     "percentile": 88.81,
+     "hit": false,
+     "headlines": [
+      "China's Biggest Lender ICBC Confirms Ransomware Attack, Disrupts Trades In US Treasury market"
+     ]
+    },
+    {
+     "id": "C101",
+     "onset": "2023-07-04",
+     "system": "Port of Nagoya (NUTS)",
+     "kind": "cyber_availability",
+     "peak_day": "2023-07-04",
+     "peak": -0.480595,
+     "percentile": 14.96,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C102",
+     "onset": "2024-08-24",
+     "system": "Port of Seattle / SEA",
+     "kind": "cyber_availability",
+     "peak_day": "2024-08-26",
+     "peak": -0.584293,
+     "percentile": 2.94,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C103",
+     "onset": "2021-05-07",
+     "system": "Colonial Pipeline",
+     "kind": "cyber_availability",
+     "peak_day": "2021-05-08",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Colonial Pipeline, Which Carries 45% of Gasoline and Diesel Fuel to the U.S. East Coast, has Halted all Operations after it was Hit with a Cyberattack on Friday",
+      "Major Energy Pipeline To US East Coast Shut Down After Cyberattack",
+      "Reuters Reports Cyber Attack Against Colonial Pipeline was Ransomware"
+     ]
+    },
+    {
+     "id": "C104",
+     "onset": "2022-02-20",
+     "system": "Expeditors",
+     "kind": "cyber_availability",
+     "peak_day": "2022-02-22",
+     "peak": -0.461665,
+     "percentile": 22.9,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C119",
+     "onset": "2016-12-17",
+     "system": "Ukraine grid (second attack)",
+     "kind": "GPT: cyber-OT",
+     "peak_day": "2016-12-17",
+     "peak": -0.296686,
+     "percentile": 69.25,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C120",
+     "onset": "2017-05-12",
+     "system": "Windows / WannaCry",
+     "kind": "GPT: ransomware worm",
+     "peak_day": "2017-05-12",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Sky News Reporting British Prime Minister Says Cyber Attack On National Health System Part Of A Wider International Attack",
+      "Microsoft Says Customers Running Free Antivirus Software And Have Latest Windows Updates Protected From Major Ransomware Attack"
+     ]
+    },
+    {
+     "id": "C137",
+     "onset": "2022-06-24",
+     "system": "Harmony bridge",
+     "kind": "GPT: signing/custody theft",
+     "peak_day": "2022-06-26",
+     "peak": -0.455826,
+     "percentile": 23.66,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C139",
+     "onset": "2023-01-30",
+     "system": "ION Cleared Derivatives",
+     "kind": "GPT: ransomware / software supplier",
+     "peak_day": "2023-01-30",
+     "peak": -0.383182,
+     "percentile": 42.08,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C141",
+     "onset": "2023-10-10",
+     "system": "CitrixBleed",
+     "kind": "GPT: exploited edge vulnerability",
+     "peak_day": "2023-10-11",
+     "peak": 1.465105,
+     "percentile": 87.2,
+     "hit": false,
+     "headlines": [
+      "Caesars Entertainment's Recent Sell-off Regarding Cyber Attacks Generates Compelling Entry Point: Analyst Highlights Multiple Catalysts"
+     ]
+    },
+    {
+     "id": "C143",
+     "onset": "2024-01-10",
+     "system": "Ivanti",
+     "kind": "GPT: exploited VPN flaws",
+     "peak_day": "2024-01-10",
+     "peak": -0.492672,
+     "percentile": 11.71,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C144",
+     "onset": "2024-02-08",
+     "system": "FortiOS SSL VPN",
+     "kind": "GPT: exploited edge flaw",
+     "peak_day": "2024-02-08",
+     "peak": -0.480898,
+     "percentile": 14.65,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C145",
+     "onset": "2024-03-28",
+     "system": "PyPI",
+     "kind": "GPT: package malware campaign",
+     "peak_day": "2024-03-28",
+     "peak": 1.546816,
+     "percentile": 88.5,
+     "hit": false,
+     "headlines": [
+      "UnitedHealth's Cyberattack - Company Provides Aid Of Over $3B To Affected Providers"
+     ]
+    },
+    {
+     "id": "C148",
+     "onset": "2024-07-30",
+     "system": "Azure Front Door",
+     "kind": "GPT: DDoS / defence / control plane",
+     "peak_day": "2024-07-31",
+     "peak": 1.262674,
+     "percentile": 85.78,
+     "hit": false,
+     "headlines": [
+      "A Ransomware Attack On A Technology Service Provider Has Forced Payment Systems Across Nearly 300 Small Indian Local Banks To Shut Down Temporarily, Two Sources Directly Aware Of The Matter Said."
+     ]
+    },
+    {
+     "id": "C149",
+     "onset": "2024-10-25",
+     "system": "Salt Typhoon (first government statement)",
+     "kind": "GPT: espionage disclosure",
+     "peak_day": "2024-10-27",
+     "peak": -0.586453,
+     "percentile": 2.8,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C150",
+     "onset": "2025-03-05",
+     "system": "ServiceNow",
+     "kind": "GPT: DDoS",
+     "peak_day": "2025-03-05",
+     "peak": -0.472497,
+     "percentile": 19.04,
+     "hit": false,
+     "headlines": []
+    }
+   ]
+  },
+  "OUTAGE": {
+   "p95": -0.0632,
+   "events_of_side": 102,
+   "undated": 2,
+   "before_first_row": 13,
+   "after_backfill": 0,
+   "dated_in_window": 87,
+   "hits": 35,
+   "hit_share": 0.402,
+   "chance_share": 0.143,
+   "misses_most": true,
+   "events": [
+    {
+     "id": "C1",
+     "onset": "2017-02-28",
+     "system": "AWS S3 us-east-1",
+     "kind": "config_push (operator error)",
+     "peak_day": "2017-02-28",
+     "peak": 3.313592,
+     "percentile": 97.06,
+     "hit": true,
+     "headlines": [
+      "The Way Amazon Handled Its AWS System Outage: 'Bad Business'"
+     ]
+    },
+    {
+     "id": "C2",
+     "onset": "2021-12-07",
+     "system": "AWS us-east-1",
+     "kind": "config_push",
+     "peak_day": "2021-12-07",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Amazon Web Service Reports Outage, Disrupting Several Major Sites",
+      "'Disney+, Roku Suffer Outages Because of AWS' -The Streamable Report",
+      "Amazon Web Outage Is Said To Affect Delivery Operation; Vans Said To Sit Idle With No Communication"
+     ]
+    },
+    {
+     "id": "C3",
+     "onset": "2025-10-19",
+     "system": "AWS DynamoDB DNS",
+     "kind": "config_push",
+     "peak_day": "2025-10-20",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "'Major AWS Outage Takes Down Fortnite, Alexa, Snapchat, And More' - The Verge",
+      "Amazon Web Services Outage Knocks Major Websites Offline — Disney+, Reddit, McDonald's App, United Airlines Among Those Hit"
+     ]
+    },
+    {
+     "id": "C4",
+     "onset": "2026-03-01",
+     "system": "AWS ME-CENTRAL-1 / ME-SOUTH-1",
+     "kind": "physical_attack",
+     "peak_day": "2026-03-02",
+     "peak": 2.842372,
+     "percentile": 96.54,
+     "hit": true,
+     "headlines": [
+      "Amazon Stock Dips After AWS Outage: What's Happening?"
+     ]
+    },
+    {
+     "id": "C5",
+     "onset": "2026-05-07",
+     "system": "AWS use1-az4",
+     "kind": "facility",
+     "peak_day": "2026-05-08",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Coinbase CEO Posts On X \"We experienced an outage at Coinbase last night, which is never acceptable. The root cause was a room overheating in an AWS datacenter when multiple chillers failed. We design our services to be redundant to downtime in any one AWS Availability Zone (AZ), and most of our systems worked this way last night, but not all. ...\"",
+      "SailPoint Reports April 20, 2026 GitHub Repository Breach, Says Incident Contained With No Customer Data Or Service Disruption"
+     ]
+    },
+    {
+     "id": "C6",
+     "onset": "2023-01-25",
+     "system": "Azure WAN / M365",
+     "kind": "config_push",
+     "peak_day": "2023-01-25",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Microsoft Was Hit Earlier Wednesday With Networking Outage That Took Impacted Azure, Teams And Outlook",
+      "Microsoft Azure Cloud Outage Disrupts Multiple Microsoft 365 Services Globally, Several users Affected"
+     ]
+    },
+    {
+     "id": "C7",
+     "onset": "2024-07-18",
+     "system": "Azure Central US",
+     "kind": "config_push",
+     "peak_day": "2024-07-19",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Cybersecurity Giant CrowdStrike Hit By Significant Outage Impacting Businesses Globally",
+      "Microsoft Outage Wreaks Havoc On World As 911, International Airlines, Banks And Airport Services Disrupted (UPDATED)",
+      "CrowdStrike Shares Drop 13%, Microsoft Takes A Hit During Pre-Market After Major Outage Causes Global Havoc"
+     ]
+    },
+    {
+     "id": "C8",
+     "onset": "2025-10-29",
+     "system": "Azure Front Door",
+     "kind": "config_push",
+     "peak_day": "2025-10-29",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Alaska Airlines News Posts On X \"Due to a global outage impacting the Microsoft Azure platform where several Alaska and Hawaiian Airlines services are hosted, we are currently experiencing a disruption to key systems, including our websites..\"",
+      "Microsoft Says Azure Recovery Underway After Major Outage; AWS Says Services Operating Normally (UPDATED)"
+     ]
+    },
+    {
+     "id": "C9",
+     "onset": "2025-06-12",
+     "system": "GCP Service Control → Cloudflare Workers KV",
+     "kind": "config_push",
+     "peak_day": "2025-06-12",
+     "peak": -0.166359,
+     "percentile": 55.38,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C10",
+     "onset": "2024-12-11",
+     "system": "OpenAI",
+     "kind": "config_push",
+     "peak_day": "2024-12-12",
+     "peak": -0.35784,
+     "percentile": 1.73,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C11",
+     "onset": "2026-11-13",
+     "system": "Anthropic Claude",
+     "kind": "software_fault",
+     "peak_day": "2026-11-13",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Microsoft Outlook Outage Hits Colorado Jail, Forces Families to Post Bail In Person to Secure Release",
+      "Fraport Confirms Operational Stability During Global Microsoft Outage",
+      "Euronext Reports Email Communication Outage Due to Global Microsoft Disruption"
+     ]
+    },
+    {
+     "id": "C13",
+     "onset": "2021-06-08",
+     "system": "Fastly",
+     "kind": "software_fault",
+     "peak_day": "2021-06-08",
+     "peak": 3.757208,
+     "percentile": 97.53,
+     "hit": true,
+     "headlines": [
+      "Fastly's Global CDN Outage Disrupts Many Websites"
+     ]
+    },
+    {
+     "id": "C14",
+     "onset": "2021-07-22",
+     "system": "Akamai Edge DNS",
+     "kind": "config_push",
+     "peak_day": "2021-07-22",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Akami Says Problems Were Not A Cyberattack On Its Platform",
+      "Akamai Service Disruption Leads To Massive Outages Globally"
+     ]
+    },
+    {
+     "id": "C15",
+     "onset": "2021-10-04",
+     "system": "Facebook backbone / BGP",
+     "kind": "config_push",
+     "peak_day": "2021-10-04",
+     "peak": 3.880689,
+     "percentile": 97.8,
+     "hit": true,
+     "headlines": [
+      "Seeing Reports Of AT&T Outages Along With Google Meet, Facebook, Instagram, WhatsApp"
+     ]
+    },
+    {
+     "id": "C16",
+     "onset": "2025-11-18",
+     "system": "Cloudflare",
+     "kind": "config_push",
+     "peak_day": "2025-11-18",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Cloudflare Stock Slides As Global Outage Knocks X, ChatGPT Offline",
+      "Cloudflare Says Root Cause Of The Outage Was Automatically Generated Configuration File For Managing Threat Traffic; No Evidence The Outage Was The Result Of An Attack Or Malicious Activity; We Are Continuing To Monitor For Any Further Issues"
+     ]
+    },
+    {
+     "id": "C17",
+     "onset": "2025-12-05",
+     "system": "Cloudflare",
+     "kind": "config_push",
+     "peak_day": "2025-12-05",
+     "peak": -0.27661,
+     "percentile": 9.65,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C18",
+     "onset": "2026-02-20",
+     "system": "Cloudflare BYOIP",
+     "kind": "software_fault",
+     "peak_day": "2026-02-22",
+     "peak": -0.284617,
+     "percentile": 7.89,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C19",
+     "onset": "2026-05-05",
+     "system": ".de TLD DNSSEC",
+     "kind": "config_push",
+     "peak_day": "2026-05-05",
+     "peak": -0.268454,
+     "percentile": 10.03,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C20",
+     "onset": "2025-07-24",
+     "system": "Starlink",
+     "kind": "software_fault",
+     "peak_day": "2025-07-24",
+     "peak": -0.189947,
+     "percentile": 44.52,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C21",
+     "onset": "2016-01-25",
+     "system": "GPS SVN-23 UTC offset",
+     "kind": "software_fault",
+     "peak_day": "2016-01-25",
+     "peak": -0.157009,
+     "percentile": 56.8,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C22",
+     "onset": "2019-07-11",
+     "system": "Galileo",
+     "kind": "facility",
+     "peak_day": "2019-07-11",
+     "peak": -0.147347,
+     "percentile": 60.22,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C24",
+     "onset": "2020-04-01",
+     "system": "BGP (Rostelecom)",
+     "kind": "config_push (disputed)",
+     "peak_day": "2020-04-01",
+     "peak": -0.089623,
+     "percentile": 92.79,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C26",
+     "onset": "2018-12-27",
+     "system": "CenturyLink / 911",
+     "kind": "software_fault (equipment + config)",
+     "peak_day": "2018-12-27",
+     "peak": -0.142571,
+     "percentile": 68.37,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C27",
+     "onset": "2020-06-15",
+     "system": "T-Mobile IMS",
+     "kind": "facility + config",
+     "peak_day": "2020-06-16",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "T-Mobile Outage Disrupts Wireless Network Across US, Companies Deny DDoS Attack"
+     ]
+    },
+    {
+     "id": "C28",
+     "onset": "2022-07-08",
+     "system": "Rogers",
+     "kind": "config_push",
+     "peak_day": "2022-07-08",
+     "peak": -0.203091,
+     "percentile": 36.68,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C29",
+     "onset": "2023-11-08",
+     "system": "Optus",
+     "kind": "config_push",
+     "peak_day": "2023-11-08",
+     "peak": -0.228132,
+     "percentile": 23.04,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C30",
+     "onset": "2024-02-22",
+     "system": "AT&T",
+     "kind": "config_push",
+     "peak_day": "2024-02-22",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "'AT&T, T-Mobile and Verizon users hit by cellular outage in US' -New York Post",
+      "Major Outage Hits AT&T, Verizon, And T-Mobile—Services Down Nationwide, Including 911 Calls",
+      "U.S. Cyber Watchdog Agency Says It Is 'Working Closely' With AT&T To Understand The Cause Of Outage"
+     ]
+    },
+    {
+     "id": "C31",
+     "onset": "2024-09-30",
+     "system": "Verizon",
+     "kind": "undisclosed",
+     "peak_day": "2024-09-30",
+     "peak": -0.363507,
+     "percentile": 0.95,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C32",
+     "onset": "2026-01-14",
+     "system": "Verizon",
+     "kind": "software_fault",
+     "peak_day": "2026-01-14",
+     "peak": 2.842372,
+     "percentile": 96.54,
+     "hit": true,
+     "headlines": [
+      "Verizon Outage Hits Customers, Phones Showing 'SOS': VZ Stock Trades Higher"
+     ]
+    },
+    {
+     "id": "C33",
+     "onset": "2025-09-18",
+     "system": "Optus triple-zero (000)",
+     "kind": "config_push",
+     "peak_day": "2025-09-19",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "The FAA Has Issued Ground Stops Dallas Love Field And Dallas-Fort Worth Airports On Friday Afternoon; The Stops Were Prompted By Radar And Communications Outages"
+     ]
+    },
+    {
+     "id": "C35",
+     "onset": "2026-11-12",
+     "system": "Microsoft 365 / Exchange",
+     "kind": "config_push",
+     "peak_day": "2026-11-12",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Workhorse Announces Q3 Earnings Call Rescheduled To November 16, Citing Business Disruptions From Global Microsoft Outages",
+      "Microsoft 365 Experiences Service Outage",
+      "Microsoft Outage Triggers Chaos Across Outlook, Teams and Copilot — Spills Over to OpenAI and Anthropic"
+     ]
+    },
+    {
+     "id": "C38",
+     "onset": "2024-07-19",
+     "system": "CrowdStrike Falcon",
+     "kind": "config_push (trusted update)",
+     "peak_day": "2024-07-19",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Cybersecurity Giant CrowdStrike Hit By Significant Outage Impacting Businesses Globally",
+      "Microsoft Outage Wreaks Havoc On World As 911, International Airlines, Banks And Airport Services Disrupted (UPDATED)",
+      "CrowdStrike Shares Drop 13%, Microsoft Takes A Hit During Pre-Market After Major Outage Causes Global Havoc"
+     ]
+    },
+    {
+     "id": "C59",
+     "onset": "2015-07-08",
+     "system": "NYSE",
+     "kind": "software_fault",
+     "peak_day": "2015-07-08",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "NYSE Tweets: 'The issue we are experiencing is an internal technical issue and is not the result of a cyber breach.'",
+      "Target, Staples, Wal-Mart, Saks Fifth Avenue, Neiman All Confirm They Have Had No Security Breach Or Issues",
+      "Fireeye Email To Benzinga Says 'no evidence across our network...to suggest that the NYSE & UAL disruptions were cyber attacks'"
+     ]
+    },
+    {
+     "id": "C61",
+     "onset": "2018-06-01",
+     "system": "Visa Europe",
+     "kind": "facility (switch)",
+     "peak_day": "2018-06-01",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Visa Is Experiencing A 'Service Disruption' Preventing Some European Transactions From Being Processed"
+     ]
+    },
+    {
+     "id": "C62",
+     "onset": "2020-03-02",
+     "system": "Robinhood",
+     "kind": "software_fault (capacity)",
+     "peak_day": "2020-03-03",
+     "peak": -0.089623,
+     "percentile": 92.79,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C63",
+     "onset": "2021-02-24",
+     "system": "Fed services (Fedwire, FedACH, NSS)",
+     "kind": "config_push (operator error)",
+     "peak_day": "2021-02-24",
+     "peak": -0.195602,
+     "percentile": 40.02,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C65",
+     "onset": "2025-11-27",
+     "system": "CME Globex (CyrusOne)",
+     "kind": "facility",
+     "peak_day": "2025-11-27",
+     "peak": -0.27661,
+     "percentile": 9.65,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C66",
+     "onset": "2026-03-03",
+     "system": "FedACH",
+     "kind": "software_fault",
+     "peak_day": "2026-03-05",
+     "peak": -0.284617,
+     "percentile": 7.89,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C67",
+     "onset": "2026-10-23",
+     "system": "NYSE American Options",
+     "kind": "software_fault",
+     "peak_day": "2026-10-23",
+     "peak": -0.189947,
+     "percentile": 44.52,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C71",
+     "onset": "2023-03-10",
+     "system": "USDC / SVB",
+     "kind": "settlement_liquidity (Claude lane: insolvency of the reserve bank)",
+     "peak_day": "2023-03-10",
+     "peak": -0.208308,
+     "percentile": 32.69,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C73",
+     "onset": "2025-04-12",
+     "system": "UPI (India)",
+     "kind": "software_fault",
+     "peak_day": "2025-04-14",
+     "peak": -0.284617,
+     "percentile": 7.89,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C76",
+     "onset": "2021-02-15",
+     "system": "ERCOT (Uri)",
+     "kind": "capacity_scarcity",
+     "peak_day": "2021-02-17",
+     "peak": 3.884965,
+     "percentile": 97.84,
+     "hit": true,
+     "headlines": [
+      "Microsoft Confirms Users Located In South America May Being Experiencing Teams Outage"
+     ]
+    },
+    {
+     "id": "C77",
+     "onset": "2022-12-23",
+     "system": "Eastern Interconnection (Elliott)",
+     "kind": "capacity_scarcity",
+     "peak_day": "2022-12-23",
+     "peak": -0.19286,
+     "percentile": 43.03,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C78",
+     "onset": "2025-04-28",
+     "system": "Iberian grid",
+     "kind": "software_fault (voltage control)",
+     "peak_day": "2025-04-30",
+     "peak": -0.234069,
+     "percentile": 20.06,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C79",
+     "onset": "2025-02-25",
+     "system": "Chile grid",
+     "kind": "software_fault (protection)",
+     "peak_day": "2025-02-25",
+     "peak": -0.339394,
+     "percentile": 4.31,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C80",
+     "onset": "2025-03-21",
+     "system": "Heathrow / North Hyde",
+     "kind": "facility",
+     "peak_day": "2025-03-21",
+     "peak": -0.337847,
+     "percentile": 4.74,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C82",
+     "onset": "2022-12-03",
+     "system": "Moore County substations",
+     "kind": "physical_attack",
+     "peak_day": "2022-12-03",
+     "peak": -0.19286,
+     "percentile": 43.03,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C83",
+     "onset": "2024-07-10",
+     "system": "Dominion zone, 1.5 GW data-centre load loss",
+     "kind": "software_fault (load ride-through)",
+     "peak_day": "2024-07-10",
+     "peak": -0.21118,
+     "percentile": 31.27,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C84",
+     "onset": "2023-09-06",
+     "system": "ERCOT EEA2",
+     "kind": "capacity_scarcity",
+     "peak_day": "2023-09-06",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Coinbase-Incubated Base Faces Major Outage, Assures 'No Funds Are At Risk'",
+      "JetBlue Says Experiencing A System Outage Affecting Bookings"
+     ]
+    },
+    {
+     "id": "C86",
+     "onset": "2024-05-10",
+     "system": "GNSS (G5 storm)",
+     "kind": "natural_hazard",
+     "peak_day": "2024-05-10",
+     "peak": -0.231874,
+     "percentile": 20.79,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C88",
+     "onset": "2023-01-11",
+     "system": "FAA NOTAM",
+     "kind": "config_push (contractor)",
+     "peak_day": "2023-01-11",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "FAA Advisory ays System Failure Is Impacting Flights Nationwide, Flights Reportedly Grounded Across US",
+      "Biden Has Been Briefed On FAA System Outage; No Evidence Of Cyberattack",
+      "US Air Traffic Operations Resume After FAA Grounds Flights Due To System Outage: Here's The Latest"
+     ]
+    },
+    {
+     "id": "C89",
+     "onset": "2025-04-28",
+     "system": "Newark/PHL TRACON",
+     "kind": "facility (copper telecom)",
+     "peak_day": "2025-04-30",
+     "peak": -0.234069,
+     "percentile": 20.06,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C90",
+     "onset": "2026-11-13",
+     "system": "FAA FTI telecom",
+     "kind": "config_push (contractor), cause not established",
+     "peak_day": "2026-11-13",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Microsoft Outlook Outage Hits Colorado Jail, Forces Families to Post Bail In Person to Secure Release",
+      "Fraport Confirms Operational Stability During Global Microsoft Outage",
+      "Euronext Reports Email Communication Outage Due to Global Microsoft Disruption"
+     ]
+    },
+    {
+     "id": "C91",
+     "onset": "2023-08-28",
+     "system": "NATS FPRSA-R",
+     "kind": "software_fault",
+     "peak_day": "2023-08-28",
+     "peak": -0.235484,
+     "percentile": 18.78,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C92",
+     "onset": "2022-12-21",
+     "system": "Southwest crew scheduling",
+     "kind": "software_fault (weather + operations)",
+     "peak_day": "2022-12-21",
+     "peak": -0.19286,
+     "percentile": 43.03,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C93",
+     "onset": "2024-12-24",
+     "system": "American (DXC)",
+     "kind": "software_fault",
+     "peak_day": "2024-12-25",
+     "peak": -0.345086,
+     "percentile": 3.22,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C94",
+     "onset": "2025-07-20",
+     "system": "Alaska",
+     "kind": "facility (hardware)",
+     "peak_day": "2025-07-21",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Alaska Airlines Posts On X \"We're working to get our operations back on track today at Alaska Airlines and Horizon Air after a significant IT outage Sunday night resulted in a system-wide ground stop of flights. We appreciate the patience of our guests whose travel plans have been disrupted...\""
+     ]
+    },
+    {
+     "id": "C95",
+     "onset": "2025-08-06",
+     "system": "United weight-and-balance",
+     "kind": "software_fault",
+     "peak_day": "2025-08-06",
+     "peak": -0.181454,
+     "percentile": 49.17,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C96",
+     "onset": "2025-10-23",
+     "system": "Alaska",
+     "kind": "facility (data centre)",
+     "peak_day": "2025-10-24",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Reported Earlier, Alaska Airlines Restores Operations After IT Outage Causes 229 Flight Cancellations, Additional Disruptions Expected During Network Recovery",
+      "Amazon's Cloud Unit Issues Apology, Explains How Rare Software Bug Triggered Global AWS Outage This Week",
+      "Alaska Airlines Says Throughout Thursday And Into Friday Morning, We Have Canceled More Than 360 Flights On Alaska And Horizon; Additional Flight Disruptions Likely. Hawaiian Airlines Flights Are Not Impacted; The It Outage Is Not A Cybersecurity Incident"
+     ]
+    },
+    {
+     "id": "C97",
+     "onset": "2017-09-28",
+     "system": "Amadeus Altéa",
+     "kind": "software_fault (network)",
+     "peak_day": "2017-09-28",
+     "peak": -0.181454,
+     "percentile": 49.17,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C105",
+     "onset": "2022-10-08",
+     "system": "DB GSM-R",
+     "kind": "physical_attack",
+     "peak_day": "2022-10-08",
+     "peak": -0.181454,
+     "percentile": 49.17,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C106",
+     "onset": "2024-07-26",
+     "system": "SNCF signalling",
+     "kind": "physical_attack",
+     "peak_day": "2024-07-26",
+     "peak": 1.733874,
+     "percentile": 96.14,
+     "hit": true,
+     "headlines": [
+      "CrowdStrike Outage Likely To Impact Insurers' Earnings; AM Best Warns Of Potential Insurance Claims And Legal Processes"
+     ]
+    },
+    {
+     "id": "C117",
+     "onset": "2015-05-13",
+     "system": "AMS-IX",
+     "kind": "GPT: network exchange outage (Claude lane: a loop)",
+     "peak_day": "2015-05-15",
+     "peak": -0.119563,
+     "percentile": 82.76,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C118",
+     "onset": "2016-03-22",
+     "system": "npm left-pad",
+     "kind": "GPT: dependency withdrawal",
+     "peak_day": "2016-03-22",
+     "peak": -0.135117,
+     "percentile": 70.03,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C121",
+     "onset": "2018-04-09",
+     "system": "DE-CIX / Interxion FRA5",
+     "kind": "GPT: power",
+     "peak_day": "2018-04-09",
+     "peak": -0.089623,
+     "percentile": 92.79,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C122",
+     "onset": "2018-10-21",
+     "system": "GitHub",
+     "kind": "GPT: network/database",
+     "peak_day": "2018-10-21",
+     "peak": -0.142571,
+     "percentile": 68.37,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C123",
+     "onset": "2018-12-06",
+     "system": "Ericsson SGSN-MME / O2 / SoftBank",
+     "kind": "GPT: certificate expiry",
+     "peak_day": "2018-12-06",
+     "peak": -0.142571,
+     "percentile": 68.37,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C124",
+     "onset": "2019-05-17",
+     "system": "Salesforce",
+     "kind": "GPT: permission-change outage",
+     "peak_day": "2019-05-17",
+     "peak": -0.147347,
+     "percentile": 60.22,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C125",
+     "onset": "2019-06-02",
+     "system": "Google Cloud",
+     "kind": "GPT: network control plane",
+     "peak_day": "2019-06-02",
+     "peak": -0.13442,
+     "percentile": 74.7,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C126",
+     "onset": "2019-06-16",
+     "system": "Argentina/Uruguay grid",
+     "kind": "GPT: operational/protection cascade",
+     "peak_day": "2019-06-16",
+     "peak": -0.13442,
+     "percentile": 74.7,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C127",
+     "onset": "2019-06-24",
+     "system": "Verizon / BGP optimizer leak",
+     "kind": "GPT: BGP leak",
+     "peak_day": "2019-06-26",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "'Bitcoin price dives $1,500 in minutes as Coinbase website goes down' -MarketWatch"
+     ]
+    },
+    {
+     "id": "C128",
+     "onset": "2019-07-02",
+     "system": "Cloudflare WAF",
+     "kind": "GPT: bad WAF update (regex CPU exhaustion)",
+     "peak_day": "2019-07-02",
+     "peak": -0.147347,
+     "percentile": 60.22,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C129",
+     "onset": "2020-10-23",
+     "system": "TARGET2 / T2S",
+     "kind": "GPT: network software",
+     "peak_day": "2020-10-23",
+     "peak": -0.153428,
+     "percentile": 59.67,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C130",
+     "onset": "2020-11-25",
+     "system": "AWS Kinesis",
+     "kind": "GPT: capacity / thread exhaustion",
+     "peak_day": "2020-11-25",
+     "peak": -0.166359,
+     "percentile": 55.38,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C131",
+     "onset": "2020-12-14",
+     "system": "Google identity",
+     "kind": "GPT: quota/authentication",
+     "peak_day": "2020-12-14",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Some Users Reporting Outages of Google Services Include Gmail and YouTube",
+      "Multiple Google Services Hit By Outage",
+      "'Google confirms that this morning's outage was NOT a cyber attack. \"it was entirely an internal issue with quota accounting for the authentication system...' -Tweet From CNBC's Eamon Javers"
+     ]
+    },
+    {
+     "id": "C132",
+     "onset": "2021-03-10",
+     "system": "OVH Strasbourg",
+     "kind": "GPT: fire",
+     "peak_day": "2021-03-10",
+     "peak": -0.195602,
+     "percentile": 40.02,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C133",
+     "onset": "2021-04-08",
+     "system": "Refinitiv",
+     "kind": "GPT: data availability",
+     "peak_day": "2021-04-08",
+     "peak": -0.205935,
+     "percentile": 33.57,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C134",
+     "onset": "2021-09-30",
+     "system": "Let's Encrypt DST Root CA X3",
+     "kind": "GPT: planned certificate expiry",
+     "peak_day": "2021-09-30",
+     "peak": -0.249536,
+     "percentile": 13.63,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C135",
+     "onset": "2022-01-03",
+     "system": "ASML Berlin",
+     "kind": "GPT: factory fire",
+     "peak_day": "2022-01-03",
+     "peak": -0.266235,
+     "percentile": 10.88,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C136",
+     "onset": "2022-06-21",
+     "system": "Cloudflare",
+     "kind": "GPT: network rollout",
+     "peak_day": "2022-06-21",
+     "peak": 3.959443,
+     "percentile": 97.94,
+     "hit": true,
+     "headlines": [
+      "Why Discord, Coinbase, Google, Steam And Several Other Top Websites Are Seeing An Outage"
+     ]
+    },
+    {
+     "id": "C138",
+     "onset": "2022-07-02",
+     "system": "KDDI/au",
+     "kind": "GPT: routing/signalling cascade",
+     "peak_day": "2022-07-02",
+     "peak": -0.203091,
+     "percentile": 36.68,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C142",
+     "onset": "2023-11-02",
+     "system": "Cloudflare",
+     "kind": "GPT: power / control plane",
+     "peak_day": "2023-11-02",
+     "peak": -0.228132,
+     "percentile": 23.04,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C146",
+     "onset": "2024-07-18",
+     "system": "SWIFT Y-Copy / CHAPS",
+     "kind": "GPT: third-party messaging",
+     "peak_day": "2024-07-19",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Cybersecurity Giant CrowdStrike Hit By Significant Outage Impacting Businesses Globally",
+      "Microsoft Outage Wreaks Havoc On World As 911, International Airlines, Banks And Airport Services Disrupted (UPDATED)",
+      "CrowdStrike Shares Drop 13%, Microsoft Takes A Hit During Pre-Market After Major Outage Causes Global Havoc"
+     ]
+    },
+    {
+     "id": "C147",
+     "onset": "2024-07-19",
+     "system": "Delta (CrowdStrike recovery)",
+     "kind": "GPT: shared bad-update recovery",
+     "peak_day": "2024-07-19",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Cybersecurity Giant CrowdStrike Hit By Significant Outage Impacting Businesses Globally",
+      "Microsoft Outage Wreaks Havoc On World As 911, International Airlines, Banks And Airport Services Disrupted (UPDATED)",
+      "CrowdStrike Shares Drop 13%, Microsoft Takes A Hit During Pre-Market After Major Outage Causes Global Havoc"
+     ]
+    },
+    {
+     "id": "C152",
+     "onset": "2025-05-09",
+     "system": "Newark (recurrence)",
+     "kind": "GPT: telecom",
+     "peak_day": "2025-05-09",
+     "peak": -0.199213,
+     "percentile": 37.98,
+     "hit": false,
+     "headlines": []
+    },
+    {
+     "id": "C154",
+     "onset": "2026-11-11",
+     "system": "Nvidia leadership",
+     "kind": "GPT: governance headline (control)",
+     "peak_day": "2026-11-12",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Workhorse Announces Q3 Earnings Call Rescheduled To November 16, Citing Business Disruptions From Global Microsoft Outages",
+      "Microsoft 365 Experiences Service Outage",
+      "Microsoft Outage Triggers Chaos Across Outlook, Teams and Copilot — Spills Over to OpenAI and Anthropic"
+     ]
+    },
+    {
+     "id": "C155",
+     "onset": "2026-11-12",
+     "system": "Claude Microsoft connector",
+     "kind": "GPT: upstream M365 cascade",
+     "peak_day": "2026-11-12",
+     "peak": 4,
+     "percentile": 100,
+     "hit": true,
+     "headlines": [
+      "Workhorse Announces Q3 Earnings Call Rescheduled To November 16, Citing Business Disruptions From Global Microsoft Outages",
+      "Microsoft 365 Experiences Service Outage",
+      "Microsoft Outage Triggers Chaos Across Outlook, Teams and Copilot — Spills Over to OpenAI and Anthropic"
+     ]
+    }
+   ]
+  }
+ },
+ "top30": {
+  "SYS_CYBER_NEWS_V2": [
+   {
+    "date": "2018-11-30",
+    "value": 4,
+    "headlines": 7,
+    "first": [
+     "2018-11-30T14:01:12Z What You Need To Know About Marriott's Data Breach",
+     "2018-11-30T14:28:04Z Watching Marriott Shares As New York Attorney General Says It Opened A Probe Into Co. Data Breach",
+     "2018-11-30T14:30:20Z UPDATE: New York Attorney General Says Probe Into Marriott Related To Fact Co. Did Not Provide The Required Notification To Attorney General When It Found Out About Data Breach",
+     "2018-11-30T14:41:26Z Marriott Shares Largely Unaffected Following Market Open Despite Several Attorney Generals Highlighting Probes On Data Breach: Connecticut Attorney General Says Will Also Be Investigating",
+     "2018-11-30T16:35:58Z Delaware DOJ Spokesperson On Marriott Data Breach Says Expect To Be Notified Under State's Laws If More Than 500 Delaware Residents Were Affected",
+     "2018-11-30T19:56:52Z Starwood Property Says It Has Not Been Impacted In Any Way By Marriott International's Data Breach",
+     "2018-11-30T20:43:23Z Starwood Property Trust Offers Response Following Marriott Data Breach: Confirms Co. Has Not Been Impacted In Any Way"
+    ]
+   },
+   {
+    "date": "2017-05-15",
+    "value": 4,
+    "headlines": 5,
+    "first": [
+     "2017-05-15T16:43:44Z What Is Ransomware, What Are 'Worms' And How Do You Stop Them?",
+     "2017-05-15T18:26:18Z White House Says 'We Don't Know' Who Was Behind WannaCry Ransomware Attack",
+     "2017-05-15T19:02:21Z Study: Stocks Fall An Average Of 5% After Data Breach",
+     "2017-05-15T19:19:49Z Proofpoint SVP Of Cybersecurity Strategy Tells Benzinga Its Customers Were Not Affected By 'WannaCry' Ransomware Attack; Says 'For Once This Type Of Ransomware Isn't Spreading Via Email'; Highlights Co. Has Been Fighting Follow-On Scams",
+     "2017-05-15T19:21:43Z Proofpoint Keeps Chugging After Ransomware Attacks"
+    ]
+   },
+   {
+    "date": "2021-05-13",
+    "value": 4,
+    "headlines": 5,
+    "first": [
+     "2021-05-13T14:39:56Z US Doesn't See A Direct Link To Russia Related To Colonial Pipeline Cyberattack",
+     "2021-05-13T15:31:35Z House Speaker Pelosi Says Companies Should Not Pay Ransom To Those Who Carry Out Cyber Attacks On Infrastructure",
+     "2021-05-13T16:00:18Z Colonial Pipeline Paid Ransomware Hackers $5M In Cryptocurrency: Report",
+     "2021-05-13T16:41:54Z Biden Does Not Rule Out Retaliation For Cyber Attacks",
+     "2021-05-13T17:08:54Z White House Says Jones Act Waiver Will Be In Effect As Long As Needed Following Colonial Pipeline Cyberattack, Shutdown"
+    ]
+   },
+   {
+    "date": "2022-03-21",
+    "value": 4,
+    "headlines": 5,
+    "first": [
+     "2022-03-21T13:02:51Z HubSpot's Recent Data Breach Affect BlockFi, Swan Bitcoin, NYDIG and Circle: CoinDesk",
+     "2022-03-21T17:38:46Z Circle Warns Its Users Of Potential Cyberattacks: Here's What To Expect",
+     "2022-03-21T18:23:28Z Biden Says There Is 'Evolving Intelligence' That Russian Government Is Exploring Options For Potential Cyberattacks Against US",
+     "2022-03-21T18:50:30Z Deputy National Security Advisor Anne Neuberger Says There Is No Certainty There Will Be A Cyber Attack On Critical Infrastructure",
+     "2022-03-21T18:54:27Z US Deputy National Security Advisor Neuberger Says U.S. Has Not Yet Attributed Cyber Attack On February 24"
+    ]
+   },
+   {
+    "date": "2026-10-22",
+    "value": 4,
+    "headlines": 5,
+    "first": [
+     "2026-10-22T07:02:11Z TAKKT AG Reports Cyber Attack Impacting IT Systems",
+     "2026-10-22T08:01:42Z NCC Group Publishes Q3 2026 Ransomware Threat Report",
+     "2026-10-22T18:03:06Z Law Firm Investigates Data Breach at CSX",
+     "2026-10-22T19:01:32Z Law Firm Investigates Data Privacy Claims Following Coca-Cola Data Breach",
+     "2026-10-22T20:08:12Z 'COVID-Like' Cyberattack Wave Could Spread Beyond Crypto, Venture Capitalist Warns"
+    ]
+   },
+   {
+    "date": "2015-08-18",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2015-08-18T15:40:50Z Target, Visa Reach Settlement Over Data Breach-Bloomberg",
+     "2015-08-18T20:49:21Z Web.com Announces Cyber Breach, Says Discovered Unauthorized Breach of One of Its Comps",
+     "2015-08-18T20:49:58Z UPDATE: Web.com Says As a Result of Cyber Breach, Credit Card Info of ~93K Customers Compromised",
+     "2015-08-18T20:50:47Z UPDATE: Web.com Announces Cyber Breach, Will Give Notice To Potentially Affected Customers Soon"
+    ]
+   },
+   {
+    "date": "2016-09-22",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2016-09-22T11:32:44Z Recode Reports Yahoo Expected To Confirm Massive Data Breach, With 200M User Accounts Affected",
+     "2016-09-22T15:10:30Z Yahoo Could Confirm 'Massive Data Breach' Which Impacted Hundreds Of Millions Of Users: Recode",
+     "2016-09-22T19:26:44Z Kara Swisher Recently Publishes Re/code Article on Yahoo Data Breach; Includes Passage '...former security head Alex Stamos had tried aggressively to get management to act more strongly, but he had not been successful.'",
+     "2016-09-22T19:32:04Z Recode's Kara Swisher Tweets: More to come on Yahoo data breach, including management bungling of situation."
+    ]
+   },
+   {
+    "date": "2017-06-27",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2017-06-27T14:44:56Z Norway National Security Says Ransomware Attack Ongoing And Assumed TO Be Similar To Attack On Maersk, Says Ongoing Attacks Affect 'One International Company' But Decline To Name It",
+     "2017-06-27T14:52:33Z CNBC Now Tweets: DEVELOPING: Cyberattacks hit WPP ad agency, Russia's Rosneft, Maersk, Ukrainian govt, Kiev airport & other targets cnb.cx/2sXcRr0",
+     "2017-06-27T18:16:34Z Splunk Issues Release Highlighting Unveiling Of Splunk Insights For Ransomware",
+     "2017-06-27T18:31:47Z Ransomware Rears Its Head Again As 150 Countries Hit By New Virus"
+    ]
+   },
+   {
+    "date": "2017-09-08",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2017-09-08T13:34:59Z Equifax Shares Down 15% Amid Data Breach; Cybersecurity Stocks Reacting: FireEye, Check Point, Imperva, Fortinet Shares Up 1.6%, Symantec Up 6%, Proofpoint Up 3%, Palo Alto Up 2.2%",
+     "2017-09-08T14:53:03Z After Security Breach, Is The Long-Term Thesis Still Intact For Equifax?",
+     "2017-09-08T17:16:13Z U.S. House Financial Services Committee Reportedly To Hold Hearing On Equifax Data Breach",
+     "2017-09-08T17:29:01Z Probes Reporter Tweets 'Investors should assume the SEC will open an investigation into $EFX data breach. If disclosed fast it's not so bad. If they wait, it's big.'"
+    ]
+   },
+   {
+    "date": "2020-12-09",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2020-12-09T07:04:25Z FireEye Shares Drop 7% As Company Reports Suffering Foreign Government-Backed Cyberattack",
+     "2020-12-09T13:57:45Z EMA Reports Cyberattack; Agency Has Swiftly Launched A Full Investigation, In Close Cooperation With Law Enforcement And Other Relevant Entities, Cannot Provide Additional Details Whilst The Investigation Is Ongoing",
+     "2020-12-09T18:12:27Z BioNTech Says EMA Has Warned Co. It Was Subject To Cyber Attack, EMA Says No BioNTech, Pfizer Systems Were Breached In Cyber Incident",
+     "2020-12-09T18:48:52Z Pfizer Says No Pfizer, BioNTech Systems Have Been Breached In Connection With EMA Cyberattack Incident"
+    ]
+   },
+   {
+    "date": "2021-05-10",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2021-05-10T11:38:08Z Shell Midstream Partners Shares Down 1.3%. BZ NOTE: Co Has Stake In Colonial Pipeline Which Was Hit With Cyber Attack Over The Weekend",
+     "2021-05-10T11:51:47Z FireEye Shares Up 5%; Hearing Co Is Assisting Investigation Into Colonial Pipeline Cyberattack Over The Weekend",
+     "2021-05-10T15:52:06Z FBI Confirms Darkside Ransomware Responsible For Compromise Of Colonial Pipeline Networks; Says Continues To Work With Co, Government Partners On Investigation",
+     "2021-05-10T16:48:19Z Biden Administration Cyber Security Adviser Neuberger Says FBI Has Been Tracking This Ransomware Group Since At Least Oct. Of Last Year"
+    ]
+   },
+   {
+    "date": "2023-02-06",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2023-02-06T12:34:16Z Ransomware Attack Targets Thousands Of Computers Worldwide Including Those In The US",
+     "2023-02-06T13:17:52Z MKS Instruments Reports Ransomware Attack; Elects To Temporarily Suspend Operations At Certain Of Its Facilities.",
+     "2023-02-06T13:19:15Z MKS Instruments Says Full Scope Of Ransomware Attack Costs And Related Impacts Have Not Been Determined",
+     "2023-02-06T15:30:08Z MKS Instruments Slides As Hit By Cyber Attack; Temporarily Suspends Some Operations"
+    ]
+   },
+   {
+    "date": "2015-06-05",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2015-06-05T14:47:12Z Note Being Circulated Mentions Lifelock as Potential Beneficiary of Government Data Breach",
+     "2015-06-05T17:25:14Z Cyber Stocks on the Move with Massive Federal Government Data Breach",
+     "2015-06-05T18:16:28Z UPDATE: US Official Says Cyber Data Breach Being Treated as National Security Matter -Reuters"
+    ]
+   },
+   {
+    "date": "2015-10-01",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2015-10-01T10:42:14Z Watch Cybersecurity Stocks Following News of FXCM Cyberattack and Statement Co. is Working with 'Leading Cybersecurity Firm'",
+     "2015-10-01T14:09:12Z Cybersecurity Mixed Following Cyberattack On FXCM",
+     "2015-10-01T20:39:05Z Hearing T-Mobile's John Legere Responds to Experian Unauthorized Data Breach: Experian 'Has Taken Full Responsibility'"
+    ]
+   },
+   {
+    "date": "2016-03-08",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2016-03-08T13:52:25Z Macs Face First Ever Ransomware Attacks",
+     "2016-03-08T16:13:02Z Home Depot Reaches $13M Settlement Regarding 2014 Data Breach",
+     "2016-03-08T16:13:25Z Court Filing Shows Home Depot Reaches $13M Settlement With Consumers Regarding 2014 Data Breach -Reuters"
+    ]
+   },
+   {
+    "date": "2017-05-16",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2017-05-16T08:44:29Z Symantec Announces Blocks 22M Attempted WannaCry Ransomware Attacks Globally",
+     "2017-05-16T16:00:55Z Reuters Reports Fewer Than 10 Companies Reported To U.S. Dept. Of Homeland Security Being Affected By 'WannaCry' Ransomware Attack",
+     "2017-05-16T16:05:43Z Check Point Software On 'WannaCry' Cyber Attack Tells Benzinga Co. Is Talking To Existing, Potential User Base In Preparation For Follow Up Attacks; 'We know our technology works we know it's effective at preventing all the variants we've seen so far'"
+    ]
+   },
+   {
+    "date": "2017-06-28",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2017-06-28T16:36:33Z UPDATE: FedEx Says While TNT Express Operations, Communications Systems Disrupted, No Data Breach Is Known To Have Occured",
+     "2017-06-28T16:46:44Z CyberArk Shares Now Up 3.3% At Session Highs Following News Of FedEx Cyberattack",
+     "2017-06-28T19:39:45Z Russia In The Spotlight As Second Wave Of Ransomware Grips Globe"
+    ]
+   },
+   {
+    "date": "2017-09-11",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2017-09-11T17:52:39Z FireEye Higher After Equifax Security Breach, Analyst Upgrade",
+     "2017-09-11T20:24:42Z Hearing US Senate Finance Committee Leaders Have Sent Letter To Equifax CEO Demanding Info Related To Data Breach",
+     "2017-09-11T20:25:48Z UPDATE: Leaders Of US Senate Finance Committee Asking Equifax Mgmt. If 3 Execs Who Sold Stock Were Made Aware Of Data Breach"
+    ]
+   },
+   {
+    "date": "2017-09-19",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2017-09-19T08:15:52Z Equifax Learned About Data Breach Almost Five Months Earlier Than the Date It Disclosed -Bloomberg",
+     "2017-09-19T20:17:49Z FedEx Unable To Forecast 2018 Earnings Guidance Due To Pension Accounting Adjustments; Before Adjustments FY18 EPS Seen At $12-$12.80; Forecast Assumes 'Continued Recovery From the Cyberattack'",
+     "2017-09-19T20:28:37Z FedEx Unable To Forecast 2018 GAAP Earnings Guidance Due To Pension Accounting Adjustments; Says Adj. Forecast Assumes 'Continued Recovery From the Cyberattack'"
+    ]
+   },
+   {
+    "date": "2019-07-31",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2019-07-31T14:25:10Z Here Are A Few Things Capital One Customers Should Do Following The Data Breach",
+     "2019-07-31T15:52:45Z UniCredit May Have Been Caught Up In Capital One Data Breach -Source",
+     "2019-07-31T18:55:49Z FTC Is Urging Consumers Impacted By Equifax's 2017 Data Breach To Considering Signing Up Fro Free Credit Monitoring Offered As Part Of Settlement"
+    ]
+   },
+   {
+    "date": "2020-03-09",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2020-03-09T09:30:13Z Australia Sues Facebook For Data Breach Of 300K Citizens In Cambridge Analytica Case",
+     "2020-03-09T14:15:18Z Ransomware Hackers May Come For Owner-Operators Next",
+     "2020-03-09T14:34:01Z Cyberattack Impacting Multiple EVRAZ Plants In US, Canada"
+    ]
+   },
+   {
+    "date": "2020-03-16",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2020-03-16T12:38:45Z 'HHS was hit by cyber attack last night' -Tweet From Bloomberg Law HHS Reporter",
+     "2020-03-16T12:53:21Z UPDATE: '\".. The attack appears to have been intended to slow the agency's systems down, but didn't do so in any meaningful way ..\"' -Tweet From CNBC's Carl Quintanilla On Reported HHS Cyber Attack",
+     "2020-03-16T16:37:09Z Cosan Shares Unaffected As Filing Shows Co. Suffered Cyberattack On Mar. 11"
+    ]
+   },
+   {
+    "date": "2020-12-14",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2020-12-14T15:03:33Z What Investors Need To Know About The US Treasury Cyberattack",
+     "2020-12-14T15:14:15Z Solarwinds 8-K Shows Co. Has Been Made Aware Of Cyberattack That Inserted A Vulnerability Within Its Orion Monitoring Products",
+     "2020-12-15T02:59:34Z After Pfizer, Moderna's COVID-19 Vaccine Data Comprised In Cyberattack"
+    ]
+   },
+   {
+    "date": "2021-05-08",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2021-05-08T13:39:38Z Colonial Pipeline, Which Carries 45% of Gasoline and Diesel Fuel to the U.S. East Coast, has Halted all Operations after it was Hit with a Cyberattack on Friday",
+     "2021-05-08T14:47:30Z Major Energy Pipeline To US East Coast Shut Down After Cyberattack",
+     "2021-05-08T14:50:05Z Reuters Reports Cyber Attack Against Colonial Pipeline was Ransomware"
+    ]
+   },
+   {
+    "date": "2022-02-25",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2022-02-25T19:00:30Z NVIDIA Shares Move Lower On Volume, Rebound Following Report From UK's Telegraph 'US microchip powerhouse Nvidia hit by cyber attack'",
+     "2022-02-25T20:23:36Z Nvidia Reportedly Under Cyberattack: What You Need To Know",
+     "2022-02-25T20:50:03Z NVIDIA On Reports Of Cyber Attack Says Are Investigating An Incident; NVIDIA Says Our Business And Commercial Activities Continue Uninterrupted"
+    ]
+   },
+   {
+    "date": "2023-01-26",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2023-01-26T14:57:30Z U.S. Justice Dept Announcement On International Ransomware Action To Be Related To Hive Ransomware Website",
+     "2023-01-26T15:39:24Z Criminal Network \"Dawnbreaker\" Broken Up As Part Of International Operation Against Cybercrime ; Website Of Hive Ransomware Group Operating On Darknet Was Blocked",
+     "2023-01-26T18:50:44Z Hive Ransomware Dismantled: FBI Confirms Disruption Of Cybercrime Ecosystem"
+    ]
+   },
+   {
+    "date": "2023-02-27",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2023-02-27T16:26:40Z 'Dish Hit By Multi-Day Outage After Reported Cyberattack' - TechCrunch",
+     "2023-02-27T21:33:15Z MKS Instruments Says Anticipates Previously Announced Ransomware Incident Identified On Feb. 3, 2023 To Have Material Impact On Co.'s Q1 Results; Says Co. Will Not Provide Q1 Guidance At This Time",
+     "2023-02-27T21:34:36Z MKS Instruments Says Prior To Ransomware Event, Co. Expected Q1 Revenue ~$1B; Says Co. Estimates Impact On Q1 Revenue To Be At Least $200M"
+    ]
+   },
+   {
+    "date": "2015-06-09",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2015-06-09T12:34:24Z Verint Unveils Next-Gen Threat Protection System Aimed at Protecting Against Advanced Cyber Attacks",
+     "2015-06-09T16:09:12Z 'Ransomware' Cyber-attacks Surge 165 Percent In Q1"
+    ]
+   },
+   {
+    "date": "2015-10-02",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2015-10-02T18:56:36Z Watching Cybersecurity Stocks Here as Hearing Scottrade Has Said It Was the Victim of a Cyberattack, 4.6M Clients Subject",
+     "2015-10-02T18:57:05Z UPDATE: Scottrade Cyberattack Spanned Late '13 to Early '14"
+    ]
+   },
+   {
+    "date": "2016-05-24",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2016-05-24T10:21:40Z Home Depot Recorded $2M Pretax Expenses Related to Data Breach in Q1",
+     "2016-05-24T10:24:26Z UPDATE: Since the Data Breach Occurred, Home Depot has Recorded Pretax Net Expenses of $163M"
+    ]
+   }
+  ],
+  "SYS_CYBER_V2": [
+   {
+    "date": "2018-11-30",
+    "value": 4,
+    "headlines": 7,
+    "kev_adds": 0,
+    "first": [
+     "2018-11-30T14:01:12Z What You Need To Know About Marriott's Data Breach",
+     "2018-11-30T14:28:04Z Watching Marriott Shares As New York Attorney General Says It Opened A Probe Into Co. Data Breach",
+     "2018-11-30T14:30:20Z UPDATE: New York Attorney General Says Probe Into Marriott Related To Fact Co. Did Not Provide The Required Notification To Attorney General When It Found Out About Data Breach",
+     "2018-11-30T14:41:26Z Marriott Shares Largely Unaffected Following Market Open Despite Several Attorney Generals Highlighting Probes On Data Breach: Connecticut Attorney General Says Will Also Be Investigating",
+     "2018-11-30T16:35:58Z Delaware DOJ Spokesperson On Marriott Data Breach Says Expect To Be Notified Under State's Laws If More Than 500 Delaware Residents Were Affected",
+     "2018-11-30T19:56:52Z Starwood Property Says It Has Not Been Impacted In Any Way By Marriott International's Data Breach",
+     "2018-11-30T20:43:23Z Starwood Property Trust Offers Response Following Marriott Data Breach: Confirms Co. Has Not Been Impacted In Any Way"
+    ]
+   },
+   {
+    "date": "2017-05-15",
+    "value": 4,
+    "headlines": 5,
+    "kev_adds": 0,
+    "first": [
+     "2017-05-15T16:43:44Z What Is Ransomware, What Are 'Worms' And How Do You Stop Them?",
+     "2017-05-15T18:26:18Z White House Says 'We Don't Know' Who Was Behind WannaCry Ransomware Attack",
+     "2017-05-15T19:02:21Z Study: Stocks Fall An Average Of 5% After Data Breach",
+     "2017-05-15T19:19:49Z Proofpoint SVP Of Cybersecurity Strategy Tells Benzinga Its Customers Were Not Affected By 'WannaCry' Ransomware Attack; Says 'For Once This Type Of Ransomware Isn't Spreading Via Email'; Highlights Co. Has Been Fighting Follow-On Scams",
+     "2017-05-15T19:21:43Z Proofpoint Keeps Chugging After Ransomware Attacks"
+    ]
+   },
+   {
+    "date": "2021-05-13",
+    "value": 4,
+    "headlines": 5,
+    "kev_adds": 0,
+    "first": [
+     "2021-05-13T14:39:56Z US Doesn't See A Direct Link To Russia Related To Colonial Pipeline Cyberattack",
+     "2021-05-13T15:31:35Z House Speaker Pelosi Says Companies Should Not Pay Ransom To Those Who Carry Out Cyber Attacks On Infrastructure",
+     "2021-05-13T16:00:18Z Colonial Pipeline Paid Ransomware Hackers $5M In Cryptocurrency: Report",
+     "2021-05-13T16:41:54Z Biden Does Not Rule Out Retaliation For Cyber Attacks",
+     "2021-05-13T17:08:54Z White House Says Jones Act Waiver Will Be In Effect As Long As Needed Following Colonial Pipeline Cyberattack, Shutdown"
+    ]
+   },
+   {
+    "date": "2015-08-18",
+    "value": 4,
+    "headlines": 4,
+    "kev_adds": 0,
+    "first": [
+     "2015-08-18T15:40:50Z Target, Visa Reach Settlement Over Data Breach-Bloomberg",
+     "2015-08-18T20:49:21Z Web.com Announces Cyber Breach, Says Discovered Unauthorized Breach of One of Its Comps",
+     "2015-08-18T20:49:58Z UPDATE: Web.com Says As a Result of Cyber Breach, Credit Card Info of ~93K Customers Compromised",
+     "2015-08-18T20:50:47Z UPDATE: Web.com Announces Cyber Breach, Will Give Notice To Potentially Affected Customers Soon"
+    ]
+   },
+   {
+    "date": "2016-09-22",
+    "value": 4,
+    "headlines": 4,
+    "kev_adds": 0,
+    "first": [
+     "2016-09-22T11:32:44Z Recode Reports Yahoo Expected To Confirm Massive Data Breach, With 200M User Accounts Affected",
+     "2016-09-22T15:10:30Z Yahoo Could Confirm 'Massive Data Breach' Which Impacted Hundreds Of Millions Of Users: Recode",
+     "2016-09-22T19:26:44Z Kara Swisher Recently Publishes Re/code Article on Yahoo Data Breach; Includes Passage '...former security head Alex Stamos had tried aggressively to get management to act more strongly, but he had not been successful.'",
+     "2016-09-22T19:32:04Z Recode's Kara Swisher Tweets: More to come on Yahoo data breach, including management bungling of situation."
+    ]
+   },
+   {
+    "date": "2017-06-27",
+    "value": 4,
+    "headlines": 4,
+    "kev_adds": 0,
+    "first": [
+     "2017-06-27T14:44:56Z Norway National Security Says Ransomware Attack Ongoing And Assumed TO Be Similar To Attack On Maersk, Says Ongoing Attacks Affect 'One International Company' But Decline To Name It",
+     "2017-06-27T14:52:33Z CNBC Now Tweets: DEVELOPING: Cyberattacks hit WPP ad agency, Russia's Rosneft, Maersk, Ukrainian govt, Kiev airport & other targets cnb.cx/2sXcRr0",
+     "2017-06-27T18:16:34Z Splunk Issues Release Highlighting Unveiling Of Splunk Insights For Ransomware",
+     "2017-06-27T18:31:47Z Ransomware Rears Its Head Again As 150 Countries Hit By New Virus"
+    ]
+   },
+   {
+    "date": "2017-09-08",
+    "value": 4,
+    "headlines": 4,
+    "kev_adds": 0,
+    "first": [
+     "2017-09-08T13:34:59Z Equifax Shares Down 15% Amid Data Breach; Cybersecurity Stocks Reacting: FireEye, Check Point, Imperva, Fortinet Shares Up 1.6%, Symantec Up 6%, Proofpoint Up 3%, Palo Alto Up 2.2%",
+     "2017-09-08T14:53:03Z After Security Breach, Is The Long-Term Thesis Still Intact For Equifax?",
+     "2017-09-08T17:16:13Z U.S. House Financial Services Committee Reportedly To Hold Hearing On Equifax Data Breach",
+     "2017-09-08T17:29:01Z Probes Reporter Tweets 'Investors should assume the SEC will open an investigation into $EFX data breach. If disclosed fast it's not so bad. If they wait, it's big.'"
+    ]
+   },
+   {
+    "date": "2020-12-09",
+    "value": 4,
+    "headlines": 4,
+    "kev_adds": 0,
+    "first": [
+     "2020-12-09T07:04:25Z FireEye Shares Drop 7% As Company Reports Suffering Foreign Government-Backed Cyberattack",
+     "2020-12-09T13:57:45Z EMA Reports Cyberattack; Agency Has Swiftly Launched A Full Investigation, In Close Cooperation With Law Enforcement And Other Relevant Entities, Cannot Provide Additional Details Whilst The Investigation Is Ongoing",
+     "2020-12-09T18:12:27Z BioNTech Says EMA Has Warned Co. It Was Subject To Cyber Attack, EMA Says No BioNTech, Pfizer Systems Were Breached In Cyber Incident",
+     "2020-12-09T18:48:52Z Pfizer Says No Pfizer, BioNTech Systems Have Been Breached In Connection With EMA Cyberattack Incident"
+    ]
+   },
+   {
+    "date": "2021-05-10",
+    "value": 4,
+    "headlines": 4,
+    "kev_adds": 0,
+    "first": [
+     "2021-05-10T11:38:08Z Shell Midstream Partners Shares Down 1.3%. BZ NOTE: Co Has Stake In Colonial Pipeline Which Was Hit With Cyber Attack Over The Weekend",
+     "2021-05-10T11:51:47Z FireEye Shares Up 5%; Hearing Co Is Assisting Investigation Into Colonial Pipeline Cyberattack Over The Weekend",
+     "2021-05-10T15:52:06Z FBI Confirms Darkside Ransomware Responsible For Compromise Of Colonial Pipeline Networks; Says Continues To Work With Co, Government Partners On Investigation",
+     "2021-05-10T16:48:19Z Biden Administration Cyber Security Adviser Neuberger Says FBI Has Been Tracking This Ransomware Group Since At Least Oct. Of Last Year"
+    ]
+   },
+   {
+    "date": "2015-06-05",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2015-06-05T14:47:12Z Note Being Circulated Mentions Lifelock as Potential Beneficiary of Government Data Breach",
+     "2015-06-05T17:25:14Z Cyber Stocks on the Move with Massive Federal Government Data Breach",
+     "2015-06-05T18:16:28Z UPDATE: US Official Says Cyber Data Breach Being Treated as National Security Matter -Reuters"
+    ]
+   },
+   {
+    "date": "2015-10-01",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2015-10-01T10:42:14Z Watch Cybersecurity Stocks Following News of FXCM Cyberattack and Statement Co. is Working with 'Leading Cybersecurity Firm'",
+     "2015-10-01T14:09:12Z Cybersecurity Mixed Following Cyberattack On FXCM",
+     "2015-10-01T20:39:05Z Hearing T-Mobile's John Legere Responds to Experian Unauthorized Data Breach: Experian 'Has Taken Full Responsibility'"
+    ]
+   },
+   {
+    "date": "2016-03-08",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2016-03-08T13:52:25Z Macs Face First Ever Ransomware Attacks",
+     "2016-03-08T16:13:02Z Home Depot Reaches $13M Settlement Regarding 2014 Data Breach",
+     "2016-03-08T16:13:25Z Court Filing Shows Home Depot Reaches $13M Settlement With Consumers Regarding 2014 Data Breach -Reuters"
+    ]
+   },
+   {
+    "date": "2017-05-16",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2017-05-16T08:44:29Z Symantec Announces Blocks 22M Attempted WannaCry Ransomware Attacks Globally",
+     "2017-05-16T16:00:55Z Reuters Reports Fewer Than 10 Companies Reported To U.S. Dept. Of Homeland Security Being Affected By 'WannaCry' Ransomware Attack",
+     "2017-05-16T16:05:43Z Check Point Software On 'WannaCry' Cyber Attack Tells Benzinga Co. Is Talking To Existing, Potential User Base In Preparation For Follow Up Attacks; 'We know our technology works we know it's effective at preventing all the variants we've seen so far'"
+    ]
+   },
+   {
+    "date": "2017-06-28",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2017-06-28T16:36:33Z UPDATE: FedEx Says While TNT Express Operations, Communications Systems Disrupted, No Data Breach Is Known To Have Occured",
+     "2017-06-28T16:46:44Z CyberArk Shares Now Up 3.3% At Session Highs Following News Of FedEx Cyberattack",
+     "2017-06-28T19:39:45Z Russia In The Spotlight As Second Wave Of Ransomware Grips Globe"
+    ]
+   },
+   {
+    "date": "2017-09-11",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2017-09-11T17:52:39Z FireEye Higher After Equifax Security Breach, Analyst Upgrade",
+     "2017-09-11T20:24:42Z Hearing US Senate Finance Committee Leaders Have Sent Letter To Equifax CEO Demanding Info Related To Data Breach",
+     "2017-09-11T20:25:48Z UPDATE: Leaders Of US Senate Finance Committee Asking Equifax Mgmt. If 3 Execs Who Sold Stock Were Made Aware Of Data Breach"
+    ]
+   },
+   {
+    "date": "2017-09-19",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2017-09-19T08:15:52Z Equifax Learned About Data Breach Almost Five Months Earlier Than the Date It Disclosed -Bloomberg",
+     "2017-09-19T20:17:49Z FedEx Unable To Forecast 2018 Earnings Guidance Due To Pension Accounting Adjustments; Before Adjustments FY18 EPS Seen At $12-$12.80; Forecast Assumes 'Continued Recovery From the Cyberattack'",
+     "2017-09-19T20:28:37Z FedEx Unable To Forecast 2018 GAAP Earnings Guidance Due To Pension Accounting Adjustments; Says Adj. Forecast Assumes 'Continued Recovery From the Cyberattack'"
+    ]
+   },
+   {
+    "date": "2019-07-31",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2019-07-31T14:25:10Z Here Are A Few Things Capital One Customers Should Do Following The Data Breach",
+     "2019-07-31T15:52:45Z UniCredit May Have Been Caught Up In Capital One Data Breach -Source",
+     "2019-07-31T18:55:49Z FTC Is Urging Consumers Impacted By Equifax's 2017 Data Breach To Considering Signing Up Fro Free Credit Monitoring Offered As Part Of Settlement"
+    ]
+   },
+   {
+    "date": "2020-03-09",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2020-03-09T09:30:13Z Australia Sues Facebook For Data Breach Of 300K Citizens In Cambridge Analytica Case",
+     "2020-03-09T14:15:18Z Ransomware Hackers May Come For Owner-Operators Next",
+     "2020-03-09T14:34:01Z Cyberattack Impacting Multiple EVRAZ Plants In US, Canada"
+    ]
+   },
+   {
+    "date": "2020-03-16",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2020-03-16T12:38:45Z 'HHS was hit by cyber attack last night' -Tweet From Bloomberg Law HHS Reporter",
+     "2020-03-16T12:53:21Z UPDATE: '\".. The attack appears to have been intended to slow the agency's systems down, but didn't do so in any meaningful way ..\"' -Tweet From CNBC's Carl Quintanilla On Reported HHS Cyber Attack",
+     "2020-03-16T16:37:09Z Cosan Shares Unaffected As Filing Shows Co. Suffered Cyberattack On Mar. 11"
+    ]
+   },
+   {
+    "date": "2020-12-14",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2020-12-14T15:03:33Z What Investors Need To Know About The US Treasury Cyberattack",
+     "2020-12-14T15:14:15Z Solarwinds 8-K Shows Co. Has Been Made Aware Of Cyberattack That Inserted A Vulnerability Within Its Orion Monitoring Products",
+     "2020-12-15T02:59:34Z After Pfizer, Moderna's COVID-19 Vaccine Data Comprised In Cyberattack"
+    ]
+   },
+   {
+    "date": "2021-05-08",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 0,
+    "first": [
+     "2021-05-08T13:39:38Z Colonial Pipeline, Which Carries 45% of Gasoline and Diesel Fuel to the U.S. East Coast, has Halted all Operations after it was Hit with a Cyberattack on Friday",
+     "2021-05-08T14:47:30Z Major Energy Pipeline To US East Coast Shut Down After Cyberattack",
+     "2021-05-08T14:50:05Z Reuters Reports Cyber Attack Against Colonial Pipeline was Ransomware"
+    ]
+   },
+   {
+    "date": "2022-02-25",
+    "value": 4,
+    "headlines": 3,
+    "kev_adds": 4,
+    "first": [
+     "2022-02-25T19:00:30Z NVIDIA Shares Move Lower On Volume, Rebound Following Report From UK's Telegraph 'US microchip powerhouse Nvidia hit by cyber attack'",
+     "2022-02-25T20:23:36Z Nvidia Reportedly Under Cyberattack: What You Need To Know",
+     "2022-02-25T20:50:03Z NVIDIA On Reports Of Cyber Attack Says Are Investigating An Incident; NVIDIA Says Our Business And Commercial Activities Continue Uninterrupted"
+    ]
+   },
+   {
+    "date": "2015-06-09",
+    "value": 4,
+    "headlines": 2,
+    "kev_adds": 0,
+    "first": [
+     "2015-06-09T12:34:24Z Verint Unveils Next-Gen Threat Protection System Aimed at Protecting Against Advanced Cyber Attacks",
+     "2015-06-09T16:09:12Z 'Ransomware' Cyber-attacks Surge 165 Percent In Q1"
+    ]
+   },
+   {
+    "date": "2015-10-02",
+    "value": 4,
+    "headlines": 2,
+    "kev_adds": 0,
+    "first": [
+     "2015-10-02T18:56:36Z Watching Cybersecurity Stocks Here as Hearing Scottrade Has Said It Was the Victim of a Cyberattack, 4.6M Clients Subject",
+     "2015-10-02T18:57:05Z UPDATE: Scottrade Cyberattack Spanned Late '13 to Early '14"
+    ]
+   },
+   {
+    "date": "2016-05-24",
+    "value": 4,
+    "headlines": 2,
+    "kev_adds": 0,
+    "first": [
+     "2016-05-24T10:21:40Z Home Depot Recorded $2M Pretax Expenses Related to Data Breach in Q1",
+     "2016-05-24T10:24:26Z UPDATE: Since the Data Breach Occurred, Home Depot has Recorded Pretax Net Expenses of $163M"
+    ]
+   },
+   {
+    "date": "2016-09-23",
+    "value": 4,
+    "headlines": 2,
+    "kev_adds": 0,
+    "first": [
+     "2016-09-23T19:38:54Z Why Verizon Just Found Out About Yahoo's Security Breach This Week",
+     "2016-09-23T21:26:20Z Hearing Court Filing Has Showed Yahoo is Being Sued Related to This Week's Data Breach"
+    ]
+   },
+   {
+    "date": "2016-10-21",
+    "value": 4,
+    "headlines": 2,
+    "kev_adds": 0,
+    "first": [
+     "2016-10-21T16:25:49Z Dyn Warns Customers Of Another Cyber Attack, Currently 'Monitoring & Mitigating' A DDOS Attack",
+     "2016-10-21T22:40:48Z Paypal Earlier Released Statement On Service Interruptions, Related To Dyn Inc. Cyber Attack"
+    ]
+   },
+   {
+    "date": "2016-12-15",
+    "value": 4,
+    "headlines": 2,
+    "kev_adds": 0,
+    "first": [
+     "2016-12-15T17:11:09Z What's The Difference Between Yahoo's Data Breaches?",
+     "2016-12-15T19:22:04Z NY AG Schnederman Says He's In Touch With Yahoo, Currently Examining Yahoo Data Breach And Company's Disclosure Of Breach To Law Enforcement"
+    ]
+   },
+   {
+    "date": "2017-05-12",
+    "value": 4,
+    "headlines": 2,
+    "kev_adds": 0,
+    "first": [
+     "2017-05-12T18:14:15Z Sky News Reporting British Prime Minister Says Cyber Attack On National Health System Part Of A Wider International Attack",
+     "2017-05-12T19:40:03Z Microsoft Says Customers Running Free Antivirus Software And Have Latest Windows Updates Protected From Major Ransomware Attack"
+    ]
+   },
+   {
+    "date": "2018-10-08",
+    "value": 4,
+    "headlines": 2,
+    "kev_adds": 0,
+    "first": [
+     "2018-10-08T15:40:20Z The Russian Foreign Ministry Says Accusations of Russian Cyber Attacks are to Divert Attention From the US Preparing Cyber Operations",
+     "2018-10-08T18:17:19Z Report: Google Tried To Cover Up A Data Breach"
+    ]
+   }
+  ],
+  "SYS_OUTAGE_NEWS_V2": [
+   {
+    "date": "2024-07-19",
+    "value": 4,
+    "headlines": 23,
+    "first": [
+     "2024-07-19T08:20:49Z Cybersecurity Giant CrowdStrike Hit By Significant Outage Impacting Businesses Globally",
+     "2024-07-19T08:42:11Z Microsoft Outage Wreaks Havoc On World As 911, International Airlines, Banks And Airport Services Disrupted (UPDATED)",
+     "2024-07-19T09:36:37Z CrowdStrike Shares Drop 13%, Microsoft Takes A Hit During Pre-Market After Major Outage Causes Global Havoc",
+     "2024-07-19T09:49:06Z Crowdstrike CEO Said This Is Not A Security Incident Or Cyberattack; The Issue Has Been Identified, Isolated And A Fix Has Been Deployed",
+     "2024-07-19T11:21:21Z Wall Street Set To End Week On Subdued Note As CrowdStrike, Microsoft Drop Amid Global Outage: Analyst Sees 10% Upside Potential For S&P 500 Over Next 12 Months",
+     "2024-07-19T12:14:19Z CrowdStrike CEO Post On X, \"CrowdStrike is actively working with customers impacted by a defect found in a single content update for Windows hosts. Mac and Linux hosts are not impacted. This is not a security incident or cyberattack. The issue has been identified, isolated and a fix has been deployed...\"",
+     "2024-07-19T12:53:36Z CrowdStrike Shares Trim Heavy Losses As Microsoft Announces Resolution Of Global Tech Outage: 'This Is Clearly A Major Black Eye'",
+     "2024-07-19T13:22:30Z Union Pacific Says CrowdStrike Software Outage Had Varying Levels Of Impact Across Network; Backup Protocols Enable Us To Communicate With Teams And Dispatchers; Doing Everything Possible To Keep Freight Moving, But There Have Been Some Processing Delays In Customer Shipments"
+    ]
+   },
+   {
+    "date": "2026-11-13",
+    "value": 4,
+    "headlines": 16,
+    "first": [
+     "2026-11-13T09:09:58Z Microsoft Outlook Outage Hits Colorado Jail, Forces Families to Post Bail In Person to Secure Release",
+     "2026-11-13T13:01:57Z Fraport Confirms Operational Stability During Global Microsoft Outage",
+     "2026-11-13T13:02:00Z Euronext Reports Email Communication Outage Due to Global Microsoft Disruption",
+     "2026-11-13T14:50:45Z Microsoft Outage Hit More Than Outlook: Even Its Cybersecurity Defenses Were Affected",
+     "2026-11-13T16:22:20Z Microsoft Stock in Focus as Massive 365 Outage Hits Outlook, Teams and Copilot: What Investors Should Know",
+     "2026-11-13T17:02:48Z Maersk Reports Operational Disruptions Due to Global Microsoft Outage",
+     "2026-11-13T18:01:48Z CMC Markets Operations Impacted by Global Microsoft Service Outage",
+     "2026-11-13T19:01:22Z Microsoft Experiences Widespread Global Service Outage"
+    ]
+   },
+   {
+    "date": "2026-11-14",
+    "value": 4,
+    "headlines": 13,
+    "first": [
+     "2026-11-14T05:59:37Z FAA Lifts Nationwide Ground Stop, Resumes Flights; Says No Cyberattack Evidence or Link to Microsoft Outage, Sean Duffy Blames Legacy Equipment, Seeks $50 Billion",
+     "2026-11-14T09:01:42Z Aviva Activates Backup Systems During Global Microsoft Outage",
+     "2026-11-14T14:01:11Z Microsoft Restores Services Following Global Outage",
+     "2026-11-14T14:01:41Z Southwest Airlines Supports Federal Funding Request Following Nationwide Ground Stop",
+     "2026-11-14T14:01:42Z United Airlines Operations Impacted by Nationwide FAA Ground Stop",
+     "2026-11-14T14:02:05Z American Airlines Operations Impacted by Nationwide FAA Ground Stop",
+     "2026-11-14T14:02:39Z Frontier Group Holdings Shares Impacted by FAA Ground Stop",
+     "2026-11-14T14:02:41Z JetBlue Resumes Operations Following Nationwide FAA Ground Stop"
+    ]
+   },
+   {
+    "date": "2016-08-08",
+    "value": 4,
+    "headlines": 9,
+    "first": [
+     "2016-08-08T12:20:50Z Delta ‏@Delta Tweet: @F3THarold A power outage in Atlanta, which began at approximately 2:30 a.m. ET, has impacted Delta computer systems and operations worldwide, resulting in flight delays. Large-scale cancellations are expected today.",
+     "2016-08-08T12:39:56Z Delta Says Ground Stop Lifted; Resuming Limited Departures, Cancellations, Delays Continue -Reuters",
+     "2016-08-08T13:08:32Z Technical Alert - Finding Support In Delta Airlines After Computer Power Outage",
+     "2016-08-08T13:43:23Z Delta Deal With System-Wide Outage; Investors Sell The News",
+     "2016-08-08T14:14:23Z Delta News Hub ‏@DeltaNewsHub  Tweet: @Delta has cancelled approx. 300 flights due to power outage. Systems are coming back online, but delays and cancellations continue.",
+     "2016-08-08T14:18:06Z PulteGroup Spokesperson Confirms To Benzinga That PulteGroup Management Cancelling Out Of Conference Due To Delta Outage",
+     "2016-08-08T14:57:53Z Georgia Power Says Delta Air Lines  Power Outage That Affected Computer Systems Caused by Equipment Failure -Reuters",
+     "2016-08-08T19:58:26Z How Much Revenue Did Delta Lose Amid Major Outage?"
+    ]
+   },
+   {
+    "date": "2023-01-11",
+    "value": 4,
+    "headlines": 9,
+    "first": [
+     "2023-01-11T11:29:36Z FAA Advisory ays System Failure Is Impacting Flights Nationwide, Flights Reportedly Grounded Across US",
+     "2023-01-11T12:46:22Z Biden Has Been Briefed On FAA System Outage; No Evidence Of Cyberattack",
+     "2023-01-11T13:17:01Z US Air Traffic Operations Resume After FAA Grounds Flights Due To System Outage: Here's The Latest",
+     "2023-01-11T13:52:10Z U.S. FAA Lifts Nationwide Ground Stop",
+     "2023-01-11T14:09:51Z Southwest Airlines Co Says Anticipates Some Schedule Adjustments After Notice to Air Missions System Outage",
+     "2023-01-11T14:11:22Z United Airlines Says FAA Has Lifted Their Nationwide Ground Stop And United Has Resumed Operations; Customers May Continue To See Some Delays And Cancellations;  Company Has Activated Travel Waiver For Any Customers Who Need To Change Their Plans",
+     "2023-01-11T14:31:56Z U.S. Committee Chair Says Senate Commerce Committee Will Investigate Cause Of FAA Computer System Outage That Sparked Massive Flight Delays",
+     "2023-01-11T16:48:35Z U.S. Transportation Secretary Says No Direct Evidence Or Indication Of Cyberattack In FAA Computer Issue"
+    ]
+   },
+   {
+    "date": "2024-07-22",
+    "value": 4,
+    "headlines": 8,
+    "first": [
+     "2024-07-22T08:42:32Z Microsoft Blames European Commission Agreement As Reason It Can't Secure Windows Like Apple Secures MacOS After CrowdStrike Outage",
+     "2024-07-22T11:12:39Z 'If You're A Lawyer For Crowdstrike, You're Probably Not Going To Enjoy The Rest Of Your Summer': Microsoft-Crowdstrike Outage Could Top $1B In Costs, Analyst Says",
+     "2024-07-22T13:51:32Z Benzinga Market Summary: Biden Drops Out Of Race And Endorses Harris, Crowdstrike Shares Continue To Fall Following Global Outage, Israel's Netanyahu To Visit Washington, Verizon Slips On Revenue Miss",
+     "2024-07-22T15:59:18Z Jim Cramer Applauds CrowdStrike's Response To Global IT Outage, Sees Swift Recovery Ahead: 'It Just Happened To Be Bad Luck'",
+     "2024-07-22T16:46:23Z Federal Communications Commission Says AT&T Wireless Outage In February Blocked More Than 92M U.S. Calls, Prevented More Than 25,000 Attempts To Reach 911",
+     "2024-07-22T18:08:12Z Southwest Airlines Saved By Procrastination: How 32-Year-Old Software Protected Company From Microsoft Outage, CrowdStrike Issues",
+     "2024-07-22T19:56:22Z 'House committee calls on CrowdStrike CEO to testify on global outage' - The Washington Post",
+     "2024-07-22T21:35:47Z CrowdStrike Says Continues To Evaluate Impact Of Outage Event On Its Business And Operations; Says The Event Was Not Caused By Cyberattack - Filing"
+    ]
+   },
+   {
+    "date": "2026-11-16",
+    "value": 4,
+    "headlines": 8,
+    "first": [
+     "2026-11-16T05:24:23Z Trump’s Ex-Counterterrorism Chief Cites FAA Ground Stop, Nearly $50 Billion Bill In Call To Focus On Domestic Issues: ‘End the Iran War Now…’",
+     "2026-11-16T16:01:21Z Microsoft Addresses Recent 365 Service Disruption",
+     "2026-11-16T22:31:21Z Class Action Lawsuit Filed Against Microsoft Following Global 365 Outage",
+     "2026-11-16T22:31:53Z JetBlue Airways Faces Significant Operational Disruptions Following Nationwide FAA Ground Stop",
+     "2026-11-16T22:32:13Z Analysts Estimate $345 Million Financial Impact on Major US Airlines from FAA Ground Stop",
+     "2026-11-16T23:01:47Z Bernstein Estimates Financial Impact of FAA Ground Stop on Major US Airlines",
+     "2026-11-16T23:01:47Z United Airlines Reports Widespread System Outage",
+     "2026-11-17T03:01:25Z Microsoft Releases Preliminary Report on Recent 365 Service Outage"
+    ]
+   },
+   {
+    "date": "2024-07-24",
+    "value": 4,
+    "headlines": 5,
+    "first": [
+     "2024-07-24T12:12:41Z Group 1 Automotive Posts Mixed Q2 Earnings Hit By CDK Outage & Adverse Weather Events",
+     "2024-07-24T16:02:26Z Delta Air Lines Faces $500M Financial Hit As IT Outage Causes Thousands Of Cancellations",
+     "2024-07-24T17:37:38Z No Sign Microsoft Plans To Limit Crowdstrike Access To Windows Operating System Following Global Tech Outage",
+     "2024-07-24T20:12:11Z CrowdStrike Admits Bug Caused Massive Global IT Outages",
+     "2024-07-24T20:25:16Z American Airlines, Southwest Airlines Q2 Earnings Previews: Will They Address The Microsoft Outage Fallout?"
+    ]
+   },
+   {
+    "date": "2026-11-15",
+    "value": 4,
+    "headlines": 5,
+    "first": [
+     "2026-11-15T10:08:11Z US Air Travel Chaos to Persist Until Late Sunday After FAA Ground Stop, Agency Chief Warns: Report",
+     "2026-11-15T13:58:56Z Consumer Tech (Nov 9-13): Jensen Resigns From Nvidia Amid Affair Controvery, Microsoft Faces Massive Outage & More",
+     "2026-11-15T14:00:21Z Jensen Huang Exits Nvidia, Musk’s SpaceX Gets a Big Bet and Microsoft’s Outage Spreads: This Week In Tech",
+     "2026-11-16T02:01:50Z Southwest Airlines Navigates Operational Recovery Following Nationwide Ground Stop",
+     "2026-11-16T04:19:42Z Trump Says FAA ‘Doing a Great Job’ as He Blames Biden for Ground Stop Order: ‘Everything They Touched Turned Bad’"
+    ]
+   },
+   {
+    "date": "2015-07-08",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2015-07-08T16:30:18Z NYSE Tweets: 'The issue we are experiencing is an internal technical issue and is not the result of a cyber breach.'",
+     "2015-07-08T17:28:30Z Target, Staples, Wal-Mart, Saks Fifth Avenue, Neiman All Confirm They Have Had No Security Breach Or Issues",
+     "2015-07-08T18:40:10Z Fireeye Email To Benzinga Says 'no evidence across our network...to suggest that the NYSE & UAL disruptions were cyber attacks'",
+     "2015-07-08T18:55:32Z American Airlines Rep: Co. Facing No Technical Issues On Website, No Security Breach"
+    ]
+   },
+   {
+    "date": "2024-07-20",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2024-07-20T06:13:12Z Microsoft-CrowdStrike Issue Caused 'Largest IT Outage In History,' Showing How Much We Depend On A Handful Of Companies",
+     "2024-07-20T07:05:23Z Elon Musk Says Tesla Deleted CrowdStrike From Its Systems But Was Not Untouched By Global IT Outage: 'Unfortunately, Many Of Our Suppliers...Use It'",
+     "2024-07-20T13:34:24Z Microsoft Outage, CrowdStrike Share Decline Hits Nancy Pelosi's, Marjorie Taylor Greene's Wealth: Here's How Much Congress Members Lost",
+     "2024-07-20T15:55:31Z CrowdStrike Issues Statement Following Massive Outage That Stemmed From Content Update For Windows Hosts: 'This Was Not A Cyberattack'"
+    ]
+   },
+   {
+    "date": "2015-09-17",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2015-09-17T17:04:24Z American Airlines Suffers System Wide Outage",
+     "2015-09-17T17:09:14Z American Airlines Unavailble For Comment When Contacted By Benzinga Pro Regarding System Outage",
+     "2015-09-17T17:10:02Z CNBC Now Tweets: 'BREAKING: Widespread ground stops for American Airlines nationwide » http://cnb.cx/1OhBd5f'"
+    ]
+   },
+   {
+    "date": "2019-03-26",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2019-03-26T15:35:18Z Hearing Sabre Is Having An Outage",
+     "2019-03-26T15:39:06Z 'Sabre had a brief technical issue that impacted multiple carriers, including American Airlines. This technical issue has been resolved.' -Tweets American Airlines",
+     "2019-03-26T15:58:03Z American Air Highlights Earlier Brief Technical Issues With Sabre Which Impacted Multiple Carriers, Including American; Issue Has Been Resolved"
+    ]
+   },
+   {
+    "date": "2019-04-01",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2019-04-01T11:21:52Z United Airlines, Southwest Airlines Report Technical Issues Causing Flight Delays",
+     "2019-04-01T11:33:19Z American Airlines Tweets AeroData is currently experiencing a technical issue that is impacting multiple carriers. They're working on a fix as quickly as they can.",
+     "2019-04-01T12:45:37Z Southwest Airlines Says it Implemented a Ground Stop for 40 Minutes Monday Morning Due to an Outage"
+    ]
+   },
+   {
+    "date": "2020-12-14",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2020-12-14T12:05:47Z Some Users Reporting Outages of Google Services Include Gmail and YouTube",
+     "2020-12-14T12:31:35Z Multiple Google Services Hit By Outage",
+     "2020-12-14T15:55:49Z 'Google confirms that this morning's outage was NOT a cyber attack. \"it was entirely an internal issue with quota accounting for the authentication system...' -Tweet From CNBC's Eamon Javers"
+    ]
+   },
+   {
+    "date": "2021-12-07",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2021-12-07T17:56:05Z Amazon Web Service Reports Outage, Disrupting Several Major Sites",
+     "2021-12-07T18:51:10Z 'Disney+, Roku Suffer Outages Because of AWS' -The Streamable Report",
+     "2021-12-07T19:01:30Z Amazon Web Outage Is Said To Affect Delivery Operation; Vans Said To Sit Idle With No Communication"
+    ]
+   },
+   {
+    "date": "2021-12-15",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2021-12-15T15:33:44Z Watching Amazon Shares; Hearing AWS Experiencing Outages, Seeing Reports Twitch Is Down",
+     "2021-12-15T15:35:13Z Seeing Reports DoorDash, Facebook, Playstation Network, Intuit Also Experiencing Outages Alongside AWS",
+     "2021-12-15T15:49:12Z UPDATE: Seeing Reports Of Outages With Disney, Apple, DISH Networks, Comcast, Netflix, Google, Discovery Amid AWS Outage"
+    ]
+   },
+   {
+    "date": "2024-02-22",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2024-02-22T12:51:17Z 'AT&T, T-Mobile and Verizon users hit by cellular outage in US' -New York Post",
+     "2024-02-22T13:40:00Z Major Outage Hits AT&T, Verizon, And T-Mobile—Services Down Nationwide, Including 911 Calls",
+     "2024-02-22T18:22:33Z U.S. Cyber Watchdog Agency Says It Is 'Working Closely' With AT&T To Understand The Cause Of Outage"
+    ]
+   },
+   {
+    "date": "2024-04-17",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2024-04-17T15:07:39Z Alaska Airlines Ground Stop Due To IT Issue",
+     "2024-04-17T15:17:09Z Alaska Airlines Says It Experienced An Issue While Performing An Upgrade To The System That Calculates Weight And Balance; Ground Stop For All Alaska And Horizon Flights Was Instituted At ~ 7:50 am PT Wednesday; Working To Resolve The Issue As Quickly As Possible",
+     "2024-04-17T15:49:09Z Alaska Airlines Ground Stop On Aircraft Has Been Lifted; Says We Have Begun Releasing Flights And Residual Delays Are Expected Throughout The Day"
+    ]
+   },
+   {
+    "date": "2024-06-25",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2024-06-25T15:33:44Z FCC Settles Verizon 911 Outage Violations For Over $1M",
+     "2024-06-25T15:38:32Z FCC Says Verizon To Pay $1.05M Fine Over 2022 Outage Of 911 System In Alabama, Florida, Georgia, North Carolina, South Carolina, And Tennessee",
+     "2024-06-25T17:47:16Z 'CDK tells dealers DMS outage won't be resolved before June 30' - Automotive News"
+    ]
+   },
+   {
+    "date": "2025-10-24",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2025-10-24T08:56:48Z Reported Earlier, Alaska Airlines Restores Operations After IT Outage Causes 229 Flight Cancellations, Additional Disruptions Expected During Network Recovery",
+     "2025-10-24T13:15:30Z Amazon's Cloud Unit Issues Apology, Explains How Rare Software Bug Triggered Global AWS Outage This Week",
+     "2025-10-24T14:54:01Z Alaska Airlines Says Throughout Thursday And Into Friday Morning, We Have Canceled More Than 360 Flights On Alaska And Horizon; Additional Flight Disruptions Likely. Hawaiian Airlines Flights Are Not Impacted; The It Outage Is Not A Cybersecurity Incident"
+    ]
+   },
+   {
+    "date": "2026-11-12",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2026-11-12T21:04:45Z Workhorse Announces Q3 Earnings Call Rescheduled To November 16, Citing Business Disruptions From Global Microsoft Outages",
+     "2026-11-12T22:31:35Z Microsoft 365 Experiences Service Outage",
+     "2026-11-13T04:41:39Z Microsoft Outage Triggers Chaos Across Outlook, Teams and Copilot — Spills Over to OpenAI and Anthropic"
+    ]
+   },
+   {
+    "date": "2020-10-22",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2020-10-22T15:08:48Z T-Mobile Shares Quiet Amid Headline FCC Has Issued A Staff Report On Networks' Outage",
+     "2020-10-22T15:18:26Z FCC Chairman Calls T-Mobile June 15 Outage A Failure, Says Company Did Not Follow Some Network Reliability Best Practices"
+    ]
+   },
+   {
+    "date": "2021-07-22",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2021-07-22T17:19:10Z Akami Says Problems Were Not A Cyberattack On Its Platform",
+     "2021-07-22T17:54:40Z Akamai Service Disruption Leads To Massive Outages Globally"
+    ]
+   },
+   {
+    "date": "2023-01-12",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-01-12T13:00:51Z FAA System Outage Causes Second Day of Flight Delays",
+     "2023-01-12T15:59:44Z U.S. FAA Says Operations Are Back To Normal, Seeing No Unusual Delays Or Cancellations After Wednesday's Computer Outage"
+    ]
+   },
+   {
+    "date": "2023-01-25",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-01-25T10:08:51Z Microsoft Was Hit Earlier Wednesday With Networking Outage That Took Impacted Azure, Teams And Outlook",
+     "2023-01-25T12:03:24Z Microsoft Azure Cloud Outage Disrupts Multiple Microsoft 365 Services Globally, Several users Affected"
+    ]
+   },
+   {
+    "date": "2023-03-23",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-03-23T16:59:40Z Coinbase Says Investigating A Technical Issue Causing Some Trades To Fail On Simple Trade For Coinbase.com And Coinbase Pay",
+     "2023-03-23T17:16:05Z Coinbase Says Resolved The Technical Issue That Was Causing Some Customers To Experience Simple Trade Failures"
+    ]
+   },
+   {
+    "date": "2023-09-05",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-09-05T17:18:12Z 'United Airlines Issues Nationwide Ground Stop Due To Computer Issue; Shares Moving Lower' - ABC News",
+     "2023-09-05T17:53:31Z FAA Tweets \"Update: United Airlines Has Lifted The Ground Stop For The U.S. And Canada.\""
+    ]
+   },
+   {
+    "date": "2023-09-06",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-09-06T05:01:56Z Coinbase-Incubated Base Faces Major Outage, Assures 'No Funds Are At Risk'",
+     "2023-09-06T13:52:07Z JetBlue Says Experiencing A System Outage Affecting Bookings"
+    ]
+   },
+   {
+    "date": "2025-10-20",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2025-10-20T10:16:05Z 'Major AWS Outage Takes Down Fortnite, Alexa, Snapchat, And More' - The Verge",
+     "2025-10-20T13:57:31Z Amazon Web Services Outage Knocks Major Websites Offline — Disney+, Reddit, McDonald's App, United Airlines Among Those Hit"
+    ]
+   }
+  ],
+  "SYS_OUTAGE_V2": [
+   {
+    "date": "2024-07-19",
+    "value": 4,
+    "headlines": 23,
+    "first": [
+     "2024-07-19T08:20:49Z Cybersecurity Giant CrowdStrike Hit By Significant Outage Impacting Businesses Globally",
+     "2024-07-19T08:42:11Z Microsoft Outage Wreaks Havoc On World As 911, International Airlines, Banks And Airport Services Disrupted (UPDATED)",
+     "2024-07-19T09:36:37Z CrowdStrike Shares Drop 13%, Microsoft Takes A Hit During Pre-Market After Major Outage Causes Global Havoc",
+     "2024-07-19T09:49:06Z Crowdstrike CEO Said This Is Not A Security Incident Or Cyberattack; The Issue Has Been Identified, Isolated And A Fix Has Been Deployed",
+     "2024-07-19T11:21:21Z Wall Street Set To End Week On Subdued Note As CrowdStrike, Microsoft Drop Amid Global Outage: Analyst Sees 10% Upside Potential For S&P 500 Over Next 12 Months",
+     "2024-07-19T12:14:19Z CrowdStrike CEO Post On X, \"CrowdStrike is actively working with customers impacted by a defect found in a single content update for Windows hosts. Mac and Linux hosts are not impacted. This is not a security incident or cyberattack. The issue has been identified, isolated and a fix has been deployed...\"",
+     "2024-07-19T12:53:36Z CrowdStrike Shares Trim Heavy Losses As Microsoft Announces Resolution Of Global Tech Outage: 'This Is Clearly A Major Black Eye'",
+     "2024-07-19T13:22:30Z Union Pacific Says CrowdStrike Software Outage Had Varying Levels Of Impact Across Network; Backup Protocols Enable Us To Communicate With Teams And Dispatchers; Doing Everything Possible To Keep Freight Moving, But There Have Been Some Processing Delays In Customer Shipments"
+    ]
+   },
+   {
+    "date": "2026-11-13",
+    "value": 4,
+    "headlines": 16,
+    "first": [
+     "2026-11-13T09:09:58Z Microsoft Outlook Outage Hits Colorado Jail, Forces Families to Post Bail In Person to Secure Release",
+     "2026-11-13T13:01:57Z Fraport Confirms Operational Stability During Global Microsoft Outage",
+     "2026-11-13T13:02:00Z Euronext Reports Email Communication Outage Due to Global Microsoft Disruption",
+     "2026-11-13T14:50:45Z Microsoft Outage Hit More Than Outlook: Even Its Cybersecurity Defenses Were Affected",
+     "2026-11-13T16:22:20Z Microsoft Stock in Focus as Massive 365 Outage Hits Outlook, Teams and Copilot: What Investors Should Know",
+     "2026-11-13T17:02:48Z Maersk Reports Operational Disruptions Due to Global Microsoft Outage",
+     "2026-11-13T18:01:48Z CMC Markets Operations Impacted by Global Microsoft Service Outage",
+     "2026-11-13T19:01:22Z Microsoft Experiences Widespread Global Service Outage"
+    ]
+   },
+   {
+    "date": "2026-11-14",
+    "value": 4,
+    "headlines": 13,
+    "first": [
+     "2026-11-14T05:59:37Z FAA Lifts Nationwide Ground Stop, Resumes Flights; Says No Cyberattack Evidence or Link to Microsoft Outage, Sean Duffy Blames Legacy Equipment, Seeks $50 Billion",
+     "2026-11-14T09:01:42Z Aviva Activates Backup Systems During Global Microsoft Outage",
+     "2026-11-14T14:01:11Z Microsoft Restores Services Following Global Outage",
+     "2026-11-14T14:01:41Z Southwest Airlines Supports Federal Funding Request Following Nationwide Ground Stop",
+     "2026-11-14T14:01:42Z United Airlines Operations Impacted by Nationwide FAA Ground Stop",
+     "2026-11-14T14:02:05Z American Airlines Operations Impacted by Nationwide FAA Ground Stop",
+     "2026-11-14T14:02:39Z Frontier Group Holdings Shares Impacted by FAA Ground Stop",
+     "2026-11-14T14:02:41Z JetBlue Resumes Operations Following Nationwide FAA Ground Stop"
+    ]
+   },
+   {
+    "date": "2016-08-08",
+    "value": 4,
+    "headlines": 9,
+    "first": [
+     "2016-08-08T12:20:50Z Delta ‏@Delta Tweet: @F3THarold A power outage in Atlanta, which began at approximately 2:30 a.m. ET, has impacted Delta computer systems and operations worldwide, resulting in flight delays. Large-scale cancellations are expected today.",
+     "2016-08-08T12:39:56Z Delta Says Ground Stop Lifted; Resuming Limited Departures, Cancellations, Delays Continue -Reuters",
+     "2016-08-08T13:08:32Z Technical Alert - Finding Support In Delta Airlines After Computer Power Outage",
+     "2016-08-08T13:43:23Z Delta Deal With System-Wide Outage; Investors Sell The News",
+     "2016-08-08T14:14:23Z Delta News Hub ‏@DeltaNewsHub  Tweet: @Delta has cancelled approx. 300 flights due to power outage. Systems are coming back online, but delays and cancellations continue.",
+     "2016-08-08T14:18:06Z PulteGroup Spokesperson Confirms To Benzinga That PulteGroup Management Cancelling Out Of Conference Due To Delta Outage",
+     "2016-08-08T14:57:53Z Georgia Power Says Delta Air Lines  Power Outage That Affected Computer Systems Caused by Equipment Failure -Reuters",
+     "2016-08-08T19:58:26Z How Much Revenue Did Delta Lose Amid Major Outage?"
+    ]
+   },
+   {
+    "date": "2023-01-11",
+    "value": 4,
+    "headlines": 9,
+    "first": [
+     "2023-01-11T11:29:36Z FAA Advisory ays System Failure Is Impacting Flights Nationwide, Flights Reportedly Grounded Across US",
+     "2023-01-11T12:46:22Z Biden Has Been Briefed On FAA System Outage; No Evidence Of Cyberattack",
+     "2023-01-11T13:17:01Z US Air Traffic Operations Resume After FAA Grounds Flights Due To System Outage: Here's The Latest",
+     "2023-01-11T13:52:10Z U.S. FAA Lifts Nationwide Ground Stop",
+     "2023-01-11T14:09:51Z Southwest Airlines Co Says Anticipates Some Schedule Adjustments After Notice to Air Missions System Outage",
+     "2023-01-11T14:11:22Z United Airlines Says FAA Has Lifted Their Nationwide Ground Stop And United Has Resumed Operations; Customers May Continue To See Some Delays And Cancellations;  Company Has Activated Travel Waiver For Any Customers Who Need To Change Their Plans",
+     "2023-01-11T14:31:56Z U.S. Committee Chair Says Senate Commerce Committee Will Investigate Cause Of FAA Computer System Outage That Sparked Massive Flight Delays",
+     "2023-01-11T16:48:35Z U.S. Transportation Secretary Says No Direct Evidence Or Indication Of Cyberattack In FAA Computer Issue"
+    ]
+   },
+   {
+    "date": "2024-07-22",
+    "value": 4,
+    "headlines": 8,
+    "first": [
+     "2024-07-22T08:42:32Z Microsoft Blames European Commission Agreement As Reason It Can't Secure Windows Like Apple Secures MacOS After CrowdStrike Outage",
+     "2024-07-22T11:12:39Z 'If You're A Lawyer For Crowdstrike, You're Probably Not Going To Enjoy The Rest Of Your Summer': Microsoft-Crowdstrike Outage Could Top $1B In Costs, Analyst Says",
+     "2024-07-22T13:51:32Z Benzinga Market Summary: Biden Drops Out Of Race And Endorses Harris, Crowdstrike Shares Continue To Fall Following Global Outage, Israel's Netanyahu To Visit Washington, Verizon Slips On Revenue Miss",
+     "2024-07-22T15:59:18Z Jim Cramer Applauds CrowdStrike's Response To Global IT Outage, Sees Swift Recovery Ahead: 'It Just Happened To Be Bad Luck'",
+     "2024-07-22T16:46:23Z Federal Communications Commission Says AT&T Wireless Outage In February Blocked More Than 92M U.S. Calls, Prevented More Than 25,000 Attempts To Reach 911",
+     "2024-07-22T18:08:12Z Southwest Airlines Saved By Procrastination: How 32-Year-Old Software Protected Company From Microsoft Outage, CrowdStrike Issues",
+     "2024-07-22T19:56:22Z 'House committee calls on CrowdStrike CEO to testify on global outage' - The Washington Post",
+     "2024-07-22T21:35:47Z CrowdStrike Says Continues To Evaluate Impact Of Outage Event On Its Business And Operations; Says The Event Was Not Caused By Cyberattack - Filing"
+    ]
+   },
+   {
+    "date": "2026-11-16",
+    "value": 4,
+    "headlines": 8,
+    "first": [
+     "2026-11-16T05:24:23Z Trump’s Ex-Counterterrorism Chief Cites FAA Ground Stop, Nearly $50 Billion Bill In Call To Focus On Domestic Issues: ‘End the Iran War Now…’",
+     "2026-11-16T16:01:21Z Microsoft Addresses Recent 365 Service Disruption",
+     "2026-11-16T22:31:21Z Class Action Lawsuit Filed Against Microsoft Following Global 365 Outage",
+     "2026-11-16T22:31:53Z JetBlue Airways Faces Significant Operational Disruptions Following Nationwide FAA Ground Stop",
+     "2026-11-16T22:32:13Z Analysts Estimate $345 Million Financial Impact on Major US Airlines from FAA Ground Stop",
+     "2026-11-16T23:01:47Z Bernstein Estimates Financial Impact of FAA Ground Stop on Major US Airlines",
+     "2026-11-16T23:01:47Z United Airlines Reports Widespread System Outage",
+     "2026-11-17T03:01:25Z Microsoft Releases Preliminary Report on Recent 365 Service Outage"
+    ]
+   },
+   {
+    "date": "2024-07-24",
+    "value": 4,
+    "headlines": 5,
+    "first": [
+     "2024-07-24T12:12:41Z Group 1 Automotive Posts Mixed Q2 Earnings Hit By CDK Outage & Adverse Weather Events",
+     "2024-07-24T16:02:26Z Delta Air Lines Faces $500M Financial Hit As IT Outage Causes Thousands Of Cancellations",
+     "2024-07-24T17:37:38Z No Sign Microsoft Plans To Limit Crowdstrike Access To Windows Operating System Following Global Tech Outage",
+     "2024-07-24T20:12:11Z CrowdStrike Admits Bug Caused Massive Global IT Outages",
+     "2024-07-24T20:25:16Z American Airlines, Southwest Airlines Q2 Earnings Previews: Will They Address The Microsoft Outage Fallout?"
+    ]
+   },
+   {
+    "date": "2026-11-15",
+    "value": 4,
+    "headlines": 5,
+    "first": [
+     "2026-11-15T10:08:11Z US Air Travel Chaos to Persist Until Late Sunday After FAA Ground Stop, Agency Chief Warns: Report",
+     "2026-11-15T13:58:56Z Consumer Tech (Nov 9-13): Jensen Resigns From Nvidia Amid Affair Controvery, Microsoft Faces Massive Outage & More",
+     "2026-11-15T14:00:21Z Jensen Huang Exits Nvidia, Musk’s SpaceX Gets a Big Bet and Microsoft’s Outage Spreads: This Week In Tech",
+     "2026-11-16T02:01:50Z Southwest Airlines Navigates Operational Recovery Following Nationwide Ground Stop",
+     "2026-11-16T04:19:42Z Trump Says FAA ‘Doing a Great Job’ as He Blames Biden for Ground Stop Order: ‘Everything They Touched Turned Bad’"
+    ]
+   },
+   {
+    "date": "2015-07-08",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2015-07-08T16:30:18Z NYSE Tweets: 'The issue we are experiencing is an internal technical issue and is not the result of a cyber breach.'",
+     "2015-07-08T17:28:30Z Target, Staples, Wal-Mart, Saks Fifth Avenue, Neiman All Confirm They Have Had No Security Breach Or Issues",
+     "2015-07-08T18:40:10Z Fireeye Email To Benzinga Says 'no evidence across our network...to suggest that the NYSE & UAL disruptions were cyber attacks'",
+     "2015-07-08T18:55:32Z American Airlines Rep: Co. Facing No Technical Issues On Website, No Security Breach"
+    ]
+   },
+   {
+    "date": "2024-07-20",
+    "value": 4,
+    "headlines": 4,
+    "first": [
+     "2024-07-20T06:13:12Z Microsoft-CrowdStrike Issue Caused 'Largest IT Outage In History,' Showing How Much We Depend On A Handful Of Companies",
+     "2024-07-20T07:05:23Z Elon Musk Says Tesla Deleted CrowdStrike From Its Systems But Was Not Untouched By Global IT Outage: 'Unfortunately, Many Of Our Suppliers...Use It'",
+     "2024-07-20T13:34:24Z Microsoft Outage, CrowdStrike Share Decline Hits Nancy Pelosi's, Marjorie Taylor Greene's Wealth: Here's How Much Congress Members Lost",
+     "2024-07-20T15:55:31Z CrowdStrike Issues Statement Following Massive Outage That Stemmed From Content Update For Windows Hosts: 'This Was Not A Cyberattack'"
+    ]
+   },
+   {
+    "date": "2015-09-17",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2015-09-17T17:04:24Z American Airlines Suffers System Wide Outage",
+     "2015-09-17T17:09:14Z American Airlines Unavailble For Comment When Contacted By Benzinga Pro Regarding System Outage",
+     "2015-09-17T17:10:02Z CNBC Now Tweets: 'BREAKING: Widespread ground stops for American Airlines nationwide » http://cnb.cx/1OhBd5f'"
+    ]
+   },
+   {
+    "date": "2019-03-26",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2019-03-26T15:35:18Z Hearing Sabre Is Having An Outage",
+     "2019-03-26T15:39:06Z 'Sabre had a brief technical issue that impacted multiple carriers, including American Airlines. This technical issue has been resolved.' -Tweets American Airlines",
+     "2019-03-26T15:58:03Z American Air Highlights Earlier Brief Technical Issues With Sabre Which Impacted Multiple Carriers, Including American; Issue Has Been Resolved"
+    ]
+   },
+   {
+    "date": "2019-04-01",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2019-04-01T11:21:52Z United Airlines, Southwest Airlines Report Technical Issues Causing Flight Delays",
+     "2019-04-01T11:33:19Z American Airlines Tweets AeroData is currently experiencing a technical issue that is impacting multiple carriers. They're working on a fix as quickly as they can.",
+     "2019-04-01T12:45:37Z Southwest Airlines Says it Implemented a Ground Stop for 40 Minutes Monday Morning Due to an Outage"
+    ]
+   },
+   {
+    "date": "2020-12-14",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2020-12-14T12:05:47Z Some Users Reporting Outages of Google Services Include Gmail and YouTube",
+     "2020-12-14T12:31:35Z Multiple Google Services Hit By Outage",
+     "2020-12-14T15:55:49Z 'Google confirms that this morning's outage was NOT a cyber attack. \"it was entirely an internal issue with quota accounting for the authentication system...' -Tweet From CNBC's Eamon Javers"
+    ]
+   },
+   {
+    "date": "2021-12-07",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2021-12-07T17:56:05Z Amazon Web Service Reports Outage, Disrupting Several Major Sites",
+     "2021-12-07T18:51:10Z 'Disney+, Roku Suffer Outages Because of AWS' -The Streamable Report",
+     "2021-12-07T19:01:30Z Amazon Web Outage Is Said To Affect Delivery Operation; Vans Said To Sit Idle With No Communication"
+    ]
+   },
+   {
+    "date": "2021-12-15",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2021-12-15T15:33:44Z Watching Amazon Shares; Hearing AWS Experiencing Outages, Seeing Reports Twitch Is Down",
+     "2021-12-15T15:35:13Z Seeing Reports DoorDash, Facebook, Playstation Network, Intuit Also Experiencing Outages Alongside AWS",
+     "2021-12-15T15:49:12Z UPDATE: Seeing Reports Of Outages With Disney, Apple, DISH Networks, Comcast, Netflix, Google, Discovery Amid AWS Outage"
+    ]
+   },
+   {
+    "date": "2024-02-22",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2024-02-22T12:51:17Z 'AT&T, T-Mobile and Verizon users hit by cellular outage in US' -New York Post",
+     "2024-02-22T13:40:00Z Major Outage Hits AT&T, Verizon, And T-Mobile—Services Down Nationwide, Including 911 Calls",
+     "2024-02-22T18:22:33Z U.S. Cyber Watchdog Agency Says It Is 'Working Closely' With AT&T To Understand The Cause Of Outage"
+    ]
+   },
+   {
+    "date": "2024-04-17",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2024-04-17T15:07:39Z Alaska Airlines Ground Stop Due To IT Issue",
+     "2024-04-17T15:17:09Z Alaska Airlines Says It Experienced An Issue While Performing An Upgrade To The System That Calculates Weight And Balance; Ground Stop For All Alaska And Horizon Flights Was Instituted At ~ 7:50 am PT Wednesday; Working To Resolve The Issue As Quickly As Possible",
+     "2024-04-17T15:49:09Z Alaska Airlines Ground Stop On Aircraft Has Been Lifted; Says We Have Begun Releasing Flights And Residual Delays Are Expected Throughout The Day"
+    ]
+   },
+   {
+    "date": "2024-06-25",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2024-06-25T15:33:44Z FCC Settles Verizon 911 Outage Violations For Over $1M",
+     "2024-06-25T15:38:32Z FCC Says Verizon To Pay $1.05M Fine Over 2022 Outage Of 911 System In Alabama, Florida, Georgia, North Carolina, South Carolina, And Tennessee",
+     "2024-06-25T17:47:16Z 'CDK tells dealers DMS outage won't be resolved before June 30' - Automotive News"
+    ]
+   },
+   {
+    "date": "2025-10-24",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2025-10-24T08:56:48Z Reported Earlier, Alaska Airlines Restores Operations After IT Outage Causes 229 Flight Cancellations, Additional Disruptions Expected During Network Recovery",
+     "2025-10-24T13:15:30Z Amazon's Cloud Unit Issues Apology, Explains How Rare Software Bug Triggered Global AWS Outage This Week",
+     "2025-10-24T14:54:01Z Alaska Airlines Says Throughout Thursday And Into Friday Morning, We Have Canceled More Than 360 Flights On Alaska And Horizon; Additional Flight Disruptions Likely. Hawaiian Airlines Flights Are Not Impacted; The It Outage Is Not A Cybersecurity Incident"
+    ]
+   },
+   {
+    "date": "2026-11-12",
+    "value": 4,
+    "headlines": 3,
+    "first": [
+     "2026-11-12T21:04:45Z Workhorse Announces Q3 Earnings Call Rescheduled To November 16, Citing Business Disruptions From Global Microsoft Outages",
+     "2026-11-12T22:31:35Z Microsoft 365 Experiences Service Outage",
+     "2026-11-13T04:41:39Z Microsoft Outage Triggers Chaos Across Outlook, Teams and Copilot — Spills Over to OpenAI and Anthropic"
+    ]
+   },
+   {
+    "date": "2020-10-22",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2020-10-22T15:08:48Z T-Mobile Shares Quiet Amid Headline FCC Has Issued A Staff Report On Networks' Outage",
+     "2020-10-22T15:18:26Z FCC Chairman Calls T-Mobile June 15 Outage A Failure, Says Company Did Not Follow Some Network Reliability Best Practices"
+    ]
+   },
+   {
+    "date": "2021-07-22",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2021-07-22T17:19:10Z Akami Says Problems Were Not A Cyberattack On Its Platform",
+     "2021-07-22T17:54:40Z Akamai Service Disruption Leads To Massive Outages Globally"
+    ]
+   },
+   {
+    "date": "2023-01-12",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-01-12T13:00:51Z FAA System Outage Causes Second Day of Flight Delays",
+     "2023-01-12T15:59:44Z U.S. FAA Says Operations Are Back To Normal, Seeing No Unusual Delays Or Cancellations After Wednesday's Computer Outage"
+    ]
+   },
+   {
+    "date": "2023-01-25",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-01-25T10:08:51Z Microsoft Was Hit Earlier Wednesday With Networking Outage That Took Impacted Azure, Teams And Outlook",
+     "2023-01-25T12:03:24Z Microsoft Azure Cloud Outage Disrupts Multiple Microsoft 365 Services Globally, Several users Affected"
+    ]
+   },
+   {
+    "date": "2023-03-23",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-03-23T16:59:40Z Coinbase Says Investigating A Technical Issue Causing Some Trades To Fail On Simple Trade For Coinbase.com And Coinbase Pay",
+     "2023-03-23T17:16:05Z Coinbase Says Resolved The Technical Issue That Was Causing Some Customers To Experience Simple Trade Failures"
+    ]
+   },
+   {
+    "date": "2023-09-05",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-09-05T17:18:12Z 'United Airlines Issues Nationwide Ground Stop Due To Computer Issue; Shares Moving Lower' - ABC News",
+     "2023-09-05T17:53:31Z FAA Tweets \"Update: United Airlines Has Lifted The Ground Stop For The U.S. And Canada.\""
+    ]
+   },
+   {
+    "date": "2023-09-06",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2023-09-06T05:01:56Z Coinbase-Incubated Base Faces Major Outage, Assures 'No Funds Are At Risk'",
+     "2023-09-06T13:52:07Z JetBlue Says Experiencing A System Outage Affecting Bookings"
+    ]
+   },
+   {
+    "date": "2025-10-20",
+    "value": 4,
+    "headlines": 2,
+    "first": [
+     "2025-10-20T10:16:05Z 'Major AWS Outage Takes Down Fortnite, Alexa, Snapchat, And More' - The Verge",
+     "2025-10-20T13:57:31Z Amazon Web Services Outage Knocks Major Websites Offline — Disney+, Reddit, McDonald's App, United Airlines Among Those Hit"
+    ]
+   }
+  ]
+ },
+ "moved": {
+  "c1_not_c1v2": [
+   "2015-07-08T17:28:30Z Target, Staples, Wal-Mart, Saks Fifth Avenue, Neiman All Confirm They Have Had No Security Breach Or Issues",
+   "2015-07-08T18:55:32Z American Airlines Rep: Co. Facing No Technical Issues On Website, No Security Breach",
+   "2023-01-11T16:48:35Z U.S. Transportation Secretary Says No Direct Evidence Or Indication Of Cyberattack In FAA Computer Issue",
+   "2026-11-14T05:59:37Z FAA Lifts Nationwide Ground Stop, Resumes Flights; Says No Cyberattack Evidence or Link to Microsoft Outage, Sean Duffy Blames Legacy Equipment, Seeks $50 Billion"
+  ],
+  "c1v2_not_c1": [],
+  "o1v2_not_o1": [
+   "2015-07-08T16:30:18Z NYSE Tweets: 'The issue we are experiencing is an internal technical issue and is not the result of a cyber breach.'",
+   "2015-07-08T17:28:30Z Target, Staples, Wal-Mart, Saks Fifth Avenue, Neiman All Confirm They Have Had No Security Breach Or Issues",
+   "2015-07-08T18:40:10Z Fireeye Email To Benzinga Says 'no evidence across our network...to suggest that the NYSE & UAL disruptions were cyber attacks'",
+   "2020-10-15T23:15:34Z Twitter Says No Evidence Today's Outage Was Caused by a Security Breach or Hack; Currently Investigating Internal Root Causes and Will Share More Soon",
+   "2021-05-11T12:43:21Z Colonial Pipeline Tweets 'We are experiencing a temporary service disruption to our corporate website, and unrelated to the ransomware. We continue to make progress on our system restart plan, and will provide an update when our website is restored.'",
+   "2021-05-18T16:15:20Z Shell Midstream's Colonial Pipeline Says One Of Co.'s Servers Experienced Intermittent Disruptions Tuesday Morning Due To Some Of Security Hardening Efforts, Says Issues Were Not Related To Ransomware, Any Type Of Reinfection",
+   "2021-07-22T17:19:10Z Akami Says Problems Were Not A Cyberattack On Its Platform",
+   "2022-11-07T22:16:14Z PGT Innovations In Form8 Filing Says On Nov. 5, Co. Detected Ransomware Infection That Impacted Portions Of Co.'s Network, Caused Disruption To Daily Business Operations; Says To Date There Is No Evidence Of Personal Information Being Accessed Or Acquired",
+   "2023-01-11T16:48:35Z U.S. Transportation Secretary Says No Direct Evidence Or Indication Of Cyberattack In FAA Computer Issue",
+   "2024-07-19T09:49:06Z Crowdstrike CEO Said This Is Not A Security Incident Or Cyberattack; The Issue Has Been Identified, Isolated And A Fix Has Been Deployed",
+   "2024-07-19T12:14:19Z CrowdStrike CEO Post On X, \"CrowdStrike is actively working with customers impacted by a defect found in a single content update for Windows hosts. Mac and Linux hosts are not impacted. This is not a security incident or cyberattack. The issue has been identified, isolated and a fix has been deployed...\"",
+   "2026-11-13T21:52:02Z 'The Reason For The Ground Stop Was Not Immediately Clear; Preliminary Reports Indicate This Is Not A Cyberattack, According To Two Law Enforcement Officials'-CNN"
+  ],
+  "o1_not_o1v2": []
+ },
+ "gate_v1": {
+  "CYBER": {
+   "hits": 8,
+   "dated_in_window": 46,
+   "hit_share": 0.174
+  },
+  "OUTAGE": {
+   "hits": 35,
+   "dated_in_window": 87,
+   "hit_share": 0.402
+  }
+ }
+}

@@ -1,0 +1,162 @@
+{
+  "schema": "probe_receipt_v1",
+  "row": "microcap-financial-strength-value",
+  "vendor": "sharadar",
+  "computed_at": "2026-11-16T08:02:41-05:00",
+  "authority": "factory spec § 2.2 condition 7 (F1 [factory:probe:microcap-financial-strength-value]); successor Amendment 2026-10-03 (K1), megareview rulings (3) (ii); Amendment 2026-10-01 (K1) B1 (2); the inbox ruling of 2026-10-24 (a) (D533), its (b) for a row not of the arena's form",
+  "note": "σ-only (D533 (b)): no value, no mean, no clears; one read of the discovery cohorts, a counted trial, never re-run. No request: the held Sharadar store, read-only; the as-filed statements from SF1's ARY rows by filing date, in place of a text parse of pre-XBRL EDGAR (the 10-31 filter). script_sha256 = the sha256 of the script at script_path, committed and pushed before the read.",
+  "statistic": "the net return of the row's own book over each twelve-month hold (formed on each June's last session: the micro pool's priced names in the highest book-to-market quintile, Piotroski's nine-signal F_SCORE from SF1 ARY annuals filed before formation and four months past fiscal year-end; long F_SCORE 8-9 +0.5/N, short 0-1 -0.5/N, gross one; held to the open after the next June's last session; the field's engine at the entry replay's B7 cost line): its sigma, turnover and cost alone",
+  "sigma": 15.375035615394538,
+  "sigma_gross": 15.066429799314738,
+  "n": 11,
+  "turnover": 1.8960549234209871,
+  "cost": 3.0971151531156154,
+  "units": "percent per twelve-month cohort (the row's Stage-1 unit; prior 1.62)",
+  "sigma_on": "all 11 June cohorts (formed 1998-06-30 → 2008-06-30)",
+  "beside": {
+    "non_cash": {
+      "n": 10,
+      "sigma": 16.19586792569918,
+      "sigma_gross": 15.873849565299693,
+      "turnover": 2.085660415763086,
+      "cost": 3.406826668427177
+    },
+    "cash_cohorts_why": "an empty micro pool: B2's m bucket reads daily.marketcap, held from 1998-12-01"
+  },
+  "cohorts": [
+    {
+      "formed": "1998-06-30",
+      "flat_at": "1999-07-01",
+      "hold": 252,
+      "pool": 0,
+      "with_bm": 0,
+      "value": 0,
+      "value_scored": 0,
+      "long": 0,
+      "short": 0
+    },
+    {
+      "formed": "1999-06-30",
+      "flat_at": "2000-07-03",
+      "hold": 254,
+      "pool": 3989,
+      "with_bm": 935,
+      "value": 187,
+      "value_scored": 144,
+      "long": 7,
+      "short": 10
+    },
+    {
+      "formed": "2000-06-30",
+      "flat_at": "2001-07-02",
+      "hold": 251,
+      "pool": 3551,
+      "with_bm": 2231,
+      "value": 446,
+      "value_scored": 329,
+      "long": 17,
+      "short": 12
+    },
+    {
+      "formed": "2001-06-29",
+      "flat_at": "2002-07-01",
+      "hold": 247,
+      "pool": 3486,
+      "with_bm": 2691,
+      "value": 538,
+      "value_scored": 453,
+      "long": 19,
+      "short": 13
+    },
+    {
+      "formed": "2002-06-28",
+      "flat_at": "2003-07-01",
+      "hold": 252,
+      "pool": 3339,
+      "with_bm": 2748,
+      "value": 550,
+      "value_scored": 478,
+      "long": 17,
+      "short": 34
+    },
+    {
+      "formed": "2003-06-30",
+      "flat_at": "2004-07-01",
+      "hold": 252,
+      "pool": 3050,
+      "with_bm": 2668,
+      "value": 534,
+      "value_scored": 456,
+      "long": 35,
+      "short": 18
+    },
+    {
+      "formed": "2004-06-30",
+      "flat_at": "2005-07-01",
+      "hold": 253,
+      "pool": 3013,
+      "with_bm": 2598,
+      "value": 520,
+      "value_scored": 392,
+      "long": 32,
+      "short": 9
+    },
+    {
+      "formed": "2005-06-30",
+      "flat_at": "2006-07-03",
+      "hold": 252,
+      "pool": 3037,
+      "with_bm": 2516,
+      "value": 503,
+      "value_scored": 393,
+      "long": 22,
+      "short": 10
+    },
+    {
+      "formed": "2006-06-30",
+      "flat_at": "2007-07-02",
+      "hold": 250,
+      "pool": 3012,
+      "with_bm": 2458,
+      "value": 492,
+      "value_scored": 356,
+      "long": 9,
+      "short": 17
+    },
+    {
+      "formed": "2007-06-29",
+      "flat_at": "2008-07-01",
+      "hold": 252,
+      "pool": 2932,
+      "with_bm": 2401,
+      "value": 480,
+      "value_scored": 292,
+      "long": 10,
+      "short": 11
+    },
+    {
+      "formed": "2008-06-30",
+      "flat_at": "2009-07-01",
+      "hold": 252,
+      "pool": 2789,
+      "with_bm": 2311,
+      "value": 462,
+      "value_scored": 264,
+      "long": 10,
+      "short": 9
+    }
+  ],
+  "carried_past_flat": {
+    "cohorts": 2,
+    "gross": 0.07190474579061737
+  },
+  "window": {
+    "start": "1998-01-02",
+    "end": "2009-12-31",
+    "first_formation": "1998-06-30",
+    "last_flat": "2009-07-01"
+  },
+  "pulled_via": "the held Sharadar store data/sharadar.db, read-only (no request)",
+  "script_path": "orient/investigations/probe-microcap-financial-strength-value.py",
+  "script_sha256": "a05d29ba2c9b37729bf29d6760dbee610f44c1e6b0ecee1c8ee3304dbf7205a8"
+}
